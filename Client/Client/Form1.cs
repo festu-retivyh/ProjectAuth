@@ -19,7 +19,7 @@ namespace Client
         
         public Form1()
         {
-            ta = new TimerAlive(3000);
+            ta = new TimerAlive(30000);
             InitializeComponent();
             ta.Start();
 

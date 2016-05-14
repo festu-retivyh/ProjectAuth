@@ -6,7 +6,7 @@ namespace Client
 {
     public class TimerAlive
     {
-        private static int time=60000;
+        private static int time=30000;
         static Thread myTimer = new Thread(AliveSend);
 
         private static void AliveSend()

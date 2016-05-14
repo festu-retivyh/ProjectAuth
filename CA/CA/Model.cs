@@ -22,8 +22,11 @@ namespace CA
             int command = int.Parse(masData[1]);
 
             //TODA check dateTime
-            if (command==2)
+            if (command == 2)
+            {
                 DbConnector.SetStateClient(guidClient, "off");
+                return;
+            }
             bool rez = DbConnector.CheckStateClient(guidClient, ip);
             if(rez)
                 DbConnector.ClientAlive(guidClient);

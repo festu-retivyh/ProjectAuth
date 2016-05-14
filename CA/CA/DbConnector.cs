@@ -247,7 +247,6 @@ namespace CA
             }
             catch (SqlException se)
             {
-                File.WriteAllText(@"D:\GetCertificate.txt", se.Message);
                 return null;
             }
             string comm = @"EXEC [dbo].[GetCertificate] @guid ";
@@ -263,7 +262,6 @@ namespace CA
                 cert.publicKey = sdr.GetValue(2).ToString();// [0].publicKey;
                 //text = text + sdr.GetValue(0).ToString();
             }
-            File.WriteAllText(@"D:\GetCertificate1.txt", cert.publicKey+"  "+DateTime.Now);
             //myFWDataSetTableAdapters.GetUsbCertTableAdapter tb = new myFWDataSetTableAdapters.GetUsbCertTableAdapter();
             //var rez = tb.GetData(guidUsb);
             return cert;

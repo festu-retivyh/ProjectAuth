@@ -11,6 +11,7 @@ namespace Client
         public static UsbDisk disk;
         public static string guidClient, pubKeyCA;
         internal static string hashPin;
+        private static string messageForOffStatus="";
         public static string genSKeyUsb(string a, string b="", string c="", string d="")
         {
             return a + b + c + d;
@@ -52,17 +53,22 @@ namespace Client
                         data = data + " " + Cryptography.Cryptography.GetHash(data);
                         data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
                         data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
+
+                        if (messageForOffStatus == "")
+                        {
+                            messageForOffStatus = guidClient + " 6 2 " + DateTime.Now;
+                            messageForOffStatus = messageForOffStatus + " " + Cryptography.Cryptography.GetHash(messageForOffStatus);
+                            messageForOffStatus = messageForOffStatus + " " + Cryptography.Cryptography.Sign(messageForOffStatus, privateKeyClient);
+                            messageForOffStatus = Cryptography.Cryptography.Encrypt(messageForOffStatus, pubKeyCA);
+                        }
+                        var ca = CreateWebServiceInstance();
+                        ca.AliveClient(new CAService.AliveClientRequest(data));
                     }
                 }
                 else
                 {
-                    data = guidClient + " 6 2 " + DateTime.Now;
-                    data = data + " " + Cryptography.Cryptography.GetHash(data);
-                    data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
-                    data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
-
                     var ca = CreateWebServiceInstance();
-                    ca.AliveClient(new CAService.AliveClientRequest(data));
+                    ca.AliveClient(new CAService.AliveClientRequest(messageForOffStatus));
                 }
 
             }

@@ -31,7 +31,7 @@ namespace CA
             }
             catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
             CheckOnlineClients();
-            Thread.Sleep(5000);
+            Thread.Sleep(60000);
         }
 
         private static void FillList()
@@ -52,38 +52,11 @@ namespace CA
                         list.Remove(list[i]);
                         i--;
                         max--;
-                        //state = DbConnector.CheckStateClient(list[i].guid, list[i].ip);
-                        //if (state)
-                        //{
-                        //    list[i].date = list[i].date.AddSeconds(150);
-                        //}
-                        //else
-                        //{
-
-                        //}
                     }
                 }
                 catch
                 { Model.AddLog("Ошибка в EventTimer.CheckOnlineClients"); }
             }
-            //bool state;
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    if (list[i].date.AddSeconds(150) <= DateTime.Now)
-            //    {
-            //        state = DbConnector.CheckStateClient(list[i].guid, list[i].ip);
-            //        if (state)
-            //        {
-            //            list[i].date = list[i].date.AddSeconds(150);
-            //        }
-            //        else
-            //        {
-            //            DbConnector.SetStateClient(list[i].guid, "off");
-            //            list.Remove(list[i]);
-            //            i--;
-            //        }
-            //    }
-            //}
         }
 
         public void Stop()
