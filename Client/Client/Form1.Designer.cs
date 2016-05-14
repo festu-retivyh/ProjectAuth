@@ -128,6 +128,9 @@
         private System.Windows.Forms.ContextMenuStrip CloseApp;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem iAmAliveToolStripMenuItem;
+        
+
+        
     }
 }
 

@@ -16,52 +16,55 @@ namespace Client
             return a + b + c + d;
         }
 
-        internal static void SendAliveMessage(bool alive=true)
+        internal static void SendAliveMessage(bool alive = true)
         {
-            string data="";
+
+            string data = "";
             if (disk != null)
             {
-                if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+                if (alive)
                 {
-                    var curUsb = UsbSearcher.infoUsbGet(disk);
-                    var curComp = infoAboutComputer();
-                    var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
-                    //string PublicKeyCA = fileUsb[1];
-                    string hashUsb = curUsb;
-                    for (int i = 0; i < 100; i++)
-                        hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
-                    //curUsb = Cryptography.Cryptography.GetHash(curUsb);
-                    curComp = Cryptography.Cryptography.GetHash(curComp);
-
-                    string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
-                    string HashSKeyClient = fileClient[3];
-                    //CheckHash
-                    if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
-                        return;
-                    string sKeyClient = GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
-                    string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
-                    string privateKeyClient = decriptDataClient[0];
-                    guidClient = decriptDataClient[1];
-                    pubKeyCA = decriptDataClient[2];
-                    if (alive)
+                    if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
                     {
+                        File.WriteAllText(@"d:\alive.txt", alive + " " + DateTime.Now);
+                        var curUsb = UsbSearcher.infoUsbGet(disk);
+                        var curComp = infoAboutComputer();
+                        var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
+                        //string PublicKeyCA = fileUsb[1];
+                        string hashUsb = curUsb;
+                        for (int i = 0; i < 100; i++)
+                            hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+                        //curUsb = Cryptography.Cryptography.GetHash(curUsb);
+                        curComp = Cryptography.Cryptography.GetHash(curComp);
+
+                        string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
+                        string HashSKeyClient = fileClient[3];
+                        //CheckHash
+                        if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
+                            return;
+                        string sKeyClient = GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
+                        string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
+                        string privateKeyClient = decriptDataClient[0];
+                        guidClient = decriptDataClient[1];
+                        pubKeyCA = decriptDataClient[2];
+
                         data = guidClient + " 6 1 " + DateTime.Now;
                         data = data + " " + Cryptography.Cryptography.GetHash(data);
                         data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
                         data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
                     }
-                    else
-                    {
-                        data = guidClient + " 6 2 " + DateTime.Now;
-                        data = data + " " + Cryptography.Cryptography.GetHash(data);
-                        data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
-                        data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
-                    }
+                }
+                else
+                {
+                    data = guidClient + " 6 2 " + DateTime.Now;
+                    data = data + " " + Cryptography.Cryptography.GetHash(data);
+                    data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
+                    data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
 
                     var ca = CreateWebServiceInstance();
                     ca.AliveClient(new CAService.AliveClientRequest(data));
                 }
-                
+
             }
         }
         internal static CAService.CAClient CreateWebServiceInstance()

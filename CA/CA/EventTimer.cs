@@ -25,7 +25,11 @@ namespace CA
 
         private static void Alive()
         {
-            FillList();
+            try
+            {
+                FillList();
+            }
+            catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
             CheckOnlineClients();
             Thread.Sleep(5000);
         }
@@ -37,23 +41,30 @@ namespace CA
 
         private static void CheckOnlineClients()
         {
-            for (int i = 0; i < list.Count; i++)
+            int max = list.Count;
+            for (int i = 0; i < max; i++)
             {
-                if (list[i].date.AddMinutes(5) <= DateTime.Now)
+                try
                 {
-                    DbConnector.SetStateClient(list[i].guid, "off");
-                    list.Remove(list[i]);
-                    i--;
-                    //state = DbConnector.CheckStateClient(list[i].guid, list[i].ip);
-                    //if (state)
-                    //{
-                    //    list[i].date = list[i].date.AddSeconds(150);
-                    //}
-                    //else
-                    //{
-                        
-                    //}
+                    if (list[i].date.AddMinutes(5) <= DateTime.Now)
+                    {
+                        DbConnector.SetStateClient(list[i].guid, "off");
+                        list.Remove(list[i]);
+                        i--;
+                        max--;
+                        //state = DbConnector.CheckStateClient(list[i].guid, list[i].ip);
+                        //if (state)
+                        //{
+                        //    list[i].date = list[i].date.AddSeconds(150);
+                        //}
+                        //else
+                        //{
+
+                        //}
+                    }
                 }
+                catch
+                { Model.AddLog("Ошибка в EventTimer.CheckOnlineClients"); }
             }
             //bool state;
             //for (int i = 0; i < list.Count; i++)

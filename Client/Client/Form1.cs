@@ -14,12 +14,14 @@ namespace Client
         UsbDisk disk;
         string[] fileUsb, fileClient;
         string curUsb, curComp, privateKeyClient, hashUsb;
+        TimerAlive ta;
         #endregion
-
+        
         public Form1()
         {
-            
+            ta = new TimerAlive(3000);
             InitializeComponent();
+            ta.Start();
 
             notifyIcon1.MouseDoubleClick += new MouseEventHandler(notifyIcon1_MouseDoubleClick);
             Resize += new EventHandler(Form1_Resize);

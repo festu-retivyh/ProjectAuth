@@ -1,12 +1,13 @@
 ﻿using Cryptography;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace CA
 {
     static class Model
-    {
+    {        
         internal static void AliveClient(string data, string ip)
         {
             string goodData = ReadData(data, false);
@@ -115,9 +116,10 @@ namespace CA
             int command = int.Parse(mas[1]);
             switch (command)
             {
-                case 1: { DbConnector.SetStateClient(mas[0], "auth", ip); returnData = GenCheckData(goodData); break; }
+                case 1: { try { DbConnector.SetStateClient(mas[0], "auth", ip); returnData = GenCheckData(goodData); } catch { Model.AddLog("Ошибка в Model.JoinClient event1"); } break; }
                 case 2:
                     {
+                        
                         string guidUsb = goodData.Split(' ')[0];
                         string guidClient = DbConnector.GetGuidClientOfUsb(guidUsb);
                         //goodData = ReadData(goodData,false);
@@ -169,6 +171,20 @@ namespace CA
             }
         }
 
+        public static void AddLog(string log)
+        {
+            try
+            {
+                if (!EventLog.SourceExists("MyService"))
+                {
+                    EventLog.CreateEventSource("MyService", "MyService");
+                }
+                //EventLog.WriteEntry(sSource, sEvent);
+                EventLog.WriteEntry("My .NET Service", log, EventLogEntryType.Error, 228);
+            }
+            catch { }
+        }
+
         private static string GenCheckData(string data)
         {
             string[] mas = data.Split(' ');
@@ -191,7 +207,9 @@ namespace CA
         private static string ReadData(string data, bool usb = true)
         {
             string allEncriptData = Cryptography.Cryptography.Decrypt(data, PrivateKeyCA);
+            File.WriteAllText(@"D:\ReadData.txt", allEncriptData);
             string[] masData = allEncriptData.Split(' ');
+            allEncriptData = null;
             try
             {
                 if (!(int.Parse(masData[1]) == masData.Length))
@@ -202,6 +220,7 @@ namespace CA
                     pubKey = DbConnector.GetUSBCertificate(masData[0]).publicKey;
                 else
                     pubKey = DbConnector.GetCertificate(masData[0]).publicKey;
+                File.WriteAllText(@"D:\ReadData.txt", pubKey);
                 if (!(CheckSign(masData, pubKey)))
                     return "2";
                 string rezultData = masData[2];
@@ -213,7 +232,7 @@ namespace CA
                 return masData[0] + " " + rezultData;
             }
             catch
-            { return "differ error"; }
+            { AddLog("Ошибка в Model.ReadData"); return "444"; }
         }
 
         private static bool CheckSign(string[] masData, string pubKeyClient)
@@ -228,7 +247,7 @@ namespace CA
             {
                 rez = Cryptography.Cryptography.CheckSign(dataForCheck, masData[masData.Length - 1], pubKeyClient);
             }
-            catch { }
+            catch { File.WriteAllText(@"D:\CheckSign.txt", "Error in checkSign"); }
             return rez;
         }
 

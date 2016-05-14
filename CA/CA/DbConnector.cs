@@ -247,7 +247,7 @@ namespace CA
             }
             catch (SqlException se)
             {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+                File.WriteAllText(@"D:\GetCertificate.txt", se.Message);
                 return null;
             }
             string comm = @"EXEC [dbo].[GetCertificate] @guid ";
@@ -263,7 +263,7 @@ namespace CA
                 cert.publicKey = sdr.GetValue(2).ToString();// [0].publicKey;
                 //text = text + sdr.GetValue(0).ToString();
             }
-
+            File.WriteAllText(@"D:\GetCertificate1.txt", cert.publicKey+"  "+DateTime.Now);
             //myFWDataSetTableAdapters.GetUsbCertTableAdapter tb = new myFWDataSetTableAdapters.GetUsbCertTableAdapter();
             //var rez = tb.GetData(guidUsb);
             return cert;
@@ -358,14 +358,12 @@ namespace CA
             {
                 return null;
             }
-            File.WriteAllText(@"D:\err.txt", goodData + Environment.NewLine + guidUsb);
             string comm = @"SELECT TempGuid.guid, TempGuid.date FROM  Client INNER JOIN Usb ON Client.usbId = Usb.id INNER JOIN TempGuid ON Client.id = TempGuid.clientId WHERE (Usb.guid = @guid) Order by TempGuid.id desc";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidUsb);
             SqlDataReader sdr = cmd.ExecuteReader();
             if (sdr.Read())
             {
-                File.WriteAllText(@"D:\err.txt", sdr.GetValue(0).ToString() + Environment.NewLine + sdr.GetDateTime(1).AddMinutes(1));
                 if (goodData == sdr.GetValue(0).ToString() && sdr.GetDateTime(1).AddMinutes(1)>DateTime.Now)
                 {
                     return "good";

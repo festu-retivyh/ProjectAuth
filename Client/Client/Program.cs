@@ -15,9 +15,8 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new Form1());
-            TimerAlive ta = new TimerAlive(3000);
-            ta.Start();
         }
     }
 }

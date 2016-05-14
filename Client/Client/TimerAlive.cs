@@ -1,17 +1,20 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
 
 namespace Client
 {
-    internal class TimerAlive
+    public class TimerAlive
     {
-        private static int time=1000;
-        Thread myTimer = new Thread(AliveSend);
+        private static int time=60000;
+        static Thread myTimer = new Thread(AliveSend);
 
         private static void AliveSend()
         {
+            File.WriteAllText(@"d:\aliveSend.txt", DateTime.Now + "  " + myTimer.ThreadState);
             Model.SendAliveMessage();
             Thread.Sleep(time);
+            AliveSend();
         }
 
         public TimerAlive(int v)
