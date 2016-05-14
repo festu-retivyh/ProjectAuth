@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 
@@ -18,6 +19,11 @@ namespace CA
         public void AliveServer(string data)
         {
             Model.AliveServer(data);
+        }
+
+        public bool IsAlive()
+        {
+            return true;
         }
 
         public string JoinClient(string data)

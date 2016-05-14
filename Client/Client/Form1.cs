@@ -34,6 +34,7 @@ namespace Client
 
         private void UsbSearcher_onDelUsb(UsbDisk nameDisk)
         {
+            Model.SendAliveMessage(false);
             if (Model.disk == nameDisk)
             {
                 Model.disk = null;
@@ -62,6 +63,7 @@ namespace Client
 
                 fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
                 string HashSKeyClient = fileClient[3];
+                disk = _disk;
                 //CheckHash
                 if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
                     return;
@@ -194,7 +196,7 @@ namespace Client
             binding.SendTimeout = TimeSpan.FromMinutes(1);
             binding.OpenTimeout = TimeSpan.FromMinutes(1);
             binding.CloseTimeout = TimeSpan.FromMinutes(1);
-            binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+            binding.ReceiveTimeout = TimeSpan.FromMinutes(5);
             binding.AllowCookies = false;
             binding.BypassProxyOnLocal = false;
             binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
@@ -202,7 +204,7 @@ namespace Client
             binding.TextEncoding = System.Text.Encoding.UTF8;
             binding.TransferMode = TransferMode.Buffered;
             binding.UseDefaultWebProxy = true;
-            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.0.100:45000/CA.CA"));
+            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.68.100:45000/CA.CA"));
         }
 
         #region FormEvents
@@ -221,6 +223,12 @@ namespace Client
             notifyIcon1.Visible = false;
             WindowState = FormWindowState.Normal;
         }
+
+        private void iAmAliveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Model.SendAliveMessage();
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!notifyIcon1.Visible)
@@ -245,7 +253,18 @@ namespace Client
             Model.pubKeyCA = decriptDataClient[2];
             var ca = CreateWebServiceInstance();//new CAService.CAClient("NetTcpBinding_ICA");
             //ca.Open();
+            try
+            {
+                ca.IsAlive(new CAService.IsAliveRequest());
+            }
+            catch (EndpointNotFoundException err)
+            {
+                MessageBox.Show(err.Message);
+                return;
+            }
+
             string messageFromCA = ca.JoinClient(new CAService.JoinClientRequest(GenerateJoinMessage())).JoinClientResult;
+
             messageFromCA = ReadMessage(messageFromCA, privateKeyClient);
             messageFromCA = ca.JoinClient(new CAService.JoinClientRequest(GenerateAcceptTocken(messageFromCA))).JoinClientResult;
             //messageFromCA = ReadMessage(messageFromCA, privateKeyClient);
@@ -256,7 +275,7 @@ namespace Client
         }
         private void CloseApp_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Close();
+            //Close();
         }
         private void Form1_Shown(object sender, EventArgs e)
         {

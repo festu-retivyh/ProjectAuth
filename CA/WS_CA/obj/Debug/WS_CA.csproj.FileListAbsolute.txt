@@ -77,3 +77,16 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.pdb

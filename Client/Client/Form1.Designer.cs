@@ -36,6 +36,7 @@
             this.tbxPinCode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.iAmAliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseApp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +52,10 @@
             // CloseApp
             // 
             this.CloseApp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.iAmAliveToolStripMenuItem});
             this.CloseApp.Name = "contextMenuStrip1";
-            this.CloseApp.Size = new System.Drawing.Size(181, 26);
+            this.CloseApp.Size = new System.Drawing.Size(181, 70);
             this.CloseApp.Text = "Выйти из приложения";
             this.CloseApp.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CloseApp_ItemClicked);
             // 
@@ -90,6 +92,13 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 2;
             // 
+            // iAmAliveToolStripMenuItem
+            // 
+            this.iAmAliveToolStripMenuItem.Name = "iAmAliveToolStripMenuItem";
+            this.iAmAliveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iAmAliveToolStripMenuItem.Text = "IAmAlive";
+            this.iAmAliveToolStripMenuItem.Click += new System.EventHandler(this.iAmAliveToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +127,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip CloseApp;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem iAmAliveToolStripMenuItem;
     }
 }
 

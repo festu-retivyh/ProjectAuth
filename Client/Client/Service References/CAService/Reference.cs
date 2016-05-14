@@ -32,6 +32,9 @@ namespace Client.CAService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICA/AliveServer", ReplyAction="http://tempuri.org/ICA/AliveServerResponse")]
         Client.CAService.AliveServerResponse AliveServer(Client.CAService.AliveServerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICA/IsAlive", ReplyAction="http://tempuri.org/ICA/IsAliveResponse")]
+        Client.CAService.IsAliveResponse IsAlive(Client.CAService.IsAliveRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -212,6 +215,31 @@ namespace Client.CAService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsAlive", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsAliveRequest {
+        
+        public IsAliveRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IsAliveResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IsAliveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool IsAliveResult;
+        
+        public IsAliveResponse() {
+        }
+        
+        public IsAliveResponse(bool IsAliveResult) {
+            this.IsAliveResult = IsAliveResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ICAChannel : Client.CAService.ICA, System.ServiceModel.IClientChannel {
     }
@@ -261,6 +289,10 @@ namespace Client.CAService {
         
         public Client.CAService.AliveServerResponse AliveServer(Client.CAService.AliveServerRequest request) {
             return base.Channel.AliveServer(request);
+        }
+        
+        public Client.CAService.IsAliveResponse IsAlive(Client.CAService.IsAliveRequest request) {
+            return base.Channel.IsAlive(request);
         }
     }
 }

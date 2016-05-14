@@ -41,16 +41,18 @@ namespace Client
                     string sKeyClient = GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
                     string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
                     string privateKeyClient = decriptDataClient[0];
+                    guidClient = decriptDataClient[1];
+                    pubKeyCA = decriptDataClient[2];
                     if (alive)
                     {
-                        data = guidClient + " 5 1 " + DateTime.Now;
+                        data = guidClient + " 6 1 " + DateTime.Now;
                         data = data + " " + Cryptography.Cryptography.GetHash(data);
                         data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
                         data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
                     }
                     else
                     {
-                        data = guidClient + " 5 2 " + DateTime.Now;
+                        data = guidClient + " 6 2 " + DateTime.Now;
                         data = data + " " + Cryptography.Cryptography.GetHash(data);
                         data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
                         data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
@@ -77,7 +79,7 @@ namespace Client
             binding.TextEncoding = System.Text.Encoding.UTF8;
             binding.TransferMode = TransferMode.Buffered;
             binding.UseDefaultWebProxy = true;
-            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.0.100:45000/CA.CA"));
+            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.68.100:45000/CA.CA"));
         }
         private static string infoAboutComputer()
         {

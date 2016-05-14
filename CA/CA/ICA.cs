@@ -18,5 +18,7 @@ namespace CA
         void AliveClient(string data);
         [OperationContract()]
         void AliveServer(string data);
+        [OperationContract()]
+        bool IsAlive();
     }
 }

@@ -120,6 +120,9 @@
     <None Include="Service References\CAService\Client.CAService.AliveServerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\CAService\Client.CAService.IsAliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\CAService\Client.CAService.JoinClientResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -132,11 +135,11 @@
     <None Include="Service References\CAService\Client.CAService.RegistrateServerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\CAService\service.wsdl" />
-    <None Include="Service References\CAService\service.xsd">
+    <None Include="Service References\CAService\service1.wsdl" />
+    <None Include="Service References\CAService\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CAService\service1.xsd">
+    <None Include="Service References\CAService\service21.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
