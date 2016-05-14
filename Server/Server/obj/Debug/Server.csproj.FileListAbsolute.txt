@@ -1,0 +1,5 @@
+K:\Диплом\Server\Server\bin\Debug\Server.exe.config
+K:\Диплом\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+K:\Диплом\Server\Server\obj\Debug\Server.Form1.resources
+K:\Диплом\Server\Server\obj\Debug\Server.Properties.Resources.resources
+K:\Диплом\Server\Server\obj\Debug\Server.csproj.GenerateResource.Cache

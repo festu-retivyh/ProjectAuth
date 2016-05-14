@@ -1,0 +1,15 @@
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Release\CAManager.exe.config
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Release\CAManager.exe
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Release\CAManager.pdb
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.Autorize.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.ClientInfo.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.ControlUserSrv.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.ErrorWindow.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.MainInstallerCA.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.MainForm.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.MasterAdd.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.MasterCreate.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.Properties.Resources.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.csproj.GenerateResource.Cache
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.exe
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Release\CAManager.pdb

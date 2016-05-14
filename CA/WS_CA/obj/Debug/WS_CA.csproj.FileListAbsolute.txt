@@ -1,0 +1,79 @@
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\obj\Debug\WS_CA.pdb
+\\Machine\общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe.config
+\\Machine\общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.exe
+\\Machine\общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe.config
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\CA.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\Cryptography.dll
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\CA.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\Cryptography.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\obj\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\obj\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\obj\Debug\WS_CA.pdb
+K:\Диплом\v6\CA\WS_CA\bin\Debug\WS_CA.exe.config
+K:\Диплом\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+K:\Диплом\v6\CA\WS_CA\bin\Debug\WS_CA.pdb
+K:\Диплом\v6\CA\WS_CA\bin\Debug\CA.exe
+K:\Диплом\v6\CA\WS_CA\bin\Debug\Cryptography.dll
+K:\Диплом\v6\CA\WS_CA\bin\Debug\CA.pdb
+K:\Диплом\v6\CA\WS_CA\bin\Debug\Cryptography.pdb
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.exe
+K:\Диплом\v6\CA\WS_CA\obj\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.ProjectInstaller.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.Service1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\obj\Debug\WS_CA.pdb

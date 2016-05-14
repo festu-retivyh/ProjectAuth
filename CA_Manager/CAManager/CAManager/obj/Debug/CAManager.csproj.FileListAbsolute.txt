@@ -1,0 +1,79 @@
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe.config
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csprojResolveAssemblyReference.cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ControlUserSrv.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.exe.config
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.exe
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.pdb
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.exe
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.pdb
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ControlUserSrv.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MainInstallerCA.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+D:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.exe.config
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.exe
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\bin\Debug\CAManager.pdb
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ControlUserSrv.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.exe
+K:\Диплом\CA_Manager_vInstaller\CAManager\CAManager\obj\Debug\CAManager.pdb
+D:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\CAManager.exe.config
+D:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.exe
+D:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.pdb
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\CAManager.exe.config
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\CAManager.exe
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\CAManager.pdb
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\Cryptography.dll
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\bin\Debug\Cryptography.pdb
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.csprojResolveAssemblyReference.cache
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.ControlUserSrv.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.exe
+K:\Диплом\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAManager\CAManager\bin\Debug\CAManager.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.pdb

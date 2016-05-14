@@ -1,0 +1,1859 @@
+﻿Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service1...
+Создается исходный EventLog Service1 в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service1.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service1...
+Служба Service1 успешно установлена.
+Создается исходный EventLog Service1 в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = K:\Диплом\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника Service_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба Service_CA...
+Служба Service_CA успешно установлена.
+Создается исходный EventLog Service_CA в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\WS_CA\bin\Debug\WS_CA.exe

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CA" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ICA_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICA_JoinClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinClient" />
+  </wsdl:message>
+  <wsdl:message name="ICA_JoinClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JoinClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICA_JoinServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinServer" />
+  </wsdl:message>
+  <wsdl:message name="ICA_JoinServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JoinServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICA_RegistrateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrateClient" />
+  </wsdl:message>
+  <wsdl:message name="ICA_RegistrateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICA_RegistrateServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrateServer" />
+  </wsdl:message>
+  <wsdl:message name="ICA_RegistrateServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrateServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICA_AliveClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:AliveClient" />
+  </wsdl:message>
+  <wsdl:message name="ICA_AliveClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AliveClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICA_AliveServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AliveServer" />
+  </wsdl:message>
+  <wsdl:message name="ICA_AliveServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AliveServerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICA">
+    <wsdl:operation name="JoinClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/JoinClient" message="tns:ICA_JoinClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/JoinClientResponse" message="tns:ICA_JoinClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JoinServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/JoinServer" message="tns:ICA_JoinServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/JoinServerResponse" message="tns:ICA_JoinServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/RegistrateClient" message="tns:ICA_RegistrateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/RegistrateClientResponse" message="tns:ICA_RegistrateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/RegistrateServer" message="tns:ICA_RegistrateServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/RegistrateServerResponse" message="tns:ICA_RegistrateServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AliveClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/AliveClient" message="tns:ICA_AliveClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/AliveClientResponse" message="tns:ICA_AliveClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AliveServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICA/AliveServer" message="tns:ICA_AliveServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICA/AliveServerResponse" message="tns:ICA_AliveServer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICA" type="tns:ICA">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="JoinClient">
+      <soap:operation soapAction="http://tempuri.org/ICA/JoinClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinServer">
+      <soap:operation soapAction="http://tempuri.org/ICA/JoinServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateClient">
+      <soap:operation soapAction="http://tempuri.org/ICA/RegistrateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateServer">
+      <soap:operation soapAction="http://tempuri.org/ICA/RegistrateServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AliveClient">
+      <soap:operation soapAction="http://tempuri.org/ICA/AliveClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AliveServer">
+      <soap:operation soapAction="http://tempuri.org/ICA/AliveServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_ICA" type="tns:ICA">
+    <wsp:PolicyReference URI="#NetTcpBinding_ICA_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="JoinClient">
+      <soap12:operation soapAction="http://tempuri.org/ICA/JoinClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinServer">
+      <soap12:operation soapAction="http://tempuri.org/ICA/JoinServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateClient">
+      <soap12:operation soapAction="http://tempuri.org/ICA/RegistrateClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrateServer">
+      <soap12:operation soapAction="http://tempuri.org/ICA/RegistrateServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AliveClient">
+      <soap12:operation soapAction="http://tempuri.org/ICA/AliveClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AliveServer">
+      <soap12:operation soapAction="http://tempuri.org/ICA/AliveServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CA">
+    <wsdl:port name="BasicHttpBinding_ICA" binding="tns:BasicHttpBinding_ICA">
+      <soap:address location="http://0.0.0.0:45000/CA.CA" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_ICA" binding="tns:NetTcpBinding_ICA">
+      <soap12:address location="net.tcp://0.0.0.0:45001/CA.CA" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://0.0.0.0:45001/CA.CA</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/Machine</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

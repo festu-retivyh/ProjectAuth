@@ -1,0 +1,78 @@
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\bin\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\bin\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.Form1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\obj\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Client\Client\bin\Debug\Client.exe.config
+\\Machine\общая папка\Diplom\Client\Client\bin\Debug\Client.exe.config
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.exe
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.pdb
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.Form1.resources
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.Properties.Resources.resources
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+\\Machine\общая папка\Diplom\Client\Client\bin\Debug\Client.exe
+\\Machine\общая папка\Diplom\Client\Client\bin\Debug\Client.pdb
+\\Machine\общая папка\Diplom\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\bin\Debug\Client.exe.config
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.Form1.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\bin\Debug\Client.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\bin\Debug\Client.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\bin\Debug\Cryptography.dll
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\Client\Client\bin\Debug\Cryptography.pdb
+D:\Диплом\Client\Client\bin\Debug\Client.exe.config
+D:\Диплом\Client\Client\obj\Debug\Client.exe
+D:\Диплом\Client\Client\obj\Debug\Client.pdb
+D:\Диплом\Client\Client\bin\Debug\Client.exe
+D:\Диплом\Client\Client\bin\Debug\Client.pdb
+D:\Диплом\Client\Client\bin\Debug\Cryptography.pdb
+D:\Диплом\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Диплом\Client\Client\obj\Debug\Client.Form1.resources
+D:\Диплом\Client\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Диплом\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+K:\Диплом\Client\Client\bin\Debug\Client.exe
+K:\Диплом\Client\Client\bin\Debug\Client.pdb
+K:\Диплом\Client\Client\bin\Debug\Cryptography.dll
+K:\Диплом\Client\Client\bin\Debug\Cryptography.pdb
+K:\Диплом\Client\Client\obj\Debug\Client.Form1.resources
+K:\Диплом\Client\Client\obj\Debug\Client.InstallForm.resources
+K:\Диплом\Client\Client\obj\Debug\Client.Properties.Resources.resources
+K:\Диплом\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+K:\Диплом\Client\Client\obj\Debug\Client.exe
+K:\Диплом\Client\Client\obj\Debug\Client.pdb
+K:\Диплом\Client\Client\bin\Debug\app.config
+K:\Диплом\Client\Client\bin\Debug\Client.exe.config
+K:\Диплом\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\Client.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\app.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.Form1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.InstallForm.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\Client.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\app.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\Client.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.Form1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.InstallForm.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache

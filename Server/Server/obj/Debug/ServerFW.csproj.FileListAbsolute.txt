@@ -1,0 +1,11 @@
+K:\Диплом\Server\Server\bin\Debug\Server.exe.config
+K:\Диплом\Server\Server\bin\Debug\Server.exe
+K:\Диплом\Server\Server\bin\Debug\Server.pdb
+K:\Диплом\Server\Server\bin\Debug\Cryptography.dll
+K:\Диплом\Server\Server\bin\Debug\Cryptography.pdb
+K:\Диплом\Server\Server\obj\Debug\Server.Form1.resources
+K:\Диплом\Server\Server\obj\Debug\Server.Properties.Resources.resources
+K:\Диплом\Server\Server\obj\Debug\ServerFW.csproj.GenerateResource.Cache
+K:\Диплом\Server\Server\obj\Debug\Server.exe
+K:\Диплом\Server\Server\obj\Debug\Server.pdb
+K:\Диплом\Server\Server\obj\Debug\ServerFW.csprojResolveAssemblyReference.cache

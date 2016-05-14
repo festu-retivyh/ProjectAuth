@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAManager", "CAManager\CAManager.csproj", "{426D71D4-5E78-4D6E-9233-DC21D7D390EE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MainSetupCA", "MainSetupCA\MainSetupCA.vdproj", "{B6D68B40-9334-47A4-A43B-7D6F685E4711}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{426D71D4-5E78-4D6E-9233-DC21D7D390EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426D71D4-5E78-4D6E-9233-DC21D7D390EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426D71D4-5E78-4D6E-9233-DC21D7D390EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426D71D4-5E78-4D6E-9233-DC21D7D390EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D68B40-9334-47A4-A43B-7D6F685E4711}.Debug|Any CPU.ActiveCfg = Debug
+		{B6D68B40-9334-47A4-A43B-7D6F685E4711}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

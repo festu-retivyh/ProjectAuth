@@ -1,0 +1,8 @@
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CryptographyDll\Cryptography\Cryptography\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CryptographyDll\Cryptography\Cryptography\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CryptographyDll\Cryptography\Cryptography\obj\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CryptographyDll\Cryptography\Cryptography\obj\Debug\Cryptography.pdb
+K:\Диплом\CryptographyDll\Cryptography\Cryptography\bin\Debug\Cryptography.dll
+K:\Диплом\CryptographyDll\Cryptography\Cryptography\bin\Debug\Cryptography.pdb
+K:\Диплом\CryptographyDll\Cryptography\Cryptography\obj\Debug\Cryptography.dll
+K:\Диплом\CryptographyDll\Cryptography\Cryptography\obj\Debug\Cryptography.pdb

@@ -1,0 +1,50 @@
+C:\Users\Petez\Desktop\Programming\CA\CA\bin\Debug\CA.exe.config
+C:\Users\Petez\Desktop\Programming\CA\CA\obj\Debug\CA.exe
+C:\Users\Petez\Desktop\Programming\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\CA\bin\Debug\CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\CA\obj\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\CA\CA\obj\Debug\CA.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\bin\Debug\CA.exe.config
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\bin\Debug\CA.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\bin\Debug\CA.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\bin\Debug\Cryptography.dll
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\bin\Debug\Cryptography.pdb
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\obj\Debug\CA.exe
+D:\Моё\Обучение\Hyper-V\Общая папка\Diplom\CA\CA\obj\Debug\CA.pdb
+D:\Диплом\CA\CA\bin\Debug\CA.exe.config
+D:\Диплом\CA\CA\obj\Debug\CA.exe
+D:\Диплом\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\bin\Debug\CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\obj\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v3\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\bin\Debug\CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\obj\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
+K:\Диплом\v6\CA\CA\bin\Debug\CA.exe.config
+K:\Диплом\v6\CA\CA\bin\Debug\CA.exe
+K:\Диплом\v6\CA\CA\bin\Debug\CA.pdb
+K:\Диплом\v6\CA\CA\bin\Debug\Cryptography.dll
+K:\Диплом\v6\CA\CA\bin\Debug\Cryptography.pdb
+K:\Диплом\v6\CA\CA\obj\Debug\CA.exe
+K:\Диплом\v6\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\CA.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
