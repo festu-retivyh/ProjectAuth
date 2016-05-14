@@ -236,7 +236,9 @@ namespace Client
         private void button1_Click(object sender, EventArgs e)
         {
             string hashPin = Cryptography.Cryptography.GetHash(tbxPinCode.Text);
-            string sKeyClient = Model.GetSKeyClient(fileClient[1], curComp, curUsb, tbxPinCode.Text);
+            tbxPinCode.Text = "";
+            Model.hashPin = hashPin;
+            string sKeyClient = Model.GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
             string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
             privateKeyClient = decriptDataClient[0];
             Model.guidClient = decriptDataClient[1];

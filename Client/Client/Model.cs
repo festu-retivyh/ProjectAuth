@@ -9,7 +9,8 @@ namespace Client
     static class Model
     {
         public static UsbDisk disk;
-        public static string guidClient, pubKeyCA; 
+        public static string guidClient, pubKeyCA;
+        internal static string hashPin;
         public static string genSKeyUsb(string a, string b="", string c="", string d="")
         {
             return a + b + c + d;
@@ -37,9 +38,24 @@ namespace Client
                     //CheckHash
                     if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
                         return;
-                    data = guidClient + " 5 "+ DateTime.Now;
-                    data = data + " " + Cryptography.Cryptography.GetHash(data);
-                    data = data + " " + Cryptography.Cryptography.Sign(data, pubKeyCA);
+                    string sKeyClient = GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
+                    string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
+                    string privateKeyClient = decriptDataClient[0];
+                    if (alive)
+                    {
+                        data = guidClient + " 5 1 " + DateTime.Now;
+                        data = data + " " + Cryptography.Cryptography.GetHash(data);
+                        data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
+                        data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
+                    }
+                    else
+                    {
+                        data = guidClient + " 5 2 " + DateTime.Now;
+                        data = data + " " + Cryptography.Cryptography.GetHash(data);
+                        data = data + " " + Cryptography.Cryptography.Sign(data, privateKeyClient);
+                        data = Cryptography.Cryptography.Encrypt(data, pubKeyCA);
+                    }
+
                     var ca = CreateWebServiceInstance();
                     ca.AliveClient(new CAService.AliveClientRequest(data));
                 }
@@ -87,9 +103,9 @@ namespace Client
         //   return ca.RegistrateClient(new CAService.RegistrateClientRequest(str)).RegistrateClientResult;
         //}
 
-        public static string GetSKeyClient(string data, string curComp, string curUsb, string pin)
+        public static string GetSKeyClient(string data, string curComp, string curUsb, string hashPin)
         {
-            string hashPin = Cryptography.Cryptography.GetHash(pin);
+            //string hashPin = Cryptography.Cryptography.GetHash(pin);
             //Encoding enc = Encoding.Unicode;
             //byte[] a = enc.GetBytes(curComp);
             //byte[] b = enc.GetBytes(curUsb);
@@ -108,9 +124,9 @@ namespace Client
             string sKey = Cryptography.Cryptography.DecryptAes(data, key, hashPin);
             return sKey;
         }
-        public static string SetSKeyClient(string data, string curComp, string curUsb, string pin)
+        public static string SetSKeyClient(string data, string curComp, string curUsb, string hashPin)
         {
-            string hashPin = Cryptography.Cryptography.GetHash(pin);
+            //string hashPin = Cryptography.Cryptography.GetHash(pin);
             //Encoding enc = Encoding.Unicode;
             //byte[] a = enc.GetBytes(curComp);
             //byte[] b = enc.GetBytes(curUsb);

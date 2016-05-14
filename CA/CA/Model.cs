@@ -12,13 +12,17 @@ namespace CA
             string goodData = ReadData(data, false);
             try
             {
-                int.Parse(goodData).ToString();
+                int.Parse(goodData);
                 return; 
             }
             catch { }
             var masData = goodData.Split(' ');
             string guidClient = masData[0];
+            int command = int.Parse(masData[1]);
+
             //TODA check dateTime
+            if (command==2)
+                DbConnector.SetStateClient(guidClient, "off");
             bool rez = DbConnector.CheckStateClient(guidClient, ip);
             if(rez)
                 DbConnector.ClientAlive(guidClient);
