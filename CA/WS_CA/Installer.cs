@@ -6,6 +6,7 @@ using System.Configuration.Install;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace WS_CA
@@ -19,69 +20,31 @@ namespace WS_CA
         }
         public override void Install(IDictionary stateSaver)
         {
-            //string path = Path.Combine(new DirectoryInfo(Context.Parameters["assemblypath"].ToString()).Parent.FullName, "[project name].exe");
-            
             base.Install(stateSaver);
-            File.WriteAllText(@"D:\qwe.txt", Context.Parameters["dbname"]);
-
-            AddDBTable(this.Context.Parameters["dbname"]);
+            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
+            File.Delete(Context.Parameters["targetdir"] + "db.sql");
         }
 
-        SqlConnection sqlConnection = new SqlConnection();
-        
-        private void ExecuteSql(string dbName, string sql)
+        static void ExecuteSqlScript(string srvName, string script)
         {
-            sqlConnection.ConnectionString = "Data Source=MACHINE;Integrated Security=true;";// User Id=adm;Password = Jhjk1209;";
-            SqlCommand command = new SqlCommand(File.ReadAllText(sql), sqlConnection);
-
-            //sqlConnection.ConnectionString = Properties.Settings.Default.masterConnectionString;
-            command.Connection.Open();
-            command.Connection.ChangeDatabase(dbName);
-            try
+            // split script on GO command
+            IEnumerable<string> commandStrings = Regex.Split(script, @"^\s*GO\s*$",
+                                     RegexOptions.Multiline | RegexOptions.IgnoreCase);
+            SqlConnection myConn = new SqlConnection("Server="+srvName+";Integrated security=SSPI;database=master");
+            myConn.Open();
+            foreach (string commandString in commandStrings)
             {
-                command.ExecuteNonQuery();
-            }
-            finally
-            {
-                command.Connection.Close();
-            }
-        }
-
-        public void CreateDatabase(string connString, string dbName, bool dropExisting)
-        {
-            SqlConnection cnn = new SqlConnection(connString);
-            try
-            {
-                SqlCommand cmdCreate = new SqlCommand(string.Format("CREATE DATABASE [{0}]", dbName), cnn);
-                cnn.Open();
-                if (dropExisting)
+                if (commandString.Trim() != "")
                 {
-                    SqlCommand cmdDrop = new SqlCommand(string.Format("IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'{0}') DROP DATABASE [{0}]", dbName), cnn);
-                    cmdDrop.ExecuteNonQuery();
+                    using (var command = new SqlCommand(commandString, myConn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
                 }
-                cmdCreate.ExecuteNonQuery();
             }
-            finally
-            {
-                cnn.Close();
-            }
+            myConn.Close();
         }
 
 
-        protected void AddDBTable(string dbName)
-        {
-            try
-            {
-                CreateDatabase("server=MACHINE;Integrated Security=true;", "ProjectAuth_DB", true);
-                //ExecuteSql("master", "USE [master] CREATE DATABASE[ProjectAuth_DB] ");
-
-                ExecuteSql("ProjectAuth_DB", @"D:\db.sql");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("In exception handler: " + e.Message);
-                throw;
-            }
-        }
     }
 }

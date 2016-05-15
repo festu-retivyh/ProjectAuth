@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6852229C85D64BFB8076CE0D84328FE1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
         "OwnerKey" = "8:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
         "MsmSig" = "8:_UNDEFINED"
@@ -109,6 +115,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -125,6 +147,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -157,7 +187,7 @@
             "Sequence" = "3:1"
             "Identifier" = "8:_EE3B24E5_7CB9_42E8_B83A_659125A3FCD3"
             "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:/dbname={SERVERNAME]"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME]"
             }
         }
         "DefaultFeature"
@@ -219,6 +249,26 @@
             "TargetName" = "8:images.png"
             "Tag" = "8:"
             "Folder" = "8:_59EE9730383A458882240C7BCDA9EBDD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6852229C85D64BFB8076CE0D84328FE1"
+            {
+            "SourcePath" = "8:D:\\db.sql"
+            "TargetName" = "8:db.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_A233DCF6EE0448ACA8D813E18544A3F1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -380,6 +430,13 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_84ED2E4494F94E3C9CE0FB54BAD6CA33"
+            {
+            "Name" = "8:AdminUser"
+            "Condition" = "8:AdminUser"
+            "Message" = "8:Запустите приложение от имени администратора"
+            "InstallUrl" = "8:"
+            }
         }
         "Locator"
         {
@@ -394,7 +451,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{E3930B04-DD34-4A6E-88AF-B6B8C4BE1A2E}"
-        "PackageCode" = "8:{D0F466F7-4245-46C0-892D-611D76F7C456}"
+        "PackageCode" = "8:{7662B777-84B1-41EB-ADF6-C11766EA470C}"
         "UpgradeCode" = "8:{EC105D0B-0276-42F8-B607-A2042703FCA4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
