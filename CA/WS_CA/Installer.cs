@@ -44,6 +44,19 @@ namespace WS_CA
             }
             myConn.Close();
         }
+        public override void Uninstall(IDictionary savedState)
+        {
+            base.Uninstall(savedState);
+            string message = "Требуется ли безвозвратно удалить базу данных?"; 
+            var result = MessageBox.Show(message, "Удалить базу данных",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                ExecuteSqlScript("MACHINE", "DROP DATABASE [ProjectAuth_DB]");
+            }
+        }
 
 
     }
