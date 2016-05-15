@@ -61,7 +61,7 @@ namespace CA
 
         public void Stop()
         {
-            CheckerOnline.Suspend();
+            //CheckerOnline.Suspend();
         }
     }
     class objClient

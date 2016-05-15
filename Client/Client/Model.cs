@@ -107,13 +107,7 @@ namespace Client
                 Cryptography.Cryptography.GetHash("IJ|lT1Tl|IJ");
             return data;
         }
-        //public static string SendInstallingMessage(string str)
-        //{
-        //    CAService.CAClient ca = new CAService.CAClient("NetTcpBinding_ICA");
-
-        //   return ca.RegistrateClient(new CAService.RegistrateClientRequest(str)).RegistrateClientResult;
-        //}
-
+       
         public static string GetSKeyClient(string data, string curComp, string curUsb, string hashPin)
         {
             //string hashPin = Cryptography.Cryptography.GetHash(pin);

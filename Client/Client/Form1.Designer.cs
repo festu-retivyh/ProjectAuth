@@ -33,10 +33,10 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.CloseApp = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.iAmAliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbxPinCode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.iAmAliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseApp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.toolStripMenuItem1,
             this.iAmAliveToolStripMenuItem});
             this.CloseApp.Name = "contextMenuStrip1";
-            this.CloseApp.Size = new System.Drawing.Size(181, 70);
+            this.CloseApp.Size = new System.Drawing.Size(181, 48);
             this.CloseApp.Text = "Выйти из приложения";
             this.CloseApp.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CloseApp_ItemClicked);
             // 
@@ -65,9 +65,16 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
+            // iAmAliveToolStripMenuItem
+            // 
+            this.iAmAliveToolStripMenuItem.Name = "iAmAliveToolStripMenuItem";
+            this.iAmAliveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iAmAliveToolStripMenuItem.Text = "IAmAlive";
+            this.iAmAliveToolStripMenuItem.Click += new System.EventHandler(this.iAmAliveToolStripMenuItem_Click);
+            // 
             // tbxPinCode
             // 
-            this.tbxPinCode.Location = new System.Drawing.Point(89, 30);
+            this.tbxPinCode.Location = new System.Drawing.Point(12, 21);
             this.tbxPinCode.Name = "tbxPinCode";
             this.tbxPinCode.Size = new System.Drawing.Size(100, 20);
             this.tbxPinCode.TabIndex = 0;
@@ -76,41 +83,36 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 68);
+            this.button1.Location = new System.Drawing.Point(12, 47);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 38);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Ввод";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 12);
+            this.label1.Location = new System.Drawing.Point(13, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 2;
             // 
-            // iAmAliveToolStripMenuItem
-            // 
-            this.iAmAliveToolStripMenuItem.Name = "iAmAliveToolStripMenuItem";
-            this.iAmAliveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.iAmAliveToolStripMenuItem.Text = "IAmAlive";
-            this.iAmAliveToolStripMenuItem.Click += new System.EventHandler(this.iAmAliveToolStripMenuItem_Click);
-            // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 131);
+            this.ClientSize = new System.Drawing.Size(126, 92);
             this.ContextMenuStrip = this.CloseApp;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxPinCode);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ввод Pin-кода";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.CloseApp.ResumeLayout(false);

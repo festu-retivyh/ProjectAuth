@@ -245,7 +245,7 @@ namespace CA
             {
                 conn.Open();
             }
-            catch (SqlException se)
+            catch
             {
                 return null;
             }
