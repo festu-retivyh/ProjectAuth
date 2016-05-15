@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA", "CA\CA.csproj", "{3F0E02B8-40F5-49CC-9836-35734BE9A57A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WS_CA", "WS_CA\WS_CA.csproj", "{9C5C90C1-EC4D-4571-9D95-9BE5BF0DFC78}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProjectAuth_CA", "ProjectAuth_CA\ProjectAuth_CA.vdproj", "{762A064B-6BB0-409D-BA90-749CCD82C4DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{9C5C90C1-EC4D-4571-9D95-9BE5BF0DFC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C5C90C1-EC4D-4571-9D95-9BE5BF0DFC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C5C90C1-EC4D-4571-9D95-9BE5BF0DFC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762A064B-6BB0-409D-BA90-749CCD82C4DF}.Debug|Any CPU.ActiveCfg = Debug
+		{762A064B-6BB0-409D-BA90-749CCD82C4DF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
