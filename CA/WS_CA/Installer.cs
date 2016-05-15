@@ -23,26 +23,37 @@ namespace WS_CA
             base.Install(stateSaver);
             ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
             File.Delete(Context.Parameters["targetdir"] + "db.sql");
+
+
+            CA.ConfigurateSattings.setMainSettings(Context.Parameters["dbname"]);
         }
 
         static void ExecuteSqlScript(string srvName, string script)
         {
+             
             // split script on GO command
             IEnumerable<string> commandStrings = Regex.Split(script, @"^\s*GO\s*$",
                                      RegexOptions.Multiline | RegexOptions.IgnoreCase);
             SqlConnection myConn = new SqlConnection("Server="+srvName+";Integrated security=SSPI;database=master");
             myConn.Open();
-            foreach (string commandString in commandStrings)
+            try
             {
-                if (commandString.Trim() != "")
+                foreach (string commandString in commandStrings)
                 {
-                    using (var command = new SqlCommand(commandString, myConn))
+                    if (commandString.Trim() != "")
                     {
-                        command.ExecuteNonQuery();
+                        using (var command = new SqlCommand(commandString, myConn))
+                        {
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
             }
+            catch { }
+            finally { 
             myConn.Close();
+            }
+
         }
         public override void Uninstall(IDictionary savedState)
         {

@@ -166,9 +166,9 @@ namespace CA
 
         internal static void SetStateClient(string guidClient, string state, string ip="")
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            var connection = "Data Source="+CASettings.Default.Setting+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
             SqlConnection conn = new SqlConnection(connection);
-            File.WriteAllText(@"d:\z.txt", guidClient + " = " + state + " = " + ip);
+            File.WriteAllText(@"d:\z.txt", guidClient + " = " + state + " = " + ip + " = " + CASettings.Default.Setting);
             try
             {
                 conn.Open();
