@@ -13,9 +13,11 @@ namespace CAManager
     public partial class ControlUserSrv : Form
     {
         int currentClientId;
-        public ControlUserSrv()
+        public ControlUserSrv(int id=0)
         {
+            currentClientId = id;
             InitializeComponent();
+
         }
         public void ChangeUser(int id, string name)
         {
@@ -27,9 +29,10 @@ namespace CAManager
             //userSvr.Adapter.SelectCommand.Parameters.AddWithValue("clientId", currentClientId);
             //userSrvBindingSource.ResetBindings(false);
 
-            tbxUser.Text = name;
-            currentClientId = id;
-            userSrvBindingSource.Filter = "clientId = "+ currentClientId.ToString();
+            userSrvTableAdapter.Fill(myFWDataSet.UserSrv, id);
+            //////tbxUser.Text = name;
+            //////currentClientId = id;
+            //////userSrvBindingSource.Filter = "clientId = "+ currentClientId.ToString();
             //userSrvTableAdapter.Adapter.SelectCommand.Parameters.AddWithValue("clientId", currentClientId);
             //userSrvBindingSource.ResetBindings(false);
 
@@ -40,7 +43,7 @@ namespace CAManager
 
         private void ControlUserSrv_Load(object sender, EventArgs e)
         {
-            
+            userSrvTableAdapter.Fill(myFWDataSet.UserSrv, currentClientId);
             //query
             //SqlDataAdapter dataadapter = new SqlDataAdapter(query, userSrvTableAdapter.Connection);
             //string connectionString = "Data Source=.;Initial Catalog=pubs;Integrated Security=True";

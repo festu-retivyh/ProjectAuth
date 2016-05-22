@@ -48,12 +48,12 @@ namespace Client
             binding.TextEncoding = System.Text.Encoding.UTF8;
             binding.TransferMode = TransferMode.Buffered;
             binding.UseDefaultWebProxy = true;
-            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.0.100:45000/CA.CA"));
+            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.68.100:45000/CA.CA"));
         }
 
         private void Form_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
-            pin = ((InstallForm)sender).pin;
+            pin = Cryptography.Cryptography.GetHash(((InstallForm)sender).pin);
         }
 
         public void RegistrateClient()

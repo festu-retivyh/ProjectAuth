@@ -80,3 +80,17 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAMa
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe.config
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ControlUserSrv.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache

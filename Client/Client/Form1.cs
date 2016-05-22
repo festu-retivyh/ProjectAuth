@@ -16,7 +16,7 @@ namespace Client
         string curUsb, curComp, privateKeyClient, hashUsb;
         TimerAlive ta;
         #endregion
-        
+
         public Form1()
         {
             ta = new TimerAlive(30000);
@@ -29,9 +29,6 @@ namespace Client
             UsbSearcher.onAddUsb += UsbSearcher_onAddUsb;
             UsbSearcher.onDelUsb += UsbSearcher_onDelUsb;
             searchUsbThread.Start();
-            //InstallerClass ic = new InstallerClass();
-            //ic.pin = "1234";
-            //ic.RegistrateClient();
         }
 
         private void UsbSearcher_onDelUsb(UsbDisk nameDisk)
@@ -45,7 +42,7 @@ namespace Client
 
         void UsbSearcher_onAddUsb(UsbDisk nameDisk)
         {
-            if(Model.disk==null)
+            if (Model.disk == null)
                 CheckFile(nameDisk);
         }
 
@@ -56,29 +53,26 @@ namespace Client
                 curUsb = UsbSearcher.infoUsbGet(_disk);
                 curComp = infoAboutComputer();
                 fileUsb = File.ReadAllText(_disk.name + @"\maan.key").Split(' ');
-                //string PublicKeyCA = fileUsb[1];
                 hashUsb = curUsb;
                 for (int i = 0; i < 100; i++)
                     hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
-                //curUsb = Cryptography.Cryptography.GetHash(curUsb);
                 curComp = Cryptography.Cryptography.GetHash(curComp);
 
                 fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
                 string HashSKeyClient = fileClient[3];
                 disk = _disk;
-                //CheckHash
                 if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
                     return;
                 label1.Invoke(new Action(delegate ()
-                   {
-                       label1.Text = "Файл найден";
-                   }));
+                {
+                    label1.Text = "Файл найден";
+                }));
                 this.Invoke(new Action(delegate ()
-                   {
-                       Show();
-                       notifyIcon1.Visible = false;
-                       WindowState = FormWindowState.Normal;
-                   }));
+                {
+                    Show();
+                    notifyIcon1.Visible = false;
+                    WindowState = FormWindowState.Normal;
+                }));
                 label1.Invoke(new Action(delegate ()
                 {
                     label1.Text = "Введите PIN-код";
@@ -109,34 +103,26 @@ namespace Client
 
         private string GenerateJoinMessage()
         {
-            string message = Model.guidClient + " 6 1 " + DateTime.Now;
-            message = message + " " + Cryptography.Cryptography.GetHash(message);
-            message = message + " " + Cryptography.Cryptography.Sign(message, privateKeyClient);
-            message = Cryptography.Cryptography.Encrypt(message, Model.pubKeyCA);
-            return message;
+            ConstractorMessage cm = new ConstractorMessage();
+            return cm.GetEncriptMessage(Model.pubKeyCA, privateKeyClient, "1", Model.guidClient);
         }
 
         private string GenerateAcceptTocken(string message)
         {
-            
+
             string usbData = fileUsb[0];
             string[] masMessage = message.Split(' ');
             string sKeyUsb = Model.genSKeyUsb(hashUsb, masMessage[2]);
             string criptDataUsb = masMessage[3];
             criptDataUsb = Cryptography.Cryptography.DecryptAes(usbData, sKeyUsb, hashUsb);
-            //if (!(CheckSing(criptDataUsb.Split(' '))))
-            //    return "fail";
             string guidUsb = criptDataUsb.Split(' ')[0];
             string privKeyUsb = criptDataUsb.Split(' ')[1];
-            message = masMessage[3].Replace("!!!!!"," ");
+            message = masMessage[3].Replace("!!!!!", " ");
             message = ReadMessage(message, privKeyUsb);
 
-            message = message.Split(' ')[2];  //tocken from CA
-            message = guidUsb + " 7 2 " + DateTime.Now + " " + message;
-            message = message + " " + Cryptography.Cryptography.GetHash(message);
-            message = message + " " + Cryptography.Cryptography.Sign(message, privKeyUsb);
-            message = Cryptography.Cryptography.Encrypt(message, Model.pubKeyCA);
-            return message;
+            ConstractorMessage cm = new ConstractorMessage();
+            cm.AddData(message.Split(' ')[2]);
+            return cm.GetEncriptMessage(Model.pubKeyCA, privKeyUsb, "2", guidUsb);
         }
 
         private string ReadMessage(string messageFromCA, string privateKey)
@@ -163,13 +149,13 @@ namespace Client
         private bool CheckSing(string[] masData)
         {
             string dataForCheck = masData[0];
-            for (int i = 1; i < masData.Length-1; i++)
+            for (int i = 1; i < masData.Length - 1; i++)
             {
                 dataForCheck += " " + masData[i];
             }
             return Cryptography.Cryptography.CheckSign(dataForCheck, masData[masData.Length - 1], Model.pubKeyCA);
         }
-        
+
         private string infoAboutUsb(UsbDisk _disk)
         {
             return UsbSearcher.infoUsbGet(_disk);
@@ -228,7 +214,7 @@ namespace Client
 
         private void iAmAliveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Model.SendAliveMessage();
+            // Model.SendAliveMessage();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -248,12 +234,12 @@ namespace Client
             string hashPin = Cryptography.Cryptography.GetHash(tbxPinCode.Text);
             tbxPinCode.Text = "";
             Model.hashPin = hashPin;
-            string sKeyClient = Model.GetSKeyClient(fileClient[1], curComp, curUsb, hashPin);
+            string sKeyClient = Model.GetSKeyClient(fileClient[1], curComp, hashUsb, hashPin);
             string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
             privateKeyClient = decriptDataClient[0];
             Model.guidClient = decriptDataClient[1];
             Model.pubKeyCA = decriptDataClient[2];
-            var ca = CreateWebServiceInstance();//new CAService.CAClient("NetTcpBinding_ICA");
+            var ca = CreateWebServiceInstance();
             //ca.Open();
             try
             {
@@ -269,7 +255,6 @@ namespace Client
 
             messageFromCA = ReadMessage(messageFromCA, privateKeyClient);
             messageFromCA = ca.JoinClient(new CAService.JoinClientRequest(GenerateAcceptTocken(messageFromCA))).JoinClientResult;
-            //messageFromCA = ReadMessage(messageFromCA, privateKeyClient);
             ca.Close();
             Close();
             if (Model.disk == null)
@@ -277,6 +262,7 @@ namespace Client
         }
         private void CloseApp_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            MessageBox.Show(e.ClickedItem.Name);
             //Close();
         }
         private void Form1_Shown(object sender, EventArgs e)
