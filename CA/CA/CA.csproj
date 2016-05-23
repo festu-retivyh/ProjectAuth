@@ -34,10 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CA.cs" />
-    <Compile Include="ConfigurateSattings.cs" />
+    <Compile Include="CASettings.cs" />
     <Compile Include="DbConnector.cs" />
     <Compile Include="EventTimer.cs" />
     <Compile Include="ICA.cs" />
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="myFWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -62,8 +68,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
@@ -88,7 +96,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="CASettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>CASettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>

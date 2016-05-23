@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CA;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,8 +25,10 @@ namespace WS_CA
             ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
             File.Delete(Context.Parameters["targetdir"] + "db.sql");
 
-
-            CA.ConfigurateSattings.setMainSettings(Context.Parameters["dbname"]);
+            CASettings.Default.Setting = Context.Parameters["dbname"];
+            CASettings.Default.Save();
+            File.WriteAllText(@"d:\sett.txt", CASettings.Default.Setting);
+            //CA.ConfigurateSattings.setMainSettings(Context.Parameters["dbname"]);
         }
 
         static void ExecuteSqlScript(string srvName, string script)

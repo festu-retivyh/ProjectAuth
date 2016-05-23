@@ -13,7 +13,7 @@ namespace CA {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
-    internal sealed partial class CASettings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class CASettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static CASettings defaultInstance = ((CASettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new CASettings())));
         
@@ -25,7 +25,7 @@ namespace CA {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("my value")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MACHINE")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));

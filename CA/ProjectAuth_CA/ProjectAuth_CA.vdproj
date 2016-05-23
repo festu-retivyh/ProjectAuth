@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5E09E7D23281498C84AC190E43F8C2A2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_6852229C85D64BFB8076CE0D84328FE1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -169,6 +163,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_1933EC5D9D534DB298DFD81D6156B6B5"
+            {
+            "Name" = "8:Основные выходные файлы from CA (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:2"
+            "Identifier" = "8:_8E18624C_3F65_4640_A36F_BE30F3F62187"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME]"
+            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_895F2260E2754DA78CCF7ECE8DD79694"
             {
             "Name" = "8:Основные выходные файлы from WS_CA (Active)"
@@ -249,26 +257,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E09E7D23281498C84AC190E43F8C2A2"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\images.png"
-            "TargetName" = "8:images.png"
-            "Tag" = "8:"
-            "Folder" = "8:_59EE9730383A458882240C7BCDA9EBDD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6852229C85D64BFB8076CE0D84328FE1"
@@ -459,7 +447,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{E3930B04-DD34-4A6E-88AF-B6B8C4BE1A2E}"
-        "PackageCode" = "8:{0E22F57D-CFDD-4168-B29B-DAB98205F287}"
+        "PackageCode" = "8:{71FC2DB9-8905-468B-9331-A5DC2395F058}"
         "UpgradeCode" = "8:{EC105D0B-0276-42F8-B607-A2042703FCA4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

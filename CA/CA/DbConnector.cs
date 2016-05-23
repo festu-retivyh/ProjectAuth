@@ -9,6 +9,20 @@ namespace CA
 {
     class DbConnector
     {
+        private static SqlConnection GetConnection()
+        {
+            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            SqlConnection conn = new SqlConnection(connection);
+            try
+            { 
+                conn.Open();
+            }
+            catch
+            {
+                conn = null;
+            }
+            return conn;
+        }
         internal static void RegistrateClient(string guidUSB, string guidClient, Certificate certificate)
         {
             ////Запрос к безe на добавление сертификата (certificate)
@@ -21,18 +35,21 @@ namespace CA
             //tbClient.GetData(guidUSB, guidClient, id);
 
             ////////////////////////////////////////////
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
-            //File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            }
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            ////var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
+            ////File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //}
+            var conn = GetConnection();
+            if (conn == null)
+                return;
             string comm = @"EXEC [dbo].[InsertCertificate] @publicKey, @type, @start, @stop, @date, @guidClient ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("publicKey", certificate.publicKey);
@@ -58,13 +75,19 @@ namespace CA
 
         internal static void GetOnlineClients(ref List<objClient> list)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    list.Clear();
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
             {
                 list.Clear();
                 return;
@@ -83,16 +106,19 @@ namespace CA
 
         internal static void ClientAlive(string guidClient)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return;
-            }
             string comm = @"Update [dbo].[ClientState] SET [date]=@date where id = (select TOP(1) id from ClientState where clientid = (select id from client where guid = @guid) Order by date desc)";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -102,12 +128,15 @@ namespace CA
 
         internal static bool CheckStateClient(string guidClient, string ip)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            { conn.Open();}
-            catch
-            { return false; }
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{ conn.Open();}
+            //catch
+            //{ return false; }
+            var conn = GetConnection();
+            if (conn == null)
+                return false;
             string comm = @"Select TOP(1) ClientState.stateid, client.address, ClientState.date from ClientState left join Client on clientState.clientid=client.id where clientid = (select id from client where guid = @guid) Order by date desc";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -122,16 +151,19 @@ namespace CA
 
         internal static void SetPartKey(string guidUSB, string partKey)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return;
-            }
             string comm = @"Update USB SET partKey=@key where guid = @guid";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidUSB);
@@ -141,17 +173,20 @@ namespace CA
 
         internal static string GetGuidClientOfUsb(string guidUsb)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"Select Client.guid from usb left join client on usb.id=client.usbid where usb.guid=@guid";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidUsb);
@@ -166,17 +201,20 @@ namespace CA
 
         internal static void SetStateClient(string guidClient, string state, string ip="")
         {
-            var connection = "Data Source="+CASettings.Default.Setting+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            File.WriteAllText(@"d:\z.txt", guidClient + " = " + state + " = " + ip + " = " + CASettings.Default.Setting);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source="+CASettings.Default.Setting+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //File.WriteAllText(@"d:\z.txt", guidClient + " = " + state + " = " + ip + " = " + CASettings.Default.Setting);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return;
-            }
             string comm = @"Update Client SET address=@ip where guid = @guid";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -200,16 +238,19 @@ namespace CA
 
         internal static void SetCertificateStatus(string guid, string status)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return;
-            }
             string comm = @"Insert INTO [dbo].[CertificateStatus] ([CertificateId],[statusId],[date]) VALUES ((Select id from [dbo].[Certificate] where guid=@guid), @state, @date)";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
@@ -237,18 +278,21 @@ namespace CA
             //return cert;
             /////////////////////////////////////////////////////////////////////
 
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
-            //File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            ////var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
+            ////File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"EXEC [dbo].[GetCertificate] @guid ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
@@ -269,17 +313,20 @@ namespace CA
 
         internal static string GetOnlineClientsForServer(string guid)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"SELECT Client.address FROM Client INNER JOIN ClientServer ON Client.id = ClientServer.clientId INNER JOIN Server ON ClientServer.serverId = Server.id WHERE (Server.guid = @guid)";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
@@ -300,16 +347,19 @@ namespace CA
             //myFWDataSetTableAdapters.insertTempGuidTableAdapter tb = new myFWDataSetTableAdapters.insertTempGuidTableAdapter();
 
             //var rez = tb.GetData(guid, clientGuid);
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return;
-            }
             string comm = @"EXEC insertTempGuid @guid, @ClientGuid ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
@@ -321,17 +371,20 @@ namespace CA
         {
             //myFWDataSetTableAdapters.GetPartKeyTableAdapter tb = new myFWDataSetTableAdapters.GetPartKeyTableAdapter();
             //var rez = tb.GetData(guidClient);
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"EXEC GetPartKey @guid ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -346,16 +399,19 @@ namespace CA
 
         internal static string CheckTocken(string goodData, string guidUsb)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch 
-            {
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch 
+            //{
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"SELECT TempGuid.guid, TempGuid.date FROM  Client INNER JOIN Usb ON Client.usbId = Usb.id INNER JOIN TempGuid ON Client.id = TempGuid.clientId WHERE (Usb.guid = @guid) Order by TempGuid.id desc";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidUsb);
@@ -380,17 +436,20 @@ namespace CA
             //cert.dateStop = rez[0].dateStop;
             //cert.publicKey = rez[0].publicKey;
 
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"EXEC [dbo].[GetUsbCertificateOfClient] @guid ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -409,17 +468,20 @@ namespace CA
 
         internal static Certificate GetUSBCertificate(string guidUsb)
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            SqlConnection conn = new SqlConnection(connection);
-            try
-            {
-                conn.Open();
-            }
-            catch (SqlException se)
-            {
-                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            //SqlConnection conn = new SqlConnection(connection);
+            //try
+            //{
+            //    conn.Open();
+            //}
+            //catch (SqlException se)
+            //{
+            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
+            //    return null;
+            //}
+            var conn = GetConnection();
+            if (conn == null)
                 return null;
-            }
             string comm = @"EXEC [dbo].[GetUsbCert] @guid ";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidUsb);
