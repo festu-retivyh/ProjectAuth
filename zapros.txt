@@ -1,0 +1,5 @@
+SELECT        [Server].id, Server.name, Server.address, tbl.have
+FROM            [Server] LEFT OUTER JOIN
+                             (SELECT        clientId AS id, 1 AS have, ClientServer.ServerId
+                               FROM            ClientServer
+                               WHERE        (clientId = 9029)) AS tbl ON [Server].id = tbl.serverId

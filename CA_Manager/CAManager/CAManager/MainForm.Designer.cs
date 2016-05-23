@@ -41,16 +41,19 @@
             this.btnStatistic = new System.Windows.Forms.Button();
             this.mainTabsControl = new System.Windows.Forms.TabControl();
             this.tabStatistic = new System.Windows.Forms.TabPage();
-            this.certificateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myFWDataSet = new CAManager.myFWDataSet();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabOnlineUsers = new System.Windows.Forms.TabPage();
             this.dgvOnlineUsers = new System.Windows.Forms.DataGridView();
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlineClientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlineClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myFWDataSet = new CAManager.myFWDataSet();
             this.onlineUserPanel = new System.Windows.Forms.Panel();
             this.btnSelectUserOnline = new System.Windows.Forms.Button();
             this.btnBlockUserOnline = new System.Windows.Forms.Button();
@@ -95,27 +98,22 @@
             this.tbxNewPass2 = new System.Windows.Forms.TextBox();
             this.tbxNewPass1 = new System.Windows.Forms.TextBox();
             this.tbxOldPass = new System.Windows.Forms.TextBox();
-            this.onlineClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.certificateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.onlineClientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientsLastStatesTableAdapter = new CAManager.myFWDataSetTableAdapters.ClientsLastStatesTableAdapter();
             this.onlineClientsTableAdapter = new CAManager.myFWDataSetTableAdapters.OnlineClientsTableAdapter();
             this.clientTableAdapter = new CAManager.myFWDataSetTableAdapters.ClientTableAdapter();
             this.tableAdapterManager = new CAManager.myFWDataSetTableAdapters.TableAdapterManager();
             this.certificateTableAdapter = new CAManager.myFWDataSetTableAdapters.CertificateTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainMenuPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.mainTabsControl.SuspendLayout();
             this.tabStatistic.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.tabOnlineUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
             this.onlineUserPanel.SuspendLayout();
             this.tabAllUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
@@ -129,7 +127,9 @@
             this.panel3.SuspendLayout();
             this.tabGeneralSettings.SuspendLayout();
             this.tabSecuritySettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuPanel
@@ -272,21 +272,6 @@
             this.tabStatistic.Text = "Статистика";
             this.tabStatistic.UseVisualStyleBackColor = true;
             // 
-            // certificateBindingSource
-            // 
-            this.certificateBindingSource.DataMember = "Certificate";
-            this.certificateBindingSource.DataSource = this.myFWDataSet;
-            // 
-            // myFWDataSet
-            // 
-            this.myFWDataSet.DataSetName = "myFWDataSet";
-            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataMember = "Client";
-            this.clientBindingSource.DataSource = this.myFWDataSet;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -349,10 +334,46 @@
             this.ip.HeaderText = "ip";
             this.ip.Name = "ip";
             // 
-            // onlineClientsBindingSource1
+            // idDataGridViewTextBoxColumn
             // 
-            this.onlineClientsBindingSource1.DataMember = "OnlineClients";
-            this.onlineClientsBindingSource1.DataSource = this.myFWDataSet;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // fIODataGridViewTextBoxColumn
+            // 
+            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
+            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
+            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            this.fIODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stateIdDataGridViewTextBoxColumn
+            // 
+            this.stateIdDataGridViewTextBoxColumn.DataPropertyName = "StateId";
+            this.stateIdDataGridViewTextBoxColumn.HeaderText = "StateId";
+            this.stateIdDataGridViewTextBoxColumn.Name = "stateIdDataGridViewTextBoxColumn";
+            // 
+            // stateNameDataGridViewTextBoxColumn
+            // 
+            this.stateNameDataGridViewTextBoxColumn.DataPropertyName = "StateName";
+            this.stateNameDataGridViewTextBoxColumn.HeaderText = "StateName";
+            this.stateNameDataGridViewTextBoxColumn.Name = "stateNameDataGridViewTextBoxColumn";
+            // 
+            // loginDataGridViewTextBoxColumn1
+            // 
+            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn1.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
+            // 
+            // onlineClientsBindingSource
+            // 
+            this.onlineClientsBindingSource.DataMember = "OnlineClients";
+            this.onlineClientsBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // myFWDataSet
+            // 
+            this.myFWDataSet.DataSetName = "myFWDataSet";
+            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // onlineUserPanel
             // 
@@ -428,6 +449,7 @@
             this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllUsers.Size = new System.Drawing.Size(762, 504);
             this.dgvAllUsers.TabIndex = 1;
+            this.dgvAllUsers.DoubleClick += new System.EventHandler(this.dgvAllUsers_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -742,10 +764,20 @@
             this.tbxOldPass.Size = new System.Drawing.Size(155, 20);
             this.tbxOldPass.TabIndex = 0;
             // 
-            // onlineClientsBindingSource
+            // certificateBindingSource
             // 
-            this.onlineClientsBindingSource.DataMember = "OnlineClients";
-            this.onlineClientsBindingSource.DataSource = this.myFWDataSet;
+            this.certificateBindingSource.DataMember = "Certificate";
+            this.certificateBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataMember = "Client";
+            this.clientBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // onlineClientsBindingSource1
+            // 
+            this.onlineClientsBindingSource1.DataMember = "OnlineClients";
+            this.onlineClientsBindingSource1.DataSource = this.myFWDataSet;
             // 
             // clientsLastStatesTableAdapter
             // 
@@ -784,37 +816,6 @@
             // 
             this.certificateTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // fIODataGridViewTextBoxColumn
-            // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
-            this.fIODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateIdDataGridViewTextBoxColumn
-            // 
-            this.stateIdDataGridViewTextBoxColumn.DataPropertyName = "StateId";
-            this.stateIdDataGridViewTextBoxColumn.HeaderText = "StateId";
-            this.stateIdDataGridViewTextBoxColumn.Name = "stateIdDataGridViewTextBoxColumn";
-            // 
-            // stateNameDataGridViewTextBoxColumn
-            // 
-            this.stateNameDataGridViewTextBoxColumn.DataPropertyName = "StateName";
-            this.stateNameDataGridViewTextBoxColumn.HeaderText = "StateName";
-            this.stateNameDataGridViewTextBoxColumn.Name = "stateNameDataGridViewTextBoxColumn";
-            // 
-            // loginDataGridViewTextBoxColumn1
-            // 
-            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn1.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -832,12 +833,10 @@
             this.mainTabsControl.ResumeLayout(false);
             this.tabStatistic.ResumeLayout(false);
             this.tabStatistic.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.tabOnlineUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
             this.onlineUserPanel.ResumeLayout(false);
             this.tabAllUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
@@ -853,7 +852,9 @@
             this.tabGeneralSettings.PerformLayout();
             this.tabSecuritySettings.ResumeLayout(false);
             this.tabSecuritySettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onlineClientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

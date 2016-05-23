@@ -12803,8 +12803,8 @@ namespace CAManager.myFWDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CertificateStatus] ([CertificateId], [statusId], [date]) VALUE" +
-                "S (@CertificateId, @statusId, @date);\r\nSELECT id, CertificateId, statusId, date " +
-                "FROM CertificateStatus WHERE (id = SCOPE_IDENTITY())";
+                "S (@CertificateId, @statusId, @date);\nSELECT id, CertificateId, statusId, date F" +
+                "ROM CertificateStatus WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CertificateId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@statusId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "statusId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13122,8 +13122,8 @@ SELECT id, CertificateId, statusId, date FROM CertificateStatus WHERE (id = @id)
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Client] ([guid], [cerificateId], [usbId], [userId]) VALUES (@g" +
-                "uid, @cerificateId, @usbId, @userId);\r\nSELECT id, guid, cerificateId, usbId, use" +
-                "rId FROM Client WHERE (id = SCOPE_IDENTITY())";
+                "uid, @cerificateId, @usbId, @userId);\nSELECT id, guid, cerificateId, usbId, user" +
+                "Id FROM Client WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cerificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cerificateId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13520,8 +13520,8 @@ SELECT id, guid, cerificateId, usbId, userId FROM Client WHERE (id = @id)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ClientServer] ([clientId], [serverId], [ipOut], [portIn]) VALU" +
-                "ES (@clientId, @serverId, @ipOut, @portIn);\r\nSELECT id, clientId, serverId, ipOu" +
-                "t, portIn FROM ClientServer WHERE (id = SCOPE_IDENTITY())";
+                "ES (@clientId, @serverId, @ipOut, @portIn);\nSELECT id, clientId, serverId, ipOut" +
+                ", portIn FROM ClientServer WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clientId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clientId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serverId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serverId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13889,8 +13889,8 @@ SELECT id, clientId, serverId, ipOut, portIn FROM ClientServer WHERE (id = @id)"
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ClientState] ([date], [clientId], [stateId]) VALUES (@date, @c" +
-                "lientId, @stateId);\r\nSELECT id, date, clientId, stateId FROM ClientState WHERE (" +
-                "id = SCOPE_IDENTITY())";
+                "lientId, @stateId);\nSELECT id, date, clientId, stateId FROM ClientState WHERE (i" +
+                "d = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clientId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clientId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14202,7 +14202,7 @@ SELECT id, date, clientId, stateId FROM ClientState WHERE (id = @id)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Log] ([id], [text], [typeLogId]) VALUES (@id, @text, @typeLogI" +
-                "d);\r\nSELECT id, text, typeLogId FROM [Log] WHERE (id = @id)";
+                "d);\nSELECT id, text, typeLogId FROM [Log] WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14210,8 +14210,8 @@ SELECT id, date, clientId, stateId FROM ClientState WHERE (id = @id)";
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Log] SET [id] = @id, [text] = @text, [typeLogId] = @typeLogId WHERE" +
-                " (([id] = @Original_id) AND ([typeLogId] = @Original_typeLogId));\r\nSELECT id, te" +
-                "xt, typeLogId FROM [Log] WHERE (id = @id)";
+                " (([id] = @Original_id) AND ([typeLogId] = @Original_typeLogId));\nSELECT id, tex" +
+                "t, typeLogId FROM [Log] WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14524,8 +14524,8 @@ SELECT id, date, clientId, stateId FROM ClientState WHERE (id = @id)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Server] ([date], [name], [address], [guid], [certificateId]) V" +
-                "ALUES (@date, @name, @address, @guid, @certificateId);\r\nSELECT id, date, name, a" +
-                "ddress, guid, certificateId FROM Server WHERE (id = SCOPE_IDENTITY())";
+                "ALUES (@date, @name, @address, @guid, @certificateId);\nSELECT id, date, name, ad" +
+                "dress, guid, certificateId FROM Server WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -14944,8 +14944,8 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ServerTypeClient] ([typeId], [serverId], [ipOut], [portIn]) VA" +
-                "LUES (@typeId, @serverId, @ipOut, @portIn);\r\nSELECT id, typeId, serverId, ipOut," +
-                " portIn FROM ServerTypeClient WHERE (id = SCOPE_IDENTITY())";
+                "LUES (@typeId, @serverId, @ipOut, @portIn);\nSELECT id, typeId, serverId, ipOut, " +
+                "portIn FROM ServerTypeClient WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@typeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "typeId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@serverId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serverId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15307,14 +15307,14 @@ SELECT id, typeId, serverId, ipOut, portIn FROM ServerTypeClient WHERE (id = @id
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[State] ([name]) VALUES (@name);\r\nSELECT id, name FROM State WH" +
-                "ERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[State] ([name]) VALUES (@name);\nSELECT id, name FROM State WHE" +
+                "RE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[State] SET [name] = @name WHERE (([id] = @Original_id) AND ([name] " +
-                "= @Original_name));\r\nSELECT id, name FROM State WHERE (id = @id)";
+                "= @Original_name));\nSELECT id, name FROM State WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15624,14 +15624,14 @@ SELECT id, typeId, serverId, ipOut, portIn FROM ServerTypeClient WHERE (id = @id
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Status] ([name]) VALUES (@name);\r\nSELECT id, name FROM Status " +
-                "WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Status] ([name]) VALUES (@name);\nSELECT id, name FROM Status W" +
+                "HERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Status] SET [name] = @name WHERE (([id] = @Original_id) AND ([name]" +
-                " = @Original_name));\r\nSELECT id, name FROM Status WHERE (id = @id)";
+                " = @Original_name));\nSELECT id, name FROM Status WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15946,8 +15946,8 @@ SELECT id, typeId, serverId, ipOut, portIn FROM ServerTypeClient WHERE (id = @id
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TempGuid] ([guid], [date], [clientId]) VALUES (@guid, @date, @" +
-                "clientId);\r\nSELECT id, guid, date, clientId FROM TempGuid WHERE (id = SCOPE_IDEN" +
-                "TITY())";
+                "clientId);\nSELECT id, guid, date, clientId FROM TempGuid WHERE (id = SCOPE_IDENT" +
+                "ITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16277,15 +16277,15 @@ SELECT id, guid, date, clientId FROM TempGuid WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeCertificate] ([name]) VALUES (@name);\r\nSELECT id, name FRO" +
-                "M TypeCertificate WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeCertificate] ([name]) VALUES (@name);\nSELECT id, name FROM" +
+                " TypeCertificate WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TypeCertificate] SET [name] = @name WHERE (([id] = @Original_id) AN" +
-                "D ([name] = @Original_name));\r\nSELECT id, name FROM TypeCertificate WHERE (id = " +
-                "@id)";
+                "D ([name] = @Original_name));\nSELECT id, name FROM TypeCertificate WHERE (id = @" +
+                "id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16595,16 +16595,16 @@ SELECT id, guid, date, clientId FROM TempGuid WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[typeClient] ([id], [name]) VALUES (@id, @name);\r\nSELECT id, na" +
-                "me FROM typeClient WHERE (id = @id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[typeClient] ([id], [name]) VALUES (@id, @name);\nSELECT id, nam" +
+                "e FROM typeClient WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[typeClient] SET [id] = @id, [name] = @name WHERE (([id] = @Original" +
-                "_id) AND ([name] = @Original_name));\r\nSELECT id, name FROM typeClient WHERE (id " +
-                "= @id)";
+                "_id) AND ([name] = @Original_name));\nSELECT id, name FROM typeClient WHERE (id =" +
+                " @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16915,14 +16915,14 @@ SELECT id, guid, date, clientId FROM TempGuid WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeLog] ([name]) VALUES (@name);\r\nSELECT id, name FROM TypeLo" +
-                "g WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeLog] ([name]) VALUES (@name);\nSELECT id, name FROM TypeLog" +
+                " WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[TypeLog] SET [name] = @name WHERE (([id] = @Original_id) AND ([name" +
-                "] = @Original_name));\r\nSELECT id, name FROM TypeLog WHERE (id = @id)";
+                "] = @Original_name));\nSELECT id, name FROM TypeLog WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -17240,8 +17240,8 @@ SELECT id, guid, date, clientId FROM TempGuid WHERE (id = @id)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Usb] ([guid], [certificateId], [partKey], [hash]) VALUES (@gui" +
-                "d, @certificateId, @partKey, @hash);\r\nSELECT id, guid, certificateId, partKey, h" +
-                "ash FROM Usb WHERE (id = SCOPE_IDENTITY())";
+                "d, @certificateId, @partKey, @hash);\nSELECT id, guid, certificateId, partKey, ha" +
+                "sh FROM Usb WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17660,8 +17660,8 @@ SELECT id, guid, certificateId, partKey, hash FROM Usb WHERE (id = @id)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[User] ([fname], [name], [sname], [login], [domain], [delated])" +
-                " VALUES (@fname, @name, @sname, @login, @domain, @delated);\r\nSELECT id, fname, n" +
-                "ame, sname, login, domain, delated FROM [User] WHERE (id = SCOPE_IDENTITY())";
+                " VALUES (@fname, @name, @sname, @login, @domain, @delated);\nSELECT id, fname, na" +
+                "me, sname, login, domain, delated FROM [User] WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18621,9 +18621,9 @@ SELECT id, fname, name, sname, login, domain, delated FROM [User] WHERE (id = @i
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Server.name, Server.id, ClientServer.clientId\r\nFROM            Clie" +
-                "ntServer INNER JOIN\r\n                         Server ON ClientServer.serverId = " +
-                "Server.id\r\nWHERE        (ClientServer.clientId = @clientId)";
+            this._commandCollection[0].CommandText = "SELECT        Server.name, Server.id, ClientServer.clientId\nFROM            Clien" +
+                "tServer INNER JOIN\n                         Server ON ClientServer.serverId = Se" +
+                "rver.id\nWHERE        (ClientServer.clientId = @clientId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clientId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "clientId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

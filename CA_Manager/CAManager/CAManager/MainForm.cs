@@ -163,5 +163,11 @@ namespace CAManager
             MasterCreate m = new MasterCreate();
             m.Show();
         }
+
+        private void dgvAllUsers_DoubleClick(object sender, EventArgs e)
+        {
+            ControlUserSrv test = new ControlUserSrv(int.Parse(((DataGridView)sender).CurrentRow.Cells[0].Value.ToString()));
+            test.Show();
+        }
     }
 }

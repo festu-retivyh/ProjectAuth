@@ -43,6 +43,7 @@ namespace CAManager
 
         private void ControlUserSrv_Load(object sender, EventArgs e)
         {
+            tbxUser.Text = currentClientId.ToString();
             userSrvTableAdapter.Fill(myFWDataSet.UserSrv, currentClientId);
             //query
             //SqlDataAdapter dataadapter = new SqlDataAdapter(query, userSrvTableAdapter.Connection);
