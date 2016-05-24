@@ -54,12 +54,24 @@ namespace CAManager
             return id;
         }
 
+        internal static void ClearUsrSrv(int clientId)
+        {
+            myFWDataSetTableAdapters.ClearUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.ClearUsrSrvTableAdapter();
+            tb.GetData(clientId);
+        }
+
         internal static int AddUsb(string guid, int idCertificateUsb, string hashUsb)
         {
             myFWDataSetTableAdapters.InsertUsbTableAdapter tbUsb = new myFWDataSetTableAdapters.InsertUsbTableAdapter();
             var idUsb = tbUsb.GetData(guid, idCertificateUsb, hashUsb,"");
             int id = (int)idUsb[0][0];
             return id;
+        }
+
+        internal static void AddUsrSrv(int clientId, int serverId, int port)
+        {
+            myFWDataSetTableAdapters.AddUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.AddUsrSrvTableAdapter();
+            tb.GetData(clientId, serverId, port);
         }
     }
 }

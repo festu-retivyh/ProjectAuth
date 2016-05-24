@@ -10,9 +10,12 @@
     }
 }
 
-namespace CAManager.myFWDataSetTableAdapters {
-    
-    
+namespace CAManager.myFWDataSetTableAdapters
+{
+    partial class ProgramTableAdapter
+    {
+    }
+
     public partial class UserSrvTableAdapter {
     }
 }
