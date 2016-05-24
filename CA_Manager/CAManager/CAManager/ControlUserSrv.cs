@@ -24,7 +24,18 @@ namespace CAManager
             tbxUser.Text = currentClientId.ToString();
             userSrvTableAdapter.Fill(myFWDataSet.UserSrv, currentClientId);
             programTableAdapter.Fill(myFWDataSet.Program, currentClientId);//, currentClientId);
-            //dgvProgram.DataBindings.Clear();
+            foreach (DataGridViewRow p in dataGridView1.Rows)
+            {
+
+                try
+                {
+                    if ((int)(p.Cells[3].Value) == 1)
+                    {
+                        p.Cells[4].Value = true;
+                    }
+                }
+                catch { }
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -49,19 +60,5 @@ namespace CAManager
             }
             Close();
         }
-        
-
-        //private void fillForCLientToolStripButton_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        programTableAdapter.FillForClient(myFWDataSet1.Program, currentClientId);
-        //    }
-        //    catch (System.Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(ex.Message);
-        //    }
-
-        //}
     }
 }

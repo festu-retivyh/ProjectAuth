@@ -33,27 +33,34 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvUserSrv = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.have = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userSrvBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myFWDataSet = new CAManager.myFWDataSet();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgvProgram = new System.Windows.Forms.DataGridView();
+            this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.programTableAdapter = new CAManager.myFWDataSetTableAdapters.ProgramTableAdapter();
             this.userSrvTableAdapter = new CAManager.myFWDataSetTableAdapters.UserSrvTableAdapter();
-            this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.have = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.haveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserSrv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSrvBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProgram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxUser
@@ -98,6 +105,28 @@
             this.dgvUserSrv.Size = new System.Drawing.Size(262, 221);
             this.dgvUserSrv.TabIndex = 2;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя сервера";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // have
+            // 
+            this.have.DataPropertyName = "have";
+            this.have.HeaderText = "have";
+            this.have.Name = "have";
+            this.have.ReadOnly = true;
+            // 
             // userSrvBindingSource
             // 
             this.userSrvBindingSource.AllowNew = false;
@@ -109,6 +138,7 @@
             // myFWDataSet
             // 
             this.myFWDataSet.DataSetName = "myFWDataSet1";
+            this.myFWDataSet.EnforceConstraints = false;
             this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnSave
@@ -135,11 +165,36 @@
             this.dgvProgram.Location = new System.Drawing.Point(276, 45);
             this.dgvProgram.Name = "dgvProgram";
             this.dgvProgram.RowHeadersVisible = false;
-            this.dgvProgram.Size = new System.Drawing.Size(234, 221);
+            this.dgvProgram.Size = new System.Drawing.Size(123, 221);
             this.dgvProgram.TabIndex = 4;
+            // 
+            // select
+            // 
+            this.select.DataPropertyName = "select";
+            this.select.HeaderText = "Выбран";
+            this.select.Name = "select";
+            this.select.ReadOnly = true;
+            this.select.Width = 30;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Программа";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // portDataGridViewTextBoxColumn
+            // 
+            this.portDataGridViewTextBoxColumn.DataPropertyName = "port";
+            this.portDataGridViewTextBoxColumn.HeaderText = "port";
+            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
+            this.portDataGridViewTextBoxColumn.ReadOnly = true;
+            this.portDataGridViewTextBoxColumn.Visible = false;
             // 
             // programBindingSource
             // 
+            this.programBindingSource.AllowNew = false;
             this.programBindingSource.DataMember = "Program";
             this.programBindingSource.DataSource = this.myFWDataSet;
             // 
@@ -169,57 +224,59 @@
             // 
             this.userSrvTableAdapter.ClearBeforeFill = true;
             // 
-            // select
+            // dataGridView1
             // 
-            this.select.DataPropertyName = "select";
-            this.select.HeaderText = "Выбран";
-            this.select.Name = "select";
-            this.select.ReadOnly = true;
-            this.select.Width = 30;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn2,
+            this.idDataGridViewTextBoxColumn1,
+            this.addressDataGridViewTextBoxColumn,
+            this.haveDataGridViewTextBoxColumn,
+            this.sel});
+            this.dataGridView1.DataSource = this.userSrvBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(411, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(123, 223);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // nameDataGridViewTextBoxColumn1
+            // nameDataGridViewTextBoxColumn2
             // 
-            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Программа";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
             // 
-            // portDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn1
             // 
-            this.portDataGridViewTextBoxColumn.DataPropertyName = "port";
-            this.portDataGridViewTextBoxColumn.HeaderText = "port";
-            this.portDataGridViewTextBoxColumn.Name = "portDataGridViewTextBoxColumn";
-            this.portDataGridViewTextBoxColumn.ReadOnly = true;
-            this.portDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // nameDataGridViewTextBoxColumn
+            // addressDataGridViewTextBoxColumn
             // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя сервера";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
-            // idDataGridViewTextBoxColumn
+            // haveDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.haveDataGridViewTextBoxColumn.DataPropertyName = "have";
+            this.haveDataGridViewTextBoxColumn.HeaderText = "have";
+            this.haveDataGridViewTextBoxColumn.Name = "haveDataGridViewTextBoxColumn";
+            this.haveDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // have
+            // sel
             // 
-            this.have.DataPropertyName = "have";
-            this.have.HeaderText = "have";
-            this.have.Name = "have";
-            this.have.ReadOnly = true;
+            this.sel.HeaderText = "sel";
+            this.sel.Name = "sel";
             // 
             // ControlUserSrv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 319);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvProgram);
@@ -236,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProgram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +323,11 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn select;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn portDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn haveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn sel;
     }
 }

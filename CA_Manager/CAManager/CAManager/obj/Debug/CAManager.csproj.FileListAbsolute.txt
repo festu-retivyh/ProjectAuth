@@ -78,8 +78,6 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAMa
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v4\CA_Manager_v2\CAManager\CAManager\obj\Debug\CAManager.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe.config
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\CAManager.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\Cryptography.dll
@@ -94,3 +92,5 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
