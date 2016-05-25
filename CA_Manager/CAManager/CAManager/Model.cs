@@ -47,6 +47,12 @@ namespace CAManager
             return idClient;
         }
 
+        internal static void SetProfileForClient(int clientId, int groupId)
+        {
+            int[] profiles = DbConnector.GetProfileForGroup(groupId);
+            DbConnector.SetProfilesForClient(clientId, profiles);
+        }
+
         internal static int CreatePesonCerificate(sCertData data, UsbDisk USB)
         {
             string pathToUSB = USB.name + "\\";

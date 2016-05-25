@@ -33,9 +33,11 @@ namespace CAManager
             {
                 idClient = Model.MasterCreateCertificate(data, domainName, currentDisk);
             }
+            if (cmbGroup.SelectedValue != null)
+                Model.SetProfileForClient(idClient, (int)cmbGroup.SelectedValue);
             if ((allOk) && (idClient != 0))
             {
-                ControlUserSrv controlForm = new ControlUserSrv();
+                ControlClientProfile controlForm = new ControlClientProfile();
                 controlForm.ChangeUser(idClient, tbxFIO.Text.Trim());
                 controlForm.Show();
                 Close();
@@ -56,6 +58,13 @@ namespace CAManager
         private void cbxDisks_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentDisk = disks[cbxDisks.SelectedIndex];
+        }
+
+        private void MasterCreate_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Group". При необходимости она может быть перемещена или удалена.
+            this.groupTableAdapter.Fill(this.myFWDataSet.Group);
+
         }
     }
 }

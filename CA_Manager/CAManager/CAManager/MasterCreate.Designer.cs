@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tbxDomain = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbGroup = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxFIO = new System.Windows.Forms.TextBox();
             this.tbxLogin = new System.Windows.Forms.TextBox();
@@ -45,9 +48,12 @@
             this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.dateStop = new System.Windows.Forms.DateTimePicker();
             this.cbxDisks = new System.Windows.Forms.ComboBox();
-            this.tbxDomain = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.myFWDataSet = new CAManager.myFWDataSet();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupTableAdapter = new CAManager.myFWDataSetTableAdapters.GroupTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +97,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tbxDomain);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmbGroup);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tbxFIO);
             this.panel1.Controls.Add(this.tbxLogin);
@@ -103,24 +109,41 @@
             this.panel1.Size = new System.Drawing.Size(349, 143);
             this.panel1.TabIndex = 4;
             // 
-            // comboBox2
+            // tbxDomain
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Бухгалтер"});
-            this.comboBox2.Location = new System.Drawing.Point(118, 110);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(206, 21);
-            this.comboBox2.TabIndex = 7;
+            this.tbxDomain.Location = new System.Drawing.Point(118, 58);
+            this.tbxDomain.Name = "tbxDomain";
+            this.tbxDomain.Size = new System.Drawing.Size(206, 20);
+            this.tbxDomain.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Имя домена";
+            // 
+            // cmbGroup
+            // 
+            this.cmbGroup.DataSource = this.groupBindingSource;
+            this.cmbGroup.DisplayMember = "name";
+            this.cmbGroup.FormattingEnabled = true;
+            this.cmbGroup.Location = new System.Drawing.Point(118, 110);
+            this.cmbGroup.Name = "cmbGroup";
+            this.cmbGroup.Size = new System.Drawing.Size(206, 21);
+            this.cmbGroup.TabIndex = 7;
+            this.cmbGroup.ValueMember = "id";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Шаблон доступа";
+            this.label6.Text = "Группа доступа";
             // 
             // tbxFIO
             // 
@@ -206,21 +229,19 @@
             this.cbxDisks.SelectedIndexChanged += new System.EventHandler(this.cbxDisks_SelectedIndexChanged);
             this.cbxDisks.Click += new System.EventHandler(this.comboBox1_Click);
             // 
-            // tbxDomain
+            // myFWDataSet
             // 
-            this.tbxDomain.Location = new System.Drawing.Point(118, 58);
-            this.tbxDomain.Name = "tbxDomain";
-            this.tbxDomain.Size = new System.Drawing.Size(206, 20);
-            this.tbxDomain.TabIndex = 9;
+            this.myFWDataSet.DataSetName = "myFWDataSet";
+            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label8
+            // groupBindingSource
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Имя домена";
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // groupTableAdapter
+            // 
+            this.groupTableAdapter.ClearBeforeFill = true;
             // 
             // MasterCreate
             // 
@@ -238,8 +259,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Name = "MasterCreate";
+            this.Load += new System.EventHandler(this.MasterCreate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +282,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbGroup;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateStart;
@@ -266,5 +290,8 @@
         private System.Windows.Forms.ComboBox cbxDisks;
         private System.Windows.Forms.TextBox tbxDomain;
         private System.Windows.Forms.Label label8;
+        private myFWDataSet myFWDataSet;
+        private System.Windows.Forms.BindingSource groupBindingSource;
+        private myFWDataSetTableAdapters.GroupTableAdapter groupTableAdapter;
     }
 }

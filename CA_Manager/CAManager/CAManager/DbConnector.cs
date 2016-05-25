@@ -46,6 +46,26 @@ namespace CAManager
             return rezult;
         }
 
+        internal static void SetProfilesForClient(int clientId, int[] profiles)
+        {
+            myFWDataSetTableAdapters.ClientProfileTableAdapter tb = new myFWDataSetTableAdapters.ClientProfileTableAdapter();
+            foreach (int a in profiles)
+                tb.Insert(clientId, a);
+        }
+
+        internal static int[] GetProfileForGroup(int groupId)
+        {
+            myFWDataSetTableAdapters.GroupProfileTableAdapter tb = new myFWDataSetTableAdapters.GroupProfileTableAdapter();
+            var dt = tb.GetData();
+            var mas = dt.Select("groupId=" + groupId.ToString());
+            int[] myMas = new int[mas.Length];
+            for(int i=0;i<mas.Length;i++)
+            {
+                myMas[i] = (int)mas[i].ItemArray[1];
+            }
+            return myMas;
+        }
+
         internal static int AddNewServer(sSERVER server, int idCertificate)
         {
             myFWDataSetTableAdapters.InsertServerTableAdapter tbServer = new myFWDataSetTableAdapters.InsertServerTableAdapter();
@@ -56,8 +76,8 @@ namespace CAManager
 
         internal static void ClearUsrSrv(int clientId)
         {
-            myFWDataSetTableAdapters.ClearUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.ClearUsrSrvTableAdapter();
-            tb.GetData(clientId);
+            //myFWDataSetTableAdapters.ClearUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.ClearUsrSrvTableAdapter();
+            //tb.GetData(clientId);
         }
 
         internal static int AddUsb(string guid, int idCertificateUsb, string hashUsb)
@@ -70,8 +90,8 @@ namespace CAManager
 
         internal static void AddUsrSrv(int clientId, int serverId, int port)
         {
-            myFWDataSetTableAdapters.AddUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.AddUsrSrvTableAdapter();
-            tb.GetData(clientId, serverId, port);
+            //myFWDataSetTableAdapters.AddUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.AddUsrSrvTableAdapter();
+            //tb.GetData(clientId, serverId, port);
         }
     }
 }

@@ -62,11 +62,11 @@
     <Compile Include="ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlUserSrv.cs">
+    <Compile Include="ControlClientProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ControlUserSrv.Designer.cs">
-      <DependentUpon>ControlUserSrv.cs</DependentUpon>
+    <Compile Include="ControlClientProfile.Designer.cs">
+      <DependentUpon>ControlClientProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnector.cs" />
     <Compile Include="ErrorWindow.cs">
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlUserSrv.resx">
-      <DependentUpon>ControlUserSrv.cs</DependentUpon>
+    <EmbeddedResource Include="ControlClientProfile.resx">
+      <DependentUpon>ControlClientProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ErrorWindow.resx">
       <DependentUpon>ErrorWindow.cs</DependentUpon>
