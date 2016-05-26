@@ -4,6 +4,10 @@
 
     partial class myFWDataSet
     {
+        partial class CutLastClientStatusDataTable
+        {
+        }
+
         partial class UserDataTable
         {
         }

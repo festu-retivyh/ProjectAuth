@@ -14,81 +14,52 @@ namespace CAManager
         }
         public void ChangeUser(int id, string name)
         {
-            userSrvTableAdapter.Fill(myFWDataSet.UserSrv, id);
+            tbxUser.Text = name;
+            UpdateChecksProfile();
+        }
+        private void UpdateChecksProfile()
+        {
+            foreach (DataGridViewRow str in dataGridView1.Rows)
+            {
+                str.Cells[1].Value = false;
+            }
+            myFWDataSetTableAdapters.GetClientProfilesTableAdapter ta = new myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
+            var dt = ta.GetData(currentClientId);
+            foreach (myFWDataSet.GetClientProfilesRow row in dt.Rows)
+            {
+                foreach (DataGridViewRow str in dataGridView1.Rows)
+                {
+                    if (row.profileId == (int)str.Cells[0].Value)
+                        str.Cells[1].Value = true;
+                }
+            }
         }
 
         private void ControlUserSrv_Load(object sender, EventArgs e)
         {
-            
-            //myFWDataSetTableAdapters.ProfileTableAdapter prof = new myFWDataSetTableAdapters.ProfileTableAdapter();
-            //var profTb = prof.GetData();
-            //int i = 0;
-            //foreach (var profile in profTb)
-            //{
-            //    i = dgvClientProf.Rows.Add();
-            //    dgvClientProf.Rows[i].Cells[1].Value = profile.Name;
-            //    dgvClientProf.Rows[i].Cells[2].Value = profile.id;
-            //}
-                
-            //myFWDataSetTableAdapters.GetClientProfilesTableAdapter clientProfile = new myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
-            //var dt = clientProfile.GetData(currentClientId);
-            //dgvClientProf.Rows.
-            //foreach (DataGridViewRow p in dgvClientProf.Rows)
-            //{
-            //    try
-            //    {
-            //        if ((int)(p.Cells[3].Value) == 1)
-            //        {
-            //            p.Cells[4].Value = true;
-            //        }
-            //    }
-            //    catch { }
-            //}
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet1.Profile". При необходимости она может быть перемещена или удалена.
+            this.profileTableAdapter1.Fill(this.myFWDataSet1.Profile);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet1.Profile". При необходимости она может быть перемещена или удалена.
+            profileTableAdapter.Fill(myFWDataSet.Profile);
 
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet1.Program". При необходимости она может быть перемещена или удалена.
-            //this.programTableAdapter.Fill(this.myFWDataSet.Program);
-            //tbxUser.Text = currentClientId.ToString();
-            //userSrvTableAdapter.Fill(myFWDataSet.UserSrv, currentClientId);
-            //programTableAdapter.Fill(myFWDataSet.Program, currentClientId);//, currentClientId);
-            //foreach (DataGridViewRow p in dataGridView1.Rows)
-            //{
-            //    try
-            //    {
-            //        if ((int)(p.Cells[3].Value) == 1)
-            //        {
-            //            p.Cells[4].Value = true;
-            //        }
-            //    }
-            //    catch { }
-            //}
+            UpdateChecksProfile();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //DbConnector.ClearUsrSrv(currentClientId);
-            //foreach (DataGridViewRow a in dgvClientProf.Rows)
-            //{
-            //    if (a.Cells[0].Value == null)
-            //        continue;
-            //    if ((bool)a.Cells[0].Value)
-            //    {
-            //        foreach (DataGridViewRow p in dgvProgram.Rows)
-            //        {
-            //            if (p.Cells[0].Value == null)
-            //                continue;
-            //            if ((bool)p.Cells[0].Value)
-            //            {
-            //                DbConnector.AddUsrSrv(currentClientId, (int)a.Cells[2].Value, (int)p.Cells[2].Value);
-            //            }
-            //        }
-            //    }
-            //}
-            //Close();
+            DbConnector.ClearClientProfile(currentClientId);
+            int[] masProf = new int[0];
+            foreach (DataGridViewRow str in dataGridView1.Rows)
+            {
+                if ((bool)str.Cells[1].Value)
+                {
+                    Array.Resize(ref masProf, masProf.Length + 1);
+                    masProf[masProf.Length - 1] = (int)str.Cells[0].Value;
+                }
+            }
+            DbConnector.SetProfilesForClient(currentClientId, masProf);
+            Close();
         }
-
-        private void dgvUserSrv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

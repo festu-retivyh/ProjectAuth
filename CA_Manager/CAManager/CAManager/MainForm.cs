@@ -64,10 +64,10 @@ namespace CAManager
         }
         private void UpdateDataForm()
         {
-            onlineClientsBindingSource.DataSource = onlineClientsTableAdapter.GetData();
+            //onlineClientsBindingSource.DataSource = onlineClientsTableAdapter.GetData();
             //clientsLastStatesBindingSource1.DataSource = clientsLastStatesTableAdapter.GetData();
             //clientsLastStatesBindingSource1.Filter = "stateId = 2";
-            clientsLastStatesBindingSource.DataSource = clientsLastStatesTableAdapter.GetData();
+            ////clientsLastStatesBindingSource.DataSource = clientsLastStatesTableAdapter.GetData();
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
@@ -85,15 +85,18 @@ namespace CAManager
         }
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            
+            UpdateForm(sender);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.OnlineClients". При необходимости она может быть перемещена или удалена.
-            onlineClientsTableAdapter.Fill(myFWDataSet.OnlineClients);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.ClientsLastStates". При необходимости она может быть перемещена или удалена.
-            clientsLastStatesTableAdapter.Fill(myFWDataSet.ClientsLastStates);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Server". При необходимости она может быть перемещена или удалена.
+            this.serverTableAdapter.Fill(this.myFWDataSet.Server);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.OnlientClientsState". При необходимости она может быть перемещена или удалена.
+            this.onlineClientStateTableAdapter.Fill(this.myFWDataSet.OnlientClientsState);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.LastClientsStates". При необходимости она может быть перемещена или удалена.
+            this.lastClientsStatesTableAdapter.Fill(this.myFWDataSet.LastClientsStates);
+                        
             currentMenu = btnStatistic;
             UpdateForm(btnStatistic);
         }

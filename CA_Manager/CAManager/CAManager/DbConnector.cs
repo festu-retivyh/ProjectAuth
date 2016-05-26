@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -39,11 +40,22 @@ namespace CAManager
             return id;
         }
 
+        internal static void ClearClientProfile(int currentClientId)
+        {
+            myFWDataSetTableAdapters.ClientProfileTableAdapter ta = new myFWDataSetTableAdapters.ClientProfileTableAdapter();
+            ta.myDelete(currentClientId);
+        }
+
         internal static int AddClientState(int idClient, int idState)
         {
             myFWDataSetTableAdapters.ClientStateTableAdapter tbClientState = new myFWDataSetTableAdapters.ClientStateTableAdapter();
             int rezult = tbClientState.Insert(DateTime.Now, idClient, idState);
             return rezult;
+        }
+
+        internal static void AddClientProfile(int currentClientId, int value)
+        {
+            
         }
 
         internal static void SetProfilesForClient(int clientId, int[] profiles)
@@ -88,10 +100,6 @@ namespace CAManager
             return id;
         }
 
-        internal static void AddUsrSrv(int clientId, int serverId, int port)
-        {
-            //myFWDataSetTableAdapters.AddUsrSrvTableAdapter tb = new myFWDataSetTableAdapters.AddUsrSrvTableAdapter();
-            //tb.GetData(clientId, serverId, port);
-        }
+        
     }
 }

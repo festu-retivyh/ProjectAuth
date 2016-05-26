@@ -32,27 +32,25 @@
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvClientProf = new System.Windows.Forms.DataGridView();
-            this.userSrvBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myFWDataSet = new CAManager.myFWDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSave = new System.Windows.Forms.Button();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.programTableAdapter = new CAManager.myFWDataSetTableAdapters.ProgramTableAdapter();
-            this.userSrvTableAdapter = new CAManager.myFWDataSetTableAdapters.UserSrvTableAdapter();
-            this.getClientProfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getClientProfilesTableAdapter = new CAManager.myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
-            this.SelSrv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profileId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.myFWDataSet1 = new CAManager.myFWDataSet();
+            this.profileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.profileTableAdapter1 = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
+            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientProf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userSrvBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getClientProfilesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxUser
@@ -73,44 +71,35 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvClientProf);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(12, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 221);
             this.panel1.TabIndex = 2;
             // 
-            // dgvClientProf
+            // dataGridView1
             // 
-            this.dgvClientProf.AllowUserToAddRows = false;
-            this.dgvClientProf.AllowUserToDeleteRows = false;
-            this.dgvClientProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SelSrv,
-            this.Profile,
-            this.profileId});
-            this.dgvClientProf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvClientProf.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvClientProf.Location = new System.Drawing.Point(0, 0);
-            this.dgvClientProf.Name = "dgvClientProf";
-            this.dgvClientProf.RowHeadersVisible = false;
-            this.dgvClientProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientProf.Size = new System.Drawing.Size(262, 221);
-            this.dgvClientProf.TabIndex = 2;
-            this.dgvClientProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserSrv_CellContentClick);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Sel,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.DataSource = this.profileBindingSource1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(262, 221);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // userSrvBindingSource
+            // profileBindingSource
             // 
-            this.userSrvBindingSource.AllowNew = false;
-            this.userSrvBindingSource.DataMember = "UserSrv";
-            this.userSrvBindingSource.DataSource = this.myFWDataSet;
-            this.userSrvBindingSource.Filter = "";
-            this.userSrvBindingSource.Sort = "name";
-            // 
-            // myFWDataSet
-            // 
-            this.myFWDataSet.DataSetName = "myFWDataSet1";
-            this.myFWDataSet.EnforceConstraints = false;
-            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.profileBindingSource.DataMember = "Profile";
             // 
             // btnSave
             // 
@@ -122,12 +111,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // programBindingSource
-            // 
-            this.programBindingSource.AllowNew = false;
-            this.programBindingSource.DataMember = "Program";
-            this.programBindingSource.DataSource = this.myFWDataSet;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -136,43 +119,6 @@
             this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Доступные профили";
-            // 
-            // programTableAdapter
-            // 
-            this.programTableAdapter.ClearBeforeFill = true;
-            // 
-            // userSrvTableAdapter
-            // 
-            this.userSrvTableAdapter.ClearBeforeFill = true;
-            // 
-            // getClientProfilesBindingSource
-            // 
-            this.getClientProfilesBindingSource.DataMember = "GetClientProfiles";
-            this.getClientProfilesBindingSource.DataSource = this.myFWDataSet;
-            // 
-            // getClientProfilesTableAdapter
-            // 
-            this.getClientProfilesTableAdapter.ClearBeforeFill = true;
-            // 
-            // SelSrv
-            // 
-            this.SelSrv.HeaderText = "Выбран";
-            this.SelSrv.Name = "SelSrv";
-            this.SelSrv.Width = 30;
-            // 
-            // Profile
-            // 
-            this.Profile.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Profile.HeaderText = "Профиль";
-            this.Profile.Name = "Profile";
-            this.Profile.ReadOnly = true;
-            // 
-            // profileId
-            // 
-            this.profileId.HeaderText = "profileId";
-            this.profileId.Name = "profileId";
-            this.profileId.ReadOnly = true;
-            this.profileId.Visible = false;
             // 
             // label2
             // 
@@ -190,6 +136,57 @@
             this.textBox1.Size = new System.Drawing.Size(175, 20);
             this.textBox1.TabIndex = 7;
             // 
+            // myFWDataSet1
+            // 
+            this.myFWDataSet1.DataSetName = "myFWDataSet";
+            this.myFWDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // profileBindingSource1
+            // 
+            this.profileBindingSource1.DataMember = "Profile";
+            this.profileBindingSource1.DataSource = this.myFWDataSet1;
+            // 
+            // profileTableAdapter1
+            // 
+            this.profileTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Sel
+            // 
+            this.Sel.HeaderText = "Выбран";
+            this.Sel.Name = "Sel";
+            this.Sel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Sel.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "programId";
+            this.dataGridViewTextBoxColumn2.HeaderText = "programId";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "serverId";
+            this.dataGridViewTextBoxColumn3.HeaderText = "serverId";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // ControlClientProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,11 +203,10 @@
             this.Text = "Разрешенные сервера";
             this.Load += new System.EventHandler(this.ControlUserSrv_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientProf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userSrvBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getClientProfilesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,23 +217,25 @@
         private System.Windows.Forms.TextBox tbxUser;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvClientProf;
-        private myFWDataSet myFWDataSet;
-        //private System.Windows.Forms.DataGridViewCheckBoxColumn SelectSrv;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource userSrvBindingSource;
-        private myFWDataSetTableAdapters.UserSrvTableAdapter userSrvTableAdapter;
         private System.Windows.Forms.Button btnSave;
-        
-        private System.Windows.Forms.BindingSource programBindingSource;
-        private myFWDataSetTableAdapters.ProgramTableAdapter programTableAdapter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource getClientProfilesBindingSource;
-        private myFWDataSetTableAdapters.GetClientProfilesTableAdapter getClientProfilesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SelSrv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Profile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn profileId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private myFWDataSet myFWDataSet;
+        private System.Windows.Forms.BindingSource profileBindingSource;
+        private myFWDataSetTableAdapters.ProfileTableAdapter profileTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private myFWDataSet myFWDataSet1;
+        private System.Windows.Forms.BindingSource profileBindingSource1;
+        private myFWDataSetTableAdapters.ProfileTableAdapter profileTableAdapter1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

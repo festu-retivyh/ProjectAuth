@@ -134,16 +134,14 @@ namespace CAManager
 
         internal static void OpenInfoAboutClient(int idSelUser)
         {
-            //myFWDataSet.UserSrvDataTable table = new myFWDataSet.UserSrvDataTable();
             sCLIENT_INFO_FULL sClientInfo = new sCLIENT_INFO_FULL();
             myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
-            var adapter = tbClientInfo.Adapter;
-            adapter.SelectCommand.Parameters.AddWithValue("ClientId", idSelUser);
-            var reader = adapter.SelectCommand.ExecuteReader();
-            if (reader.Read())
+            var data = tbClientInfo.GetData(idSelUser);
+            if (data.Count!=0)
             {
-                sClientInfo.clientId = reader.GetInt32(0);
-                //Заполняем все параметры структуры
+                sClientInfo.clientId = data[0].ClientId;
+                sClientInfo.fio = data[0].FName + " " + data[0].Name + " " + data[0].SName;
+                sClientInfo.status = data[0].State;
             }
             ClientInfo form = new ClientInfo(sClientInfo);
             form.Show();
