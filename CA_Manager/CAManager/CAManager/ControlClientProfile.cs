@@ -14,6 +14,7 @@ namespace CAManager
         }
         public void ChangeUser(int id, string name)
         {
+            currentClientId = id;
             tbxUser.Text = name;
             UpdateChecksProfile();
         }
@@ -37,10 +38,8 @@ namespace CAManager
 
         private void ControlUserSrv_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet1.Profile". При необходимости она может быть перемещена или удалена.
-            this.profileTableAdapter1.Fill(this.myFWDataSet1.Profile);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet1.Profile". При необходимости она может быть перемещена или удалена.
-            profileTableAdapter.Fill(myFWDataSet.Profile);
+            this.profileTableAdapter1.Fill(this.myFWDataSet.Profile);
+            profileTableAdapter1.Fill(myFWDataSet.Profile);
 
             UpdateChecksProfile();
         }
@@ -60,6 +59,5 @@ namespace CAManager
             DbConnector.SetProfilesForClient(currentClientId, masProf);
             Close();
         }
-        
     }
 }

@@ -11,7 +11,8 @@ namespace CAManager
     class Model
     {
         static private string privateKeyCA;
-
+        public static event EventHandler UpdateViewTables;
+        
         static private string PrivateKeyCA
         {
             get
@@ -26,11 +27,6 @@ namespace CAManager
         {
             return File.ReadAllText(@"D:\ca.key");
         }
-        //**** Получить айпи адрес клиента в момент вызова метода
-        //OperationContext context = OperationContext.Current;
-        //MessageProperties prop = context.IncomingMessageProperties;
-        //RemoteEndpointMessageProperty endpoint = prop[RemoteEndpointMessageProperty.Name] as RemoteEndpointMessageProperty;
-        //string ip = endpoint.Address;
 
         internal static int MasterCreateCertificate(sCertData data, string domainName, UsbDisk disk)
         {
@@ -44,7 +40,13 @@ namespace CAManager
             user.patronymic = fio.Length==3?fio[2]:"";
             int idUser = DbConnector.addUser(user); //Добавляем в БД Юзера
             int idClient = DbConnector.AddClient(idUsb,idUser); //Добавляем в БД Клиента
+            UpdateViewTables(true, new EventArgs());
             return idClient;
+        }
+
+        internal static void CallEventUpdateViewTables()
+        {
+            UpdateViewTables(true, new EventArgs());
         }
 
         internal static void SetProfileForClient(int clientId, int groupId)
@@ -77,7 +79,7 @@ namespace CAManager
             string dataForUsb = "8 " + DateTime.Now + " " + guidUsb + " " + privateKey + " " + pubKeyCA + " " + Cryptography.Cryptography.Sign(guidUsb+ " " + privateKey, PrivateKeyCA);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.GetHash(dataForUsb);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.Sign(dataForUsb, PrivateKeyCA);
-            //guidUsb + "@" + 
+             
             File.WriteAllText(pathToUSB + "prv.key", Cryptography.Cryptography.EncryptAes(dataForUsb, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")));
             
             return idUsb;

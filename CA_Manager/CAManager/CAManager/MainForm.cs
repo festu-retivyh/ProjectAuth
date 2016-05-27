@@ -13,17 +13,20 @@ namespace CAManager
     {
         private Button currentMenu;
         private TabControl.TabPageCollection allTabs;
-
         public MainForm()
         {
             InitializeComponent();
             allTabs = new TabControl.TabPageCollection(new TabControl());
             foreach (TabPage tab in mainTabsControl.TabPages)
                 allTabs.Add(tab);
-            
+            Model.UpdateViewTables += M_UpdateViewTables;
         }
 
-        
+        private void M_UpdateViewTables(object sender, EventArgs e)
+        {
+            UpdateTables();
+        }
+
         private void UpdateForm(object sender)
         {
             foreach (TabPage tab in mainTabsControl.TabPages)
@@ -90,15 +93,16 @@ namespace CAManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Server". При необходимости она может быть перемещена или удалена.
-            this.serverTableAdapter.Fill(this.myFWDataSet.Server);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.OnlientClientsState". При необходимости она может быть перемещена или удалена.
-            this.onlineClientStateTableAdapter.Fill(this.myFWDataSet.OnlientClientsState);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.LastClientsStates". При необходимости она может быть перемещена или удалена.
-            this.lastClientsStatesTableAdapter.Fill(this.myFWDataSet.LastClientsStates);
+            UpdateTables();
                         
             currentMenu = btnStatistic;
             UpdateForm(btnStatistic);
+        }
+        private void UpdateTables()
+        {
+            serverTableAdapter.Fill(myFWDataSet.Server);
+            onlineClientStateTableAdapter.Fill(myFWDataSet.OnlientClientsState);
+            lastClientsStatesTableAdapter.Fill(myFWDataSet.LastClientsStates);
         }
 
         private void btnSelectUserOnline_Click(object sender, EventArgs e)

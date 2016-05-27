@@ -42,6 +42,7 @@ namespace CAManager
                 controlForm.Show();
                 Close();
             }
+            Model.CallEventUpdateViewTables();
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
