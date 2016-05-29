@@ -67,6 +67,7 @@ namespace CAManager
             string privateKey = Cryptography.Cryptography.GeneratePrivateKey();
 
             Certificate certificateUSB = Cryptography.Cryptography.GetCertificate(data, privateKey);
+            certificateUSB.CalculateCertSign(PrivateKeyCA);
             //privateKey = Cryptography.Cryptography.EncryptAes(privateKey, infoUSB);
             int idCertificateUsb = DbConnector.AddCertificate(certificateUSB);
             string guidUsb = Guid.NewGuid().ToString();
@@ -103,6 +104,7 @@ namespace CAManager
             certificate.fioOwner = server.address;
             certificate.login = server.name;
             Certificate certSrv = new Certificate(certificate, privateKey, 3);
+            certSrv.CalculateCertSign(PrivateKeyCA);
             File.WriteAllText(Cryptography.Cryptography.EncryptAes(privateKey, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")), pathToUSB + @"\srv.key");
             int idCertSrv = DbConnector.AddCertificate(certSrv);
             server.guid = Guid.NewGuid().ToString();

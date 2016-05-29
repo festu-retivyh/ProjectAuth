@@ -6,41 +6,69 @@ namespace CAManager
     public partial class ControlClientProfile : Form
     {
         int currentClientId;
-        public ControlClientProfile(int id=0)
+        int currentGroupId;
+        public ControlClientProfile(int clientId = 0, int groupId = 0)
         {
-            currentClientId = id;
+
+            currentClientId = clientId;
+            currentGroupId = groupId;
             InitializeComponent();
 
+            groupTableAdapter.Fill(myFWDataSet.Group);
+            profileTableAdapter1.Fill(myFWDataSet.Profile);
         }
-        public void ChangeUser(int id, string name)
+
+        public void ChangeUser(int clientId, string name, int groupId = 0)
         {
-            currentClientId = id;
+            currentClientId = clientId;
+            currentGroupId = groupId;
+            cbxGroup.SelectedValue = groupId;
             tbxUser.Text = name;
             UpdateChecksProfile();
         }
+
         private void UpdateChecksProfile()
+        {
+            ClearChecksInDgv();
+            if (currentGroupId == 0)
+            {
+                //cbxGroup.SelectedValue = null;
+                myFWDataSetTableAdapters.GetClientProfilesTableAdapter ta = new myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
+                var dt = ta.GetData(currentClientId);
+                foreach (myFWDataSet.GetClientProfilesRow row in dt.Rows)
+                {
+                    foreach (DataGridViewRow str in dataGridView1.Rows)
+                    {
+                        if (row.profileId == (int)str.Cells[0].Value)
+                            str.Cells[1].Value = true;
+                    }
+                }
+            }
+            else
+            {
+                myFWDataSetTableAdapters.GroupProfileTableAdapter taProfile = new myFWDataSetTableAdapters.GroupProfileTableAdapter();
+                var dtProfile = taProfile.GetDataForGroup(currentGroupId);
+                foreach (myFWDataSet.GroupProfileRow row in dtProfile.Rows)
+                {
+                    foreach (DataGridViewRow str in dataGridView1.Rows)
+                    {
+                        if (row.profileId == (int)str.Cells[0].Value)
+                            str.Cells[1].Value = true;
+                    }
+                }
+            }
+        }
+
+        private void ClearChecksInDgv()
         {
             foreach (DataGridViewRow str in dataGridView1.Rows)
             {
                 str.Cells[1].Value = false;
             }
-            myFWDataSetTableAdapters.GetClientProfilesTableAdapter ta = new myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
-            var dt = ta.GetData(currentClientId);
-            foreach (myFWDataSet.GetClientProfilesRow row in dt.Rows)
-            {
-                foreach (DataGridViewRow str in dataGridView1.Rows)
-                {
-                    if (row.profileId == (int)str.Cells[0].Value)
-                        str.Cells[1].Value = true;
-                }
-            }
         }
 
         private void ControlUserSrv_Load(object sender, EventArgs e)
         {
-            this.profileTableAdapter1.Fill(this.myFWDataSet.Profile);
-            profileTableAdapter1.Fill(myFWDataSet.Profile);
-
             UpdateChecksProfile();
         }
 
@@ -58,6 +86,14 @@ namespace CAManager
             }
             DbConnector.SetProfilesForClient(currentClientId, masProf);
             Close();
+        }
+
+        private void cbxGroup_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (((ComboBox)sender).SelectedValue == null)
+                return;
+            currentGroupId = (int)cbxGroup.SelectedValue;
+            UpdateChecksProfile();
         }
     }
 }

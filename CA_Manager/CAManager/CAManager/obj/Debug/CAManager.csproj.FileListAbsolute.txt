@@ -94,3 +94,5 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ControlClientProfile.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprGroup.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListGroup.resources

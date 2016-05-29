@@ -176,5 +176,11 @@ namespace CAManager
             ControlClientProfile test = new ControlClientProfile(int.Parse(((DataGridView)sender).CurrentRow.Cells[0].Value.ToString()));
             test.Show();
         }
+
+        private void btnGroup_Click(object sender, EventArgs e)
+        {
+            sprListGroup spr = new sprListGroup();
+            spr.Show();
+        }
     }
 }

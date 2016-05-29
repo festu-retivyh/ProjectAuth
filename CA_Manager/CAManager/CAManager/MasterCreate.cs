@@ -21,6 +21,7 @@ namespace CAManager
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+
             int idClient = 0;
             bool allOk = true;
             Cryptography.sCertData data;
@@ -29,16 +30,19 @@ namespace CAManager
             data.fioOwner = tbxFIO.Text.Trim();
             data.login = tbxLogin.Text.Trim();
             string domainName = tbxDomain.Text.Trim();
-            if (allOk)
+            if (currentDisk == null)
+                allOk = false;
+            if (!allOk)
             {
-                idClient = Model.MasterCreateCertificate(data, domainName, currentDisk);
+                return;
             }
+            idClient = Model.MasterCreateCertificate(data, domainName, currentDisk);
             if (cmbGroup.SelectedValue != null)
                 Model.SetProfileForClient(idClient, (int)cmbGroup.SelectedValue);
             if ((allOk) && (idClient != 0))
             {
                 ControlClientProfile controlForm = new ControlClientProfile();
-                controlForm.ChangeUser(idClient, tbxFIO.Text.Trim());
+                controlForm.ChangeUser(idClient, tbxFIO.Text.Trim(), cmbGroup.SelectedValue == null?0:(int)cmbGroup.SelectedValue);
                 controlForm.Show();
                 Close();
             }
@@ -63,7 +67,6 @@ namespace CAManager
 
         private void MasterCreate_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Group". При необходимости она может быть перемещена или удалена.
             this.groupTableAdapter.Fill(this.myFWDataSet.Group);
 
         }

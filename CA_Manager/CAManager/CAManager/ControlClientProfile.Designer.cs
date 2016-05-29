@@ -33,22 +33,25 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.myFWDataSet = new CAManager.myFWDataSet();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.profileTableAdapter1 = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.myFWDataSet = new CAManager.myFWDataSet();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.profileTableAdapter1 = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
+            this.cbxGroup = new System.Windows.Forms.ComboBox();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupTableAdapter = new CAManager.myFWDataSetTableAdapters.GroupTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxUser
@@ -95,55 +98,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(262, 221);
             this.dataGridView1.TabIndex = 0;
             // 
-            // myFWDataSet
-            // 
-            this.myFWDataSet.DataSetName = "myFWDataSet";
-            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(141, 303);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(127, 27);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Сохранить и закрыть";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Доступные профили";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Группа";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(93, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Profile";
-            this.bindingSource1.DataSource = this.myFWDataSet;
-            // 
-            // profileTableAdapter1
-            // 
-            this.profileTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "id";
@@ -181,12 +135,75 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Name";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Profile";
+            this.bindingSource1.DataSource = this.myFWDataSet;
+            // 
+            // myFWDataSet
+            // 
+            this.myFWDataSet.DataSetName = "myFWDataSet";
+            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(141, 303);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(127, 27);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Сохранить и закрыть";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Доступные профили";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Группа";
+            // 
+            // profileTableAdapter1
+            // 
+            this.profileTableAdapter1.ClearBeforeFill = true;
+            // 
+            // cbxGroup
+            // 
+            this.cbxGroup.DataSource = this.groupBindingSource;
+            this.cbxGroup.DisplayMember = "name";
+            this.cbxGroup.FormattingEnabled = true;
+            this.cbxGroup.Location = new System.Drawing.Point(93, 32);
+            this.cbxGroup.Name = "cbxGroup";
+            this.cbxGroup.Size = new System.Drawing.Size(175, 21);
+            this.cbxGroup.TabIndex = 8;
+            this.cbxGroup.ValueMember = "id";
+            this.cbxGroup.SelectedValueChanged += new System.EventHandler(this.cbxGroup_SelectedValueChanged);
+            // 
+            // groupBindingSource
+            // 
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // groupTableAdapter
+            // 
+            this.groupTableAdapter.ClearBeforeFill = true;
+            // 
             // ControlClientProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 342);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbxGroup);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
@@ -198,8 +215,9 @@
             this.Load += new System.EventHandler(this.ControlUserSrv_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +231,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private myFWDataSet myFWDataSet;
         private System.Windows.Forms.BindingSource profileBindingSource;
@@ -233,5 +250,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.ComboBox cbxGroup;
+        private System.Windows.Forms.BindingSource groupBindingSource;
+        private myFWDataSetTableAdapters.GroupTableAdapter groupTableAdapter;
     }
 }
