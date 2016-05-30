@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CAManager
@@ -18,9 +12,7 @@ namespace CAManager
 
         private void sprListGroup_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Group". При необходимости она может быть перемещена или удалена.
-            this.groupTableAdapter.Fill(this.myFWDataSet.Group);
-
+            groupTableAdapter.Fill(myFWDataSet.Group);
         }
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)

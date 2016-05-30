@@ -124,6 +124,18 @@
     <Compile Include="sprListGroup.Designer.cs">
       <DependentUpon>sprListGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="sprListProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprListProfile.Designer.cs">
+      <DependentUpon>sprListProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sprProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprProfile.Designer.cs">
+      <DependentUpon>sprProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsbSeacher.cs" />
     <EmbeddedResource Include="Autorize.resx">
       <DependentUpon>Autorize.cs</DependentUpon>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sprListGroup.resx">
       <DependentUpon>sprListGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprListProfile.resx">
+      <DependentUpon>sprListProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprProfile.resx">
+      <DependentUpon>sprProfile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

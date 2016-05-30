@@ -182,5 +182,11 @@ namespace CAManager
             sprListGroup spr = new sprListGroup();
             spr.Show();
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            sprListProfile spr = new sprListProfile();
+            spr.Show();
+        }
     }
 }

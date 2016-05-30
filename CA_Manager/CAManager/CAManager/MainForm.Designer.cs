@@ -861,6 +861,7 @@
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Профили";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnGroup
             // 
