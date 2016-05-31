@@ -39,8 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.сохранитьИЗакрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mSaveExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.serverTableAdapter = new CAManager.myFWDataSetTableAdapters.ServerTableAdapter();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.programTableAdapter = new CAManager.myFWDataSetTableAdapters.ProgramTableAdapter();
@@ -126,25 +126,27 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сохранитьИЗакрытьToolStripMenuItem,
-            this.закрытьToolStripMenuItem});
+            this.mSaveExit,
+            this.mCopy});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(248, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // сохранитьИЗакрытьToolStripMenuItem
+            // mSaveExit
             // 
-            this.сохранитьИЗакрытьToolStripMenuItem.Name = "сохранитьИЗакрытьToolStripMenuItem";
-            this.сохранитьИЗакрытьToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.сохранитьИЗакрытьToolStripMenuItem.Text = "Сохранить и закрыть";
+            this.mSaveExit.Name = "mSaveExit";
+            this.mSaveExit.Size = new System.Drawing.Size(134, 20);
+            this.mSaveExit.Text = "Сохранить и закрыть";
+            this.mSaveExit.Click += new System.EventHandler(this.mSaveExit_Click);
             // 
-            // закрытьToolStripMenuItem
+            // mCopy
             // 
-            this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
-            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.закрытьToolStripMenuItem.Text = "Копировать";
+            this.mCopy.Name = "mCopy";
+            this.mCopy.Size = new System.Drawing.Size(84, 20);
+            this.mCopy.Text = "Копировать";
+            this.mCopy.Click += new System.EventHandler(this.mCopy_Click);
             // 
             // serverTableAdapter
             // 
@@ -199,8 +201,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьИЗакрытьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem закрытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mSaveExit;
+        private System.Windows.Forms.ToolStripMenuItem mCopy;
         private myFWDataSet myFWDataSet;
         private System.Windows.Forms.BindingSource serverBindingSource;
         private myFWDataSetTableAdapters.ServerTableAdapter serverTableAdapter;

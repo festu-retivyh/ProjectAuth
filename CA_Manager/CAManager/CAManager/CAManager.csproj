@@ -56,11 +56,11 @@
     <Compile Include="Autorize.Designer.cs">
       <DependentUpon>Autorize.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientInfo.cs">
+    <Compile Include="sprClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientInfo.Designer.cs">
-      <DependentUpon>ClientInfo.cs</DependentUpon>
+    <Compile Include="sprClient.Designer.cs">
+      <DependentUpon>sprClient.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlClientProfile.cs">
       <SubType>Form</SubType>
@@ -112,11 +112,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="sprCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprCert.Designer.cs">
+      <DependentUpon>sprCert.cs</DependentUpon>
+    </Compile>
     <Compile Include="sprGroup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sprGroup.Designer.cs">
       <DependentUpon>sprGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sprListCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprListCert.Designer.cs">
+      <DependentUpon>sprListCert.cs</DependentUpon>
     </Compile>
     <Compile Include="sprListGroup.cs">
       <SubType>Form</SubType>
@@ -140,8 +152,8 @@
     <EmbeddedResource Include="Autorize.resx">
       <DependentUpon>Autorize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientInfo.resx">
-      <DependentUpon>ClientInfo.cs</DependentUpon>
+    <EmbeddedResource Include="sprClient.resx">
+      <DependentUpon>sprClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlClientProfile.resx">
       <DependentUpon>ControlClientProfile.cs</DependentUpon>
@@ -167,8 +179,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="sprCert.resx">
+      <DependentUpon>sprCert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sprGroup.resx">
       <DependentUpon>sprGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprListCert.resx">
+      <DependentUpon>sprListCert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sprListGroup.resx">
       <DependentUpon>sprListGroup.cs</DependentUpon>

@@ -33,9 +33,10 @@ namespace CAManager
             return id;
         }
 
-        internal static void DeleteProfile(int value)
+        internal static void DeleteProfile(int id)
         {
-            throw new NotImplementedException();
+            myFWDataSetTableAdapters.ProfileTableAdapter ta = new myFWDataSetTableAdapters.ProfileTableAdapter();
+            ta.myDelete(id);
         }
 
         internal static void SetNameGroup(int id, string newName, string oldName)

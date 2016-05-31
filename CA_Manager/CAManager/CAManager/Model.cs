@@ -144,10 +144,15 @@ namespace CAManager
             if (data.Count!=0)
             {
                 sClientInfo.clientId = data[0].ClientId;
-                sClientInfo.fio = data[0].FName + " " + data[0].Name + " " + data[0].SName;
+                sClientInfo.f = data[0].FName;
+                sClientInfo.i = data[0].Name;
+                sClientInfo.o = data[0].SName;
                 sClientInfo.status = data[0].State;
+                sClientInfo.login = data[0].Login;
+                sClientInfo.domain = data[0].Domain;
+                sClientInfo.deleted = data[0].Deleted;
             }
-            ClientInfo form = new ClientInfo(sClientInfo);
+            sprClient form = new sprClient(sClientInfo);
             form.Show();
         }
     }

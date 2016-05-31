@@ -477,6 +477,7 @@
             this.dgvAllUsers.MultiSelect = false;
             this.dgvAllUsers.Name = "dgvAllUsers";
             this.dgvAllUsers.ReadOnly = true;
+            this.dgvAllUsers.RowHeadersVisible = false;
             this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllUsers.Size = new System.Drawing.Size(762, 504);
             this.dgvAllUsers.TabIndex = 1;
@@ -881,6 +882,7 @@
             this.btnCert.TabIndex = 1;
             this.btnCert.Text = "Сертификаты";
             this.btnCert.UseVisualStyleBackColor = true;
+            this.btnCert.Click += new System.EventHandler(this.btnCert_Click);
             // 
             // btnClient
             // 

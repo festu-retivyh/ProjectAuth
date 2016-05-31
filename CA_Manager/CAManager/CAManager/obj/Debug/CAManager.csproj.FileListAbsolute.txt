@@ -84,7 +84,6 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\bin\Debug\Cryptography.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csprojResolveAssemblyReference.cache
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ClientInfo.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
@@ -98,3 +97,6 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListGroup.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListProfile.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprProfile.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprClient.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprCert.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListCert.resources

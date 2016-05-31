@@ -29,8 +29,10 @@ namespace CAManager
 
         private void mDel_Click(object sender, EventArgs e)
         {
-            myFWDataSetTableAdapters.GroupTableAdapter ta = new myFWDataSetTableAdapters.GroupTableAdapter();
-            ta.Delete((int)dgvGroups.SelectedRows[0].Cells[0].Value, (string)dgvGroups.SelectedRows[0].Cells[1].Value);
+            myFWDataSetTableAdapters.GroupProfileTableAdapter taP = new myFWDataSetTableAdapters.GroupProfileTableAdapter();
+            taP.myDelete((int)dgvGroups.SelectedRows[0].Cells[0].Value);
+            myFWDataSetTableAdapters.GroupTableAdapter taG = new myFWDataSetTableAdapters.GroupTableAdapter();
+            taG.myDelete((int)dgvGroups.SelectedRows[0].Cells[0].Value);
         }
     }
 }

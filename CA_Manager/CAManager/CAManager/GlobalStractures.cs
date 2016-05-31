@@ -10,9 +10,14 @@ namespace CAManager
     //}
     public struct sCLIENT_INFO_FULL
     {
-        public string fio;
+        public string f;
+        public string i;
+        public string o;
         public string ipAddress;
         public string status;
+        public string login;
+        public string domain;
+        public bool deleted;
         public int clientId;
     }
     public struct sUSER

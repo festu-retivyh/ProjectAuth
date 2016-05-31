@@ -122,7 +122,7 @@ namespace CAManager
 
         private void btnSelectUser_Click(object sender, EventArgs e)
         {
-            int idSelUser = int.Parse(dgvAllUsers.CurrentRow.Cells[0].Value.ToString());
+            int idSelUser = int.Parse(dgvAllUsers.SelectedRows[0].Cells[0].Value.ToString());
             Model.OpenInfoAboutClient(idSelUser);
         }
 
@@ -187,6 +187,11 @@ namespace CAManager
         {
             sprListProfile spr = new sprListProfile();
             spr.Show();
+        }
+
+        private void btnCert_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
