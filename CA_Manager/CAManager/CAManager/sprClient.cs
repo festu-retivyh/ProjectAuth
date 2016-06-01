@@ -5,27 +5,39 @@ namespace CAManager
 {
     public partial class sprClient : Form
     {
-        private sCLIENT_INFO_FULL sClientInfo;
-        
-        public sprClient(sCLIENT_INFO_FULL sClientInfo)
+        private int curId;
+        private bool del;
+        public sprClient(int id)
         {
             InitializeComponent();
-            this.sClientInfo = sClientInfo;
+            curId = id;
         }
 
         private void sprClient_Load(object sender, EventArgs e)
         {
-            tbxLogin.Text = sClientInfo.login;
-            tbxDomain.Text = sClientInfo.domain;
-            tbxFName.Text = sClientInfo.f;
-            tbxName.Text = sClientInfo.i;
-            tbxSName.Text = sClientInfo.o;
+            myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
+            var data = tbClientInfo.GetData(curId);
+            if (data.Count != 0)
+            {
+                tbxFName.Text = data[0].FName;
+                tbxName.Text = data[0].Name;
+                tbxSName.Text = data[0].SName;
+                //status = data[0].State;
+                tbxLogin.Text = data[0].Login;
+                tbxDomain.Text = data[0].Domain;
+                del = data[0].Deleted;
+            }
+            else
+            {
+                MessageBox.Show("Клиент не выбран", "Ошибка");
+                Close();
+            }
         }
 
         private void btnSaveExit_Click(object sender, EventArgs e)
         {
             myFWDataSetTableAdapters.UserTableAdapter ta = new myFWDataSetTableAdapters.UserTableAdapter();
-            ta.myUpdate(tbxFName.Text, tbxName.Text, tbxSName.Text, tbxLogin.Text, tbxDomain.Text, sClientInfo.deleted, sClientInfo.clientId);
+            ta.myUpdate(tbxFName.Text, tbxName.Text, tbxSName.Text, tbxLogin.Text, tbxDomain.Text, del, curId);
             Close();
         }
 

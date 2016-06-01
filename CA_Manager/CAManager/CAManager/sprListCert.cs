@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CAManager
@@ -18,11 +12,8 @@ namespace CAManager
 
         private void sprListCert_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.myCertificate". При необходимости она может быть перемещена или удалена.
-            this.myCertificateTableAdapter.Fill(this.myFWDataSet.myCertificate);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.Certificate". При необходимости она может быть перемещена или удалена.
-            this.certificateTableAdapter.Fill(this.myFWDataSet.Certificate);
-
+            myCertificateTableAdapter.Fill(myFWDataSet.myCertificate);
+            certificateTableAdapter.Fill(myFWDataSet.Certificate);
         }
 
         private void mAddServer_Click(object sender, EventArgs e)

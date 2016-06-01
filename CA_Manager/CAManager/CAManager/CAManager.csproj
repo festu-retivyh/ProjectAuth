@@ -142,11 +142,23 @@
     <Compile Include="sprListProfile.Designer.cs">
       <DependentUpon>sprListProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="sprListProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprListProgram.Designer.cs">
+      <DependentUpon>sprListProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="sprProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sprProfile.Designer.cs">
       <DependentUpon>sprProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sprProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sprProgram.Designer.cs">
+      <DependentUpon>sprProgram.cs</DependentUpon>
     </Compile>
     <Compile Include="UsbSeacher.cs" />
     <EmbeddedResource Include="Autorize.resx">
@@ -193,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sprListProfile.resx">
       <DependentUpon>sprListProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprListProgram.resx">
+      <DependentUpon>sprListProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sprProfile.resx">
       <DependentUpon>sprProfile.cs</DependentUpon>

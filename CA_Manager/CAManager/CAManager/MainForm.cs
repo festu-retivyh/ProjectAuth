@@ -123,7 +123,8 @@ namespace CAManager
         private void btnSelectUser_Click(object sender, EventArgs e)
         {
             int idSelUser = int.Parse(dgvAllUsers.SelectedRows[0].Cells[0].Value.ToString());
-            Model.OpenInfoAboutClient(idSelUser);
+            sprClient spr = new sprClient(idSelUser);
+            spr.Show();
         }
 
         private void btnBlockUserAll_Click(object sender, EventArgs e)

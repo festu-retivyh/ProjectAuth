@@ -5833,7 +5833,6 @@ namespace CAManager {
                 this.columnClientId.AllowDBNull = false;
                 this.columnClientId.ReadOnly = true;
                 this.columnClientId.Unique = true;
-                this.columnDateState.AllowDBNull = false;
                 this.columnState.AllowDBNull = false;
                 this.columnState.MaxLength = 50;
                 this.columnFName.AllowDBNull = false;
@@ -5845,8 +5844,6 @@ namespace CAManager {
                 this.columnLogin.MaxLength = 50;
                 this.columnDomain.MaxLength = 50;
                 this.columnDeleted.AllowDBNull = false;
-                this.columnDateStart.AllowDBNull = false;
-                this.columnDateStop.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12736,7 +12733,12 @@ namespace CAManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DateState {
                 get {
-                    return ((global::System.DateTime)(this[this.tableClientInfo.DateStateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableClientInfo.DateStateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'DateState\' в таблице \'ClientInfo\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableClientInfo.DateStateColumn] = value;
@@ -12834,7 +12836,12 @@ namespace CAManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DateStart {
                 get {
-                    return ((global::System.DateTime)(this[this.tableClientInfo.DateStartColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableClientInfo.DateStartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'DateStart\' в таблице \'ClientInfo\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableClientInfo.DateStartColumn] = value;
@@ -12845,11 +12852,28 @@ namespace CAManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DateStop {
                 get {
-                    return ((global::System.DateTime)(this[this.tableClientInfo.DateStopColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableClientInfo.DateStopColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'DateStop\' в таблице \'ClientInfo\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableClientInfo.DateStopColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateStateNull() {
+                return this.IsNull(this.tableClientInfo.DateStateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateStateNull() {
+                this[this.tableClientInfo.DateStateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12874,6 +12898,30 @@ namespace CAManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDomainNull() {
                 this[this.tableClientInfo.DomainColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateStartNull() {
+                return this.IsNull(this.tableClientInfo.DateStartColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateStartNull() {
+                this[this.tableClientInfo.DateStartColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateStopNull() {
+                return this.IsNull(this.tableClientInfo.DateStopColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateStopNull() {
+                this[this.tableClientInfo.DateStopColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -20449,26 +20497,27 @@ FROM            [Server] LEFT OUTER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Client.id AS ClientId, ClientState.date AS DateState, State.name AS State, [User].fname AS FName, [User].name AS Name, [User].sname AS SName, [User].login AS Login, [User].domain AS Domain, 
+            this._commandCollection[0].CommandText = @"SELECT        client1.id AS ClientId, ClientState.date AS DateState, State.name AS State, [User].fname AS FName, [User].name AS Name, [User].sname AS SName, [User].login AS Login, [User].domain AS Domain, 
                          [User].delated AS Deleted, Certificate.dateStart AS DateStart, Certificate.dateStop AS DateStop
-FROM            Client INNER JOIN
-                         ClientState ON Client.id = ClientState.clientId INNER JOIN
+FROM            (SELECT        id, guid, cerificateId, usbId, userId, address
+                          FROM            Client
+                          WHERE        (id = @clientId)) AS client1 LEFT OUTER JOIN
+                         ClientState ON client1.id = ClientState.clientId INNER JOIN
                          State ON ClientState.stateId = State.id INNER JOIN
-                         [User] ON Client.userId = [User].id INNER JOIN
-                         Usb ON Client.usbId = Usb.id INNER JOIN
-                         Certificate ON Client.cerificateId = Certificate.id AND Usb.certificateId = Certificate.id
-WHERE        (Client.id = @ClientId)";
+                         [User] ON client1.userId = [User].id INNER JOIN
+                         Usb ON client1.usbId = Usb.id LEFT OUTER JOIN
+                         Certificate ON client1.cerificateId = Certificate.id AND Usb.certificateId = Certificate.id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clientId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(myFWDataSet.ClientInfoDataTable dataTable, int ClientId) {
+        public virtual int Fill(myFWDataSet.ClientInfoDataTable dataTable, int clientId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ClientId));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(clientId));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -20480,9 +20529,9 @@ WHERE        (Client.id = @ClientId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual myFWDataSet.ClientInfoDataTable GetData(int ClientId) {
+        public virtual myFWDataSet.ClientInfoDataTable GetData(int clientId) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ClientId));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(clientId));
             myFWDataSet.ClientInfoDataTable dataTable = new myFWDataSet.ClientInfoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

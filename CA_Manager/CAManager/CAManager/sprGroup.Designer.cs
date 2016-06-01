@@ -33,31 +33,31 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mSaveExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mClose = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
             this.btnSel = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dgvProfile = new System.Windows.Forms.DataGridView();
-            this.myFWDataSet = new CAManager.myFWDataSet();
-            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profileTableAdapter = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.programIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serverIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myFWDataSet = new CAManager.myFWDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mSaveExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.profileTableAdapter = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
             this.LayoutPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LayoutPanel
@@ -109,40 +109,6 @@
             this.tbxName.Size = new System.Drawing.Size(147, 20);
             this.tbxName.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.LayoutPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 307);
-            this.panel1.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mSaveExit,
-            this.mClose});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(257, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mSaveExit
-            // 
-            this.mSaveExit.Name = "mSaveExit";
-            this.mSaveExit.Size = new System.Drawing.Size(134, 20);
-            this.mSaveExit.Text = "Сохранить и закрыть";
-            this.mSaveExit.Click += new System.EventHandler(this.mSaveExit_Click);
-            // 
-            // mClose
-            // 
-            this.mClose.Name = "mClose";
-            this.mClose.Size = new System.Drawing.Size(65, 20);
-            this.mClose.Text = "Закрыть";
-            this.mClose.Click += new System.EventHandler(this.mClose_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnSel);
@@ -153,15 +119,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(248, 24);
             this.panel2.TabIndex = 2;
+            this.panel2.Visible = false;
             // 
-            // btnAdd
+            // btnSel
             // 
-            this.btnAdd.Location = new System.Drawing.Point(5, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnSel.Location = new System.Drawing.Point(167, 2);
+            this.btnSel.Name = "btnSel";
+            this.btnSel.Size = new System.Drawing.Size(75, 23);
+            this.btnSel.TabIndex = 0;
+            this.btnSel.Text = "Изменить";
+            this.btnSel.UseVisualStyleBackColor = true;
             // 
             // btnDel
             // 
@@ -172,14 +139,14 @@
             this.btnDel.Text = "Удалить";
             this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // btnSel
+            // btnAdd
             // 
-            this.btnSel.Location = new System.Drawing.Point(167, 2);
-            this.btnSel.Name = "btnSel";
-            this.btnSel.Size = new System.Drawing.Size(75, 23);
-            this.btnSel.TabIndex = 0;
-            this.btnSel.Text = "Изменить";
-            this.btnSel.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(5, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Добавить";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // dgvProfile
             // 
@@ -200,20 +167,6 @@
             this.dgvProfile.RowHeadersVisible = false;
             this.dgvProfile.Size = new System.Drawing.Size(248, 238);
             this.dgvProfile.TabIndex = 3;
-            // 
-            // myFWDataSet
-            // 
-            this.myFWDataSet.DataSetName = "myFWDataSet";
-            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // profileBindingSource
-            // 
-            this.profileBindingSource.DataMember = "Profile";
-            this.profileBindingSource.DataSource = this.myFWDataSet;
-            // 
-            // profileTableAdapter
-            // 
-            this.profileTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -251,6 +204,54 @@
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // profileBindingSource
+            // 
+            this.profileBindingSource.DataMember = "Profile";
+            this.profileBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // myFWDataSet
+            // 
+            this.myFWDataSet.DataSetName = "myFWDataSet";
+            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.LayoutPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(257, 307);
+            this.panel1.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mSaveExit,
+            this.mClose});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(257, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mSaveExit
+            // 
+            this.mSaveExit.Name = "mSaveExit";
+            this.mSaveExit.Size = new System.Drawing.Size(134, 20);
+            this.mSaveExit.Text = "Сохранить и закрыть";
+            this.mSaveExit.Click += new System.EventHandler(this.mSaveExit_Click);
+            // 
+            // mClose
+            // 
+            this.mClose.Name = "mClose";
+            this.mClose.Size = new System.Drawing.Size(65, 20);
+            this.mClose.Text = "Закрыть";
+            this.mClose.Click += new System.EventHandler(this.mClose_Click);
+            // 
+            // profileTableAdapter
+            // 
+            this.profileTableAdapter.ClearBeforeFill = true;
+            // 
             // sprGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,14 +266,14 @@
             this.LayoutPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

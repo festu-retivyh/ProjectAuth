@@ -138,21 +138,37 @@ namespace CAManager
 
         internal static void OpenInfoAboutClient(int idSelUser)
         {
-            sCLIENT_INFO_FULL sClientInfo = new sCLIENT_INFO_FULL();
-            myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
-            var data = tbClientInfo.GetData(idSelUser);
-            if (data.Count!=0)
-            {
-                sClientInfo.clientId = data[0].ClientId;
-                sClientInfo.f = data[0].FName;
-                sClientInfo.i = data[0].Name;
-                sClientInfo.o = data[0].SName;
-                sClientInfo.status = data[0].State;
-                sClientInfo.login = data[0].Login;
-                sClientInfo.domain = data[0].Domain;
-                sClientInfo.deleted = data[0].Deleted;
-            }
-            sprClient form = new sprClient(sClientInfo);
+            //sCLIENT_INFO_FULL sClientInfo = new sCLIENT_INFO_FULL();
+            //myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
+            //var data = tbClientInfo.GetData(idSelUser);
+            //if (data.Count != 0)
+            //{
+            //    sClientInfo = new sCLIENT_INFO_FULL()
+            //    {
+            //        clientId = data[0].ClientId,
+            //        f = data[0].FName,
+            //        i = data[0].Name,
+            //        o = data[0].SName,
+            //        status = data[0].State,
+            //        login = data[0].Login,
+            //        domain = data[0].Domain,
+            //        deleted = data[0].Deleted,
+            //    };
+            //}
+            //myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
+            //var data = tbClientInfo.GetData(idSelUser);
+            //if (data.Count!=0)
+            //{
+            //    sClientInfo.clientId = data[0].ClientId;
+            //    sClientInfo.f = data[0].FName;
+            //    sClientInfo.i = data[0].Name;
+            //    sClientInfo.o = data[0].SName;
+            //    sClientInfo.status = data[0].State;
+            //    sClientInfo.login = data[0].Login;
+            //    sClientInfo.domain = data[0].Domain;
+            //    sClientInfo.deleted = data[0].Deleted;
+            //}
+            sprClient form = new sprClient(idSelUser);
             form.Show();
         }
     }
