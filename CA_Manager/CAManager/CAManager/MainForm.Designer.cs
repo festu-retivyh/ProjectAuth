@@ -853,6 +853,7 @@
             this.btnProgram.TabIndex = 1;
             this.btnProgram.Text = "Программы и службы";
             this.btnProgram.UseVisualStyleBackColor = true;
+            this.btnProgram.Click += new System.EventHandler(this.btnProgram_Click);
             // 
             // btnProfile
             // 
@@ -971,9 +972,8 @@
             this.tableAdapterManager.GroupProfileTableAdapter = null;
             this.tableAdapterManager.GroupTableAdapter = null;
             this.tableAdapterManager.LogTableAdapter = null;
-            this.tableAdapterManager.PortTableAdapter = null;
             this.tableAdapterManager.ProfileTableAdapter = null;
-            this.tableAdapterManager.Program1TableAdapter = null;
+            this.tableAdapterManager.ProgramTableAdapter = null;
             this.tableAdapterManager.ServerTableAdapter = null;
             this.tableAdapterManager.StateTableAdapter = null;
             this.tableAdapterManager.StatusTableAdapter = null;

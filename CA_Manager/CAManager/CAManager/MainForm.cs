@@ -194,5 +194,11 @@ namespace CAManager
         {
 
         }
+
+        private void btnProgram_Click(object sender, EventArgs e)
+        {
+            sprListProgram spr = new sprListProgram();
+            spr.Show();
+        }
     }
 }

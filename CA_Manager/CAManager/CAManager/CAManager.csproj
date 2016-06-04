@@ -212,6 +212,9 @@
     <EmbeddedResource Include="sprProfile.resx">
       <DependentUpon>sprProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sprProgram.resx">
+      <DependentUpon>sprProgram.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

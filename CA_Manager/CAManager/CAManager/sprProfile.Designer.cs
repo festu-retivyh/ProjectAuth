@@ -33,7 +33,7 @@
             this.serverBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myFWDataSet = new CAManager.myFWDataSet();
             this.cbxProgram = new System.Windows.Forms.ComboBox();
-            this.program1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,14 +42,12 @@
             this.mSaveExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.serverTableAdapter = new CAManager.myFWDataSetTableAdapters.ServerTableAdapter();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.programTableAdapter = new CAManager.myFWDataSetTableAdapters.ProgramTableAdapter();
-            this.program1TableAdapter = new CAManager.myFWDataSetTableAdapters.Program1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.program1BindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxServer
@@ -75,7 +73,7 @@
             // 
             // cbxProgram
             // 
-            this.cbxProgram.DataSource = this.program1BindingSource;
+            this.cbxProgram.DataSource = this.programBindingSource;
             this.cbxProgram.DisplayMember = "name";
             this.cbxProgram.FormattingEnabled = true;
             this.cbxProgram.Location = new System.Drawing.Point(107, 80);
@@ -86,8 +84,8 @@
             // 
             // program1BindingSource
             // 
-            this.program1BindingSource.DataMember = "Program1";
-            this.program1BindingSource.DataSource = this.myFWDataSet;
+            this.programBindingSource.DataMember = "Program1";
+            this.programBindingSource.DataSource = this.myFWDataSet;
             // 
             // tbxName
             // 
@@ -161,10 +159,6 @@
             // 
             this.programTableAdapter.ClearBeforeFill = true;
             // 
-            // program1TableAdapter
-            // 
-            this.program1TableAdapter.ClearBeforeFill = true;
-            // 
             // sprProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,10 +177,9 @@
             this.Load += new System.EventHandler(this.sprProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.program1BindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,8 +201,6 @@
         private myFWDataSetTableAdapters.ServerTableAdapter serverTableAdapter;
         private System.Windows.Forms.BindingSource programBindingSource;
         private myFWDataSetTableAdapters.ProgramTableAdapter programTableAdapter;
-        private System.Windows.Forms.BindingSource program1BindingSource;
-        private myFWDataSetTableAdapters.Program1TableAdapter program1TableAdapter;
         private int value;
 
         

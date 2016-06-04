@@ -32,10 +32,9 @@ namespace CAManager
             ClearChecksInDgv();
             if (currentGroupId == 0)
             {
-                //cbxGroup.SelectedValue = null;
-                myFWDataSetTableAdapters.GetClientProfilesTableAdapter ta = new myFWDataSetTableAdapters.GetClientProfilesTableAdapter();
-                var dt = ta.GetData(currentClientId);
-                foreach (myFWDataSet.GetClientProfilesRow row in dt.Rows)
+                myFWDataSetTableAdapters.ClientProfileTableAdapter ta = new myFWDataSetTableAdapters.ClientProfileTableAdapter();
+                var dt = ta.GetDataForClientId(currentClientId);
+                foreach (myFWDataSet.ClientProfileRow row in dt.Rows)
                 {
                     foreach (DataGridViewRow str in dataGridView1.Rows)
                     {

@@ -4,16 +4,12 @@
 
     partial class myFWDataSet
     {
-        partial class CutLastClientStatusDataTable
-        {
-        }
-
-        partial class UserDataTable
-        {
-        }
     }
 }
 
 namespace CAManager.myFWDataSetTableAdapters
 {
+    partial class ProgramTableAdapter
+    {
+    }
 }

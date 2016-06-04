@@ -19,7 +19,7 @@ namespace CAManager
 
         private void sprProfile_Load(object sender, EventArgs e)
         {
-            program1TableAdapter.Fill(myFWDataSet.Program1);
+            programTableAdapter.Fill(myFWDataSet.Program);
             serverTableAdapter.Fill(myFWDataSet.Server);
             if (curId == 0)
                 return;
