@@ -35,6 +35,7 @@ namespace CA
 
         }
 
+
         internal static void AliveServer(string data)
         {
             
@@ -144,7 +145,21 @@ namespace CA
             }
             return returnData;
         }
-        
+
+        //internal static void CloseServerWithError()
+        //{
+        //    try
+        //    {
+        //        Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
+        //        DbConnector.DBServer = myRegKey.GetValue("NameServer").ToString();
+        //        myRegKey = myRegKey.OpenSubKey("secure");
+        //        DbConnector.DBUser = myRegKey.GetValue("login").ToString();
+        //        DbConnector.DBPass = myRegKey.GetValue("password").ToString();
+        //        myRegKey.Close();
+        //    }
+        //    catch { File.WriteAllText(@"D:\CA_SetPasrams.txt", "sOmEerror"); }
+        //}
+
         internal static string JoinServer(string data)
         {
             string goodData = ReadData(data);

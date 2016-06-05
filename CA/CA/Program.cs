@@ -15,7 +15,6 @@ namespace CA
         /// </summary>
         static void Main()
         {
-
         }
     }
 }

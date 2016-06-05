@@ -16,18 +16,18 @@
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
         "OwnerKey" = "8:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
+        "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -70,12 +70,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -88,7 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -184,7 +178,7 @@
             "Object" = "8:_A914821E52C444D68EC85C40973A4DB6"
             "FileType" = "3:2"
             "InstallAction" = "3:4"
-            "Arguments" = "8:"
+            "Arguments" = "8:/x {FB2B3BAD-A22F-4FF2-A868-380A9DDC7BD8} /qr"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
             "Identifier" = "8:_3A9ABD0A_78A1_4C45_879A_EB2FA0B24A53"
@@ -259,37 +253,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_94DF32F0FEA172DE7347D6385286C028"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_94DF32F0FEA172DE7347D6385286C028"
-                    {
-                    "Name" = "8:Cryptography.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Cryptography.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_A233DCF6EE0448ACA8D813E18544A3F1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
             {
             "AssemblyRegister" = "3:1"
@@ -297,11 +260,6 @@
             "AssemblyAsmDisplayName" = "8:CA, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E0F7DCAF367AA240DFEE7E5EAC6B375B"
-                    {
-                    "Name" = "8:CA.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CA.exe"
             "TargetName" = "8:"
@@ -446,9 +404,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
-        "ProductCode" = "8:{E3930B04-DD34-4A6E-88AF-B6B8C4BE1A2E}"
-        "PackageCode" = "8:{9749E533-76B5-4FF8-970B-EE5F0D3981C3}"
-        "UpgradeCode" = "8:{EC105D0B-0276-42F8-B607-A2042703FCA4}"
+        "ProductCode" = "8:{D4E6DCEF-7271-41EA-A44F-076D61345EF7}"
+        "PackageCode" = "8:{E9B203BA-0725-4F9F-BA77-D06F61A04612}"
+        "UpgradeCode" = "8:{0C686165-AC35-4BBF-9647-E76E677FBCE4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"

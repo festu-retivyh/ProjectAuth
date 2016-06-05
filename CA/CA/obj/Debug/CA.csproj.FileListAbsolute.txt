@@ -48,6 +48,9 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\bin\Debug\Cr
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\v6\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\bin\Debug\CA.exe.config
+C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\obj\Debug\CA.exe
+C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\obj\Debug\CA.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Debug\CA.exe.config
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Debug\CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Debug\CA.pdb
@@ -55,7 +58,3 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Deb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Debug\Cryptography.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.pdb
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache
-C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\bin\Debug\CA.exe.config
-C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\obj\Debug\CA.exe
-C:\Users\007-0_000\Desktop\ProjectAuth-CreateDB\CA\CA\obj\Debug\CA.pdb

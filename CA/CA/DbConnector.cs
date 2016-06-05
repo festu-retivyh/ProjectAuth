@@ -9,23 +9,36 @@ namespace CA
 {
     class DbConnector
     {
-        private static string dbUser;
-        private static string dbPass;
-        public static string DBUser
-        {
-            set { dbUser = value; }
-        }
-        public static string DBPass
-        {
-            set { dbPass = value; }
-        }
+        //private static string dbUser = null;
+        //private static string dbPass = null;
+        //private static string dbServer = null;
+        //public static string DBUser
+        //{
+        //    set { dbUser = value; }
+        //}
+        //public static string DBServer
+        //{
+        //    set { dbServer = value; }
+        //}
+        //public static string DBPass
+        //{
+        //    set { dbPass = value; }
+        //}
         private static SqlConnection GetConnection()
         {
-            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
+            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
+            string dbServer = myRegKey.GetValue("NameServer").ToString();
+            var myRegKey1 = myRegKey.OpenSubKey("secure");
+            string dbUser = myRegKey1.GetValue("Login").ToString();
+            string dbPass = myRegKey1.GetValue("Password").ToString();
+            myRegKey.Close();
+            myRegKey1.Close();
+
+            //Model.CloseServerWithError();
+            File.WriteAllText(@"D:\CA_connectionDB.txt", dbUser+"$"+ dbPass + "$" + dbServer);
             //var connection = "Data Source="+myRegKey.GetValue("NameServer")+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
             //var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=adm;Password = Jhjk1209;";
-            var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=" + dbUser + ";Password = " + dbPass + ";";
-            myRegKey.Close();
+            var connection = "Data Source=" + dbServer + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=" + dbUser + ";Password = " + dbPass + ";";
             SqlConnection conn = new SqlConnection(connection);
             try
             {
@@ -69,17 +82,6 @@ namespace CA
 
         internal static void GetOnlineClients(ref List<objClient> list)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    list.Clear();
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
             {

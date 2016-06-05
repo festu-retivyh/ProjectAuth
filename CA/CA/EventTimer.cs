@@ -25,11 +25,11 @@ namespace CA
 
         private static void Alive()
         {
-            try
-            {
+            //try
+            //{
                 FillList();
-            }
-            catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
+            //}
+            //catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
             CheckOnlineClients();
             Thread.Sleep(60000);
         }
