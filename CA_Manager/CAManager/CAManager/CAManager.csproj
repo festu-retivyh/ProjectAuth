@@ -37,6 +37,7 @@
       <HintPath>..\..\..\CryptographyDll\Cryptography\Cryptography\bin\Debug\Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />

@@ -25,9 +25,13 @@ namespace WS_CA
             ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
             File.Delete(Context.Parameters["targetdir"] + "db.sql");
 
-            CASettings.Default.Setting = Context.Parameters["dbname"];
-            CASettings.Default.Save();
-            File.WriteAllText(@"d:\sett.txt", CASettings.Default.Setting);
+            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
+            myRegKey.SetValue("NameServer", Context.Parameters["dbname"]);
+            myRegKey.Close();
+
+            //CASettings.Default.Setting = Context.Parameters["dbname"];
+            //CASettings.Default.Save();
+            //File.WriteAllText(@"d:\sett.txt", CASettings.Default.Setting);
             //CA.ConfigurateSattings.setMainSettings(Context.Parameters["dbname"]);
         }
 
@@ -37,7 +41,7 @@ namespace WS_CA
             // split script on GO command
             IEnumerable<string> commandStrings = Regex.Split(script, @"^\s*GO\s*$",
                                      RegexOptions.Multiline | RegexOptions.IgnoreCase);
-            SqlConnection myConn = new SqlConnection("Server="+srvName+";Integrated security=SSPI;database=master");
+            SqlConnection myConn = new SqlConnection("Server="+srvName+ ";Integrated security=SSPI");
             myConn.Open();
             try
             {
@@ -52,9 +56,10 @@ namespace WS_CA
                     }
                 }
             }
-            catch { }
-            finally { 
-            myConn.Close();
+            catch {  }
+            finally
+            {
+                myConn.Close();
             }
 
         }
@@ -68,7 +73,9 @@ namespace WS_CA
             
             if (result == DialogResult.Yes)
             {
-                ExecuteSqlScript("MACHINE", "DROP DATABASE [ProjectAuth_DB]");
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
+                ExecuteSqlScript(myRegKey.GetValue("NameServer").ToString(), "DROP DATABASE [ProjectAuth_DB]");
+                myRegKey.Close();
             }
         }
 

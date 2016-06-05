@@ -16189,7 +16189,7 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
-            int returnValue = this.Adapter.Fill(dataTable);
+            int returnValue = Adapter.Fill(dataTable);
             return returnValue;
         }
         

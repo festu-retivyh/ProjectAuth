@@ -242,7 +242,7 @@ namespace Cryptography
             //TODO: code for checking sign for data
             RSACryptoServiceProvider CSP = new RSACryptoServiceProvider(lengthKey);
             CSP.ImportParameters(KeyFromString(key));
-            File.WriteAllText(@"D:\checkSign", "impot key: good");
+            File.WriteAllText(@"D:\checkSign", sign);
             var _sign = Convert.FromBase64String(sign.Replace("\0",""));
             bool rezult = CSP.VerifyData(StringToByteArray(data), new SHA384CryptoServiceProvider(), _sign);
                 

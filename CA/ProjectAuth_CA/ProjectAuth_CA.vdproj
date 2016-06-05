@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6852229C85D64BFB8076CE0D84328FE1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
         "OwnerKey" = "8:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,8 +57,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "MsmKey" = "8:_FA3D5CB6AC6146E191CB141D00E8C511"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -89,6 +83,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -259,26 +259,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6852229C85D64BFB8076CE0D84328FE1"
-            {
-            "SourcePath" = "8:D:\\db.sql"
-            "TargetName" = "8:db.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_A233DCF6EE0448ACA8D813E18544A3F1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_94DF32F0FEA172DE7347D6385286C028"
             {
             "AssemblyRegister" = "3:1"
@@ -353,6 +333,26 @@
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:TRUE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA3D5CB6AC6146E191CB141D00E8C511"
+            {
+            "SourcePath" = "8:..\\..\\db.sql"
+            "TargetName" = "8:db.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_A233DCF6EE0448ACA8D813E18544A3F1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
@@ -447,7 +447,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{E3930B04-DD34-4A6E-88AF-B6B8C4BE1A2E}"
-        "PackageCode" = "8:{71FC2DB9-8905-468B-9331-A5DC2395F058}"
+        "PackageCode" = "8:{93CC5EC7-F0DA-4B2D-A39B-E3C71C61A43E}"
         "UpgradeCode" = "8:{EC105D0B-0276-42F8-B607-A2042703FCA4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -922,7 +922,7 @@
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:1"
+                            "Value" = "3:0"
                             "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -974,7 +974,7 @@
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:1"
+                            "Value" = "3:0"
                             "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1026,7 +1026,7 @@
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:1"
+                            "Value" = "3:0"
                             "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }

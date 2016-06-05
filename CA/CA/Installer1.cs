@@ -17,11 +17,6 @@ namespace CA
         }
         public override void Install(IDictionary stateSaver)
         {
-            File.WriteAllText(@"d:\sett0.txt", CASettings.Default.Setting);
-            CASettings.Default.Setting = Context.Parameters["dbname"];
-            CASettings.Default.Save();
-            File.WriteAllText(@"d:\sett1.txt", CASettings.Default.Setting);
-            //CA.ConfigurateSattings.setMainSettings(Context.Parameters["dbname"]);
         }
     }
 }

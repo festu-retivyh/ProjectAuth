@@ -26,7 +26,7 @@ namespace CAManager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MACHINE;Initial Catalog=ProjectAuth_DB;Integrated Security=True")]
         public string myFWConnectionString {
             get {
                 return ((string)(this["myFWConnectionString"]));

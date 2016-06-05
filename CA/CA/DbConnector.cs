@@ -11,42 +11,25 @@ namespace CA
     {
         private static SqlConnection GetConnection()
         {
-            var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
+            //var connection = "Data Source="+myRegKey.GetValue("NameServer")+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
+            var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=adm;Password = Jhjk1209;";
+            myRegKey.Close();
             SqlConnection conn = new SqlConnection(connection);
             try
-            { 
+            {
                 conn.Open();
+                File.WriteAllText(@"D:\CA_openConnect.txt", connection);
             }
             catch
             {
                 conn = null;
+                File.WriteAllText(@"D:\CA_CannotOpenConnect.txt", connection);
             }
             return conn;
         }
         internal static void RegistrateClient(string guidUSB, string guidClient, Certificate certificate)
         {
-            ////Запрос к безe на добавление сертификата (certificate)
-            /////// ADD date start, datestop, dataCreating generate on CA
-            //myFWDataSetTableAdapters.InsertCertificateTableAdapter tbCert = new myFWDataSetTableAdapters.InsertCertificateTableAdapter();
-            //var idClientCert = tbCert.GetData(certificate.publicKey, 2, certificate.dateStart, certificate.dateStop, certificate.dateCreating);
-            //int id = (int)idClientCert[0][0];
-            ////Запрос на изменение клиента соответствующего guidUSB
-            //myFWDataSetTableAdapters.RegistrateClientTableAdapter tbClient = new myFWDataSetTableAdapters.RegistrateClientTableAdapter();
-            //tbClient.GetData(guidUSB, guidClient, id);
-
-            ////////////////////////////////////////////
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            ////var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
-            ////File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -269,27 +252,6 @@ namespace CA
 
         internal static Certificate GetCertificate(string guid)
         {
-            //myFWDataSetTableAdapters.GetCertificateTableAdapter tbCert = new myFWDataSetTableAdapters.GetCertificateTableAdapter();
-            //var certTA = tbCert.GetData(guid);
-            //Certificate cert = new Certificate();
-            //cert.publicKey = certTA[0].publicKey;
-            //cert.dateStart = certTA[0].dateStart;
-            //cert.dateStop = certTA[0].dateStop;
-            //return cert;
-            /////////////////////////////////////////////////////////////////////
-
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            ////var connection = System.Configuration.ConfigurationManager.ConnectionStrings[0].ConnectionString;
-            ////File.WriteAllText(@"D:\file.txt", guidUsb);  ///////////////////////////
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -306,24 +268,11 @@ namespace CA
                 cert.publicKey = sdr.GetValue(2).ToString();// [0].publicKey;
                 //text = text + sdr.GetValue(0).ToString();
             }
-            //myFWDataSetTableAdapters.GetUsbCertTableAdapter tb = new myFWDataSetTableAdapters.GetUsbCertTableAdapter();
-            //var rez = tb.GetData(guidUsb);
             return cert;
         }
 
         internal static string GetOnlineClientsForServer(string guid)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -344,19 +293,6 @@ namespace CA
 
         internal static void InsertTempGuid(string guid, string clientGuid)
         {
-            //myFWDataSetTableAdapters.insertTempGuidTableAdapter tb = new myFWDataSetTableAdapters.insertTempGuidTableAdapter();
-
-            //var rez = tb.GetData(guid, clientGuid);
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -369,19 +305,6 @@ namespace CA
 
         internal static string GetPartKeyUsb(string guidClient)
         {
-            //myFWDataSetTableAdapters.GetPartKeyTableAdapter tb = new myFWDataSetTableAdapters.GetPartKeyTableAdapter();
-            //var rez = tb.GetData(guidClient);
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -399,16 +322,6 @@ namespace CA
 
         internal static string CheckTocken(string goodData, string guidUsb)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch 
-            //{
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -428,25 +341,6 @@ namespace CA
 
         internal static Certificate GetCertificateUsbOfClient(string guidClient)
         {
-            //myFWDataSetTableAdapters.GetUsbCertificateOfClientTableAdapter tb = new myFWDataSetTableAdapters.GetUsbCertificateOfClientTableAdapter();
-            //var rez = tb.GetData(guidClient);
-            //Certificate cert = new Certificate();
-            //cert.dateCreating = rez[0].date;
-            //cert.dateStart = rez[0].dateStart;
-            //cert.dateStop = rez[0].dateStop;
-            //cert.publicKey = rez[0].publicKey;
-
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -468,17 +362,6 @@ namespace CA
 
         internal static Certificate GetUSBCertificate(string guidUsb)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -495,6 +378,7 @@ namespace CA
                 cert.publicKey = sdr.GetValue(1).ToString();// [0].publicKey;
                 //text = text + sdr.GetValue(0).ToString();
             }
+            File.WriteAllText(@"D:\GetUSBCert.txt", cert.publicKey);
             return cert;
         }
     }
