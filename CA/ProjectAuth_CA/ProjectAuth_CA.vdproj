@@ -70,6 +70,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -83,12 +89,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_94DF32F0FEA172DE7347D6385286C028"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -175,7 +175,7 @@
             "Sequence" = "3:2"
             "Identifier" = "8:_8E18624C_3F65_4640_A36F_BE30F3F62187"
             "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME]"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME] /dbuser=[USERNAME] /dbpass=[USERPASS]"
             }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_895F2260E2754DA78CCF7ECE8DD79694"
             {
@@ -203,7 +203,7 @@
             "Sequence" = "3:1"
             "Identifier" = "8:_EE3B24E5_7CB9_42E8_B83A_659125A3FCD3"
             "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME]"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME] /dbuser=[USERNAME] /dbpass=[USERPASS]"
             }
         }
         "DefaultFeature"
@@ -447,7 +447,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{E3930B04-DD34-4A6E-88AF-B6B8C4BE1A2E}"
-        "PackageCode" = "8:{93CC5EC7-F0DA-4B2D-A39B-E3C71C61A43E}"
+        "PackageCode" = "8:{9749E533-76B5-4FF8-970B-EE5F0D3981C3}"
         "UpgradeCode" = "8:{EC105D0B-0276-42F8-B607-A2042703FCA4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -804,8 +804,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1214"
+                            "Setting" = "3:2"
+                            "Value" = "8:Создание пользователя"
                             "DefaultValue" = "8:#1214"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -817,8 +817,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1215"
+                            "Setting" = "3:2"
+                            "Value" = "8:Необходимо указать идентификационные данные администратора для доступа к базе данных приложения"
                             "DefaultValue" = "8:#1215"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -882,8 +882,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1247"
+                            "Setting" = "3:2"
+                            "Value" = "8:Имя нового пользователя:"
                             "DefaultValue" = "8:#1247"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -896,7 +896,7 @@
                             "ContextData" = "8:Public"
                             "Attributes" = "3:2"
                             "Setting" = "3:2"
-                            "Value" = "8:EDITA2"
+                            "Value" = "8:USERNAME"
                             "DefaultValue" = "8:EDITA2"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -922,7 +922,7 @@
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:0"
+                            "Value" = "3:1"
                             "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -934,8 +934,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1248"
+                            "Setting" = "3:2"
+                            "Value" = "8:Введите пароль:"
                             "DefaultValue" = "8:#1248"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -948,7 +948,7 @@
                             "ContextData" = "8:Public"
                             "Attributes" = "3:2"
                             "Setting" = "3:2"
-                            "Value" = "8:EDITA3"
+                            "Value" = "8:USERPASS"
                             "DefaultValue" = "8:EDITA3"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -974,7 +974,7 @@
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
                             "Setting" = "3:0"
-                            "Value" = "3:0"
+                            "Value" = "3:1"
                             "DefaultValue" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }

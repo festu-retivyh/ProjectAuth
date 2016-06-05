@@ -9,11 +9,22 @@ namespace CA
 {
     class DbConnector
     {
+        private static string dbUser;
+        private static string dbPass;
+        public static string DBUser
+        {
+            set { dbUser = value; }
+        }
+        public static string DBPass
+        {
+            set { dbPass = value; }
+        }
         private static SqlConnection GetConnection()
         {
             Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
             //var connection = "Data Source="+myRegKey.GetValue("NameServer")+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=adm;Password = Jhjk1209;";
+            //var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=adm;Password = Jhjk1209;";
+            var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=" + dbUser + ";Password = " + dbPass + ";";
             myRegKey.Close();
             SqlConnection conn = new SqlConnection(connection);
             try

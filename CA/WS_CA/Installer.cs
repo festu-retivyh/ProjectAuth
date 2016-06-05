@@ -22,7 +22,9 @@ namespace WS_CA
         public override void Install(IDictionary stateSaver)
         {
             base.Install(stateSaver);
+            File.WriteAllText(@"D:\text.txt", Context.Parameters["dbuser"]+ Context.Parameters["dbpass"]);
             ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
+            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "CREATE LOGIN "+ Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]);
             File.Delete(Context.Parameters["targetdir"] + "db.sql");
 
             Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
