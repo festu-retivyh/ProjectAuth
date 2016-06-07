@@ -25,12 +25,22 @@ namespace WS_CA
         protected override void OnStart(string[] args)
         {
             AddLog("start");
-
+            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
+            string server = myRegKey.GetValue("NameServer").ToString();
+            myRegKey = myRegKey.OpenSubKey("secure");
+            string login = myRegKey.GetValue("Login").ToString();
+            string pass = myRegKey.GetValue("Password").ToString(); 
+            myRegKey.Close();
             host = new ServiceHost(typeof(CA.CA));
             host.Open(); //Запуск SWF
+            try
+            {
+                File.WriteAllText(@"D:\Service1.txt", server + login + pass);
+            }
+            catch { }
             et = new CA.EventTimer();
+            et.SetParams(server, login, pass);
             et.Start();
-            //ConnectToDB();
 
         }
 

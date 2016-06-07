@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace CAManager
 {
-    public partial class MasterCreate : Form
+    public partial class MasterAddClient : Form
     {
         List<UsbDisk> disks;
         UsbDisk currentDisk;
-        public MasterCreate()
+        public MasterAddClient()
         {
             InitializeComponent();
             disks = UsbSearcher.Search();

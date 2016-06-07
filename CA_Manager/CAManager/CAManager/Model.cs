@@ -12,7 +12,8 @@ namespace CAManager
     {
         static private string privateKeyCA;
         public static event EventHandler UpdateViewTables;
-        
+        private static string pkey, ppin;
+
         static private string PrivateKeyCA
         {
             get
@@ -23,9 +24,17 @@ namespace CAManager
             }
 
         }
+        public static void setParams(string v1, string v2)
+        {
+            pkey = v1;
+            ppin = v2;
+        }
         private static string GetMyPrivateKey()
         {
-            return File.ReadAllText(@"D:\ca.key");
+            string k = DbConnector.GetParam("privateKey");
+            if (k == null)
+                new ApplicationException("Ошибка при попытки получить приватный ключ центра сертификации");
+            return Cryptography.Cryptography.DecryptAes(k, pkey, ppin);
         }
 
         internal static int MasterCreateCertificate(sCertData data, string domainName, UsbDisk disk)
@@ -97,7 +106,7 @@ namespace CAManager
             {
                 infoUSB = Cryptography.Cryptography.GetHash(infoUSB);
             }
-            
+
             sCertData certificate = new sCertData();
             certificate.dStart = server.dateStart;
             certificate.dStop = server.dateStop;
@@ -105,9 +114,16 @@ namespace CAManager
             certificate.login = server.name;
             Certificate certSrv = new Certificate(certificate, privateKey, 3);
             certSrv.CalculateCertSign(PrivateKeyCA);
-            File.WriteAllText(Cryptography.Cryptography.EncryptAes(privateKey, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")), pathToUSB + @"\srv.key");
+            string sGuid = Guid.NewGuid().ToString();
+            string dataForSrv = "8 " + DateTime.Now + " " + privateKey + " " + sGuid + " "
+                //+Cryptography.Cryptography.CertificateToString(certSrv)
+                + Cryptography.Cryptography.GetPublicKey(privateKeyCA) + " "
+                + DbConnector.GetParam("AddressService");
+            dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
+            dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, privateKeyCA);
+            File.WriteAllText(pathToUSB + @"\srv.key", Cryptography.Cryptography.EncryptAes(dataForSrv, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")));
             int idCertSrv = DbConnector.AddCertificate(certSrv);
-            server.guid = Guid.NewGuid().ToString();
+            server.guid = sGuid;
             server.id = DbConnector.AddNewServer(server, idCertSrv);
             return server.id;
         }

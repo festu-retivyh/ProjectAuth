@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace CAManager
 {
-    public partial class MasterAdd : Form
+    public partial class MasterAddServer : Form
     {
         List<UsbDisk> disks;
         UsbDisk currentDisk;
-        public MasterAdd()
+        public MasterAddServer()
         {
             InitializeComponent();
             disks = UsbSearcher.Search();

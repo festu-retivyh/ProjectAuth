@@ -6,8 +6,12 @@ using System.IO;
 
 namespace CA
 {
-    static class Model
+    public static class Model
     {        
+        public static string login;
+        public static string pass;
+        public static string server;
+
         internal static void AliveClient(string data, string ip)
         {
             string goodData = ReadData(data, false);
@@ -99,14 +103,6 @@ namespace CA
             return "OK";
         }
 
-        //public static bool SearchGuidInList(List<objClient> list, string guid, )
-        //{
-        //    foreach (var l in list)
-        //        if (l.guid == guid)
-        //            return true;
-        //    return false;
-        //}
-
         internal static string JoinClient(string data, string ip)
         {
             string goodData = ReadData(data, false);
@@ -132,7 +128,14 @@ namespace CA
                         if (rezult == "good")
                         {
                             DbConnector.SetStateClient(guidClient, "active", ip);
-                            //TODO:   Send message to Server  ***********************
+
+                            string [,] ipPorts = DbConnector.GetServersForClient(guidClient);
+                            for (int i = 0; i < ipPorts.Length; i++)
+                            {
+                                //var conn = CreateWebServiceInstance(ipPorts[i,0]);
+                                //conn.AddRule(ipPorts[i, 1]);
+                            }
+
                             returnData = "message was getted";
                         }
                         break;
@@ -146,18 +149,21 @@ namespace CA
             return returnData;
         }
 
-        //internal static void CloseServerWithError()
+        //private static Server.CAClient CreateWebServiceInstance(string address)
         //{
-        //    try
-        //    {
-        //        Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
-        //        DbConnector.DBServer = myRegKey.GetValue("NameServer").ToString();
-        //        myRegKey = myRegKey.OpenSubKey("secure");
-        //        DbConnector.DBUser = myRegKey.GetValue("login").ToString();
-        //        DbConnector.DBPass = myRegKey.GetValue("password").ToString();
-        //        myRegKey.Close();
-        //    }
-        //    catch { File.WriteAllText(@"D:\CA_SetPasrams.txt", "sOmEerror"); }
+        //    BasicHttpBinding binding = new BasicHttpBinding();
+        //    binding.SendTimeout = TimeSpan.FromMinutes(1);
+        //    binding.OpenTimeout = TimeSpan.FromMinutes(1);
+        //    binding.CloseTimeout = TimeSpan.FromMinutes(1);
+        //    binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+        //    binding.AllowCookies = false;
+        //    binding.BypassProxyOnLocal = false;
+        //    binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
+        //    binding.MessageEncoding = WSMessageEncoding.Text;
+        //    binding.TextEncoding = Encoding.UTF8;
+        //    binding.TransferMode = TransferMode.Buffered;
+        //    binding.UseDefaultWebProxy = true;
+        //    return new CAService.CAClient(binding, new EndpointAddress("http://" + address + ":45000/CA.CA"));
         //}
 
         internal static string JoinServer(string data)
@@ -225,7 +231,6 @@ namespace CA
         private static string ReadData(string data, bool usb = true)
         {
             string allEncriptData = Cryptography.Cryptography.Decrypt(data, PrivateKeyCA);
-            File.WriteAllText(@"D:\ReadData.txt", allEncriptData);
             string[] masData = allEncriptData.Split(' ');
             allEncriptData = null;
             try
@@ -238,7 +243,6 @@ namespace CA
                     pubKey = DbConnector.GetUSBCertificate(masData[0]).publicKey;
                 else
                     pubKey = DbConnector.GetCertificate(masData[0]).publicKey;
-                File.WriteAllText(@"D:\ReadData.txt", pubKey);
                 if (!(CheckSign(masData, pubKey)))
                     return "2";
                 string rezultData = masData[2];
@@ -265,13 +269,20 @@ namespace CA
             {
                 rez = Cryptography.Cryptography.CheckSign(dataForCheck, masData[masData.Length - 1], pubKeyClient);
             }
-            catch { File.WriteAllText(@"D:\CheckSign.txt", "Error in checkSign"); }
+            catch { AddLog("Error in checkSign"); }
             return rez;
         }
 
         private static string GetMyPrivateKey()
         {
-            return File.ReadAllText(@"D:\ca.key");
+            //return File.ReadAllText(@"D:\ca.key");
+            string key = DbConnector.GetPrivateKey();
+            if (key == null)
+            {
+                AddLog("Поверждена база данных. Приложение будет остновлено");
+                new ApplicationException("Поверждена база данных. Приложение будет остновлено");
+            }
+            return key;
         }
         
     }

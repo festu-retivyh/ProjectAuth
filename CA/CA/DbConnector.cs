@@ -9,46 +9,17 @@ namespace CA
 {
     class DbConnector
     {
-        //private static string dbUser = null;
-        //private static string dbPass = null;
-        //private static string dbServer = null;
-        //public static string DBUser
-        //{
-        //    set { dbUser = value; }
-        //}
-        //public static string DBServer
-        //{
-        //    set { dbServer = value; }
-        //}
-        //public static string DBPass
-        //{
-        //    set { dbPass = value; }
-        //}
         private static SqlConnection GetConnection()
         {
-            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
-            string dbServer = myRegKey.GetValue("NameServer").ToString();
-            var myRegKey1 = myRegKey.OpenSubKey("secure");
-            string dbUser = myRegKey1.GetValue("Login").ToString();
-            string dbPass = myRegKey1.GetValue("Password").ToString();
-            myRegKey.Close();
-            myRegKey1.Close();
-
-            //Model.CloseServerWithError();
-            File.WriteAllText(@"D:\CA_connectionDB.txt", dbUser+"$"+ dbPass + "$" + dbServer);
-            //var connection = "Data Source="+myRegKey.GetValue("NameServer")+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //var connection = "Data Source=" + myRegKey.GetValue("NameServer") + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=adm;Password = Jhjk1209;";
-            var connection = "Data Source=" + dbServer + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=" + dbUser + ";Password = " + dbPass + ";";
+            var connection = "Data Source=" + Model.server + ";Initial Catalog=ProjectAuth_DB;Integrated security=False;User Id=" + Model.login + ";Password = " + Model.pass + ";";
             SqlConnection conn = new SqlConnection(connection);
             try
             {
                 conn.Open();
-                File.WriteAllText(@"D:\CA_openConnect.txt", connection);
             }
             catch
             {
                 conn = null;
-                File.WriteAllText(@"D:\CA_CannotOpenConnect.txt", connection);
             }
             return conn;
         }
@@ -89,29 +60,17 @@ namespace CA
                 return;
             }
             string comm = "SELECT State.[Date], Client.Address, Client.Guid FROM (SELECT ClientState.ClientId, ClientState.[Date], ClientState.StateId FROM (SELECT MAX(date) AS DateT, clientId From ClientState Group by clientId) AS Filter LEFT JOIN ClientState on Filter.clientId=clientState.ClientId and Filter.DateT=ClientState.[date]) AS State LEFT JOIN Client on State.ClientId=Client.Id WHERE State.StateId=2";
-            //string comm = @"SELECT Client.address, ClientState.date, client.guid FROM Client INNER JOIN ClientState ON Client.id = ClientState.clientId WHERE (clientState.stateid = 2)";
             SqlCommand cmd = new SqlCommand(comm, conn);
             SqlDataReader sdr = cmd.ExecuteReader();
             list.Clear();
             while (sdr.Read())
             {
-                //if(!Model.SearchGuidInList(list, sdr.GetValue(2).ToString()))
                 list.Add(new objClient(sdr.GetValue(2).ToString(), sdr.GetValue(1).ToString(), sdr.GetDateTime(0)));
             }
         }
 
         internal static void ClientAlive(string guidClient)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -124,12 +83,6 @@ namespace CA
 
         internal static bool CheckStateClient(string guidClient, string ip)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{ conn.Open();}
-            //catch
-            //{ return false; }
             var conn = GetConnection();
             if (conn == null)
                 return false;
@@ -147,16 +100,6 @@ namespace CA
 
         internal static void SetPartKey(string guidUSB, string partKey)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -167,19 +110,13 @@ namespace CA
             cmd.ExecuteNonQuery();
         }
 
+        internal static string [,] GetServersForClient(string guidClient)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static string GetGuidClientOfUsb(string guidUsb)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch (SqlException se)
-            //{
-            //    Console.WriteLine("Ошибка подключения:{0}", se.Message);
-            //    return null;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return null;
@@ -197,17 +134,6 @@ namespace CA
 
         internal static void SetStateClient(string guidClient, string state, string ip="")
         {
-            //var connection = "Data Source="+CASettings.Default.Setting+";Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //File.WriteAllText(@"d:\z.txt", guidClient + " = " + state + " = " + ip + " = " + CASettings.Default.Setting);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -216,9 +142,7 @@ namespace CA
             cmd.Parameters.AddWithValue("guid", guidClient);
             cmd.Parameters.AddWithValue("ip", ip);
             cmd.ExecuteNonQuery();
-            File.WriteAllText(@"d:\x.txt", guidClient + " = " + state + " = " + ip);
             cmd.Cancel();
-            File.WriteAllText(@"d:\c.txt", guidClient + " = " + state + " = " + ip);
             comm = @"Insert INTO [dbo].[ClientState] ([date],[clientId],[stateId]) VALUES (@date, (Select id from client where guid=@guid), @state)";
             cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
@@ -234,16 +158,6 @@ namespace CA
 
         internal static void SetCertificateStatus(string guid, string status)
         {
-            //var connection = "Data Source=MACHINE;Initial Catalog=myFW;Integrated Security=False;User Id=adm;Password = Jhjk1209;";
-            //SqlConnection conn = new SqlConnection(connection);
-            //try
-            //{
-            //    conn.Open();
-            //}
-            //catch
-            //{
-            //    return;
-            //}
             var conn = GetConnection();
             if (conn == null)
                 return;
@@ -314,6 +228,19 @@ namespace CA
             cmd.Parameters.AddWithValue("guid", guid);
             cmd.Parameters.AddWithValue("ClientGuid", clientGuid);
             cmd.ExecuteNonQuery();
+        }
+
+        internal static string GetPrivateKey()
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return null;
+            string comm = @"Select [value] from parametrs where [property]='PrivateKey'";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            var reader = cmd.ExecuteReader();
+            if (reader.Read())
+                return reader.GetValue(0).ToString();
+            return null;
         }
 
         internal static string GetPartKeyUsb(string guidClient)
@@ -391,7 +318,6 @@ namespace CA
                 cert.publicKey = sdr.GetValue(1).ToString();// [0].publicKey;
                 //text = text + sdr.GetValue(0).ToString();
             }
-            File.WriteAllText(@"D:\GetUSBCert.txt", cert.publicKey);
             return cert;
         }
     }

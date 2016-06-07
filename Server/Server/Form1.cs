@@ -8,13 +8,13 @@ namespace Server
         ServiceHost host;
         public Form1()
         {
-            InstallerClass ic = new InstallerClass();
-            ic.RegistrateServer();
+            //InstallerClass ic = new InstallerClass();
+            //ic.RegistrateServer();
             InitializeComponent();
             //if (!Model.CheckServerData())
             //    Close();
-            //host = new ServiceHost(typeof(Srv));
-            //host.Open();
+            host = new ServiceHost(typeof(Srv));
+            host.Open();
             //Model.SendMessageForJoinCA();
         }
 

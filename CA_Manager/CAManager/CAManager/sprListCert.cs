@@ -18,13 +18,13 @@ namespace CAManager
 
         private void mAddServer_Click(object sender, EventArgs e)
         {
-            MasterAdd add = new MasterAdd();
+            MasterAddServer add = new MasterAddServer();
             add.ShowDialog();
         }
 
         private void mAddClient_Click(object sender, EventArgs e)
         {
-            MasterCreate add = new MasterCreate();
+            MasterAddClient add = new MasterAddClient();
             add.ShowDialog();
         }
 

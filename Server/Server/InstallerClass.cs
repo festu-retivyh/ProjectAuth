@@ -40,20 +40,24 @@ namespace Server
                 hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
             data = Cryptography.Cryptography.DecryptAes(data, hashUsb, DateTime.Now.ToString("dd:MM:yyyy"));
             var masData = data.Split(' ');
-            Cryptography.Certificate certCA = Cryptography.Cryptography.CertificateFromString(masData[4]);
-            if (!checkData(data, certCA.publicKey))
+            string pubKeyCa="";
+            try
+            { pubKeyCa = masData[4];}
+            catch
+            { new Exception("Ошибка в зашифрованных данных, установка не может быть продолжена."); }
+            if (!checkData(data, pubKeyCa))
                 Console.WriteLine(4 / zero);                ////////ERRROR
-            string DataForSave = masData[2] + masData[3] + masData[4];
+            string DataForSave = masData[3] + masData[2] + masData[4] + masData[5];
             string dir = @"C:\ProgramData\ServerKey";
             Directory.CreateDirectory(dir);
-            File.WriteAllText(dir + @"\srv.key",DataForSave);
+            File.WriteAllText(dir + @"\srv.key", DataForSave);
             File.Encrypt(dir + @"\srv.key");
-            string dataForSend = masData[2] + " 6 1 " + DateTime.Now;
+            string dataForSend = masData[3] + " 6 1 " + DateTime.Now;
             dataForSend = dataForSend + " " + Cryptography.Cryptography.GetHash(dataForSend);
-            dataForSend = dataForSend + " " + Cryptography.Cryptography.Sign(dataForSend,masData[3]);
+            dataForSend = dataForSend + " " + Cryptography.Cryptography.Sign(dataForSend,masData[2]);
 
-            dataForSend = Cryptography.Cryptography.Encrypt(dataForSend, certCA.publicKey);
-            data = Model.RegistrateToCA(dataForSend);
+            dataForSend = Cryptography.Cryptography.Encrypt(dataForSend, pubKeyCa);
+            data = Model.RegistrateToCA(dataForSend, masData[5]);
             if (data != "OK")
             {
                 File.Delete(dir + @"\srv.key");
@@ -68,13 +72,10 @@ namespace Server
             if (int.Parse(masData[0]) != masData.Length)                //Check count section
                 return false;
             data = masData[0];
-            for (int i = 1; i < masData.Length - 1; i++)
-                data = data + " " + masData[i];
-            if (!Cryptography.Cryptography.CheckSign(data, masData[masData.Length - 1], pubKeyCA))    //Check sign CA
-                return false;
-            data = masData[0];
             for (int i = 1; i < masData.Length - 2; i++)
                 data = data + " " + masData[i];
+            if (!Cryptography.Cryptography.CheckSign(data + " " + masData[masData.Length - 2], masData[masData.Length - 1], pubKeyCA))    //Check sign CA
+                return false;
             if (Cryptography.Cryptography.GetHash(data) == masData[masData.Length - 2])     //Check hash data
                 return true;
             return false;

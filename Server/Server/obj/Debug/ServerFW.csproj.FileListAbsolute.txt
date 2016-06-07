@@ -9,3 +9,14 @@ K:\Диплом\Server\Server\obj\Debug\ServerFW.csproj.GenerateResource.Cache
 K:\Диплом\Server\Server\obj\Debug\Server.exe
 K:\Диплом\Server\Server\obj\Debug\Server.pdb
 K:\Диплом\Server\Server\obj\Debug\ServerFW.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\bin\Debug\Server.exe.config
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\Server.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\Server.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\bin\Debug\Server.exe
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\bin\Debug\Server.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\bin\Debug\Cryptography.dll
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\bin\Debug\Cryptography.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\ServerFW.csprojResolveAssemblyReference.cache
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\Server.Form1.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Server\Server\obj\Debug\ServerFW.csproj.GenerateResource.Cache

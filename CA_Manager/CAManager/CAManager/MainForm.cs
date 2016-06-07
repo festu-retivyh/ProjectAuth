@@ -163,13 +163,13 @@ namespace CAManager
 
         private void btnAddServerMasterOpen_Click(object sender, EventArgs e)
         {
-            MasterAdd m = new MasterAdd();
+            MasterAddServer m = new MasterAddServer();
             m.Show();
         }
 
         private void btnCertificateMasterOpen_Click(object sender, EventArgs e)
         {
-            MasterCreate m = new MasterCreate();
+            MasterAddClient m = new MasterAddClient();
             m.Show();
         }
 

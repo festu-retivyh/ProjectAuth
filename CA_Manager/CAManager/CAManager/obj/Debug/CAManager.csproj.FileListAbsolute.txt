@@ -86,8 +86,6 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Autorize.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.ErrorWindow.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MainForm.resources
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAdd.resources
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterCreate.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.Properties.Resources.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.csproj.GenerateResource.Cache
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.exe
@@ -102,3 +100,5 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListCert.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprListProgram.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprProgram.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAddServer.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAddClient.resources

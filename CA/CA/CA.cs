@@ -7,6 +7,8 @@ namespace CA
 {
     public class CA : ICA
     {
+        public string login;
+        public string pass;
         public void AliveClient(string data)
         {
             OperationContext context = OperationContext.Current;

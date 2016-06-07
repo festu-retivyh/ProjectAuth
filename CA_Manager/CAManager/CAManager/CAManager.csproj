@@ -57,6 +57,12 @@
     <Compile Include="Autorize.Designer.cs">
       <DependentUpon>Autorize.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConstractorMessage.cs" />
+    <Compile Include="myFWDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myFWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sprClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,25 +95,20 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterAdd.cs">
+    <Compile Include="MasterAddServer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterAdd.Designer.cs">
-      <DependentUpon>MasterAdd.cs</DependentUpon>
+    <Compile Include="MasterAddServer.Designer.cs">
+      <DependentUpon>MasterAddServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasterCreate.cs">
+    <Compile Include="MasterAddClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterCreate.Designer.cs">
-      <DependentUpon>MasterCreate.cs</DependentUpon>
+    <Compile Include="MasterAddClient.Designer.cs">
+      <DependentUpon>MasterAddClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="myFWDataSet.cs">
-      <DependentUpon>myFWDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="myFWDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>myFWDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -177,11 +178,11 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterAdd.resx">
-      <DependentUpon>MasterAdd.cs</DependentUpon>
+    <EmbeddedResource Include="MasterAddServer.resx">
+      <DependentUpon>MasterAddServer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasterCreate.resx">
-      <DependentUpon>MasterCreate.cs</DependentUpon>
+    <EmbeddedResource Include="MasterAddClient.resx">
+      <DependentUpon>MasterAddClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,8 +225,8 @@
     </None>
     <None Include="myFWDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myFWDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>myFWDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="myFWDataSet.xss">
       <DependentUpon>myFWDataSet.xsd</DependentUpon>

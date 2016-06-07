@@ -1,12 +1,11 @@
-﻿using CA;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration.Install;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -31,6 +30,33 @@ namespace WS_CA
 
             ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('privateKey','" + key + "') ");
 
+            var ips = GetLocalIPAddress();
+            while (true)
+            {
+                if (ips.Count == 1)
+                    ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
+                else
+                {
+                    try
+                    {
+                        var rezult = MessageBox.Show("Желаете использовать ip-адрес: " + ips[0] + ", для работы ProjectAuth", "Используем этот адрес?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (rezult == DialogResult.Yes)
+                        {
+                            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
+                            break;
+                        }
+                        else
+                        {
+                            ips.Remove(ips[0]);
+                        }
+                    }
+                    catch
+                    {
+                        throw new Exception("Не найден ip адрес через который мог бы работать Центр сертификации и аутентификации");
+                    }
+                }
+            }
+
 
             Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
             myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
@@ -43,7 +69,21 @@ namespace WS_CA
             
 
         }
-
+        private static List<string> GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            List<string> ips = new List<string>();
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    ips.Add(ip.ToString());
+                }
+            }
+            if(ips.Count==0)
+                throw new Exception("Не найден ip адрес через который мог бы работать Центр сертификации и аутентификации");
+            return ips;
+        }
         static void ExecuteSqlScript(string srvName, string script, bool stock = true)
         {
              
@@ -69,7 +109,7 @@ namespace WS_CA
                     }
                 }
             }
-            catch { File.WriteAllText(@"D:\CAinstaller_Error.txt", script); }
+            catch {  }
             finally
             {
                 myConn.Close();
@@ -112,5 +152,10 @@ namespace WS_CA
                 //myRegKey.Close();
             }
         }
+        public override void Rollback(IDictionary savedState)
+        {
+            base.Rollback(savedState);
+        }
     }
+    
 }

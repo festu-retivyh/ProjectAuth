@@ -18,6 +18,15 @@ namespace CAManager
             return ta.GetName(id);
         }
 
+        internal static string GetParam(string proprty)
+        {
+            myFWDataSetTableAdapters.ParametrsTableAdapter ta = new myFWDataSetTableAdapters.ParametrsTableAdapter();
+            string str = ta.GetValue(proprty);
+            if (str != null)
+                return str;
+            return null;
+        }
+
         internal static int AddCertificateStatus(int idCertificate, int idStatus)
         {
             myFWDataSetTableAdapters.CertificateStatusTableAdapter tbCertificateStatus = new myFWDataSetTableAdapters.CertificateStatusTableAdapter();

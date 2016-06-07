@@ -27,8 +27,12 @@ namespace WS_CA
 
         private void serviceInstaller1_BeforeUninstall(object sender, InstallEventArgs e)
         {
-            if(new ServiceController(serviceInstaller1.ServiceName).Status == ServiceControllerStatus.Running)
-                new ServiceController(serviceInstaller1.ServiceName).Stop();
+            try
+            {
+                if (new ServiceController(serviceInstaller1.ServiceName).Status == ServiceControllerStatus.Running)
+                    new ServiceController(serviceInstaller1.ServiceName).Stop();
+            }
+            catch { }
         }
         
     }

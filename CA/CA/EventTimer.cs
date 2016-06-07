@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace CA
@@ -10,7 +7,15 @@ namespace CA
     public class EventTimer
     {
         static List<objClient> list = new List<objClient>();
-        Thread CheckerOnline; 
+        Thread CheckerOnline;
+
+        public void SetParams(string server, string user, string pass)
+        {
+            Model.server = server;
+            Model.login = user;
+            Model.pass = pass;
+        }
+
         public void Start()
         {
             CheckerOnline = new Thread(Timer);
@@ -25,11 +30,11 @@ namespace CA
 
         private static void Alive()
         {
-            //try
-            //{
+            try
+            {
                 FillList();
-            //}
-            //catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
+            }
+            catch { Model.AddLog("Ошибка в EventTimer.FillList"); }
             CheckOnlineClients();
             Thread.Sleep(60000);
         }

@@ -20,17 +20,17 @@ namespace CAManager
         {
             base.Install(stateSaver);
 
-            string privKey = Cryptography.Cryptography.GeneratePrivateKey();
-            File.WriteAllText(@"D:\ca.key", privKey);
-            //string path = @"c:\MyTest.txt";
+            //string privKey = Cryptography.Cryptography.GeneratePrivateKey();
+            //File.WriteAllText(@"D:\ca.key", privKey);
+            ////string path = @"c:\MyTest.txt";
 
-            //// This text is added only once to the file.
-            //if (!File.Exists(path))
-            //{
-            //    // Create a file to write to.
-            //    string createText = "Hello and Welcome" + Environment.NewLine;
-            //    File.WriteAllText(path, createText);
-            //}
+            ////// This text is added only once to the file.
+            ////if (!File.Exists(path))
+            ////{
+            ////    // Create a file to write to.
+            ////    string createText = "Hello and Welcome" + Environment.NewLine;
+            ////    File.WriteAllText(path, createText);
+            ////}
 
         }
     }

@@ -11,7 +11,7 @@ namespace Server
     class Model
     {
 
-        internal static CAService.CAClient CreateWebServiceInstance()
+        internal static CAService.CAClient CreateWebServiceInstance(string address)
         {
             BasicHttpBinding binding = new BasicHttpBinding();
             binding.SendTimeout = TimeSpan.FromMinutes(1);
@@ -25,7 +25,7 @@ namespace Server
             binding.TextEncoding = Encoding.UTF8;
             binding.TransferMode = TransferMode.Buffered;
             binding.UseDefaultWebProxy = true;
-            return new CAService.CAClient(binding, new EndpointAddress("http://192.168.0.100:45000/CA.CA"));
+            return new CAService.CAClient(binding, new EndpointAddress("http://"+address+":45000/CA.CA"));
         }
 
         internal static void SendMessageForJoinCA()
@@ -34,9 +34,9 @@ namespace Server
             string message = masData[0] + " 6 1 " + DateTime.Now;
             message = message + " " + Cryptography.Cryptography.GetHash(message);
             message = message + " " + Cryptography.Cryptography.Sign(message, masData[1]);
-            Cryptography.Certificate certCA = Cryptography.Cryptography.CertificateFromString(masData[2]);
-            message = Cryptography.Cryptography.Encrypt(message, certCA.publicKey);
-            string data = JoinToCA(message);
+            //Cryptography.Certificate certCA = Cryptography.Cryptography.CertificateFromString(masData[2]);
+            message = Cryptography.Cryptography.Encrypt(message, masData[2]);
+            string data = JoinToCA(message, masData[3]);
             var srvData = DecryptServerData();
             data = Cryptography.Cryptography.Decrypt(data, srvData[1]);
             if (!checkData(data, srvData[3]))
@@ -74,15 +74,15 @@ namespace Server
         }
         
 
-        internal static string JoinToCA(string data)
+        internal static string JoinToCA(string data, string ipCA)
         {
-            var service = CreateWebServiceInstance();
+            var service = CreateWebServiceInstance(ipCA);
             data = service.JoinServer(data);
             return data;
         }
-        internal static string RegistrateToCA(string data)
+        internal static string RegistrateToCA(string data, string ipCA)
         {
-            var service = CreateWebServiceInstance();
+            var service = CreateWebServiceInstance(ipCA);
             data = service.RegistrateServer(data);
             return data;
         }

@@ -1,6 +1,6 @@
 ﻿namespace CAManager
 {
-    partial class MasterAdd
+    partial class MasterAddServer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAddServer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbxAddress = new System.Windows.Forms.TextBox();
             this.tbxName = new System.Windows.Forms.TextBox();
@@ -56,16 +54,6 @@
             this.btnAddServer.UseVisualStyleBackColor = true;
             this.btnAddServer.Click += new System.EventHandler(this.btnAddServer_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(262, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Обзор";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -74,14 +62,6 @@
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "USB-носитель";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(116, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 12;
-            this.textBox3.Visible = false;
             // 
             // panel1
             // 
@@ -179,7 +159,7 @@
             this.cbxDisks.SelectedIndexChanged += new System.EventHandler(this.cbxDisks_SelectedIndexChanged);
             this.cbxDisks.Click += new System.EventHandler(this.cbxDisks_Click);
             // 
-            // MasterAdd
+            // MasterAddServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,11 +170,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAddServer);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.panel1);
-            this.Name = "MasterAdd";
+            this.Name = "MasterAddServer";
             this.Text = "Мастер добавления сервера";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -206,9 +184,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddServer;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbxAddress;
         private System.Windows.Forms.TextBox tbxName;

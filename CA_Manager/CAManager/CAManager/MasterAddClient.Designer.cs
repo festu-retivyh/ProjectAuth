@@ -1,6 +1,6 @@
 ﻿namespace CAManager
 {
-    partial class MasterCreate
+    partial class MasterAddClient
     {
         /// <summary>
         /// Required designer variable.
