@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.ServiceModel;
+using System.Text;
 
 namespace CA
 {
@@ -132,8 +134,9 @@ namespace CA
                             string [,] ipPorts = DbConnector.GetServersForClient(guidClient);
                             for (int i = 0; i < ipPorts.Length; i++)
                             {
-                                //var conn = CreateWebServiceInstance(ipPorts[i,0]);
-                                //conn.AddRule(ipPorts[i, 1]);
+                                var conn = CreateWebServiceInstanceToServer(ipPorts[i, 0]);
+                                //TODO:   Crypting message hash and sign            **************************
+                                conn.AddRule(ipPorts[i, 1]);
                             }
 
                             returnData = "message was getted";
@@ -149,22 +152,22 @@ namespace CA
             return returnData;
         }
 
-        //private static Server.CAClient CreateWebServiceInstance(string address)
-        //{
-        //    BasicHttpBinding binding = new BasicHttpBinding();
-        //    binding.SendTimeout = TimeSpan.FromMinutes(1);
-        //    binding.OpenTimeout = TimeSpan.FromMinutes(1);
-        //    binding.CloseTimeout = TimeSpan.FromMinutes(1);
-        //    binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
-        //    binding.AllowCookies = false;
-        //    binding.BypassProxyOnLocal = false;
-        //    binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
-        //    binding.MessageEncoding = WSMessageEncoding.Text;
-        //    binding.TextEncoding = Encoding.UTF8;
-        //    binding.TransferMode = TransferMode.Buffered;
-        //    binding.UseDefaultWebProxy = true;
-        //    return new CAService.CAClient(binding, new EndpointAddress("http://" + address + ":45000/CA.CA"));
-        //}
+        private static Server.SrvClient CreateWebServiceInstanceToServer(string address)
+        {
+            BasicHttpBinding binding = new BasicHttpBinding();
+            binding.SendTimeout = TimeSpan.FromMinutes(1);
+            binding.OpenTimeout = TimeSpan.FromMinutes(1);
+            binding.CloseTimeout = TimeSpan.FromMinutes(1);
+            binding.ReceiveTimeout = TimeSpan.FromMinutes(10);
+            binding.AllowCookies = false;
+            binding.BypassProxyOnLocal = false;
+            binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
+            binding.MessageEncoding = WSMessageEncoding.Text;
+            binding.TextEncoding = Encoding.UTF8;
+            binding.TransferMode = TransferMode.Buffered;
+            binding.UseDefaultWebProxy = true;
+            return new Server.SrvClient(binding, new EndpointAddress("http://" + address + ":46000/Server.Srv"));
+        }
 
         internal static string JoinServer(string data)
         {

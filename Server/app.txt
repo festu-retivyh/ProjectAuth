@@ -1,0 +1,15 @@
+<services>
+            <service name="Server.Srv">
+                <endpoint address="" binding="basicHttpBinding" contract="Server.ISrv">
+                  <identity>
+                    <dns value="localhost" />
+                  </identity>
+                </endpoint>
+                <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+                <host>
+                    <baseAddresses>
+                        <add baseAddress="http://localhost:8733/Design_Time_Addresses/Server/Server/" />
+                    </baseAddresses>
+                </host>
+            </service>
+        </services>

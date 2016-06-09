@@ -34,7 +34,10 @@ namespace WS_CA
             while (true)
             {
                 if (ips.Count == 1)
+                {
                     ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
+                    break;
+                }
                 else
                 {
                     try

@@ -13,7 +13,7 @@ namespace Server
             InitializeComponent();
             //if (!Model.CheckServerData())
             //    Close();
-            host = new ServiceHost(typeof(Srv));
+            host = new ServiceHost(typeof(Server.Srv));
             host.Open();
             //Model.SendMessageForJoinCA();
         }
