@@ -58,4 +58,3 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Deb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\bin\Debug\Cryptography.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.pdb
-C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\CA\obj\Debug\CA.csprojResolveAssemblyReference.cache

@@ -33,7 +33,7 @@
             // 
             // Service1
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "ProjectAuth_CA";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
 
         }

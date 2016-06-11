@@ -21,56 +21,58 @@ namespace WS_CA
         public override void Install(IDictionary stateSaver)
         {
             base.Install(stateSaver);
-            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
-            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "CREATE LOGIN "+ Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]);
-            File.Delete(Context.Parameters["targetdir"] + "db.sql");
-
-            string key = Cryptography.Cryptography.GeneratePrivateKey();
-            key = Cryptography.Cryptography.EncryptAes(key, Context.Parameters["dbpass"], Context.Parameters["dbuser"]);
-
-            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('privateKey','" + key + "') ");
-
-            var ips = GetLocalIPAddress();
-            while (true)
+            try
             {
-                if (ips.Count == 1)
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "CREATE LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]);
+                File.Delete(Context.Parameters["targetdir"] + "db.sql");
+
+                string key = Cryptography.Cryptography.GeneratePrivateKey();
+                key = Cryptography.Cryptography.EncryptAes(key, Context.Parameters["dbpass"], Context.Parameters["dbuser"]);
+
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('privateKey','" + key + "') ");
+
+                var ips = GetLocalIPAddress();
+                bool loop = true;
+                while (loop)
                 {
-                    ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
-                    break;
-                }
-                else
-                {
-                    try
+                    if (ips.Count == 1)
                     {
-                        var rezult = MessageBox.Show("Желаете использовать ip-адрес: " + ips[0] + ", для работы ProjectAuth", "Используем этот адрес?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (rezult == DialogResult.Yes)
+                        ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
+                        loop = false;
+                    }
+                    else
+                    {
+                        try
                         {
-                            ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
-                            break;
+                            var rezult = MessageBox.Show("Желаете использовать ip-адрес: " + ips[0] + ", для работы ProjectAuth", "Используем этот адрес?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (rezult == DialogResult.Yes)
+                            {
+                                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "USE [ProjectAuth_DB] INSERT INTO [dbo].[Parametrs] ([property],[value]) VALUES ('AddressService','" + ips[0] + "') ");
+                                loop = false;
+                            }
+                            else
+                            {
+                                ips.Remove(ips[0]);
+                            }
                         }
-                        else
+                        catch
                         {
-                            ips.Remove(ips[0]);
+                            loop = false;
+                            throw new Exception("Не найден ip адрес через который мог бы работать Центр сертификации и аутентификации");
                         }
                     }
-                    catch
-                    {
-                        throw new Exception("Не найден ip адрес через который мог бы работать Центр сертификации и аутентификации");
-                    }
                 }
+
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
+                myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                var mySec = myRegKey.CreateSubKey("secure");
+                mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                mySec.SetValue("Password", Context.Parameters["dbpass"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                mySec.Close();
+                myRegKey.Close();
             }
-
-
-            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
-            myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-            var mySec = myRegKey.CreateSubKey("secure");
-            mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-            mySec.SetValue("Password", Context.Parameters["dbpass"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-            mySec.Close();
-            myRegKey.Close();
-            
-            
-
+            catch { }
         }
         private static List<string> GetLocalIPAddress()
         {

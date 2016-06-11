@@ -22,13 +22,13 @@
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -229,6 +229,11 @@
             "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_0CA4F0E865E99DD273B0141ED3B7C297"
+                    {
+                    "Name" = "8:Cryptography.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Cryptography.dll"
             "TargetName" = "8:"
@@ -255,6 +260,11 @@
             "AssemblyAsmDisplayName" = "8:CA, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_E0F7DCAF367AA240DFEE7E5EAC6B375B"
+                    {
+                    "Name" = "8:CA.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:CA.exe"
             "TargetName" = "8:"
@@ -399,9 +409,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
-        "ProductCode" = "8:{8D1F9230-2A59-4590-8FEB-AAE9B94A67A4}"
-        "PackageCode" = "8:{17A87BFF-FC1F-494F-9313-50D8DEC7FC9D}"
-        "UpgradeCode" = "8:{07795D32-73B9-4693-A5B2-8487B00C0C9B}"
+        "ProductCode" = "8:{C134B7C5-797F-41C4-AC31-99B8D2917ECE}"
+        "PackageCode" = "8:{BC73A515-3960-4140-8C3D-A1CC9B6E0967}"
+        "UpgradeCode" = "8:{5527AD14-681F-4D23-B9CC-95D1E4174005}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"

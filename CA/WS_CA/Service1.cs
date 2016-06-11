@@ -17,20 +17,27 @@ namespace WS_CA
     {
         ServiceHost host;
         CA.EventTimer et;
+        private string server="", login="", pass="";
         public Service1()
         {
             InitializeComponent();
+            
         }
 
         protected override void OnStart(string[] args)
         {
             AddLog("start");
-            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
-            string server = myRegKey.GetValue("NameServer").ToString();
-            myRegKey = myRegKey.OpenSubKey("secure");
-            string login = myRegKey.GetValue("Login").ToString();
-            string pass = myRegKey.GetValue("Password").ToString(); 
-            myRegKey.Close();
+            try
+            {
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth", true);
+                server = myRegKey.GetValue("NameServer").ToString();
+                myRegKey = myRegKey.OpenSubKey("secure", true);
+                login = myRegKey.GetValue("Login").ToString();
+                pass = myRegKey.GetValue("Password").ToString();
+                myRegKey.Close();
+                File.WriteAllText(@"D:\Service1inTRY.txt", server + login + pass);
+            }
+            catch { }
             host = new ServiceHost(typeof(CA.CA));
             host.Open(); //Запуск SWF
             try
@@ -41,7 +48,6 @@ namespace WS_CA
             et = new CA.EventTimer();
             et.SetParams(server, login, pass);
             et.Start();
-
         }
 
         protected override void OnStop()
@@ -64,7 +70,5 @@ namespace WS_CA
             }
             catch { }
         }
-        
     }
-
 }
