@@ -31,16 +31,63 @@ namespace CA
             if (command == 2)
             {
                 DbConnector.SetStateClient(guidClient, "off");
+                DeliveryRulesForServers(guidClient, ip, false);
                 return;
             }
             bool rez = DbConnector.CheckStateClient(guidClient, ip);
-            if(rez)
+            if (rez)
                 DbConnector.ClientAlive(guidClient);
             else
+            {
                 DbConnector.SetStateClient(guidClient, "off");
+                DeliveryRulesForServers(guidClient, ip, false);
+            }
 
         }
 
+        private static void DeliveryRulesForServers(string clientGuid, string ipClient, bool rule = false)
+        {
+            string data;
+            string[,] ports = DbConnector.GetPortsForClient(clientGuid);
+            File.WriteAllText(@"D:\test.txt", (ports.GetUpperBound(1) + 1).ToString());
+            for (int i = 0; i < ports.GetUpperBound(1) + 1; i++)
+            {
+                if (CheckServer(ports[i, 0]))
+                {
+                    data = ipClient + ":" + ports[i, 1];
+                    SendRuleToServer(ports[i, 0], data, rule);
+                }
+            }
+        }
+
+        private static bool CheckServer(string ip)
+        {
+            try
+            {
+                var conn = CreateWebServiceInstanceToServer(ip);
+                return conn.IsAlive();
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static void SendRuleToServer(string ipSrv, string data, bool rule)
+        {
+            var conn = CreateWebServiceInstanceToServer(ipSrv);
+            try
+            {
+                if(rule)
+                    conn.AddRule(data);
+                else
+                    conn.DelRule(data);
+            }
+            catch
+            {
+                AddLog("Не успешная попытка передать на сервер данные об открытии\\закрытии портов");
+            }
+        }
 
         internal static void AliveServer(string data)
         {
@@ -50,7 +97,7 @@ namespace CA
         {
             get
             {
-                return GetMyPrivateKey();
+                return Cryptography.Cryptography.DecryptAes(GetMyPrivateKey(), pass, login);
             }
 
         }
@@ -90,7 +137,7 @@ namespace CA
 
         internal static string RegistrateServer(string data)
         {
-            string goodData = ReadData(data);
+            string goodData = ReadData(data, false);
             try
             {
                 return int.Parse(goodData).ToString();
@@ -131,13 +178,7 @@ namespace CA
                         {
                             DbConnector.SetStateClient(guidClient, "active", ip);
 
-                            string [,] ipPorts = DbConnector.GetServersForClient(guidClient);
-                            for (int i = 0; i < ipPorts.Length; i++)
-                            {
-                                var conn = CreateWebServiceInstanceToServer(ipPorts[i, 0]);
-                                //TODO:   Crypting message hash and sign            **************************
-                                conn.AddRule(ipPorts[i, 1]);
-                            }
+                            DeliveryRulesForServers(guidClient, ip, true);
 
                             returnData = "message was getted";
                         }
@@ -171,20 +212,22 @@ namespace CA
 
         internal static string JoinServer(string data)
         {
-            string goodData = ReadData(data);
+            string goodData = ReadData(data, false);
             try
             {
                 return int.Parse(goodData).ToString();
             }
             catch { }
+            //File.WriteAllText(@"D:\joinSrv.txt", goodData);
             string[] mas = goodData.Split(' ');
             int command = int.Parse(mas[1]);
             if (command == 1)
             {
                 string onlineClients = DbConnector.GetOnlineClientsForServer(mas[0]);
-                string dataForSrv = "5 " + DateTime.Now + " " + onlineClients + " ";
+                string dataForSrv = "5 " + DateTime.Now + " " + onlineClients;
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, PrivateKeyCA);
+                //File.WriteAllText(@"D:\DataForSrv.txt", dataForSrv);
                 dataForSrv = Cryptography.Cryptography.Encrypt(dataForSrv, DbConnector.GetCertificate(mas[0]).publicKey);
                 return dataForSrv;
             }

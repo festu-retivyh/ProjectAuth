@@ -20,6 +20,9 @@ namespace CA.Server {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISrv/DelRule", ReplyAction="http://tempuri.org/ISrv/DelRuleResponse")]
         void DelRule(string data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISrv/IsAlive", ReplyAction="http://tempuri.org/ISrv/IsAliveResponse")]
+        bool IsAlive();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +58,10 @@ namespace CA.Server {
         
         public void DelRule(string data) {
             base.Channel.DelRule(data);
+        }
+        
+        public bool IsAlive() {
+            return base.Channel.IsAlive();
         }
     }
 }

@@ -34,12 +34,21 @@ namespace Server
             string message = masData[0] + " 6 1 " + DateTime.Now;
             message = message + " " + Cryptography.Cryptography.GetHash(message);
             message = message + " " + Cryptography.Cryptography.Sign(message, masData[1]);
+            string testMsg = message;
             //Cryptography.Certificate certCA = Cryptography.Cryptography.CertificateFromString(masData[2]);
             message = Cryptography.Cryptography.Encrypt(message, masData[2]);
-            string data = JoinToCA(message, masData[3]);
+            string data="";
+            //try {
+            data = JoinToCA(message, masData[3]);
+            //    File.WriteAllText(@"D:\JointToCaFromSrv.txt", data);
+            //}
+            //catch
+            //{
+            //    File.WriteAllText(@"D:\JointToCaFromSrvERR.txt", testMsg+"\r\n"+ masData[3]);
+            //}
             var srvData = DecryptServerData();
             data = Cryptography.Cryptography.Decrypt(data, srvData[1]);
-            if (!checkData(data, srvData[3]))
+            if (!checkData(data, srvData[2]))
                 return;
             masData = data.Split(' ');
             ControlFW.SetListRules(masData[2]);
@@ -64,7 +73,7 @@ namespace Server
 
         private static string[] DecryptServerData()
         {
-            string data = File.ReadAllText(@"C:\ProgramData\ServerKey");
+            string data = File.ReadAllText(@"C:\ProgramData\ServerKey\srv.key");
             return data.Split(' ');
         }
 
@@ -77,6 +86,7 @@ namespace Server
         internal static string JoinToCA(string data, string ipCA)
         {
             var service = CreateWebServiceInstance(ipCA);
+            service.Open();
             data = service.JoinServer(data);
             return data;
         }

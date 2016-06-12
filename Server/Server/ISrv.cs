@@ -15,5 +15,7 @@ namespace Server
         void AddRule(string data);
         [OperationContract]
         void DelRule(string data);
+        [OperationContract]
+        bool IsAlive();
     }
 }

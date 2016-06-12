@@ -110,9 +110,30 @@ namespace CA
             cmd.ExecuteNonQuery();
         }
 
-        internal static string [,] GetServersForClient(string guidClient)
+        internal static string [,] GetPortsForClient(string guidClient)
         {
-            throw new NotImplementedException();
+            var conn = GetConnection();
+            if (conn == null)
+                return null;
+            string comm = @"SELECT (SELECT [Server].[address] from [Server] WHERE id =[profile].serverId ), (SELECT Program.[port]+':'+Program.protocol from Program WHERE id = [profile].programId) FROM [Profile] right join (SELECT profileId FROM ClientProfile WHERE ClientProfile.clientId=(Select id from Client where [guid] = @guid)) as usrProf on [profile].id=usrProf.profileId";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("guid", guidClient);
+            var reader = cmd.ExecuteReader();
+            
+            int count = 0;
+            while (reader.Read())
+                count++;
+            var data = new string[count, 2];
+            reader.Close();
+            reader = cmd.ExecuteReader();
+            count = 0;
+            while (reader.Read())
+            {
+                data[count, 0] = reader.GetString(0);
+                data[count, 1] = reader.GetString(1);
+                count++;
+            }
+            return data;
         }
 
         internal static string GetGuidClientOfUsb(string guidUsb)
@@ -165,7 +186,6 @@ namespace CA
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
             cmd.Parameters.AddWithValue("date", DateTime.Now);
-            cmd.ExecuteNonQuery();
             if (status == "active")
                 cmd.Parameters.AddWithValue("state", 2);
             else if (status == "block")
@@ -203,7 +223,11 @@ namespace CA
             var conn = GetConnection();
             if (conn == null)
                 return null;
-            string comm = @"SELECT Client.address FROM Client INNER JOIN ClientServer ON Client.id = ClientServer.clientId INNER JOIN Server ON ClientServer.serverId = Server.id WHERE (Server.guid = @guid)";
+            string comm = @"Select sel.[address], [Program].port, [Program].protocol from 
+                            (SELECT prof.id, usrsPrf.[address] FROM (SELECT ClientProfile.profileId, [LastClientsStates].[address] FROM [dbo].[LastClientsStates] 
+	                            inner join ClientProfile on [LastClientsStates].clientId=ClientProfile.clientId WHERE [stateId]=2) AS usrsPrf 
+		                    left join (Select [Profile].id,[Profile].programid from [dbo].[Profile] where [serverId]=(Select [id] from [dbo].[Server] where [guid]=@guid)) as prof on usrsPrf.profileId=prof.id) as sel
+		                inner join [dbo].[Program] on sel.id=Program.id";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guid);
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -211,9 +235,9 @@ namespace CA
             while (sdr.Read())
             {
                 if (address == "")
-                    address = sdr.GetValue(0).ToString();
+                    address = sdr.GetValue(0).ToString()+":"+ sdr.GetValue(1).ToString()+":"+ sdr.GetValue(2).ToString();
                 else
-                    address = address + ";" + sdr.GetValue(0).ToString();
+                    address = address + ";" + sdr.GetValue(0).ToString() + ":" + sdr.GetValue(1).ToString() + ":" + sdr.GetValue(2).ToString();
             }
             return address;
         }

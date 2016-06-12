@@ -18,5 +18,10 @@ namespace Server
         {
             ControlFW.DelRule(data);
         }
+
+        public bool IsAlive()
+        {
+            return true;
+        }
     }
 }

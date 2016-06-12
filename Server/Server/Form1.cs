@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using System.IO;
+using System.ServiceModel;
 using System.Windows.Forms;
 
 namespace Server
@@ -11,11 +12,18 @@ namespace Server
             //InstallerClass ic = new InstallerClass();
             //ic.RegistrateServer();
             InitializeComponent();
-            //if (!Model.CheckServerData())
-            //    Close();
+            if (!Model.CheckServerData())
+                Close();
             host = new ServiceHost(typeof(Server.Srv));
             host.Open();
-            //Model.SendMessageForJoinCA();
+            //try
+            //{
+                Model.SendMessageForJoinCA();
+            //}
+            //catch
+            //{
+            //    File.WriteAllText(@"D:\sendMessageJoinSrv.txt", host.State.ToString());
+            //}
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

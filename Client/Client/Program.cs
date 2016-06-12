@@ -15,7 +15,7 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            InstallerClass ic = new InstallerClass();
+            //InstallerClass ic = new InstallerClass();
             Application.Run(new Form1());
         }
     }

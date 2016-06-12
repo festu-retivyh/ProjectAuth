@@ -58,7 +58,6 @@ namespace Client
 
         public void RegistrateClient()
         {
-            
             //Configuration config = ConfigurationManager.OpenExeConfiguration(path);
             int zero = 0;
             string data = "";

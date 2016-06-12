@@ -19,6 +19,8 @@ namespace Client
 
         public Form1()
         {
+
+
             ta = new TimerAlive(30000);
             InitializeComponent();
             ta.Start();
@@ -240,7 +242,7 @@ namespace Client
             Model.guidClient = decriptDataClient[1];
             Model.pubKeyCA = decriptDataClient[2];
             var ca = CreateWebServiceInstance();
-            //ca.Open();
+            ca.Open();
             try
             {
                 ca.IsAlive(new CAService.IsAliveRequest());

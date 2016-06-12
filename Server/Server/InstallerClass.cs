@@ -47,7 +47,7 @@ namespace Server
             { new Exception("Ошибка в зашифрованных данных, установка не может быть продолжена."); }
             if (!checkData(data, pubKeyCa))
                 Console.WriteLine(4 / zero);                ////////ERRROR
-            string DataForSave = masData[3] + masData[2] + masData[4] + masData[5];
+            string DataForSave = masData[3] +" "+ masData[2] + " " + masData[4] + " " + masData[5];
             string dir = @"C:\ProgramData\ServerKey";
             Directory.CreateDirectory(dir);
             File.WriteAllText(dir + @"\srv.key", DataForSave);
