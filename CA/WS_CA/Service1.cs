@@ -21,7 +21,6 @@ namespace WS_CA
         public Service1()
         {
             InitializeComponent();
-            
         }
 
         protected override void OnStart(string[] args)
@@ -40,11 +39,21 @@ namespace WS_CA
             catch { }
             host = new ServiceHost(typeof(CA.CA));
             host.Open(); //Запуск SWF
+            try { if (pass == "")
+                {
+                    string [] str = File.ReadAllLines(@"C:\ProgramData\ProjectAuth\data.txt");
+
+                    server = str[0];
+                    login = str[1];
+                    pass = str[2];
+                } }
+            catch { }
             try
             {
                 File.WriteAllText(@"D:\Service1.txt", server + login + pass);
             }
-            catch { }
+            catch
+            {}
             et = new CA.EventTimer();
             et.SetParams(server, login, pass);
             et.Start();
