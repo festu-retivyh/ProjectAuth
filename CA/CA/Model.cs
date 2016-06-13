@@ -69,7 +69,6 @@ namespace CA
             }
             catch
             {
-                File.WriteAllText(@"D:\CheckServerERR.txt", false.ToString());
                 return false;
             }
         }
@@ -80,17 +79,13 @@ namespace CA
             try
             {
                 if (rule)
-                {
                     conn.AddRule(data);
-                    File.WriteAllText(@"D:\deliverRulesSend.txt", data);
-                }
                 else
                     conn.DelRule(data);
             }
             catch
             {
                 AddLog("Не успешная попытка передать на сервер данные об открытии\\закрытии портов");
-                File.WriteAllText(@"D:\deliverRulesSendERR.txt", data);
             }
         }
 
@@ -230,7 +225,6 @@ namespace CA
                 string dataForSrv = "5 " + DateTime.Now + " " + onlineClients;
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, PrivateKeyCA);
-                File.WriteAllText(@"D:\DataForSrv.txt", dataForSrv);
                 dataForSrv = Cryptography.Cryptography.Encrypt(dataForSrv, DbConnector.GetCertificate(mas[0]).publicKey);
                 return dataForSrv;
             }
