@@ -2693,29 +2693,3 @@ System.ArgumentException: Словарь savedState не содержит ожи
    logtoconsole = 
    logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
    assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
-Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
-Затронуты следующие параметры:
-   logtoconsole = 
-   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
-   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
-Устанавливается служба ProjectAuth_CA...
-Служба ProjectAuth_CA успешно установлена.
-Создается исходный EventLog ProjectAuth_CA в журнале Application...
-Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
-Затронуты следующие параметры:
-   logtoconsole = 
-   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
-   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
-Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
-Затронуты следующие параметры:
-   logtoconsole = 
-   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
-   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
-Устанавливается служба ProjectAuth_CA...
-Служба ProjectAuth_CA успешно установлена.
-Создается исходный EventLog ProjectAuth_CA в журнале Application...
-Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
-Затронуты следующие параметры:
-   logtoconsole = 
-   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
-   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe

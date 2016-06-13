@@ -162,12 +162,6 @@
     <Compile Include="sprProgram.Designer.cs">
       <DependentUpon>sprProgram.cs</DependentUpon>
     </Compile>
-    <Compile Include="sprServer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="sprServer.Designer.cs">
-      <DependentUpon>sprServer.cs</DependentUpon>
-    </Compile>
     <Compile Include="UsbSeacher.cs" />
     <EmbeddedResource Include="Autorize.resx">
       <DependentUpon>Autorize.cs</DependentUpon>
@@ -222,9 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sprProgram.resx">
       <DependentUpon>sprProgram.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sprServer.resx">
-      <DependentUpon>sprServer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

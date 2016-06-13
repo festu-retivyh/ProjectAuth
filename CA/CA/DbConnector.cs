@@ -246,13 +246,6 @@ namespace CA
                 else
                     address = address + ";" + sdr.GetValue(0).ToString() + ":" + sdr.GetValue(1).ToString() + ":" + sdr.GetValue(2).ToString();
             }
-            sdr.Close();
-            comm = @"Select protocols from server where guid=@guid";
-            cmd = new SqlCommand(comm, conn);
-            cmd.Parameters.AddWithValue("guid", guid);
-            sdr = cmd.ExecuteReader();
-            if (sdr.Read())
-                address = sdr.GetString(0) +";"+ address;
             return address;
         }
 
