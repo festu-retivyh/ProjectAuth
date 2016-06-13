@@ -28,7 +28,7 @@ namespace WS_CA
             AddLog("start");
             try
             {
-                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth", true);
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\\ProjectAuth", true);
                 server = myRegKey.GetValue("NameServer").ToString();
                 myRegKey = myRegKey.OpenSubKey("secure", true);
                 login = myRegKey.GetValue("Login").ToString();
@@ -39,21 +39,24 @@ namespace WS_CA
             catch { }
             host = new ServiceHost(typeof(CA.CA));
             host.Open(); //Запуск SWF
-            try { if (pass == "")
+            try
+            {
+                if (pass == "")
                 {
-                    string [] str = File.ReadAllLines(@"C:\ProgramData\ProjectAuth\data.txt");
+                    string[] str = File.ReadAllLines(@"C:\ProgramData\ProjectAuth\data.txt");
 
                     server = str[0];
                     login = str[1];
                     pass = str[2];
-                } }
+                }
+            }
             catch { }
             try
             {
                 File.WriteAllText(@"D:\Service1.txt", server + login + pass);
             }
             catch
-            {}
+            { }
             et = new CA.EventTimer();
             et.SetParams(server, login, pass);
             et.Start();
@@ -70,12 +73,12 @@ namespace WS_CA
         {
             try
             {
-                if (!EventLog.SourceExists("MyExampleService"))
-                {
-                    EventLog.CreateEventSource("MyExampleService", "MyExampleService");
-                }
-                eventLog1.Source = "MyExampleService";
-                eventLog1.WriteEntry(log);
+                //if (!EventLog.SourceExists("MyExampleService"))
+                //{
+                //    EventLog.CreateEventSource("MyExampleService", "MyExampleService");
+                //}
+                //eventLog1.Source = "MyExampleService";
+                //eventLog1.WriteEntry(log);
             }
             catch { }
         }

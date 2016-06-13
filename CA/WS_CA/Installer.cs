@@ -63,14 +63,17 @@ namespace WS_CA
                         }
                     }
                 }
-
-                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
-                myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-                var mySec = myRegKey.CreateSubKey("secure");
-                mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-                mySec.SetValue("Password", Context.Parameters["dbpass"].ToString(), Microsoft.Win32.RegistryValueKind.String);
-                mySec.Close();
-                myRegKey.Close();
+                try
+                {
+                    Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\\ProjectAuth");
+                    myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                    var mySec = myRegKey.CreateSubKey("secure");
+                    mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                    mySec.SetValue("Password", Context.Parameters["dbpass"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                    mySec.Close();
+                    myRegKey.Close();
+                }
+                catch { }
             }
             catch { }
         }

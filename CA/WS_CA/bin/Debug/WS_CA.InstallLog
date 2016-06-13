@@ -2693,3 +2693,106 @@ System.ArgumentException: Словарь savedState не содержит ожи
    logtoconsole = 
    logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
    assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Служба ProjectAuth_CA успешно установлена.
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется удаление службы ProjectAuth_CA из системы...
+Служба ProjectAuth_CA успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Служба ProjectAuth_CA успешно установлена.
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется удаление службы ProjectAuth_CA из системы...
+Служба ProjectAuth_CA успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Служба ProjectAuth_CA успешно установлена.
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется удаление службы ProjectAuth_CA из системы...
+Служба ProjectAuth_CA успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA...
+Служба ProjectAuth_CA успешно установлена.
+Создается исходный EventLog ProjectAuth_CA в журнале Application...
+Выполняется откат для сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Восстанавливается исходное состояние журнала событий для источника ProjectAuth_CA.
+Выполняется удаление службы ProjectAuth_CA из системы...
+Служба ProjectAuth_CA успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe
+Устанавливается служба ProjectAuth_CA1...
+Служба ProjectAuth_CA1 успешно установлена.
+Создается исходный EventLog ProjectAuth_CA1 в журнале Application...
+Выполняется фиксация сборки 'C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.InstallLog
+   assemblypath = C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe

@@ -246,16 +246,16 @@ namespace CA
 
         public static void AddLog(string log)
         {
-            try
-            {
-                if (!EventLog.SourceExists("ProjectAuth_CA"))
-                {
-                    EventLog.CreateEventSource("ProjectAuth_CA", "ProjectAuth_CA");
-                }
-                //EventLog.WriteEntry(sSource, sEvent);
-                EventLog.WriteEntry("ProjectAuth_CA", log, EventLogEntryType.Error, 228);
-            }
-            catch { }
+            //try
+            //{
+            //    if (!EventLog.SourceExists("MyExampleService"))
+            //    {
+            //        EventLog.CreateEventSource("MyExampleService", "MyExampleService");
+            //    }
+            //    //EventLog.WriteEntry(sSource, sEvent);
+            //    EventLog.WriteEntry("MyExampleService", log, EventLogEntryType.Error, 228);
+            //}
+            //catch { }
         }
 
         private static string GenCheckData(string data)

@@ -40,8 +40,8 @@
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "Сервис центра сертификации (ДВГУПС)";
-            this.serviceInstaller1.DisplayName = "ProjectAuth_CA";
-            this.serviceInstaller1.ServiceName = "ProjectAuth_CA";
+            this.serviceInstaller1.DisplayName = "ProjectAuth_CA1";
+            this.serviceInstaller1.ServiceName = "ProjectAuth_CA1";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
