@@ -60,14 +60,6 @@
             this.btnStopSession = new System.Windows.Forms.Button();
             this.tabAllUsers = new System.Windows.Forms.TabPage();
             this.dgvAllUsers = new System.Windows.Forms.DataGridView();
-            this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastClientsStatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBlockUserAll = new System.Windows.Forms.Button();
@@ -83,12 +75,6 @@
             this.btnSelectUserBlocked = new System.Windows.Forms.Button();
             this.tabServers = new System.Windows.Forms.TabPage();
             this.dgvServers = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.certificateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serverBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelServer = new System.Windows.Forms.Button();
@@ -120,6 +106,20 @@
             this.lastClientsStatesTableAdapter = new CAManager.myFWDataSetTableAdapters.LastClientsStatesTableAdapter();
             this.onlineClientStateTableAdapter = new CAManager.myFWDataSetTableAdapters.OnlineClientStateTableAdapter();
             this.serverTableAdapter = new CAManager.myFWDataSetTableAdapters.ServerTableAdapter();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certificateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainMenuPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.mainTabsControl.SuspendLayout();
@@ -483,65 +483,6 @@
             this.dgvAllUsers.TabIndex = 1;
             this.dgvAllUsers.DoubleClick += new System.EventHandler(this.dgvAllUsers_DoubleClick);
             // 
-            // clientIdDataGridViewTextBoxColumn
-            // 
-            this.clientIdDataGridViewTextBoxColumn.DataPropertyName = "clientId";
-            this.clientIdDataGridViewTextBoxColumn.HeaderText = "clientId";
-            this.clientIdDataGridViewTextBoxColumn.Name = "clientIdDataGridViewTextBoxColumn";
-            this.clientIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clientIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameUserDataGridViewTextBoxColumn
-            // 
-            this.nameUserDataGridViewTextBoxColumn.DataPropertyName = "NameUser";
-            this.nameUserDataGridViewTextBoxColumn.HeaderText = "NameUser";
-            this.nameUserDataGridViewTextBoxColumn.Name = "nameUserDataGridViewTextBoxColumn";
-            this.nameUserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "login";
-            this.dataGridViewTextBoxColumn1.HeaderText = "login";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.DataPropertyName = "stateId";
-            this.State.HeaderText = "Статус";
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateIdDataGridViewTextBoxColumn1
-            // 
-            this.stateIdDataGridViewTextBoxColumn1.DataPropertyName = "stateId";
-            this.stateIdDataGridViewTextBoxColumn1.HeaderText = "stateId";
-            this.stateIdDataGridViewTextBoxColumn1.Name = "stateIdDataGridViewTextBoxColumn1";
-            this.stateIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.stateIdDataGridViewTextBoxColumn1.Visible = false;
-            // 
             // lastClientsStatesBindingSource
             // 
             this.lastClientsStatesBindingSource.DataMember = "LastClientsStates";
@@ -683,53 +624,11 @@
             this.dgvServers.Location = new System.Drawing.Point(3, 33);
             this.dgvServers.Name = "dgvServers";
             this.dgvServers.ReadOnly = true;
+            this.dgvServers.RowHeadersVisible = false;
+            this.dgvServers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServers.Size = new System.Drawing.Size(762, 504);
             this.dgvServers.TabIndex = 1;
-            // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn1
-            // 
-            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn1.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
-            this.addressDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn2
-            // 
-            this.dateDataGridViewTextBoxColumn2.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn2.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn2.Name = "dateDataGridViewTextBoxColumn2";
-            this.dateDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // guidDataGridViewTextBoxColumn
-            // 
-            this.guidDataGridViewTextBoxColumn.DataPropertyName = "guid";
-            this.guidDataGridViewTextBoxColumn.HeaderText = "guid";
-            this.guidDataGridViewTextBoxColumn.Name = "guidDataGridViewTextBoxColumn";
-            this.guidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.guidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // certificateIdDataGridViewTextBoxColumn
-            // 
-            this.certificateIdDataGridViewTextBoxColumn.DataPropertyName = "certificateId";
-            this.certificateIdDataGridViewTextBoxColumn.HeaderText = "certificateId";
-            this.certificateIdDataGridViewTextBoxColumn.Name = "certificateIdDataGridViewTextBoxColumn";
-            this.certificateIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.certificateIdDataGridViewTextBoxColumn.Visible = false;
+            this.dgvServers.DoubleClick += new System.EventHandler(this.dgvServers_DoubleClick);
             // 
             // serverBindingSource
             // 
@@ -972,6 +871,7 @@
             this.tableAdapterManager.GroupProfileTableAdapter = null;
             this.tableAdapterManager.GroupTableAdapter = null;
             this.tableAdapterManager.LogTableAdapter = null;
+            this.tableAdapterManager.ParametrsTableAdapter = null;
             this.tableAdapterManager.ProfileTableAdapter = null;
             this.tableAdapterManager.ProgramTableAdapter = null;
             this.tableAdapterManager.ServerTableAdapter = null;
@@ -999,6 +899,115 @@
             // serverTableAdapter
             // 
             this.serverTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn1
+            // 
+            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn1.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
+            this.addressDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn1.Width = 120;
+            // 
+            // dateDataGridViewTextBoxColumn2
+            // 
+            this.dateDataGridViewTextBoxColumn2.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn2.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn2.Name = "dateDataGridViewTextBoxColumn2";
+            this.dateDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // guidDataGridViewTextBoxColumn
+            // 
+            this.guidDataGridViewTextBoxColumn.DataPropertyName = "guid";
+            this.guidDataGridViewTextBoxColumn.HeaderText = "guid";
+            this.guidDataGridViewTextBoxColumn.Name = "guidDataGridViewTextBoxColumn";
+            this.guidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.guidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // certificateIdDataGridViewTextBoxColumn
+            // 
+            this.certificateIdDataGridViewTextBoxColumn.DataPropertyName = "certificateId";
+            this.certificateIdDataGridViewTextBoxColumn.HeaderText = "certificateId";
+            this.certificateIdDataGridViewTextBoxColumn.Name = "certificateIdDataGridViewTextBoxColumn";
+            this.certificateIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.certificateIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // clientIdDataGridViewTextBoxColumn
+            // 
+            this.clientIdDataGridViewTextBoxColumn.DataPropertyName = "clientId";
+            this.clientIdDataGridViewTextBoxColumn.HeaderText = "clientId";
+            this.clientIdDataGridViewTextBoxColumn.Name = "clientIdDataGridViewTextBoxColumn";
+            this.clientIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameUserDataGridViewTextBoxColumn
+            // 
+            this.nameUserDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameUserDataGridViewTextBoxColumn.DataPropertyName = "NameUser";
+            this.nameUserDataGridViewTextBoxColumn.HeaderText = "NameUser";
+            this.nameUserDataGridViewTextBoxColumn.Name = "nameUserDataGridViewTextBoxColumn";
+            this.nameUserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "login";
+            this.dataGridViewTextBoxColumn1.HeaderText = "login";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.DataPropertyName = "stateId";
+            this.State.HeaderText = "Статус";
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stateIdDataGridViewTextBoxColumn1
+            // 
+            this.stateIdDataGridViewTextBoxColumn1.DataPropertyName = "stateId";
+            this.stateIdDataGridViewTextBoxColumn1.HeaderText = "stateId";
+            this.stateIdDataGridViewTextBoxColumn1.Name = "stateIdDataGridViewTextBoxColumn1";
+            this.stateIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.stateIdDataGridViewTextBoxColumn1.Visible = false;
             // 
             // MainForm
             // 
@@ -1119,12 +1128,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stateIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serverBindingSource;
         private myFWDataSetTableAdapters.ServerTableAdapter serverTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn certificateIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label lblSpr;
@@ -1134,6 +1137,12 @@
         private System.Windows.Forms.Button btnCert;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnSrv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certificateIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

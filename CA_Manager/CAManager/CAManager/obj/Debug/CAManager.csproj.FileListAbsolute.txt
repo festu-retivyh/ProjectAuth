@@ -102,3 +102,4 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CA
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprProgram.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAddServer.resources
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.MasterAddClient.resources
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA_Manager\CAManager\CAManager\obj\Debug\CAManager.sprServer.resources

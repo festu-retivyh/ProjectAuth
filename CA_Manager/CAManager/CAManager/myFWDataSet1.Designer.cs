@@ -2744,6 +2744,8 @@ namespace CAManager {
             
             private global::System.Data.DataColumn columncertificateId;
             
+            private global::System.Data.DataColumn columnprotocols;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ServerDataTable() {
@@ -2827,6 +2829,14 @@ namespace CAManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn protocolsColumn {
+                get {
+                    return this.columnprotocols;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2862,7 +2872,7 @@ namespace CAManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ServerRow AddServerRow(System.DateTime date, string name, string address, string guid, CertificateRow parentCertificateRowByFK_Server_Certificate) {
+            public ServerRow AddServerRow(System.DateTime date, string name, string address, string guid, CertificateRow parentCertificateRowByFK_Server_Certificate, string protocols) {
                 ServerRow rowServerRow = ((ServerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2870,7 +2880,8 @@ namespace CAManager {
                         name,
                         address,
                         guid,
-                        null};
+                        null,
+                        protocols};
                 if ((parentCertificateRowByFK_Server_Certificate != null)) {
                     columnValuesArray[5] = parentCertificateRowByFK_Server_Certificate[0];
                 }
@@ -2909,6 +2920,7 @@ namespace CAManager {
                 this.columnaddress = base.Columns["address"];
                 this.columnguid = base.Columns["guid"];
                 this.columncertificateId = base.Columns["certificateId"];
+                this.columnprotocols = base.Columns["protocols"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2926,6 +2938,8 @@ namespace CAManager {
                 base.Columns.Add(this.columnguid);
                 this.columncertificateId = new global::System.Data.DataColumn("certificateId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncertificateId);
+                this.columnprotocols = new global::System.Data.DataColumn("protocols", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprotocols);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -2941,6 +2955,7 @@ namespace CAManager {
                 this.columnaddress.MaxLength = 15;
                 this.columnguid.AllowDBNull = false;
                 this.columnguid.MaxLength = 100;
+                this.columnprotocols.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11464,6 +11479,22 @@ namespace CAManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string protocols {
+                get {
+                    try {
+                        return ((string)(this[this.tableServer.protocolsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'protocols\' в таблице \'Server\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableServer.protocolsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CertificateRow CertificateRow {
                 get {
                     return ((CertificateRow)(this.GetParentRow(this.Table.ParentRelations["FK_Server_Certificate"])));
@@ -11483,6 +11514,18 @@ namespace CAManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcertificateIdNull() {
                 this[this.tableServer.certificateIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprotocolsNull() {
+                return this.IsNull(this.tableServer.protocolsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprotocolsNull() {
+                this[this.tableServer.protocolsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16517,10 +16560,11 @@ SELECT id, date, clientId, stateId FROM ClientState WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("address", "address");
             tableMapping.ColumnMappings.Add("guid", "guid");
             tableMapping.ColumnMappings.Add("certificateId", "certificateId");
+            tableMapping.ColumnMappings.Add("protocols", "protocols");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Server] WHERE (([id] = @Original_id) AND ([date] = @Original_date) AND ([name] = @Original_name) AND ([address] = @Original_address) AND ([guid] = @Original_guid) AND ((@IsNull_certificateId = 1 AND [certificateId] IS NULL) OR ([certificateId] = @Original_certificateId)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Server] WHERE (([id] = @Original_id) AND ([date] = @Original_date) AND ([name] = @Original_name) AND ([address] = @Original_address) AND ([guid] = @Original_guid) AND ((@IsNull_certificateId = 1 AND [certificateId] IS NULL) OR ([certificateId] = @Original_certificateId)) AND ((@IsNull_protocols = 1 AND [protocols] IS NULL) OR ([protocols] = @Original_protocols)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16529,27 +16573,30 @@ SELECT id, date, clientId, stateId FROM ClientState WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_protocols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_protocols", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Server] ([date], [name], [address], [guid], [certificateId]) V" +
-                "ALUES (@date, @name, @address, @guid, @certificateId);\nSELECT id, date, name, ad" +
-                "dress, guid, certificateId FROM Server WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Server] ([date], [name], [address], [guid], [certificateId], [protocols]) VALUES (@date, @name, @address, @guid, @certificateId, @protocols);
+SELECT id, date, name, address, guid, certificateId, protocols FROM Server WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@protocols", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Server] SET [date] = @date, [name] = @name, [address] = @address, [guid] = @guid, [certificateId] = @certificateId WHERE (([id] = @Original_id) AND ([date] = @Original_date) AND ([name] = @Original_name) AND ([address] = @Original_address) AND ([guid] = @Original_guid) AND ((@IsNull_certificateId = 1 AND [certificateId] IS NULL) OR ([certificateId] = @Original_certificateId)));
-SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Server] SET [date] = @date, [name] = @name, [address] = @address, [guid] = @guid, [certificateId] = @certificateId, [protocols] = @protocols WHERE (([id] = @Original_id) AND ([date] = @Original_date) AND ([name] = @Original_name) AND ([address] = @Original_address) AND ([guid] = @Original_guid) AND ((@IsNull_certificateId = 1 AND [certificateId] IS NULL) OR ([certificateId] = @Original_certificateId)) AND ((@IsNull_protocols = 1 AND [protocols] IS NULL) OR ([protocols] = @Original_protocols)));
+SELECT id, date, name, address, guid, certificateId, protocols FROM Server WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@protocols", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16557,6 +16604,8 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_guid", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "guid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_certificateId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certificateId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_protocols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_protocols", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -16570,11 +16619,38 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, date, name, address, guid, certificateId FROM dbo.Server";
+            this._commandCollection[0].CommandText = "SELECT id, date, name, address, guid, certificateId, protocols FROM Server";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        srv.id, srv.date, srv.name, srv.address, srv.guid, srv.protocols, Certificate.dateStart, Certificate.dateStop,
+                             (SELECT        Status.name
+                               FROM            Status INNER JOIN
+                                                             (SELECT        CertificateStatus_1.statusId, CertificateStatus_1.CertificateId
+                                                               FROM            (SELECT        MAX(date) AS date1, CertificateId AS certId
+                                                                                         FROM            CertificateStatus
+                                                                                         GROUP BY CertificateId) AS filter LEFT OUTER JOIN
+                                                                                         CertificateStatus AS CertificateStatus_1 ON filter.date1 = CertificateStatus_1.date AND filter.certId = CertificateStatus_1.CertificateId) AS stat ON Status.id = stat.statusId
+                               WHERE        (stat.CertificateId = Certificate.id)) AS StatusName
+FROM            (SELECT        id, date, name, address, guid, certificateId, protocols
+                          FROM            Server
+                          WHERE        (id = @id)) AS srv LEFT OUTER JOIN
+                         Certificate ON srv.certificateId = Certificate.id";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "UPDATE [Server] SET [name] = @name, [address] = @address, [protocols] = @protocol" +
+                "s WHERE id = @id;\r\nSELECT id, date, name, address, guid, certificateId, protocol" +
+                "s FROM Server WHERE (id = @id)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@protocols", global::System.Data.SqlDbType.NVarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "protocols", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16596,6 +16672,32 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual myFWDataSet.ServerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            myFWDataSet.ServerDataTable dataTable = new myFWDataSet.ServerDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int GetServer(myFWDataSet.ServerDataTable dataTable, int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual myFWDataSet.ServerDataTable GetServerDT(int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
             myFWDataSet.ServerDataTable dataTable = new myFWDataSet.ServerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -16634,7 +16736,7 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId) {
+        public virtual int Delete(int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId, string Original_protocols) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_date));
             if ((Original_name == null)) {
@@ -16663,6 +16765,14 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
+            if ((Original_protocols == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_protocols));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16683,7 +16793,7 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId) {
+        public virtual int Insert(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId, string protocols) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(date));
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
@@ -16709,6 +16819,12 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
+            if ((protocols == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(protocols));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16729,7 +16845,7 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId, int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId, int id) {
+        public virtual int Update(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId, string protocols, int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId, string Original_protocols, int id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(date));
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
@@ -16755,35 +16871,49 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_date));
+            if ((protocols == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(protocols));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_date));
             if ((Original_name == null)) {
                 throw new global::System.ArgumentNullException("Original_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_name));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_name));
             }
             if ((Original_address == null)) {
                 throw new global::System.ArgumentNullException("Original_address");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_address));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_address));
             }
             if ((Original_guid == null)) {
                 throw new global::System.ArgumentNullException("Original_guid");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_guid));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_guid));
             }
             if ((Original_certificateId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_certificateId.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_certificateId.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id));
+            if ((Original_protocols == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_protocols));
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16804,8 +16934,50 @@ SELECT id, date, name, address, guid, certificateId FROM Server WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId, int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId) {
-            return this.Update(date, name, address, guid, certificateId, Original_id, Original_date, Original_name, Original_address, Original_guid, Original_certificateId, Original_id);
+        public virtual int Update(System.DateTime date, string name, string address, string guid, global::System.Nullable<int> certificateId, string protocols, int Original_id, System.DateTime Original_date, string Original_name, string Original_address, string Original_guid, global::System.Nullable<int> Original_certificateId, string Original_protocols) {
+            return this.Update(date, name, address, guid, certificateId, protocols, Original_id, Original_date, Original_name, Original_address, Original_guid, Original_certificateId, Original_protocols, Original_id);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int myUpdate(string name, string address, string protocols, int id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((name == null)) {
+                throw new global::System.ArgumentNullException("name");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(name));
+            }
+            if ((address == null)) {
+                throw new global::System.ArgumentNullException("address");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(address));
+            }
+            if ((protocols == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(protocols));
+            }
+            command.Parameters[3].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -24478,7 +24650,7 @@ SELECT id, name, port, protocol FROM Program WHERE (id = @id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT [value] FROM Parametrs Where [property] = @prop";
+            this._commandCollection[1].CommandText = "SELECT TOP(1) value FROM Parametrs Where property=@prop";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@prop", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "property", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -24646,7 +24818,7 @@ SELECT id, name, port, protocol FROM Program WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string GetValue(string prop) {
+        public virtual object GetValue(string prop) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((prop == null)) {
                 throw new global::System.ArgumentNullException("prop");
@@ -24673,7 +24845,7 @@ SELECT id, name, port, protocol FROM Program WHERE (id = @id)";
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
     }

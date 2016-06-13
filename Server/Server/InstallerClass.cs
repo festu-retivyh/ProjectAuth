@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration.Install;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management;
@@ -63,6 +64,13 @@ namespace Server
                 File.Delete(dir + @"\srv.key");
                 Console.WriteLine(4 / zero);                ////////ERRROR
             }
+
+            var proc = new Process();
+            proc.StartInfo.FileName = "netsh.exe";
+            proc.StartInfo.Arguments = "schtasks /create /RU System /TN Server /SC onstart /TR " + Context.Parameters["targetdir"] + "Server.exe";
+            proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.Start();
+            proc.WaitForExit();
 
         }
 

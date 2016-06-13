@@ -36,13 +36,7 @@ namespace Server
             string testMsg = message;
             message = Cryptography.Cryptography.Encrypt(message, masData[2]);
             string data="";
-            try {
             data = JoinToCA(message, masData[3]);
-            }
-            catch
-            {
-                File.WriteAllText(@"D:\JointToCaFromSrvERR.txt", testMsg + "\r\n" + masData[3]);
-            }
             var srvData = DecryptServerData();
             data = Cryptography.Cryptography.Decrypt(data, srvData[1]);
             if (!checkData(data, srvData[2]))
