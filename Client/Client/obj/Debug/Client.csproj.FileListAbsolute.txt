@@ -89,3 +89,4 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Client\Client
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Client\Client\obj\Debug\Client.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Client\Client\obj\Debug\Client.pdb
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Client\Client\bin\Debug\Client.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\Client\Client\obj\Debug\Client.FormSetting.resources

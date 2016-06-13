@@ -25,43 +25,92 @@ namespace Client
             if (disk != null)
             {
                 var ca = CreateWebServiceInstance();
-                if (alive)
+                if (ca.IsAlive(new CAService.IsAliveRequest()).IsAliveResult)
                 {
-                    if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+                    if (alive)
                     {
-                        var curUsb = UsbSearcher.infoUsbGet(disk);
-                        var curComp = infoAboutComputer();
-                        var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
-                        string hashUsb = curUsb;
-                        for (int i = 0; i < 100; i++)
-                            hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
-                        curComp = Cryptography.Cryptography.GetHash(curComp);
-
-                        string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
-                        string HashSKeyClient = fileClient[3];
-                        if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
-                            return;
-                        string sKeyClient = GetSKeyClient(fileClient[1], curComp, hashUsb, hashPin);
-                        string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
-                        string privateKeyClient = decriptDataClient[0];
-                        guidClient = decriptDataClient[1];
-                        pubKeyCA = decriptDataClient[2];
-                        ConstractorMessage cm = new ConstractorMessage();
-                        data = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "1", guidClient);
-                        if (messageForOffStatus == "")
+                        if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
                         {
-                            messageForOffStatus = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "2", guidClient);
+                            var curUsb = UsbSearcher.infoUsbGet(disk);
+                            var curComp = infoAboutComputer();
+                            var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
+                            string hashUsb = curUsb;
+                            for (int i = 0; i < 100; i++)
+                                hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+                            curComp = Cryptography.Cryptography.GetHash(curComp);
+
+                            string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
+                            string HashSKeyClient = fileClient[3];
+                            if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
+                                return;
+                            string sKeyClient = GetSKeyClient(fileClient[1], curComp, hashUsb, hashPin);
+                            string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
+                            string privateKeyClient = decriptDataClient[0];
+                            guidClient = decriptDataClient[1];
+                            pubKeyCA = decriptDataClient[2];
+                            ConstractorMessage cm = new ConstractorMessage();
+                            data = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "1", guidClient);
+                            if (messageForOffStatus == "")
+                            {
+                                messageForOffStatus = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "2", guidClient);
+                            }
+                            ca.AliveClient(new CAService.AliveClientRequest(data));
                         }
-                        ca.AliveClient(new CAService.AliveClientRequest(data));
                     }
-                }
-                else
-                {
-                    ca.AliveClient(new CAService.AliveClientRequest(messageForOffStatus));
+                    else
+                    {
+                        ca.AliveClient(new CAService.AliveClientRequest(messageForOffStatus));
+                    }
                 }
 
             }
         }
+
+        internal static bool ChangeUserPincode(string oldPin, string newPin)
+        {
+            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+            {
+                string hashUsb = UsbSearcher.infoUsbGet(disk);
+                string curComp = Cryptography.Cryptography.GetHash(infoAboutComputer());
+                string[] clientFile = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
+                string sKeyClient = clientFile[3];
+                for (int i = 0; i < 100; i++)
+                    hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != sKeyClient)
+                {
+                    return false;
+                }
+                string hashPin = Cryptography.Cryptography.GetHash(oldPin);
+                Model.hashPin = hashPin;
+                string sMyKeyClient = GetSKeyClient(clientFile[1], curComp, hashUsb, hashPin);
+                sKeyClient = SetSKeyClient(sMyKeyClient, curComp, hashUsb, Cryptography.Cryptography.GetHash(newPin));
+                
+                //encript private key Client
+                string dataClient = clientFile[0] + " " + sKeyClient + " " + clientFile[2] + " " + clientFile[3];
+                File.WriteAllText(@"C:\ProgramData\ClientKey\prv.key", dataClient);
+                return true;
+            }
+            return false;
+        }
+
+        private static bool CheckDataUsbClient()
+        {
+            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+            {
+                string hashUsb = UsbSearcher.infoUsbGet(disk);
+                string curComp = Cryptography.Cryptography.GetHash(infoAboutComputer());
+                string sKeyClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ')[3];
+                for (int i = 0; i < 100; i++)
+                    hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != sKeyClient)
+                {
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        }
+
         internal static CAService.CAClient CreateWebServiceInstance()
         {
             BasicHttpBinding binding = new BasicHttpBinding();

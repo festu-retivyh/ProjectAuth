@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 
 namespace CA
 {
@@ -49,8 +50,7 @@ namespace CA
         {
             string data;
             string[,] ports = DbConnector.GetPortsForClient(clientGuid);
-            File.WriteAllText(@"D:\test.txt", (ports.GetUpperBound(1) + 1).ToString());
-            for (int i = 0; i < ports.GetUpperBound(1) + 1; i++)
+            for (int i = 0; i < ports.GetUpperBound(1); i++)
             {
                 if (CheckServer(ports[i, 0]))
                 {
@@ -69,6 +69,7 @@ namespace CA
             }
             catch
             {
+                File.WriteAllText(@"D:\CheckServerERR.txt", false.ToString());
                 return false;
             }
         }
@@ -78,14 +79,18 @@ namespace CA
             var conn = CreateWebServiceInstanceToServer(ipSrv);
             try
             {
-                if(rule)
+                if (rule)
+                {
                     conn.AddRule(data);
+                    File.WriteAllText(@"D:\deliverRulesSend.txt", data);
+                }
                 else
                     conn.DelRule(data);
             }
             catch
             {
                 AddLog("Не успешная попытка передать на сервер данные об открытии\\закрытии портов");
+                File.WriteAllText(@"D:\deliverRulesSendERR.txt", data);
             }
         }
 
@@ -93,6 +98,7 @@ namespace CA
         {
             
         }
+
         static private string PrivateKeyCA
         {
             get
@@ -168,16 +174,14 @@ namespace CA
                 case 1: { try { DbConnector.SetStateClient(mas[0], "auth", ip); returnData = GenCheckData(goodData); } catch { Model.AddLog("Ошибка в Model.JoinClient event1"); } break; }
                 case 2:
                     {
-                        
                         string guidUsb = goodData.Split(' ')[0];
                         string guidClient = DbConnector.GetGuidClientOfUsb(guidUsb);
-                        //goodData = ReadData(goodData,false);
                         string rezult = DbConnector.CheckTocken(goodData.Split(' ')[goodData.Split(' ').Length-1], guidUsb);
                         
                         if (rezult == "good")
                         {
                             DbConnector.SetStateClient(guidClient, "active", ip);
-
+                            
                             DeliveryRulesForServers(guidClient, ip, true);
 
                             returnData = "message was getted";
@@ -218,7 +222,6 @@ namespace CA
                 return int.Parse(goodData).ToString();
             }
             catch { }
-            //File.WriteAllText(@"D:\joinSrv.txt", goodData);
             string[] mas = goodData.Split(' ');
             int command = int.Parse(mas[1]);
             if (command == 1)
@@ -227,7 +230,7 @@ namespace CA
                 string dataForSrv = "5 " + DateTime.Now + " " + onlineClients;
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, PrivateKeyCA);
-                //File.WriteAllText(@"D:\DataForSrv.txt", dataForSrv);
+                File.WriteAllText(@"D:\DataForSrv.txt", dataForSrv);
                 dataForSrv = Cryptography.Cryptography.Encrypt(dataForSrv, DbConnector.GetCertificate(mas[0]).publicKey);
                 return dataForSrv;
             }
@@ -245,12 +248,12 @@ namespace CA
         {
             try
             {
-                if (!EventLog.SourceExists("MyService"))
+                if (!EventLog.SourceExists("ProjectAuth_CA"))
                 {
-                    EventLog.CreateEventSource("MyService", "MyService");
+                    EventLog.CreateEventSource("ProjectAuth_CA", "ProjectAuth_CA");
                 }
                 //EventLog.WriteEntry(sSource, sEvent);
-                EventLog.WriteEntry("My .NET Service", log, EventLogEntryType.Error, 228);
+                EventLog.WriteEntry("ProjectAuth_CA", log, EventLogEntryType.Error, 228);
             }
             catch { }
         }

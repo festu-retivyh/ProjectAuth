@@ -8,7 +8,7 @@ namespace CA
     {
         static List<objClient> list = new List<objClient>();
         Thread CheckerOnline;
-
+        static bool secThreadWork = true;
         public void SetParams(string server, string user, string pass)
         {
             Model.server = server;
@@ -25,7 +25,8 @@ namespace CA
         private static void Timer()
         {
             while (true)
-                Alive();
+                if (secThreadWork)
+                    Alive();
         }
 
         private static void Alive()
@@ -66,7 +67,7 @@ namespace CA
 
         public void Stop()
         {
-            //CheckerOnline.Suspend();
+            secThreadWork = false;
         }
     }
     class objClient

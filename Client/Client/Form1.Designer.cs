@@ -32,8 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.CloseApp = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.iAmAliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxState = new System.Windows.Forms.ToolStripTextBox();
+            this.btnSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.tbxPinCode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,25 +53,38 @@
             // CloseApp
             // 
             this.CloseApp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.iAmAliveToolStripMenuItem});
+            this.tbxState,
+            this.btnSetting,
+            this.btnClose});
             this.CloseApp.Name = "contextMenuStrip1";
-            this.CloseApp.Size = new System.Drawing.Size(181, 48);
+            this.CloseApp.Size = new System.Drawing.Size(221, 95);
             this.CloseApp.Text = "Выйти из приложения";
-            this.CloseApp.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CloseApp_ItemClicked);
+            this.CloseApp.Opening += new System.ComponentModel.CancelEventHandler(this.CloseApp_Opening);
             // 
-            // toolStripMenuItem1
+            // tbxState
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.tbxState.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxState.Margin = new System.Windows.Forms.Padding(5, 1, 1, 1);
+            this.tbxState.Name = "tbxState";
+            this.tbxState.ReadOnly = true;
+            this.tbxState.Size = new System.Drawing.Size(160, 23);
+            this.tbxState.Text = "Состояние: Отключен";
             // 
-            // iAmAliveToolStripMenuItem
+            // btnSetting
             // 
-            this.iAmAliveToolStripMenuItem.Name = "iAmAliveToolStripMenuItem";
-            this.iAmAliveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.iAmAliveToolStripMenuItem.Text = "IAmAlive";
-            this.iAmAliveToolStripMenuItem.Click += new System.EventHandler(this.iAmAliveToolStripMenuItem_Click);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.ShortcutKeyDisplayString = "[Ctrl+S]";
+            this.btnSetting.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.btnSetting.Size = new System.Drawing.Size(220, 22);
+            this.btnSetting.Text = "Настройки";
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(220, 22);
+            this.btnClose.Text = "Закрыть приложение";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbxPinCode
             // 
@@ -96,8 +110,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 2;
+            this.label1.Text = "Ожидание USB";
             // 
             // Form1
             // 
@@ -116,6 +131,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.CloseApp.ResumeLayout(false);
+            this.CloseApp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,11 +144,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip CloseApp;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem iAmAliveToolStripMenuItem;
-        
-
-        
+        private System.Windows.Forms.ToolStripMenuItem btnSetting;
+        private System.Windows.Forms.ToolStripMenuItem btnClose;
+        private System.Windows.Forms.ToolStripTextBox tbxState;
     }
 }
 

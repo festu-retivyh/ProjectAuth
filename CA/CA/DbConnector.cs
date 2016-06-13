@@ -59,7 +59,14 @@ namespace CA
                 list.Clear();
                 return;
             }
-            string comm = "SELECT State.[Date], Client.Address, Client.Guid FROM (SELECT ClientState.ClientId, ClientState.[Date], ClientState.StateId FROM (SELECT MAX(date) AS DateT, clientId From ClientState Group by clientId) AS Filter LEFT JOIN ClientState on Filter.clientId=clientState.ClientId and Filter.DateT=ClientState.[date]) AS State LEFT JOIN Client on State.ClientId=Client.Id WHERE State.StateId=2";
+            string comm = "SELECT        [State].[Date], Client.[Address], Client.[Guid]"+
+                        " FROM(SELECT        ClientState_1.ClientId, ClientState_1.[Date], ClientState_1.StateId"+
+                          " FROM(SELECT        MAX(date) AS DateT, clientId"+
+                          "                          FROM            ClientState"+
+                          "                          GROUP BY clientId) AS Filter LEFT OUTER JOIN"+
+                          "                          ClientState AS ClientState_1 ON Filter.clientId = ClientState_1.ClientId AND Filter.DateT = ClientState_1.[date]) AS[State] INNER JOIN"+
+                        " Client ON[State].ClientId = Client.Id"+
+                         "   WHERE([State].StateId = 2)";
             SqlCommand cmd = new SqlCommand(comm, conn);
             SqlDataReader sdr = cmd.ExecuteReader();
             list.Clear();
@@ -86,7 +93,7 @@ namespace CA
             var conn = GetConnection();
             if (conn == null)
                 return false;
-            string comm = @"Select TOP(1) ClientState.stateid, client.address, ClientState.date from ClientState left join Client on clientState.clientid=client.id where clientid = (select id from client where guid = @guid) Order by date desc";
+            string comm = @"Select TOP(1) ClientState.stateid, client.address, ClientState.date from ClientState inner join Client on clientState.clientid=client.id where clientid = (select id from client where guid = @guid) Order by date desc";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
             SqlDataReader sdr = cmd.ExecuteReader();

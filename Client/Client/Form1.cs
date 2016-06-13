@@ -19,8 +19,6 @@ namespace Client
 
         public Form1()
         {
-
-
             ta = new TimerAlive(30000);
             InitializeComponent();
             ta.Start();
@@ -45,44 +43,51 @@ namespace Client
         void UsbSearcher_onAddUsb(UsbDisk nameDisk)
         {
             if (Model.disk == null)
-                CheckFile(nameDisk);
+                UpdateForm(nameDisk);
         }
 
-        private void CheckFile(UsbDisk _disk)
+        private void UpdateForm(UsbDisk _disk)
         {
             if (File.Exists(_disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
             {
+                label1.Invoke(new Action(delegate ()
+                {
+                    label1.Text = "Вставлен USB";
+                }));
                 curUsb = UsbSearcher.infoUsbGet(_disk);
                 curComp = infoAboutComputer();
                 fileUsb = File.ReadAllText(_disk.name + @"\maan.key").Split(' ');
                 hashUsb = curUsb;
+                fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
                 for (int i = 0; i < 100; i++)
                     hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
                 curComp = Cryptography.Cryptography.GetHash(curComp);
 
-                fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
-                string HashSKeyClient = fileClient[3];
-                disk = _disk;
-                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
-                    return;
-                label1.Invoke(new Action(delegate ()
+                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) == fileClient[3])
                 {
-                    label1.Text = "Файл найден";
-                }));
-                this.Invoke(new Action(delegate ()
-                {
-                    Show();
-                    notifyIcon1.Visible = false;
-                    WindowState = FormWindowState.Normal;
-                }));
-                label1.Invoke(new Action(delegate ()
-                {
-                    label1.Text = "Введите PIN-код";
-                }));
+                    disk = _disk;
 
+                    this.Invoke(new Action(delegate ()
+                    {
+                        Show();
+                        notifyIcon1.Visible = false;
+                        WindowState = FormWindowState.Normal;
+                    }));
+                    label1.Invoke(new Action(delegate ()
+                    {
+                        label1.Text = "Введите PIN-код";
+                    }));
+                }
+                else
+                {
+                    label1.Invoke(new Action(delegate ()
+                    {
+                        label1.Text = "Ожидание USB";
+                    }));
+                }
             }
         }
-
+        
         private static void SearchUsb()
         {
             while (true)
@@ -162,6 +167,7 @@ namespace Client
         {
             return UsbSearcher.infoUsbGet(_disk);
         }
+
         private string infoAboutComputer()
         {
             string data = "";
@@ -179,6 +185,7 @@ namespace Client
                 Cryptography.Cryptography.GetHash("IJ|lT1Tl|IJ");
             return data;
         }
+
         internal static CAService.CAClient CreateWebServiceInstance()
         {
             BasicHttpBinding binding = new BasicHttpBinding();
@@ -213,10 +220,26 @@ namespace Client
             notifyIcon1.Visible = false;
             WindowState = FormWindowState.Normal;
         }
+        
 
-        private void iAmAliveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSetting_Click(object sender, EventArgs e)
         {
-            // Model.SendAliveMessage();
+            FormSetting fs = new FormSetting();
+            fs.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void CloseApp_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (Model.disk == null)
+                tbxState.Text = "Состояние:Отключен";
+            else
+                tbxState.Text = "Состояние:Подключен";
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -233,6 +256,7 @@ namespace Client
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Visible = false;
             string hashPin = Cryptography.Cryptography.GetHash(tbxPinCode.Text);
             tbxPinCode.Text = "";
             Model.hashPin = hashPin;
