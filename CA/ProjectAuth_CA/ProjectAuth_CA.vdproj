@@ -16,6 +16,12 @@
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -23,12 +29,6 @@
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -157,6 +157,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_1933EC5D9D534DB298DFD81D6156B6B5"
+            {
+            "Name" = "8:Основные выходные файлы from CA (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:2"
+            "Identifier" = "8:_8E18624C_3F65_4640_A36F_BE30F3F62187"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME] /dbuser=[USERNAME] /dbpass=[USERPASS]"
+            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_895F2260E2754DA78CCF7ECE8DD79694"
             {
             "Name" = "8:Основные выходные файлы from WS_CA (Active)"
@@ -337,6 +351,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_59EE9730383A458882240C7BCDA9EBDD"
+                    {
+                    "Name" = "8:Res"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_B894DF858741491497177599A494CC37"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_C48CA9E4B484485798496DD0B101B2CE"
@@ -384,9 +409,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
-        "ProductCode" = "8:{C5C47384-7718-4F72-8777-414090D2C28E}"
-        "PackageCode" = "8:{8690FEF1-41C8-499D-8A0D-1BC61E4524FE}"
-        "UpgradeCode" = "8:{473BF2A6-AC98-4F00-8C98-EA1F9593427A}"
+        "ProductCode" = "8:{C134B7C5-797F-41C4-AC31-99B8D2917ECE}"
+        "PackageCode" = "8:{BC73A515-3960-4140-8C3D-A1CC9B6E0967}"
+        "UpgradeCode" = "8:{5527AD14-681F-4D23-B9CC-95D1E4174005}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"

@@ -37,6 +37,12 @@
     <Compile Include="DbConnector.cs" />
     <Compile Include="EventTimer.cs" />
     <Compile Include="ICA.cs" />
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="myFWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

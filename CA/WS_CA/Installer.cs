@@ -23,11 +23,8 @@ namespace WS_CA
             base.Install(stateSaver);
             try
             {
-                try { ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql")); }
-                catch { }
-                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "IF NOT EXISTS (SELECT name FROM master.sys.server_principals WHERE name = '" + Context.Parameters["dbuser"] + "') "+
-                " BEGIN CREATE LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]+" END "+
-                " ELSE BEGIN ALTER LOGIN Mary5 WITH PASSWORD = '" + Context.Parameters["dbpass"] + "' END");
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "CREATE LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]);
                 File.Delete(Context.Parameters["targetdir"] + "db.sql");
 
                 string key = Cryptography.Cryptography.GeneratePrivateKey();
@@ -67,7 +64,7 @@ namespace WS_CA
                     }
                 }
 
-                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\\ProjectAuth");
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("ProjectAuth");
                 myRegKey.SetValue("NameServer", Context.Parameters["dbname"].ToString(), Microsoft.Win32.RegistryValueKind.String);
                 var mySec = myRegKey.CreateSubKey("secure");
                 mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
