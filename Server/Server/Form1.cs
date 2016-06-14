@@ -18,15 +18,8 @@ namespace Server
             cmd.Execute("add rule name=ProjectAuth_Server protocol=TCP localport=46000-46001 dir=in action=allow remoteip=" + Model.DecryptServerData()[3]);
             host = new ServiceHost(typeof(Server.Srv));
             host.Open();
-            //try
-            //{
             Model.SendMessageForJoinCA();
             ControlFW.Start();
-            //}
-            //catch
-            //{
-            //    File.WriteAllText(@"D:\sendMessageJoinSrv.txt", host.State.ToString());
-            //}
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

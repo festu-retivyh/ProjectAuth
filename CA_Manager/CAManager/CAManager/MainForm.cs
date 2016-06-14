@@ -123,7 +123,7 @@ namespace CAManager
 
         private void btnSelectUser_Click(object sender, EventArgs e)
         {
-            int idSelUser = int.Parse(dgvAllUsers.SelectedRows[0].Cells[0].Value.ToString());
+            int idSelUser = (int)dgvAllUsers.SelectedRows[0].Cells[0].Value;
             sprClient spr = new sprClient(idSelUser);
             spr.Show();
         }
@@ -199,6 +199,13 @@ namespace CAManager
         private void btnProgram_Click(object sender, EventArgs e)
         {
             sprListProgram spr = new sprListProgram();
+            spr.Show();
+        }
+
+        private void dgvServers_DoubleClick(object sender, EventArgs e)
+        {
+            int id = (int)dgvServers.SelectedRows[0].Cells[0].Value;
+            sprServer spr = new sprServer(id);
             spr.Show();
         }
     }

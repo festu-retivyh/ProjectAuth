@@ -90,3 +90,8 @@ C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.csproj.GenerateResource.Cache
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.exe
 C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.pdb
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.exe.manifest
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\bin\Debug\WS_CA.application
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.TrustInfo.xml
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.exe.manifest
+C:\Users\007-0_000\Desktop\ДИПЛОМ\Наработки\Project\CA\WS_CA\obj\Debug\WS_CA.application

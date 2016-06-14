@@ -21,7 +21,7 @@ namespace CAManager
         internal static string GetParam(string proprty)
         {
             myFWDataSetTableAdapters.ParametrsTableAdapter ta = new myFWDataSetTableAdapters.ParametrsTableAdapter();
-            string str = ta.GetValue(proprty);
+            string str = ta.GetValue(proprty).ToString();
             if (str != null)
                 return str;
             return null;

@@ -66,10 +66,8 @@ namespace Client
             string curComp = infoAboutComputer();
             curComp = Cryptography.Cryptography.GetHash(curComp);
             if (!File.Exists(dirUsb))
-                return;
+                throw new Exception("Не найден файл с ключевой информацией на USB носителе.");
             data = File.ReadAllText(dirUsb);
-            //fileInst = Cryptography.Cryptography.DecryptAes(fileInst[0],)
-            //data = fileInst;
             
             string hashUsb = UsbSearcher.infoUsbGet(UsbSearcher.getUsbAdapters()[0]);
             for (int i = 0; i < 100; i++)
@@ -78,7 +76,7 @@ namespace Client
             //data = data.ToString();
             string pubKeyCA = data.Split(' ')[4];
             if (!checkData(data, pubKeyCA))
-                Console.WriteLine(4 / zero);                ////////ERRROR
+                throw new Exception("Не пройдена проверка файла.");
             string prvKeyClient = Cryptography.Cryptography.GeneratePrivateKey();
             Cryptography.sCertData dataCert = new Cryptography.sCertData();
 
@@ -91,17 +89,14 @@ namespace Client
             dataForCA = dataForCA + " " + Cryptography.Cryptography.Sign(dataForCA, data.Split(' ')[3]);
             dataForCA = Cryptography.Cryptography.Encrypt(dataForCA, pubKeyCA);
 
-            //CAService.CAClient ca = new CAService.CAClient("NetTcpBinding_ICA");
-
-            //string dataFromCA = ca.RegistrateClient(dataForCA);
             var instans = CreateWebServiceInstance();
-            string dataFromCA = instans.RegistrateClient(new CAService.RegistrateClientRequest(dataForCA)).RegistrateClientResult;//Model.SendInstallingMessage(dataForCA);
-            //string dataFromCA = RegistrateClient(dataForCA);
+            string dataFromCA = instans.RegistrateClient(new CAService.RegistrateClientRequest(dataForCA)).RegistrateClientResult;
+
             dataForCA = "";
             //read message from ca
             dataFromCA = Cryptography.Cryptography.Decrypt(dataFromCA, data.Split(' ')[3]);
             if (!checkData(dataFromCA, pubKeyCA))
-                Console.WriteLine(4 / zero);                //////ERRROR
+                throw new Exception("Не пройденна проверка переданных данных в центре сертификации.");
             string partKeyCA = dataFromCA.Split(' ')[3];
             string partKeyClient = Cryptography.Cryptography.GenerateKey(50);
             //gen data for encript on usb

@@ -49,7 +49,6 @@ namespace Server
 
         private static string GetCommand(Rule rule)
         {
-            File.WriteAllText(@"D:\GetCommand.txt", rule.ip+"#"+rule.action + "#" +rule.name + "#" +rule.port + "#" +rule.protocol);
             string str = "";
             if (rule.port == "")
             {
@@ -57,7 +56,6 @@ namespace Server
                 str = "add rule name="+ rule.name + " protocol=" + rule.protocol + " action=allow dir=IN";
                 activRules.Add(rule);
                 queueRules.Remove(rule);
-                File.WriteAllText(@"D:\ProtocolText.txt", str);
             }
             else
             {
@@ -68,7 +66,6 @@ namespace Server
                     activRules.Add(rule);
                     queueRules.Remove(rule);
                     counterRules++;
-                    File.WriteAllText(@"D:\AddRuleText.txt", str);
                 }
                 else
                 {
@@ -81,7 +78,6 @@ namespace Server
                     str = "delete rule name = " + curRule.name;
                     activRules.Remove(curRule);
                     queueRules.Remove(rule);
-                    File.WriteAllText(@"D:\DelRuleText.txt", str);
                 }
             }
             return str;

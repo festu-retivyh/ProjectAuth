@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration.Install;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Server
 {
@@ -28,11 +30,17 @@ namespace Server
             int zero = 0;
             string data = "";
             var disk = GetDirUsb();
+            if (disk == null)
+            {
+                throw new Exception("Не найден usb носитель с ключевой информацией");
+            }
             string dirUsb = disk.name + @"\srv.key";
             string curComp = infoAboutComputer();
             curComp = Cryptography.Cryptography.GetHash(curComp);
             if (!File.Exists(dirUsb))
-                return;
+            {
+                throw new Exception("Не найден файл с ключевой информацией");
+            }
             data = File.ReadAllText(dirUsb);
 
             string hashUsb = UsbSearcher.infoUsbGet(disk);
@@ -44,9 +52,9 @@ namespace Server
             try
             { pubKeyCa = masData[4];}
             catch
-            { new Exception("Ошибка в зашифрованных данных, установка не может быть продолжена."); }
+            { throw new Exception("Ошибка в зашифрованных данных, установка не может быть продолжена."); }
             if (!checkData(data, pubKeyCa))
-                Console.WriteLine(4 / zero);                ////////ERRROR
+                throw new Exception("Ошибка проверки зашифрованных данных.");
             string DataForSave = masData[3] +" "+ masData[2] + " " + masData[4] + " " + masData[5];
             string dir = @"C:\ProgramData\ServerKey";
             Directory.CreateDirectory(dir);
@@ -61,8 +69,15 @@ namespace Server
             if (data != "OK")
             {
                 File.Delete(dir + @"\srv.key");
-                Console.WriteLine(4 / zero);                ////////ERRROR
+                throw new Exception("Ошибка переданных данных на Центр сертификации.");
             }
+
+            var proc = new Process();
+            proc.StartInfo.FileName = "netsh.exe";
+            proc.StartInfo.Arguments = "schtasks /create /RU System /TN Server /SC onstart /TR " + Context.Parameters["targetdir"] + "Server.exe";
+            proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.Start();
+            proc.WaitForExit();
 
         }
 
@@ -83,8 +98,14 @@ namespace Server
 
         private UsbDisk GetDirUsb()
         {
-            var disk = UsbSearcher.getUsbAdapters()[0];
-            return disk;
+            try
+            {
+                var disk = UsbSearcher.getUsbAdapters()[0];
+                return disk;
+            }
+
+            catch { new Exception("Не найден usb носитель с ключевой информацией"); return null; }
+           
         }
         private string infoAboutComputer()
         {

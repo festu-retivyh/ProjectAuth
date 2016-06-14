@@ -72,6 +72,7 @@
             this.dgvProg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProg.Size = new System.Drawing.Size(284, 237);
             this.dgvProg.TabIndex = 0;
+            this.dgvProg.DoubleClick += new System.EventHandler(this.dgvProg_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

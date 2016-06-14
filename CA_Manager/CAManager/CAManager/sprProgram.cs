@@ -12,6 +12,8 @@ namespace CAManager
     public partial class sprProgram : Form
     {
         int curId;
+        public delegate void ChangeInformation();
+        public event ChangeInformation change;
         public sprProgram()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace CAManager
                 var data = ta.myUpdate(tbxName.Text, tbxPort.Text, rbTCP.Checked ? "TCP" : "UDP", curId);
                 Close();
             }
+            change();
         }
     }
 }

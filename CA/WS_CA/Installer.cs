@@ -23,8 +23,14 @@ namespace WS_CA
             base.Install(stateSaver);
             try
             {
-                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
-                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "CREATE LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"]);
+                try
+                {
+                    ExecuteSqlScript(Context.Parameters["dbname"].ToString(), File.ReadAllText(Context.Parameters["targetdir"] + "db.sql"));
+                }
+                catch { MessageBox.Show("База данных не была развернута, вероятно она уже существовала"); }
+                ExecuteSqlScript(Context.Parameters["dbname"].ToString(), "IF NOT EXISTS (SELECT name FROM master.sys.server_principals WHERE name = '" + Context.Parameters["dbuser"] + "') " +
+                   " BEGIN CREATE LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "';ALTER SERVER ROLE [sysadmin] ADD MEMBER " + Context.Parameters["dbuser"] + " END " +
+                   " ELSE BEGIN ALTER LOGIN " + Context.Parameters["dbuser"] + " WITH PASSWORD = '" + Context.Parameters["dbpass"] + "' END");
                 File.Delete(Context.Parameters["targetdir"] + "db.sql");
 
                 string key = Cryptography.Cryptography.GeneratePrivateKey();
@@ -70,6 +76,7 @@ namespace WS_CA
                     var mySec = myRegKey.CreateSubKey("secure");
                     mySec.SetValue("Login", Context.Parameters["dbuser"].ToString(), Microsoft.Win32.RegistryValueKind.String);
                     mySec.SetValue("Password", Context.Parameters["dbpass"].ToString(), Microsoft.Win32.RegistryValueKind.String);
+                    
                     mySec.Close();
                     myRegKey.Close();
                 }
