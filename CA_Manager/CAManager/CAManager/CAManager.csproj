@@ -229,6 +229,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="myFWDataSet.xsc">
       <DependentUpon>myFWDataSet.xsd</DependentUpon>
     </None>

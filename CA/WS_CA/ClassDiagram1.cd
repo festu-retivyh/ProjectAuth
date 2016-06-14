@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WS_CA.Installer">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAGAACAAAACAAAAggAAAAAAAAAAAAA=</HashCode>
+      <FileName>Installer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WS_CA.Program">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WS_CA.ProjectInstaller">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAQCAAAAAAAACAAAACAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>ProjectInstaller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WS_CA.Service1">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEEACAAAACAAAAAAAAAEgEAAAAEAI=</HashCode>
+      <FileName>Service1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

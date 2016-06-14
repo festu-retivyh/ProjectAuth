@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CA.CA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAABAAAAAAAEEEAAAAAAAAEAABAAAAAACAAAEAA=</HashCode>
+      <FileName>CA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CA.DbConnector">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUBBAQAABBAEIAAAAAABAABAAAAEQAgAoBAAAgA=</HashCode>
+      <FileName>DbConnector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.EventTimer" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAKAAAAAAAAAAAAAAAACMAAQAIQAAAAAEAAA=</HashCode>
+      <FileName>EventTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.objClient" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAQAAAAA=</HashCode>
+      <FileName>EventTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.Installer1" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Installer1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.Model" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAABIAABAAAEEMQAABAAAAEAABAAAQAECAAAECI=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSet">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="CA.myFWDataSet.GetUsbCertRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.CutLastClientStatusRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.OnlineClientsDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ServerTypeClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ServerTypeClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TypeCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.typeClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.insertTempGuidDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateStatusRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ServerRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.UserRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.InsertCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateStatusRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientStateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StatusRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ServerTypeClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TypeLogRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TempGuidDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.RegistrateClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.insertTempGuidRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.UsbRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.GetUsbCertificateOfClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.CutLastClientStatusRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.ServerTypeClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.InsertCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.UsbDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TypeCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.LogRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.TempGuidRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.TypeLogRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CutLastClientStatusRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TypeLogDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.typeClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.GetCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetPartKeyRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.LogDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientStateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ServerRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StatusDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.CertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.GetPartKeyRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.StatusRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.TypeCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StatusRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.OnlineClientsRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientsLastStatesDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.ClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.insertTempGuidRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.GetPartKeyDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.StateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.ServerDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.RegistrateClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetUsbCertRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetUsbCertificateOfClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateStatusDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.RegistrateClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.UsbRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.typeClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.UserDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.OnlineClientsRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TempGuidRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetUsbCertRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.LogRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientServerRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.TempGuidRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.insertTempGuidRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.CertificateStatusRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.OnlineClientsRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.UsbRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.TypeCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.RegistrateClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.ServerRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.ClientStateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.TypeLogRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.ClientsLastStatesRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CA.myFWDataSet.UserRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.InsertCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.LogRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.typeClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.CutLastClientStatusDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetUsbCertDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetUsbCertificateOfClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.StateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientsLastStatesRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.GetCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.ClientStateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetPartKeyRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientServerRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.InsertCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientServerDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.ClientsLastStatesRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CA.myFWDataSet.ClientServerRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CA.myFWDataSet.GetUsbCertificateOfClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.UserRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CA.myFWDataSet.GetCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BBCZgKglB7GKEAvWRAgb8AYAhgkm8BzEhFl8Nk1E/pY=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.Program">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.CertificateTableAdapter" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.CertificateStatusTableAdapter" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ClientTableAdapter">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ClientServerTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ClientStateTableAdapter" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.LogTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ServerTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ServerTypeClientTableAdapter" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.StateTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.StatusTableAdapter" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.TempGuidTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.TypeCertificateTableAdapter" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.typeClientTableAdapter" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.TypeLogTableAdapter" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.UsbTableAdapter">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.UserTableAdapter">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.ClientsLastStatesTableAdapter" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.CutLastClientStatusTableAdapter" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.OnlineClientsTableAdapter" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.RegistrateClientTableAdapter" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.InsertCertificateTableAdapter" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.GetCertificateTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.GetPartKeyTableAdapter" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.GetUsbCertificateOfClientTableAdapter" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.insertTempGuidTableAdapter" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.GetUsbCertTableAdapter" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.myFWDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAACBQAARKBiUJQEAEMAAggAACwIHAAgQiQIjARAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.Properties.Settings">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CA.Server.SrvClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Service References\Server\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="CA.ICA">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAABAAAAAAAAEEAAAAAAAAEAABAAAAAACAAAAAA=</HashCode>
+      <FileName>ICA.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CA.Server.ISrv" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Service References\Server\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CA.Server.ISrvChannel" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\Server\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

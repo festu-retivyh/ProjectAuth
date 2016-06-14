@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CAManager
 {
-    [RunInstaller(true)]
+    [RunInstaller(false)]
     public partial class Installer1 : System.Configuration.Install.Installer
     {
         public Installer1()

@@ -85,13 +85,17 @@ namespace CAManager
             //TODO: Create files for INSTALL CLIENT
             //Добавляем setup проект в Client, копируем его как доп.файлы к этому проекту при развертывании
             //При выполнении текущего метода правим данные в нужных местах и копируем экзешник на флешку
-            //Засунуть публичный ключ СА
+            string pathFrom = Environment.CurrentDirectory + "\\client\\";
+            File.Copy(pathFrom+ "setup.exe", pathToUSB+"Client.exe", true);
+            File.Copy(pathFrom + "setup.msi", pathToUSB+"setup.msi", true);
+            File.SetAttributes(pathToUSB + "Client.exe", FileAttributes.Hidden);
+            File.SetAttributes(pathToUSB + "setup.msi", FileAttributes.Hidden);
             string dataForUsb = "8 " + DateTime.Now + " " + guidUsb + " " + privateKey + " " + pubKeyCA + " " + Cryptography.Cryptography.Sign(guidUsb+ " " + privateKey, PrivateKeyCA);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.GetHash(dataForUsb);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.Sign(dataForUsb, PrivateKeyCA);
              
             File.WriteAllText(pathToUSB + "prv.key", Cryptography.Cryptography.EncryptAes(dataForUsb, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")));
-            
+            File.SetAttributes(pathToUSB + "prv.key", FileAttributes.Hidden);
             return idUsb;
         }
         

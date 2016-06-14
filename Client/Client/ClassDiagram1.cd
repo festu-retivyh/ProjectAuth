@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Client.ConstractorMessage">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAACBgAAAAAAAAQAAAAIAAAAAABAAAA=</HashCode>
+      <FileName>ConstractorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.Form1">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACIACQAACgCCZAIAJCAEBlCoQgMYAAAAMAIAAAAggA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.FormSetting">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYACCAABAAAACAAABCAAAAABAAAAEAAAIAIAA=</HashCode>
+      <FileName>FormSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.InstallerClass">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAEBACAAAAIEAICAAAACAAAAAAAAACAgAAAAAAA=</HashCode>
+      <FileName>InstallerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.InstallForm">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAIAAACAAAACAAAIAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>InstallForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.Model">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAIAAAAAAQCAAMAAICAAAAAAAAPAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.Program">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.TimerAlive">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBgAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimerAlive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.UsbDisk">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>UsbSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.UsbSearcher">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Client.UsbSearcher.AddNewUsbDiskDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UsbSearcher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Client.UsbSearcher.DelUsbDiskDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UsbSearcher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Client.UsbSearcher.ErrorUsbDiskDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UsbSearcher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAABAABAQEAAAAAAAgAAABAAgAAAAAICAAAAAgAAA=</HashCode>
+      <FileName>UsbSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.CAService.IsAliveResponse">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\CAService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.CAService.CAClient" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAABAAAAAAAAEEAAAAAAAAEAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Service References\CAService\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Client.CAService.ICA" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAABAAAAAAAAEEAAAAAAAAEAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Service References\CAService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Client.CAService.ICAChannel" Collapsed="true">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\CAService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

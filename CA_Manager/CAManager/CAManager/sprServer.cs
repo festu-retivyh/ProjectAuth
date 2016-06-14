@@ -63,7 +63,6 @@ namespace CAManager
             string prot="";
             for (int i = 0; i < dgvProtocols.Rows.Count; i++)
             {
-                //if ((bool)dgvProtocols.Rows[i].Cells[0].Value)
                 if(prot == "")
                     prot = dgvProtocols.Rows[i].Cells[1].Value.ToString() + ":" + ((bool)(dgvProtocols.Rows[i].Cells[0].Value) ? "Y" : "N");
                 else
@@ -71,6 +70,7 @@ namespace CAManager
             }
             ta.myUpdate(tbxName.Text, tbxAddress.Text, prot, curId);
             change();
+            Close();
         }
 
         private void закрытьToolStripMenuItem_Click(object sender, EventArgs e)

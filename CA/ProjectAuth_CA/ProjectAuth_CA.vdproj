@@ -22,13 +22,13 @@
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -157,20 +157,6 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_1933EC5D9D534DB298DFD81D6156B6B5"
-            {
-            "Name" = "8:Основные выходные файлы from CA (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
-            "FileType" = "3:2"
-            "InstallAction" = "3:1"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:2"
-            "Identifier" = "8:_8E18624C_3F65_4640_A36F_BE30F3F62187"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\" /dbname=[SERVERNAME] /dbuser=[USERNAME] /dbpass=[USERPASS]"
-            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_895F2260E2754DA78CCF7ECE8DD79694"
             {
             "Name" = "8:Основные выходные файлы from WS_CA (Active)"
@@ -229,11 +215,6 @@
             "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0CA4F0E865E99DD273B0141ED3B7C297"
-                    {
-                    "Name" = "8:Cryptography.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Cryptography.dll"
             "TargetName" = "8:"
@@ -260,11 +241,6 @@
             "AssemblyAsmDisplayName" = "8:CA, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E0F7DCAF367AA240DFEE7E5EAC6B375B"
-                    {
-                    "Name" = "8:CA.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CA.exe"
             "TargetName" = "8:"

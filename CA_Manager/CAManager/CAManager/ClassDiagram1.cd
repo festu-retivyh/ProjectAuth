@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CAManager.Autorize">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACCAQBAAAACAAAACAAEAKoAgBEIAAAAAAAI=</HashCode>
+      <FileName>Autorize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.ConstractorMessage">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAACBgAAAAAAAAQAAAAIAAAAAABAAAA=</HashCode>
+      <FileName>ConstractorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.ControlClientProfile">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QOAgAAQAEDBMDBKBAACMiAqCAAgAABAAIACAAYoAAAQ=</HashCode>
+      <FileName>ControlClientProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.DbConnector">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACgIEEAAAIAAAAAAAACCAAAgggAAAggCIAAAABA=</HashCode>
+      <FileName>DbConnector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.Installer1">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Installer1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.MainForm">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QJm9yKpwaLQQQF4k8YTOmA3SUJPHQ4AQwcgwj44AMCE=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.MasterAddClient">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAERAAGYASBQAAAGAAACCICgAAAACAAAAAQAAIAI=</HashCode>
+      <FileName>MasterAddClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.MasterAddServer">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAEGQAABQAAACAAAAKAAgAAAAAAAAAAQABIAA=</HashCode>
+      <FileName>MasterAddServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.Model">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiABCAIAAAQAAAAAAAABAACAAAQAAACAAAAACAIAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.myFWDataSet">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="CAManager.myFWDataSet.GetCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientStateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.CertificateStatusRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertServerRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.OnlientClientsStateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.UserRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.UserDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ServerRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertServerRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.LogRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientInfoDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.CertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GroupDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ClientStateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.myCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.UserSrvRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.LastClientsStatesRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ProgramRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.InsertClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.InsertCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.myProfileTADataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.StateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.UserSrvDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.CertificateStatusRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.UserSrvRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.StateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.UserRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ProfileRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.UsbRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.CertificateStatusRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GetCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.StateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.CertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.GroupProfileDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.OnlientClientsStateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientStateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ProfileDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ClientProfileRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.CertificateStatusDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientProfileRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.StateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.LastClientsStatesRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.ClientStateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TypeLogDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.myProfileTARowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.ClientRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.UsbRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.InsertServerRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.InsertUsbRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.StatusRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientProfileDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ServerRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.TypeCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.StatusRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.InsertUserDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GroupRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.InsertCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.StatusDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ProfileRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.InsertUserRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.ProgramDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TypeCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.GetCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.UsbDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.StatusRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ParametrsRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.ProgramRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.myCertificateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.LogRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.UserSrvRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.UsbRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.GroupProfileRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.CertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.myProfileTARow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TypeLogRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TempGuidRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GroupRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientInfoRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.TempGuidRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.LastClientsStatesDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.LogRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertUsbRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.myCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.GroupProfileRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.LogDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ParametrsRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.GroupRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.TypeLogRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertClientRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientProfileRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.myCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertUserRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.TypeCertificateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.OnlientClientsStateRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ServerRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TypeCertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ClientInfoRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.CertificateDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ProgramRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.UserRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TempGuidDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.LastClientsStatesRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.TempGuidRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ServerDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GroupProfileRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.ClientInfoRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="CAManager.myFWDataSet.OnlientClientsStateRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.ParametrsRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertUsbRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.myProfileTARowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertServerDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ParametrsDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="CAManager.myFWDataSet.TypeLogRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="CAManager.myFWDataSet.ClientRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.GetCertificateRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertClientDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.ProfileRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertUserRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="CAManager.myFWDataSet.InsertUsbDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>L2CZkWiEZ6WqEg/WBSgJciUgRwgv8FxEBRFcJl8ArpQ=</HashCode>
+      <FileName>myFWDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.Program">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.Settings">
+    <Position X="19.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprCert">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAIAAAQAAA=</HashCode>
+      <FileName>sprCert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprClient">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQRAAAAAICAAQIAAAESAgAACAAAAAAAiEAAoAAABAAA=</HashCode>
+      <FileName>sprClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprGroup">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAACAEBAEQAgCACECLBIAEgQACIIAAAYgBAgA=</HashCode>
+      <FileName>sprGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprListCert">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAQEAClAiAREAACIBQCiAAgMAAQBgIIACIAAIgA=</HashCode>
+      <FileName>sprListCert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprListGroup">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASBAAAAAACAACAAIAQCAAICigAAIAAQAAAAAAIAgAAA=</HashCode>
+      <FileName>sprListGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprListProfile">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CUBAAAAAACAAAAAIAQCACIWCgAAAAAYAIIAAAKAAAAA=</HashCode>
+      <FileName>sprListProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprListProgram">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQhAAAAAACgQAgAIAQCAABCCgIAAAAQAAQAAAMgAAAA=</HashCode>
+      <FileName>sprListProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprProfile">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACAAAAKAAAhAAAACAAACDBIBAACgAAAAIhAABAQA=</HashCode>
+      <FileName>sprProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprProgram">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="CAManager.sprProgram.ChangeInformation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>sprProgram.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CQAAAEAAACAAABAAQACAAAACACYAAAgAACAIAAQBAAA=</HashCode>
+      <FileName>sprProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.sprServer">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="CAManager.sprServer.ChangeInformation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>sprServer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>wYEAAEAAAGABBAgAAACAAAACAAAAQgAAECCYAAABEgA=</HashCode>
+      <FileName>sprServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.UsbDisk">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>UsbSeacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAManager.UsbSearcher">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="CAManager.UsbSearcher.AddNewUsbDiskDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UsbSeacher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="CAManager.UsbSearcher.ErrorUsbDiskDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UsbSeacher.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAEAAAAAAAoAAAAAAgAAAAAIAAAAAAgAAA=</HashCode>
+      <FileName>UsbSeacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CAManager.sCLIENT_INFO_FULL">
+    <Position X="13.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAACAAAAABAAAAAQqAAAAAAAEAA=</HashCode>
+      <FileName>GlobalStractures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAManager.sUSER">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAGAAAEABAEAAAAAAAAAAAAEgA=</HashCode>
+      <FileName>GlobalStractures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAManager.sSERVER">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAQABAAAAAAEAAIEAAACAAAAAAAAAgA=</HashCode>
+      <FileName>GlobalStractures.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

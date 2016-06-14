@@ -209,4 +209,8 @@ namespace CAManager
             spr.Show();
         }
     }
+
+    public class Class1
+    {
+    }
 }
