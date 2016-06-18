@@ -122,6 +122,8 @@ namespace Client
             File.WriteAllText(pathClient+@"\prv.key", dataClient);
             File.SetAttributes(pathClient + @"\prv.key", FileAttributes.Hidden);
             File.Encrypt(pathClient + @"\prv.key");
+            if(File.Exists(Context.Parameters["targetdir"] + "Client.exe"))
+                System.Diagnostics.Process.Start(Context.Parameters["targetdir"] + "Client.exe");
         }
 
         private void DeleteFile(string path)

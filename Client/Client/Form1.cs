@@ -57,8 +57,20 @@ namespace Client
                 var rezult = MessageBox.Show("Желаете выполнить привязку сертификата к данному компьютеру?","Установить сертификат?", MessageBoxButtons.YesNo);
                 if (rezult == DialogResult.Yes)
                 {
-                    InstallerClass ic = new InstallerClass();
-                    ic.StartInstallCert();
+                    if (File.Exists(@"C:\ProgramData\ClientKey\prv.key"))
+                    {
+                        rezult = MessageBox.Show("Действующий сертификат будет удален? Вы уверены что хотите продолжить?", "Продолжить?", MessageBoxButtons.YesNo);
+                        if (rezult == DialogResult.Yes)
+                        {
+                            InstallerClass ic = new InstallerClass();
+                            ic.StartInstallCert();
+                        }
+                    }
+                    else
+                    {
+                        InstallerClass ic = new InstallerClass();
+                        ic.StartInstallCert();
+                    }
                 }
             }
             tbxPinCode.Focus();
