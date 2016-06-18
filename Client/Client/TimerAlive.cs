@@ -11,7 +11,7 @@ namespace Client
 
         private static void AliveSend()
         {
-            File.WriteAllText(@"d:\aliveSend.txt", DateTime.Now + "  " + myTimer.ThreadState);
+            //File.WriteAllText(@"d:\aliveSend.txt", DateTime.Now + "  " + myTimer.ThreadState);
             Model.SendAliveMessage();
             Thread.Sleep(time);
             AliveSend();

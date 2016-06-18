@@ -21,49 +21,53 @@ namespace Client
         internal static void SendAliveMessage(bool alive = true)
         {
 
-            string data = "";
-            if (disk != null)
+            try
             {
-                var ca = CreateWebServiceInstance();
-                if (ca.IsAlive(new CAService.IsAliveRequest()).IsAliveResult)
+                string data = "";
+                if (disk != null)
                 {
-                    if (alive)
+                    var ca = CreateWebServiceInstance();
+                    if (ca.IsAlive(new CAService.IsAliveRequest()).IsAliveResult)
                     {
-                        if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+                        if (alive)
                         {
-                            var curUsb = UsbSearcher.infoUsbGet(disk);
-                            var curComp = infoAboutComputer();
-                            var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
-                            string hashUsb = curUsb;
-                            for (int i = 0; i < 100; i++)
-                                hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
-                            curComp = Cryptography.Cryptography.GetHash(curComp);
-
-                            string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
-                            string HashSKeyClient = fileClient[3];
-                            if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
-                                return;
-                            string sKeyClient = GetSKeyClient(fileClient[1], curComp, hashUsb, hashPin);
-                            string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
-                            string privateKeyClient = decriptDataClient[0];
-                            guidClient = decriptDataClient[1];
-                            pubKeyCA = decriptDataClient[2];
-                            ConstractorMessage cm = new ConstractorMessage();
-                            data = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "1", guidClient);
-                            if (messageForOffStatus == "")
+                            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
                             {
-                                messageForOffStatus = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "2", guidClient);
+                                var curUsb = UsbSearcher.infoUsbGet(disk);
+                                var curComp = infoAboutComputer();
+                                var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
+                                string hashUsb = curUsb;
+                                for (int i = 0; i < 100; i++)
+                                    hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+                                curComp = Cryptography.Cryptography.GetHash(curComp);
+
+                                string[] fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
+                                string HashSKeyClient = fileClient[3];
+                                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) != HashSKeyClient)
+                                    return;
+                                string sKeyClient = GetSKeyClient(fileClient[1], curComp, hashUsb, hashPin);
+                                string[] decriptDataClient = Cryptography.Cryptography.DecryptAes(fileClient[0], sKeyClient, hashUsb).Split(' ');
+                                string privateKeyClient = decriptDataClient[0];
+                                guidClient = decriptDataClient[1];
+                                pubKeyCA = decriptDataClient[2];
+                                ConstractorMessage cm = new ConstractorMessage();
+                                data = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "1", guidClient);
+                                if (messageForOffStatus == "")
+                                {
+                                    messageForOffStatus = cm.GetEncriptMessage(pubKeyCA, privateKeyClient, "2", guidClient);
+                                }
+                                ca.AliveClient(new CAService.AliveClientRequest(data));
                             }
-                            ca.AliveClient(new CAService.AliveClientRequest(data));
+                        }
+                        else
+                        {
+                            ca.AliveClient(new CAService.AliveClientRequest(messageForOffStatus));
                         }
                     }
-                    else
-                    {
-                        ca.AliveClient(new CAService.AliveClientRequest(messageForOffStatus));
-                    }
-                }
 
+                }
             }
+            catch { }
         }
 
         internal static bool ChangeUserPincode(string oldPin, string newPin)

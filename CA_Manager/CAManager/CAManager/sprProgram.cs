@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace CAManager
 {
+    public delegate void UpdateForm();
     public partial class sprProgram : Form
     {
         int curId;
-        public delegate void ChangeInformation();
-        public event ChangeInformation change;
+        //public delegate void ChangeInformation();
+        public event UpdateForm updating;
         public sprProgram()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace CAManager
             curId = id;
         }
 
+        private static void meth()
+        { }
         private void sprProgram_Load(object sender, EventArgs e)
         {
             if (curId == 0)
@@ -58,7 +61,7 @@ namespace CAManager
                 var data = ta.myUpdate(tbxName.Text, tbxPort.Text, rbTCP.Checked ? "TCP" : "UDP", curId);
                 Close();
             }
-            change();
+            Model.CallEventUpdateViewTables();
         }
     }
 }

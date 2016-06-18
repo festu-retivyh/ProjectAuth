@@ -42,6 +42,7 @@ namespace CAManager
                 myFWDataSetTableAdapters.ProfileTableAdapter ta = new myFWDataSetTableAdapters.ProfileTableAdapter();
                 ta.myUpdate((int)cbxProgram.SelectedValue, (int)cbxServer.SelectedValue, tbxName.Text, curId);
             }
+            Model.CallEventUpdateViewTables();
             Close();
         }
 

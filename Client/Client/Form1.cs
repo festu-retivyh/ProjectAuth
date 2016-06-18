@@ -86,6 +86,7 @@ namespace Client
                     }));
                 }
             }
+            tbxPinCode.Focus();
         }
         
         private static void SearchUsb()

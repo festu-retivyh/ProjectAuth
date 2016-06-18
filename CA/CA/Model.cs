@@ -50,14 +50,18 @@ namespace CA
         {
             string data;
             string[,] ports = DbConnector.GetPortsForClient(clientGuid);
-            for (int i = 0; i < ports.GetUpperBound(1); i++)
+            try
             {
-                if (CheckServer(ports[i, 0]))
+                for (int i = 0; i < ports.GetUpperBound(0); i++)
                 {
-                    data = ipClient + ":" + ports[i, 1];
-                    SendRuleToServer(ports[i, 0], data, rule);
+                    if (CheckServer(ports[i, 0]))
+                    {
+                        data = ipClient + ":" + ports[i, 1];
+                        SendRuleToServer(ports[i, 0], data, rule);
+                    }
                 }
             }
+            catch { File.WriteAllText(@"D:\file.txt", "error  во время рассылки серверам"); }
         }
 
         private static bool CheckServer(string ip)
@@ -174,14 +178,13 @@ namespace CA
                 case 1: { try { DbConnector.SetStateClient(mas[0], "auth", ip); returnData = GenCheckData(goodData); } catch { Model.AddLog("Ошибка в Model.JoinClient event1"); } break; }
                 case 2:
                     {
-                        string guidUsb = goodData.Split(' ')[0];
+                        string guidUsb = mas[0];
                         string guidClient = DbConnector.GetGuidClientOfUsb(guidUsb);
-                        string rezult = DbConnector.CheckTocken(goodData.Split(' ')[goodData.Split(' ').Length-1], guidUsb);
-                        
+                        string rezult = DbConnector.CheckTocken(mas[mas.Length-1], guidUsb);
                         if (rezult == "good")
                         {
                             DbConnector.SetStateClient(guidClient, "active", ip);
-                            
+
                             DeliveryRulesForServers(guidClient, ip, true);
 
                             returnData = "message was getted";

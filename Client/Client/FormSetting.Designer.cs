@@ -114,7 +114,7 @@
             this.Controls.Add(this.tbxOldPin);
             this.Controls.Add(this.label1);
             this.Name = "FormSetting";
-            this.Text = "Setting";
+            this.Text = "Смена пин-кода";
             this.Load += new System.EventHandler(this.FormSetting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

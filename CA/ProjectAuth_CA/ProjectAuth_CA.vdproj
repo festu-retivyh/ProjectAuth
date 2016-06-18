@@ -22,13 +22,13 @@
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
-        "OwnerKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
+        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A914821E52C444D68EC85C40973A4DB6"
+        "OwnerKey" = "8:_0CA4F0E865E99DD273B0141ED3B7C297"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -215,6 +215,11 @@
             "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_0CA4F0E865E99DD273B0141ED3B7C297"
+                    {
+                    "Name" = "8:Cryptography.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Cryptography.dll"
             "TargetName" = "8:"
@@ -241,6 +246,11 @@
             "AssemblyAsmDisplayName" = "8:CA, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_E0F7DCAF367AA240DFEE7E5EAC6B375B"
+                    {
+                    "Name" = "8:CA.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:CA.exe"
             "TargetName" = "8:"
@@ -384,20 +394,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:ProjectAuth_CA1"
-        "ProductCode" = "8:{157B3C4C-485A-4127-B0AF-A4533A8D8DE4}"
-        "PackageCode" = "8:{28A485F3-145D-44B9-824D-F7B966200455}"
+        "ProductName" = "8:setupProjectAuth_CA"
+        "ProductCode" = "8:{85F77E9D-3E91-45D3-A93C-A3C89F464CEC}"
+        "PackageCode" = "8:{D15DE4E4-C403-4480-AD79-FC8CA6C12311}"
         "UpgradeCode" = "8:{242E9F5E-914B-47C9-9637-FFC23F8CE559}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.5.0"
         "Manufacturer" = "8:DVGUPS"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:ProjectAuth_CA1"
+        "Title" = "8:setupProjectAuth_CA"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Retivykh"
         "Keywords" = "8:"

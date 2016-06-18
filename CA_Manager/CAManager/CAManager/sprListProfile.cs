@@ -18,9 +18,19 @@ namespace CAManager
 
         private void sprListProfile_Load(object sender, EventArgs e)
         {
+            UpdateThisForm();
+            Model.UpdateViewTables += Model_UpdateViewTables;
+        }
+
+        private void Model_UpdateViewTables(object sender, EventArgs e)
+        {
+            UpdateThisForm();
+        }
+
+        private void UpdateThisForm()
+        {
             myProfileTATableAdapter.Fill(myFWDataSet.myProfileTA);
             profileTableAdapter.Fill(myFWDataSet.Profile);
-
         }
 
         private void mAdd_Click(object sender, EventArgs e)

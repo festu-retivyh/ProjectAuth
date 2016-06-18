@@ -13,6 +13,7 @@ namespace CAManager
         private void sprListProgram_Load(object sender, EventArgs e)
         {
             LoadAllPrograms();
+            Model.UpdateViewTables += Model_UpdateViewTables;
         }
 
         private void LoadAllPrograms()
@@ -41,14 +42,14 @@ namespace CAManager
             try
             {
                 sprProgram spr = new sprProgram((int)dgvProg.SelectedRows[0].Cells[0].Value);
-                spr.change += Spr_change;
+                
                 spr.Show();
             }
             catch
             { }
         }
 
-        private void Spr_change()
+        private void Model_UpdateViewTables(object sender, EventArgs e)
         {
             LoadAllPrograms();
         }
