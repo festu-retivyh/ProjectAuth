@@ -1112,9 +1112,6 @@
         private myFWDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource certificateBindingSource;
         private myFWDataSetTableAdapters.CertificateTableAdapter certificateTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn1;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource lastClientsStatesBindingSource;
         private myFWDataSetTableAdapters.LastClientsStatesTableAdapter lastClientsStatesTableAdapter;
         private System.Windows.Forms.BindingSource onlientClientsStateBindingSource;

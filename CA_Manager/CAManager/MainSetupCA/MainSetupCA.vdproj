@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_235CC235185C44AD9D05FC2AF223B551"
+        "MsmKey" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
+        "MsmKey" = "8:_7D9B1696768E424BB6CA53892DC049E2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,8 +51,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FEBDDD53767619AFA81DB599D5B6275A"
+        "OwnerKey" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FEBDDD53767619AFA81DB599D5B6275A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -150,7 +162,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_235CC235185C44AD9D05FC2AF223B551"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D9B1696768E424BB6CA53892DC049E2"
             {
             "SourcePath" = "8:..\\..\\..\\Server\\SetupServer\\Debug\\SetupServer.msi"
             "TargetName" = "8:SetupServer.msi"
@@ -248,6 +260,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FEBDDD53767619AFA81DB599D5B6275A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FEBDDD53767619AFA81DB599D5B6275A"
+                    {
+                    "Name" = "8:Cryptography.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Cryptography.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D7140714DEE6479DBB142E86A2DBD6E3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -362,7 +405,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MainSetupCA"
         "ProductCode" = "8:{497A77AC-2247-4DE4-B8DE-76D748F330E6}"
-        "PackageCode" = "8:{61ED72A0-B9C8-4901-A909-47D512583ED3}"
+        "PackageCode" = "8:{49B329E6-28AE-45CC-BB49-4602F5873AF1}"
         "UpgradeCode" = "8:{38B7CC1F-050F-44E6-B3F8-9F914D4710E2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -512,7 +555,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C171A4C99D9A42D3986758A517619305"
             {
-            "Name" = "8:Execute CA Manager"
+            "Name" = "8:Manager CA"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

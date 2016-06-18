@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -20,6 +21,19 @@ namespace WS_CA
         }
         public override void Install(IDictionary stateSaver)
         {
+            try
+            {
+                var proc = new Process();
+                proc.StartInfo.FileName = "netsh.exe";
+                proc.StartInfo.Arguments = " advfirewall firewall add rule name=ProjectAuth_CA protocol=TCP localport=45000-45001 dir=in action=allow";
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                proc.Start();
+                proc.WaitForExit();
+            }
+            catch
+            {
+                throw new Exception("Не достаточно прав для управления брандмауэром, установка не может быть продолжена");
+            }
             base.Install(stateSaver);
             try
             {

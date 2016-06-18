@@ -61,7 +61,7 @@ namespace CA
                     }
                 }
             }
-            catch { File.WriteAllText(@"D:\file.txt", "error  во время рассылки серверам"); }
+            catch { }
         }
 
         private static bool CheckServer(string ip)
@@ -73,7 +73,6 @@ namespace CA
             }
             catch
             {
-                File.WriteAllText(@"D:\CheckServerERR.txt", false.ToString());
                 return false;
             }
         }
@@ -86,7 +85,6 @@ namespace CA
                 if (rule)
                 {
                     conn.AddRule(data);
-                    File.WriteAllText(@"D:\deliverRulesSend.txt", data);
                 }
                 else
                     conn.DelRule(data);
@@ -94,7 +92,6 @@ namespace CA
             catch
             {
                 AddLog("Не успешная попытка передать на сервер данные об открытии\\закрытии портов");
-                File.WriteAllText(@"D:\deliverRulesSendERR.txt", data);
             }
         }
 
@@ -249,16 +246,16 @@ namespace CA
 
         public static void AddLog(string log)
         {
-            //try
-            //{
-            //    if (!EventLog.SourceExists("MyExampleService"))
-            //    {
-            //        EventLog.CreateEventSource("MyExampleService", "MyExampleService");
-            //    }
-            //    //EventLog.WriteEntry(sSource, sEvent);
-            //    EventLog.WriteEntry("MyExampleService", log, EventLogEntryType.Error, 228);
-            //}
-            //catch { }
+            try
+            {
+                if (!EventLog.SourceExists("MyExampleService"))
+                {
+                    EventLog.CreateEventSource("MyExampleService", "MyExampleService");
+                }
+                //EventLog.WriteEntry(sSource, sEvent);
+                EventLog.WriteEntry("MyExampleService", log, EventLogEntryType.Error, 228);
+            }
+            catch { }
         }
 
         private static string GenCheckData(string data)

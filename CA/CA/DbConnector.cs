@@ -23,6 +23,7 @@ namespace CA
             }
             return conn;
         }
+
         internal static void RegistrateClient(string guidUSB, string guidClient, Certificate certificate)
         {
             var conn = GetConnection();
@@ -48,6 +49,24 @@ namespace CA
             cmd.Parameters.AddWithValue("guidUsb", guidUSB);
             cmd.Parameters.AddWithValue("guidClient", guidClient);
             cmd.Parameters.AddWithValue("idCert", id);
+            cmd.ExecuteNonQuery();
+            sdr.Close();
+            sdr = null;
+            cmd.Cancel();
+            cmd = null;
+            SetCertificateStatus(guidClient, "active");
+        }
+
+        private void SetCertStatus(string guid, string statusNum)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return;
+            string comm = @"INSERT INTO CertificateStatus VALUES((Select Certificate.id from Certificate where Certificate.guid = @guidCert),@status,GETDATE())";
+
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("guidCert", guid);
+            cmd.Parameters.AddWithValue("status", statusNum);
             cmd.ExecuteNonQuery();
         }
 

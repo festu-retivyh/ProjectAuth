@@ -27,7 +27,6 @@ namespace Server
 
         public void RegistrateServer()
         {
-            int zero = 0;
             string data = "";
             var disk = GetDirUsb();
             if (disk == null)
@@ -60,17 +59,25 @@ namespace Server
             Directory.CreateDirectory(dir);
             File.WriteAllText(dir + @"\srv.key", DataForSave);
             File.Encrypt(dir + @"\srv.key");
-            string dataForSend = masData[3] + " 6 1 " + DateTime.Now;
-            dataForSend = dataForSend + " " + Cryptography.Cryptography.GetHash(dataForSend);
-            dataForSend = dataForSend + " " + Cryptography.Cryptography.Sign(dataForSend,masData[2]);
-
-            dataForSend = Cryptography.Cryptography.Encrypt(dataForSend, pubKeyCa);
-            data = Model.RegistrateToCA(dataForSend, masData[5]);
-            if (data != "OK")
+            if (Model.CheckCaAccess(masData[5]))
             {
-                File.Delete(dir + @"\srv.key");
-                throw new Exception("Ошибка переданных данных на Центр сертификации.");
+                string dataForSend = masData[3] + " 6 1 " + DateTime.Now;
+                dataForSend = dataForSend + " " + Cryptography.Cryptography.GetHash(dataForSend);
+                dataForSend = dataForSend + " " + Cryptography.Cryptography.Sign(dataForSend, masData[2]);
+
+                dataForSend = Cryptography.Cryptography.Encrypt(dataForSend, pubKeyCa);
+                data = Model.RegistrateToCA(dataForSend, masData[5]);
+                if (data != "OK")
+                {
+                    DeleteFile(dir + @"\srv.key");
+                    DeleteFile(dir + @"\Server.exe");
+                    DeleteFile(dir + @"\SetupServer.msi");
+                    throw new Exception("Ошибка переданных данных на Центр сертификации.");
+                }
             }
+            DeleteFile(dir + @"\srv.key");
+            DeleteFile(dir + @"\Server.exe");
+            DeleteFile(dir + @"\SetupServer.msi");
 
             var proc = new Process();
             proc.StartInfo.FileName = "netsh.exe";
@@ -79,6 +86,11 @@ namespace Server
             proc.Start();
             proc.WaitForExit();
 
+        }
+        private void DeleteFile(string path)
+        {
+            if (File.Exists(path))
+                File.Delete(path);
         }
 
         private bool checkData(string data, string pubKeyCA)

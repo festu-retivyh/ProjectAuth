@@ -31,11 +31,11 @@ namespace Client
                     {
                         if (alive)
                         {
-                            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+                            if (File.Exists(disk.name + @"\clnt.key")) //Если имеется наш зашифрованный файл
                             {
                                 var curUsb = UsbSearcher.infoUsbGet(disk);
                                 var curComp = infoAboutComputer();
-                                var fileUsb = File.ReadAllText(disk.name + @"\maan.key").Split(' ');
+                                var fileUsb = File.ReadAllText(disk.name + @"\clnt.key").Split(' ');
                                 string hashUsb = curUsb;
                                 for (int i = 0; i < 100; i++)
                                     hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
@@ -72,7 +72,7 @@ namespace Client
 
         internal static bool ChangeUserPincode(string oldPin, string newPin)
         {
-            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+            if (File.Exists(disk.name + @"\clnt.key")) //Если имеется наш зашифрованный файл
             {
                 string hashUsb = UsbSearcher.infoUsbGet(disk);
                 string curComp = Cryptography.Cryptography.GetHash(infoAboutComputer());
@@ -99,7 +99,7 @@ namespace Client
 
         private static bool CheckDataUsbClient()
         {
-            if (File.Exists(disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+            if (File.Exists(disk.name + @"\clnt.key")) //Если имеется наш зашифрованный файл
             {
                 string hashUsb = UsbSearcher.infoUsbGet(disk);
                 string curComp = Cryptography.Cryptography.GetHash(infoAboutComputer());

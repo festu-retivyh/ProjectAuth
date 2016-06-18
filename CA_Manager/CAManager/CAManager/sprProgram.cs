@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CAManager
@@ -13,8 +7,6 @@ namespace CAManager
     public partial class sprProgram : Form
     {
         int curId;
-        //public delegate void ChangeInformation();
-        public event UpdateForm updating;
         public sprProgram()
         {
             InitializeComponent();

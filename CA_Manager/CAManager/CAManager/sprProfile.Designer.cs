@@ -201,7 +201,6 @@
         private myFWDataSetTableAdapters.ServerTableAdapter serverTableAdapter;
         private System.Windows.Forms.BindingSource programBindingSource;
         private myFWDataSetTableAdapters.ProgramTableAdapter programTableAdapter;
-        private int value;
 
         
     }

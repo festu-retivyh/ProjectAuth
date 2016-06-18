@@ -88,7 +88,6 @@ namespace CAManager
             string pathFrom = Environment.CurrentDirectory + "\\client\\";
             File.Copy(pathFrom+ "setup.exe", pathToUSB+"Client.exe", true);
             File.Copy(pathFrom + "setup.msi", pathToUSB+"setup.msi", true);
-            File.SetAttributes(pathToUSB + "Client.exe", FileAttributes.Hidden);
             File.SetAttributes(pathToUSB + "setup.msi", FileAttributes.Hidden);
             string dataForUsb = "8 " + DateTime.Now + " " + guidUsb + " " + privateKey + " " + pubKeyCA + " " + Cryptography.Cryptography.Sign(guidUsb+ " " + privateKey, PrivateKeyCA);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.GetHash(dataForUsb);
@@ -120,12 +119,16 @@ namespace CAManager
             certSrv.CalculateCertSign(PrivateKeyCA);
             string sGuid = Guid.NewGuid().ToString();
             string dataForSrv = "8 " + DateTime.Now + " " + privateKey + " " + sGuid + " "
-                //+Cryptography.Cryptography.CertificateToString(certSrv)
                 + Cryptography.Cryptography.GetPublicKey(privateKeyCA) + " "
                 + DbConnector.GetParam("AddressService");
             dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
             dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, privateKeyCA);
             File.WriteAllText(pathToUSB + @"\srv.key", Cryptography.Cryptography.EncryptAes(dataForSrv, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")));
+            string pathFrom = Environment.CurrentDirectory + "\\srv\\";
+            File.Copy(pathFrom + "setup.exe", pathToUSB + "Server.exe", true);
+            File.Copy(pathFrom + "setup.msi", pathToUSB + "SetupServer.msi", true);
+            File.SetAttributes(pathToUSB + "SetupServer.msi", FileAttributes.Hidden);
+            File.SetAttributes(pathToUSB + @"\srv.key", FileAttributes.Hidden);
             int idCertSrv = DbConnector.AddCertificate(certSrv);
             server.guid = sGuid;
             server.id = DbConnector.AddNewServer(server, idCertSrv);
@@ -158,36 +161,6 @@ namespace CAManager
 
         internal static void OpenInfoAboutClient(int idSelUser)
         {
-            //sCLIENT_INFO_FULL sClientInfo = new sCLIENT_INFO_FULL();
-            //myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
-            //var data = tbClientInfo.GetData(idSelUser);
-            //if (data.Count != 0)
-            //{
-            //    sClientInfo = new sCLIENT_INFO_FULL()
-            //    {
-            //        clientId = data[0].ClientId,
-            //        f = data[0].FName,
-            //        i = data[0].Name,
-            //        o = data[0].SName,
-            //        status = data[0].State,
-            //        login = data[0].Login,
-            //        domain = data[0].Domain,
-            //        deleted = data[0].Deleted,
-            //    };
-            //}
-            //myFWDataSetTableAdapters.ClientInfoTableAdapter tbClientInfo = new myFWDataSetTableAdapters.ClientInfoTableAdapter();
-            //var data = tbClientInfo.GetData(idSelUser);
-            //if (data.Count!=0)
-            //{
-            //    sClientInfo.clientId = data[0].ClientId;
-            //    sClientInfo.f = data[0].FName;
-            //    sClientInfo.i = data[0].Name;
-            //    sClientInfo.o = data[0].SName;
-            //    sClientInfo.status = data[0].State;
-            //    sClientInfo.login = data[0].Login;
-            //    sClientInfo.domain = data[0].Domain;
-            //    sClientInfo.deleted = data[0].Deleted;
-            //}
             sprClient form = new sprClient(idSelUser);
             form.Show();
         }

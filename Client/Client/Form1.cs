@@ -48,45 +48,59 @@ namespace Client
 
         private void UpdateForm(UsbDisk _disk)
         {
-            if (File.Exists(_disk.name + @"\maan.key")) //Если имеется наш зашифрованный файл
+            if (File.Exists(_disk.name + @"\clnt.key")) //Если имеется наш зашифрованный файл на USB
             {
-                label1.Invoke(new Action(delegate ()
+                CheckDataForAuth(_disk);
+            }
+            else if (File.Exists(_disk.name + @"\prv.key"))
+            {
+                var rezult = MessageBox.Show("Желаете выполнить привязку сертификата к данному компьютеру?","Установить сертификат?", MessageBoxButtons.YesNo);
+                if (rezult == DialogResult.Yes)
                 {
-                    label1.Text = "Вставлен USB";
-                }));
-                curUsb = UsbSearcher.infoUsbGet(_disk);
-                curComp = infoAboutComputer();
-                fileUsb = File.ReadAllText(_disk.name + @"\maan.key").Split(' ');
-                hashUsb = curUsb;
-                fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
-                for (int i = 0; i < 100; i++)
-                    hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
-                curComp = Cryptography.Cryptography.GetHash(curComp);
-
-                if (Cryptography.Cryptography.GetHash(hashUsb + curComp) == fileClient[3])
-                {
-                    disk = _disk;
-
-                    this.Invoke(new Action(delegate ()
-                    {
-                        Show();
-                        notifyIcon1.Visible = false;
-                        WindowState = FormWindowState.Normal;
-                    }));
-                    label1.Invoke(new Action(delegate ()
-                    {
-                        label1.Text = "Введите PIN-код";
-                    }));
-                }
-                else
-                {
-                    label1.Invoke(new Action(delegate ()
-                    {
-                        label1.Text = "Ожидание USB";
-                    }));
+                    InstallerClass ic = new InstallerClass();
+                    ic.StartInstallCert();
                 }
             }
             tbxPinCode.Focus();
+        }
+
+        private void CheckDataForAuth(UsbDisk _disk)
+        {
+            label1.Invoke(new Action(delegate ()
+            {
+                label1.Text = "Вставлен USB";
+            }));
+            curUsb = UsbSearcher.infoUsbGet(_disk);
+            curComp = infoAboutComputer();
+            fileUsb = File.ReadAllText(_disk.name + @"\clnt.key").Split(' ');
+            hashUsb = curUsb;
+            fileClient = File.ReadAllText(@"C:\ProgramData\ClientKey\prv.key").Split(' ');
+            for (int i = 0; i < 100; i++)
+                hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
+            curComp = Cryptography.Cryptography.GetHash(curComp);
+
+            if (Cryptography.Cryptography.GetHash(hashUsb + curComp) == fileClient[3])
+            {
+                disk = _disk;
+
+                this.Invoke(new Action(delegate ()
+                {
+                    Show();
+                    notifyIcon1.Visible = false;
+                    WindowState = FormWindowState.Normal;
+                }));
+                label1.Invoke(new Action(delegate ()
+                {
+                    label1.Text = "Введите PIN-код";
+                }));
+            }
+            else
+            {
+                label1.Invoke(new Action(delegate ()
+                {
+                    label1.Text = "Ожидание USB";
+                }));
+            }
         }
         
         private static void SearchUsb()
@@ -290,7 +304,6 @@ namespace Client
         private void CloseApp_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             MessageBox.Show(e.ClickedItem.Name);
-            //Close();
         }
         private void Form1_Shown(object sender, EventArgs e)
         {

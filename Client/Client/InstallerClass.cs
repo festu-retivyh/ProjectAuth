@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.ComponentModel;
-using System.Configuration;
 using System.Configuration.Install;
 using System.IO;
 using System.Management;
 using System.ServiceModel;
-using System.ServiceModel.Description;
-using System.ServiceModel.Security;
-using System.Text;
 
 namespace Client
 {
@@ -25,14 +21,20 @@ namespace Client
         }
         public override void Install(IDictionary stateSaver)
         {
-            //string path = Path.Combine(new DirectoryInfo(Context.Parameters["assemblypath"].ToString()).Parent.FullName, "[project name].exe");
-            //File.WriteAllText(@"D:\qwe.txt", path);
             base.Install(stateSaver);
+            string dir = GetDirUsb();
+            string dirUsb = dir + @"\prv.key";
+            if (!File.Exists(dirUsb))
+                return;
+            StartInstallCert();
+        }
+        public void StartInstallCert()
+        {
             InstallForm form = new InstallForm();
             form.FormClosing += Form_FormClosing;
             form.ShowDialog();
             RegistrateClient();
-        }
+        } 
         internal static CAService.CAClient CreateWebServiceInstance()
         {
             BasicHttpBinding binding = new BasicHttpBinding();
@@ -59,7 +61,6 @@ namespace Client
         public void RegistrateClient()
         {
             //Configuration config = ConfigurationManager.OpenExeConfiguration(path);
-            int zero = 0;
             string data = "";
             string dir = GetDirUsb();
             string dirUsb = dir + @"\prv.key";
@@ -73,7 +74,6 @@ namespace Client
             for (int i = 0; i < 100; i++)
                 hashUsb = Cryptography.Cryptography.GetHash(hashUsb);
             data = Cryptography.Cryptography.DecryptAes(data, hashUsb, DateTime.Now.ToString("dd:MM:yyyy"));
-            //data = data.ToString();
             string pubKeyCA = data.Split(' ')[4];
             if (!checkData(data, pubKeyCA))
                 throw new Exception("Не пройдена проверка файла.");
@@ -104,8 +104,12 @@ namespace Client
             //encript private key USB
             string cryptUsbData = Cryptography.Cryptography.EncryptAes(guidUsb + " " + data.Split(' ')[3] + " " + data.Split(' ')[4], Model.genSKeyUsb(hashUsb,partKeyCA), hashUsb);
             cryptUsbData = cryptUsbData + " " + pubKeyCA;
-            File.Delete(dirUsb);
-            File.WriteAllText(dir+@"\maan.key", cryptUsbData);
+            DeleteFile(dirUsb);
+            DeleteFile(dir + @"\setup.exe");
+            DeleteFile(dir + @"\Setup.msi");
+            File.WriteAllText(dir + @"\clnt.key", cryptUsbData);
+            File.SetAttributes(dir + @"\clnt.key", FileAttributes.Hidden);
+            File.Encrypt(dir + @"\clnt.key");
             //gen data for encript on Client
             string sKeyClient = Cryptography.Cryptography.GenerateKey(100);
             string dataClient = prvKeyClient+ " " + guidClient+ " " + pubKeyCA;
@@ -116,6 +120,14 @@ namespace Client
             string pathClient = @"C:\ProgramData\ClientKey";
             Directory.CreateDirectory(pathClient);
             File.WriteAllText(pathClient+@"\prv.key", dataClient);
+            File.SetAttributes(pathClient + @"\prv.key", FileAttributes.Hidden);
+            File.Encrypt(pathClient + @"\prv.key");
+        }
+
+        private void DeleteFile(string path)
+        {
+            if (File.Exists(path))
+                File.Delete(path);
         }
 
         private string infoAboutComputer()

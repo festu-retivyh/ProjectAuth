@@ -35,7 +35,7 @@ namespace Server
             message = message + " " + Cryptography.Cryptography.Sign(message, masData[1]);
             string testMsg = message;
             message = Cryptography.Cryptography.Encrypt(message, masData[2]);
-            string data="";
+            string data = "";
             data = JoinToCA(message, masData[3]);
             var srvData = DecryptServerData();
             data = Cryptography.Cryptography.Decrypt(data, srvData[1]);
@@ -60,6 +60,20 @@ namespace Server
             if (Cryptography.Cryptography.GetHash(data) == masData[masData.Length - 2])     //Check hash data
                 return true;
             return false;
+        }
+
+        internal static bool CheckCaAccess(string ipCA)
+        {
+            var service = CreateWebServiceInstance(ipCA);
+            try
+            {
+                service.Open();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         internal static string[] DecryptServerData()
