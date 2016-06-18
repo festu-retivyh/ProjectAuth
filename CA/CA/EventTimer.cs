@@ -26,7 +26,19 @@ namespace CA
         {
             while (true)
                 if (secThreadWork)
+                {
                     Alive();
+                    CheckEvents();
+                }
+                    
+        }
+
+        private static void CheckEvents()
+        {
+            var val = DbConnector.GetValue("SendRulsForServers");
+            if (val == null)
+                return;
+            Model.UpdateRulesServer(val);
         }
 
         private static void Alive()

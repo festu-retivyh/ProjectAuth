@@ -100,14 +100,16 @@ namespace Server
 
         internal static void DelRule(string data)
         {
-            var mas = data.Split(':');
-            if (mas.Length == 3)
-                queueRules.Add(new Rule(mas[0], mas[1], mas[2], "", false));
-            try
+            if (data == "all")
             {
-                File.WriteAllText(@"d:\DelRule.txt", data);
+                Model.SendMessageForJoinCA();
             }
-            catch { }
+            else
+            {
+                var mas = data.Split(':');
+                if (mas.Length == 3)
+                    queueRules.Add(new Rule(mas[0], mas[1], mas[2], "", false));
+            }
         }
 
         internal static void AddRule(string data)
@@ -115,34 +117,65 @@ namespace Server
             var mas = data.Split(':');
             if(mas.Length==3)
                 queueRules.Add(new Rule(mas[0],mas[1],mas[2],"",true));
-            try
-            {
-                File.WriteAllText(@"d:\addRule.txt", data);
-            }
-            catch { }
         }
 
         internal static void SetListRules(string data)
         {
-            var masData = data.Split(';');
-            cmd.Execute("set rule name=all dir=in new enable=no");
-            cmd.Execute("set rule name=ProjectAuth_Server new enable=yes");
-            for (int i = 0; i < masData.Length; i++)
+            if (activRules.Count == 0)
             {
-                var mas = masData[i].Split(':');
-                if (mas.Length == 3)
-                    queueRules.Add(new Rule(mas[0], mas[1], mas[2], "", true));
-                else if (mas.Length == 2)
+                var masData = data.Split(';');
+                cmd.Execute("set rule name=all dir=in new enable=no");
+                cmd.Execute("set rule name=ProjectAuth_Server new enable=yes");
+                for (int i = 0; i < masData.Length; i++)
                 {
-                    queueRules.Add(new Rule("", "", mas[0], "", mas[1] == "Y" ? true : false));
-                }
+                    var mas = masData[i].Split(':');
+                    if (mas.Length == 3)
+                        queueRules.Add(new Rule(mas[0], mas[1], mas[2], "", true));
+                    else if (mas.Length == 2)
+                    {
+                        queueRules.Add(new Rule("", "", mas[0], "", mas[1] == "Y" ? true : false));
+                    }
 
+                }
             }
-            try
+            else
             {
-                File.WriteAllText(@"d:\SetListRules.txt", data);
+                var masData = data.Split(';');
+                List<Rule> temp = new List<Rule>();
+                for (int i = 0; i < masData.Length; i++)
+                {
+                    var mas = masData[i].Split(':');
+                    if (mas.Length == 3)
+                        temp.Add(new Rule(mas[0], mas[1], mas[2], "", true));
+                    else if (mas.Length == 2)
+                    {
+                        //Пока ничего не делаем
+                        //temp.Add(new Rule("", "", mas[0], "", mas[1] == "Y" ? true : false));
+                    }
+                }
+                bool find = false;
+
+                for (int i = 0; i < activRules.Count; i++)
+                {
+                    for (int j = 0; i < temp.Count; j++)
+                    {
+                        if (temp[j].port == activRules[i].port && temp[j].ip == activRules[i].ip)
+                        {
+                            temp.Remove(temp[j]);
+                            find = true;
+                            break;
+                        }
+                    }
+                    if (!find)
+                    {
+                        DelRule(activRules[i].ip + ":" + activRules[i].port + ":" + activRules[i].protocol);
+                    }
+                }
+                foreach (var r in temp)
+                {
+                    AddRule(r.ip + ":" + r.port + ":" + r.protocol);
+                }
             }
-            catch { }
         }
     }
     class Rule
@@ -171,8 +204,6 @@ namespace Server
             proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             proc.Start();
             proc.WaitForExit();
-            File.WriteAllText(@"D:\rezultCMD.txt", command);
-            //System.Diagnostics.Process.Start("netsh.exe", " advfirewall firewall " + command);
         }
         public void ExecuteAdv(string command)
         {
@@ -182,7 +213,6 @@ namespace Server
             proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             proc.Start();
             proc.WaitForExit();
-            //proc.Start("netsh.exe", " advfirewall " + command);
         }
     }
 

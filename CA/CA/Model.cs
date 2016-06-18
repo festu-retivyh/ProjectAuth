@@ -46,6 +46,11 @@ namespace CA
 
         }
 
+        internal static void UpdateRulesServer(string ip)
+        {
+            SendRuleToServer(ip, "all", false);
+        }
+
         private static void DeliveryRulesForServers(string clientGuid, string ipClient, bool rule = false)
         {
             string data;
@@ -138,6 +143,8 @@ namespace CA
                 returnData = returnData + " " + Cryptography.Cryptography.GetHash(returnData);
                 returnData = returnData + " " + Cryptography.Cryptography.Sign(returnData, PrivateKeyCA);
                 returnData = Cryptography.Cryptography.Encrypt(returnData, certUsb.publicKey);
+
+                DbConnector.AddLogs("Регистрация клиента", "Зарегистрирован клинт: " + DbConnector.GetLoginClientByGuid(guidClient),TypeLog.normal);
             }
             return returnData;
         }
@@ -156,23 +163,37 @@ namespace CA
             {
                 DbConnector.SetCertificateStatus(mas[0], "Active");
             }
+            DbConnector.AddLogs("Регистрация сервера", "Зарегистрирован сервер: " + DbConnector.GetNameServerByGuid(mas[0]), TypeLog.normal);
             return "OK";
         }
 
         internal static string JoinClient(string data, string ip)
         {
             string goodData = ReadData(data, false);
-            try
+            int num;
+            if (Int32.TryParse(goodData, out num))
             {
-                return int.Parse(goodData).ToString();
+                DbConnector.AddLogs("Попытка аутентификации клиента", "Попытка аутентификации клиента окончена с ошибкой: " + goodData, TypeLog.violation);
+                return goodData;
             }
-            catch { }
             string returnData = "";
             string[] mas = goodData.Split(' ');
             int command = int.Parse(mas[1]);
             switch (command)
             {
-                case 1: { try { DbConnector.SetStateClient(mas[0], "auth", ip); returnData = GenCheckData(goodData); } catch { Model.AddLog("Ошибка в Model.JoinClient event1"); } break; }
+                case 1:
+                    {
+                        try
+                        {
+                            DbConnector.SetStateClient(mas[0], "auth", ip);
+                            returnData = GenCheckData(goodData);
+                        }
+                        catch
+                        {
+                            Model.AddLog("Ошибка в Model.JoinClient event1");
+                        }
+                        break;
+                    }
                 case 2:
                     {
                         string guidUsb = mas[0];
@@ -185,11 +206,14 @@ namespace CA
                             DeliveryRulesForServers(guidClient, ip, true);
 
                             returnData = "message was getted";
+
+                            DbConnector.AddLogs("Успешная аутентификация клиента", "Успешная аутентификация клиента: " + DbConnector.GetLoginClientByGuid(guidClient), TypeLog.normal);
                         }
                         break;
                     }
                 default:
                     {
+                        DbConnector.AddLogs("Ошибка аутентификации клиента", "Не корректно указана команда аутентификации. Попытка аутентификации клиента: " + DbConnector.GetLoginClientByGuid(mas[0]), TypeLog.violation);
                         returnData = "fail_low";
                         break;
                     }
@@ -217,11 +241,12 @@ namespace CA
         internal static string JoinServer(string data)
         {
             string goodData = ReadData(data, false);
-            try
+            int num;
+            if (Int32.TryParse(goodData, out num))
             {
-                return int.Parse(goodData).ToString();
+                DbConnector.AddLogs("Попытка аутентификации сервера", "Попытка аутентификации сервера окончена с ошибкой: " + goodData, TypeLog.violation);
+                return goodData;
             }
-            catch { }
             string[] mas = goodData.Split(' ');
             int command = int.Parse(mas[1]);
             if (command == 1)
@@ -230,8 +255,8 @@ namespace CA
                 string dataForSrv = "5 " + DateTime.Now + " " + onlineClients;
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.GetHash(dataForSrv);
                 dataForSrv = dataForSrv + " " + Cryptography.Cryptography.Sign(dataForSrv, PrivateKeyCA);
-                File.WriteAllText(@"D:\DataForSrv.txt", dataForSrv);
                 dataForSrv = Cryptography.Cryptography.Encrypt(dataForSrv, DbConnector.GetCertificate(mas[0]).publicKey);
+                DbConnector.AddLogs("Аутентификация сервера", "Успешная аутентификация сервера: " + DbConnector.GetNameServerByGuid(mas[0]), TypeLog.normal);
                 return dataForSrv;
             }
             else if (command == 2)
@@ -244,6 +269,19 @@ namespace CA
             }
         }
 
+        internal static void ChangeAdminPassword(string oldPass, string oldLogin, string newPass, string newLogin)
+        {
+            if (oldPass == pass)
+            {
+                DbConnector.AddLogs("Смена пароля администратора", "Происходт смена пароля администратора", TypeLog.smollViolation);
+                string key = PrivateKeyCA;
+                string value = Cryptography.Cryptography.EncryptAes(key, newPass, newLogin);
+                DbConnector.UpdateValue(value, "privateKey");
+                DbConnector.ChangePassword(newLogin, newPass);
+            }
+
+        }
+
         public static void AddLog(string log)
         {
             try
@@ -252,7 +290,6 @@ namespace CA
                 {
                     EventLog.CreateEventSource("MyExampleService", "MyExampleService");
                 }
-                //EventLog.WriteEntry(sSource, sEvent);
                 EventLog.WriteEntry("MyExampleService", log, EventLogEntryType.Error, 228);
             }
             catch { }
@@ -324,12 +361,11 @@ namespace CA
 
         private static string GetMyPrivateKey()
         {
-            //return File.ReadAllText(@"D:\ca.key");
-            string key = DbConnector.GetPrivateKey();
+            string key = DbConnector.GetValue("privateKey");
             if (key == null)
             {
                 AddLog("Поверждена база данных. Приложение будет остновлено");
-                new ApplicationException("Поверждена база данных. Приложение будет остновлено");
+                throw new Exception("Поверждена база данных. Приложение будет остновлено");
             }
             return key;
         }

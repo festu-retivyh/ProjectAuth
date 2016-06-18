@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B7EC875D24F7495D8BEE2015C1D79B19"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C1E90DAB4EFC4C0684718AE63A3A4DA9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -114,8 +120,13 @@
                 {
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 и x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.Express.11.0"
+                    {
+                    "Name" = "8:SQL Server 2012 Express"
+                    "ProductCode" = "8:Microsoft.SqlServer.Express.11.0"
                     }
                 }
             }
@@ -237,6 +248,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7EC875D24F7495D8BEE2015C1D79B19"
+            {
+            "SourcePath" = "8:..\\..\\img\\install3.ico"
+            "TargetName" = "8:install3.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_59EE9730383A458882240C7BCDA9EBDD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E0F7DCAF367AA240DFEE7E5EAC6B375B"
@@ -394,9 +425,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:setupProjectAuth_CA"
+        "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{85F77E9D-3E91-45D3-A93C-A3C89F464CEC}"
-        "PackageCode" = "8:{D15DE4E4-C403-4480-AD79-FC8CA6C12311}"
+        "PackageCode" = "8:{86313187-A326-4BDA-AA92-13193FB6BD72}"
         "UpgradeCode" = "8:{242E9F5E-914B-47C9-9637-FFC23F8CE559}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -413,7 +444,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_B7EC875D24F7495D8BEE2015C1D79B19"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"

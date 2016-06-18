@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace CA
 {
+    public enum TypeLog { normal=1, smollViolation=2, violation=3, BigViolation=4 };
     class DbConnector
     {
         private static SqlConnection GetConnection()
@@ -107,6 +108,46 @@ namespace CA
             cmd.ExecuteNonQuery();
         }
 
+        internal static string GetLoginClientByGuid(object guidClient)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return null;
+            string comm = @"Select TOP(1) login from User inner join Client on client.userId=user.id where client.guid = @guid";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("guid", guidClient);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.Read())
+            {
+                return sdr.GetString(0);
+            }
+            else
+            {
+                AddLogs("Не существующий guid", "Попытка выполнения действия клиента с несуществующим guid", TypeLog.violation);
+                return "'не найден'";
+            }
+        }
+
+        internal static string GetNameServerByGuid(string guid)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return null;
+            string comm = @"Select TOP(1) name from Server where Server.guid = @guid";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("guid", guid);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.Read())
+            {
+                return sdr.GetString(0);
+            }
+            else
+            {
+                AddLogs("Не существующий guid", "Попытка выполнения действия сервера с несуществующим guid", TypeLog.BigViolation);
+                return "'не найден'";
+            }
+        }
+
         internal static bool CheckStateClient(string guidClient, string ip)
         {
             var conn = GetConnection();
@@ -203,6 +244,30 @@ namespace CA
             cmd.ExecuteNonQuery();
         }
 
+        internal static void UpdateValue(string value, string prop)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return;
+            string comm = @"Update Parametrs SET [value]=@val where [property] = @prop";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("val", value);
+            cmd.Parameters.AddWithValue("prop", prop);
+            cmd.ExecuteNonQuery();
+        }
+
+        internal static void ChangePassword(string newLogin, string newPass)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return;
+            string comm = @"ALTER LOGIN @login WITH PASSWORD = @pass";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("pass", newPass);
+            cmd.Parameters.AddWithValue("login", newLogin);
+            cmd.ExecuteNonQuery();
+        }
+
         internal static void SetCertificateStatus(string guid, string status)
         {
             var conn = GetConnection();
@@ -280,13 +345,14 @@ namespace CA
             cmd.ExecuteNonQuery();
         }
 
-        internal static string GetPrivateKey()
+        internal static string GetValue(string key)
         {
             var conn = GetConnection();
             if (conn == null)
                 return null;
-            string comm = @"Select [value] from parametrs where [property]='PrivateKey'";
+            string comm = @"Select [value] from parametrs where [property]=@key";
             SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("key", key);
             var reader = cmd.ExecuteReader();
             if (reader.Read())
                 return reader.GetValue(0).ToString();
@@ -369,6 +435,20 @@ namespace CA
                 //text = text + sdr.GetValue(0).ToString();
             }
             return cert;
+        }
+
+        internal static void AddLogs(string name, string text, TypeLog type)
+        {
+            var conn = GetConnection();
+            if (conn == null)
+                return;
+            string comm = @"INSERT INTO [Log] VALUES (@name,@text,@date,@type) ";
+            SqlCommand cmd = new SqlCommand(comm, conn);
+            cmd.Parameters.AddWithValue("name", name);
+            cmd.Parameters.AddWithValue("text", text);
+            cmd.Parameters.AddWithValue("date", DateTime.Now);
+            cmd.Parameters.AddWithValue("type", type);
+            cmd.ExecuteNonQuery();
         }
     }
 }
