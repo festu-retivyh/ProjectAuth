@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_460D92DE4CB74429F7EDB92B45E052A7"
+        "MsmKey" = "8:_5029F92875BE445F556F44081EA46C01"
         "OwnerKey" = "8:_F1EE0897B703408298E7D41D61438906"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_85E871251D2D5AF5BE0726198421DCBD"
+        "MsmKey" = "8:_555DA2C75DBEB9BFF7E333567E02AE30"
         "OwnerKey" = "8:_F1EE0897B703408298E7D41D61438906"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,19 +34,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_85E871251D2D5AF5BE0726198421DCBD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_460D92DE4CB74429F7EDB92B45E052A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F1EE0897B703408298E7D41D61438906"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5029F92875BE445F556F44081EA46C01"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_555DA2C75DBEB9BFF7E333567E02AE30"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -74,6 +74,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -98,6 +106,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -142,13 +158,18 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_460D92DE4CB74429F7EDB92B45E052A7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5029F92875BE445F556F44081EA46C01"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Cryptography, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_5029F92875BE445F556F44081EA46C01"
+                    {
+                    "Name" = "8:Cryptography.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Cryptography.dll"
             "TargetName" = "8:"
@@ -168,13 +189,18 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_85E871251D2D5AF5BE0726198421DCBD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_555DA2C75DBEB9BFF7E333567E02AE30"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_555DA2C75DBEB9BFF7E333567E02AE30"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -259,12 +285,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:DVGUPS"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:SetupServer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Retivykh"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

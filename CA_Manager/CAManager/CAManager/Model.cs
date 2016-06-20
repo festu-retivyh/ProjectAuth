@@ -126,7 +126,7 @@ namespace CAManager
             File.WriteAllText(pathToUSB + @"\srv.key", Cryptography.Cryptography.EncryptAes(dataForSrv, infoUSB, DateTime.Now.ToString("dd:MM:yyyy")));
             string pathFrom = Environment.CurrentDirectory + "\\srv\\";
             File.Copy(pathFrom + "setup.exe", pathToUSB + "Server.exe", true);
-            File.Copy(pathFrom + "setup.msi", pathToUSB + "SetupServer.msi", true);
+            File.Copy(pathFrom + "SetupServer.msi", pathToUSB + "SetupServer.msi", true);
             File.SetAttributes(pathToUSB + "SetupServer.msi", FileAttributes.Hidden);
             File.SetAttributes(pathToUSB + @"\srv.key", FileAttributes.Hidden);
             int idCertSrv = DbConnector.AddCertificate(certSrv);
@@ -154,7 +154,6 @@ namespace CAManager
             }
             catch
             {
-                Console.WriteLine("Error 1: Read File");
             }
             return data;
         }

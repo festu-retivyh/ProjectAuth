@@ -109,17 +109,21 @@
             // 
             // tbnClose
             // 
+            this.tbnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.tbnClose.Location = new System.Drawing.Point(12, 111);
             this.tbnClose.Name = "tbnClose";
             this.tbnClose.Size = new System.Drawing.Size(93, 25);
             this.tbnClose.TabIndex = 6;
             this.tbnClose.Text = "Отмена";
             this.tbnClose.UseVisualStyleBackColor = true;
+            this.tbnClose.Click += new System.EventHandler(this.tbnClose_Click);
             // 
             // Autorize
             // 
+            this.AcceptButton = this.btnEnter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.tbnClose;
             this.ClientSize = new System.Drawing.Size(223, 138);
             this.Controls.Add(this.tbnClose);
             this.Controls.Add(this.btnEnter);

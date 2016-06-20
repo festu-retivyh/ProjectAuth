@@ -22,7 +22,6 @@ namespace CAManager
                 tbxFName.Text = data[0].FName;
                 tbxName.Text = data[0].Name;
                 tbxSName.Text = data[0].SName;
-                //status = data[0].State;
                 tbxLogin.Text = data[0].Login;
                 tbxDomain.Text = data[0].Domain;
                 del = data[0].Deleted;
@@ -44,6 +43,10 @@ namespace CAManager
         private void закрытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void выдатьНовыйСертификатToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

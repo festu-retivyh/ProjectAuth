@@ -51,7 +51,10 @@ namespace CAManager
 
             idServer = Model.MasterAddServer(server, currentDisk);
             if (idServer != 0)
+            {
+                Model.CallEventUpdateViewTables();
                 Close();
+            }
             else
                 MessageBox.Show("Some Error. ups..");
         }

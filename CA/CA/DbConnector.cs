@@ -51,8 +51,6 @@ namespace CA
             cmd.Parameters.AddWithValue("guidClient", guidClient);
             cmd.Parameters.AddWithValue("idCert", id);
             cmd.ExecuteNonQuery();
-            sdr.Close();
-            sdr = null;
             cmd.Cancel();
             cmd = null;
             SetCertificateStatus(guidClient, "active");
@@ -113,7 +111,7 @@ namespace CA
             var conn = GetConnection();
             if (conn == null)
                 return null;
-            string comm = @"Select TOP(1) login from User inner join Client on client.userId=user.id where client.guid = @guid";
+            string comm = @"Select TOP(1) [login] from [User] inner join Client on client.userId=[user].id where client.guid = @guid";
             SqlCommand cmd = new SqlCommand(comm, conn);
             cmd.Parameters.AddWithValue("guid", guidClient);
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -286,6 +284,7 @@ namespace CA
             else
                 cmd.Parameters.AddWithValue("state", 1);
             cmd.ExecuteNonQuery();
+            cmd = null;
         }
 
         internal static Certificate GetCertificate(string guid)

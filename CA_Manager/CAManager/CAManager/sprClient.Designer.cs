@@ -40,6 +40,8 @@
             this.lLogin = new System.Windows.Forms.Label();
             this.tbxDomain = new System.Windows.Forms.TextBox();
             this.ldomain = new System.Windows.Forms.Label();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.выдатьНовыйСертификатToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSaveExit,
-            this.закрытьToolStripMenuItem});
+            this.закрытьToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.выдатьНовыйСертификатToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(436, 24);
@@ -130,6 +134,19 @@
             this.ldomain.TabIndex = 1;
             this.ldomain.Text = "Домен";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem1.Text = "|";
+            // 
+            // выдатьНовыйСертификатToolStripMenuItem
+            // 
+            this.выдатьНовыйСертификатToolStripMenuItem.Name = "выдатьНовыйСертификатToolStripMenuItem";
+            this.выдатьНовыйСертификатToolStripMenuItem.Size = new System.Drawing.Size(164, 20);
+            this.выдатьНовыйСертификатToolStripMenuItem.Text = "Выдать новый сертификат";
+            this.выдатьНовыйСертификатToolStripMenuItem.Click += new System.EventHandler(this.выдатьНовыйСертификатToolStripMenuItem_Click);
+            // 
             // sprClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,5 +185,7 @@
         private System.Windows.Forms.Label lLogin;
         private System.Windows.Forms.TextBox tbxDomain;
         private System.Windows.Forms.Label ldomain;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem выдатьНовыйСертификатToolStripMenuItem;
     }
 }

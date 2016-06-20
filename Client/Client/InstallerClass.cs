@@ -105,11 +105,15 @@ namespace Client
             string cryptUsbData = Cryptography.Cryptography.EncryptAes(guidUsb + " " + data.Split(' ')[3] + " " + data.Split(' ')[4], Model.genSKeyUsb(hashUsb,partKeyCA), hashUsb);
             cryptUsbData = cryptUsbData + " " + pubKeyCA;
             DeleteFile(dirUsb);
-            DeleteFile(dir + @"\setup.exe");
-            DeleteFile(dir + @"\Setup.msi");
+            try
+            {
+                DeleteFile(dir + @"\setup.exe");
+                DeleteFile(dir + @"\Setup.msi");
+            }
+            catch { }
             File.WriteAllText(dir + @"\clnt.key", cryptUsbData);
             File.SetAttributes(dir + @"\clnt.key", FileAttributes.Hidden);
-            File.Encrypt(dir + @"\clnt.key");
+            //File.Encrypt(dir + @"\clnt.key");
             //gen data for encript on Client
             string sKeyClient = Cryptography.Cryptography.GenerateKey(100);
             string dataClient = prvKeyClient+ " " + guidClient+ " " + pubKeyCA;

@@ -7,13 +7,23 @@ namespace CAManager
     public partial class Autorize : Form
     {
         string srv="", usr="", pss="", server;
+
+        private void tbnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         public string connStr, p, u;
         public Autorize()
         {
             InitializeComponent();
-            Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("ProjectAuth");
-            server = myRegKey.GetValue("NameServer").ToString();
-            myRegKey.Close();
+            try
+            {
+                Microsoft.Win32.RegistryKey myRegKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\\Wow6432Node\\ProjectAuth");
+                server = myRegKey.GetValue("NameServer").ToString();
+                myRegKey.Close();
+            }
+            catch { }
             if (server != null)
                 srv = server;
             if (srv != "")

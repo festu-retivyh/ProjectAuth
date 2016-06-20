@@ -15,19 +15,25 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_06CBF32B383C4CC294D62DF31B4708AA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D9B1696768E424BB6CA53892DC049E2"
+        "MsmKey" = "8:_896647A44EF14AFAA0173D22ADD7BE28"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_845F91EDF8AF4AE99C38E3D33A49D8B1"
+        "MsmKey" = "8:_8A34F78544B74189B4BA89CF41D43CC2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,13 +45,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9EDA6F3812A54434B0040E06FC749D7A"
+        "MsmKey" = "8:_A8D71EF5164F4046A5877328571A1813"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B8A0959343C04495998FBBA5B2144ADC"
+        "MsmKey" = "8:_C385B9A07E5B446BA4FC493F5EF019BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -162,12 +168,12 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D9B1696768E424BB6CA53892DC049E2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06CBF32B383C4CC294D62DF31B4708AA"
             {
-            "SourcePath" = "8:..\\..\\..\\Server\\SetupServer\\Debug\\SetupServer.msi"
-            "TargetName" = "8:SetupServer.msi"
+            "SourcePath" = "8:..\\..\\..\\Client\\Setup\\Debug\\setup.exe"
+            "TargetName" = "8:setup.exe"
             "Tag" = "8:"
-            "Folder" = "8:_171F8E4D9ED34C5AB1EA2616E045FDB5"
+            "Folder" = "8:_DE4C39FCB50D4EB7B76AB6DD1E61D63A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -182,12 +188,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_845F91EDF8AF4AE99C38E3D33A49D8B1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_896647A44EF14AFAA0173D22ADD7BE28"
             {
-            "SourcePath" = "8:..\\..\\..\\Client\\Setup\\Debug\\setup.exe"
+            "SourcePath" = "8:..\\CAManager\\favicon.ico"
+            "TargetName" = "8:favicon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B18D2B32385E4F778C32643B3BB352A1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A34F78544B74189B4BA89CF41D43CC2"
+            {
+            "SourcePath" = "8:..\\..\\..\\Server\\SetupServer\\Debug\\setup.exe"
             "TargetName" = "8:setup.exe"
             "Tag" = "8:"
-            "Folder" = "8:_DE4C39FCB50D4EB7B76AB6DD1E61D63A"
+            "Folder" = "8:_171F8E4D9ED34C5AB1EA2616E045FDB5"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -222,12 +248,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9EDA6F3812A54434B0040E06FC749D7A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8D71EF5164F4046A5877328571A1813"
             {
-            "SourcePath" = "8:..\\..\\..\\Server\\SetupServer\\Debug\\setup.exe"
-            "TargetName" = "8:setup.exe"
+            "SourcePath" = "8:..\\..\\..\\Client\\Setup\\Debug\\Setup.msi"
+            "TargetName" = "8:Setup.msi"
             "Tag" = "8:"
-            "Folder" = "8:_171F8E4D9ED34C5AB1EA2616E045FDB5"
+            "Folder" = "8:_DE4C39FCB50D4EB7B76AB6DD1E61D63A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -242,12 +268,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8A0959343C04495998FBBA5B2144ADC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C385B9A07E5B446BA4FC493F5EF019BB"
             {
-            "SourcePath" = "8:..\\..\\..\\Client\\Setup\\Debug\\Setup.msi"
-            "TargetName" = "8:Setup.msi"
+            "SourcePath" = "8:..\\..\\..\\Server\\SetupServer\\Debug\\SetupServer.msi"
+            "TargetName" = "8:SetupServer.msi"
             "Tag" = "8:"
-            "Folder" = "8:_DE4C39FCB50D4EB7B76AB6DD1E61D63A"
+            "Folder" = "8:_171F8E4D9ED34C5AB1EA2616E045FDB5"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -564,7 +590,7 @@
             "Target" = "8:_412FAE5FF8AA453DBB568D8F6E401E11"
             "Folder" = "8:_FDB4384BF6204B65A836E2F4BAC4380F"
             "WorkingFolder" = "8:_D7140714DEE6479DBB142E86A2DBD6E3"
-            "Icon" = "8:"
+            "Icon" = "8:_896647A44EF14AFAA0173D22ADD7BE28"
             "Feature" = "8:"
             }
         }

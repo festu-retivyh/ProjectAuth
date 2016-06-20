@@ -63,7 +63,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FA3D5CB6AC6146E191CB141D00E8C511"
+        "MsmKey" = "8:_F7605F79DE554B858359511A8F44E8A4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -122,11 +122,6 @@
                     {
                     "Name" = "8:Microsoft .NET Framework 4.5 (x86 и x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.5"
-                    }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.Express.11.0"
-                    {
-                    "Name" = "8:SQL Server 2012 Express"
-                    "ProductCode" = "8:Microsoft.SqlServer.Express.11.0"
                     }
                 }
             }
@@ -321,7 +316,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA3D5CB6AC6146E191CB141D00E8C511"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F7605F79DE554B858359511A8F44E8A4"
             {
             "SourcePath" = "8:..\\..\\db.sql"
             "TargetName" = "8:db.sql"
@@ -427,7 +422,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProjectAuth_CA"
         "ProductCode" = "8:{85F77E9D-3E91-45D3-A93C-A3C89F464CEC}"
-        "PackageCode" = "8:{86313187-A326-4BDA-AA92-13193FB6BD72}"
+        "PackageCode" = "8:{E3F8E2FB-CA67-4D97-8DB9-990E4380BFAC}"
         "UpgradeCode" = "8:{242E9F5E-914B-47C9-9637-FFC23F8CE559}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

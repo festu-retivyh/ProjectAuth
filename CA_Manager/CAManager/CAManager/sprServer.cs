@@ -13,7 +13,6 @@ namespace CAManager
     {
         int curId = 0;
         public delegate void ChangeInformation();
-        public event ChangeInformation change;
         public sprServer()
         {
             InitializeComponent();
@@ -69,7 +68,7 @@ namespace CAManager
                     prot = prot + ";" + dgvProtocols.Rows[i].Cells[1].Value.ToString() + ":" + ((bool)(dgvProtocols.Rows[i].Cells[0].Value) ? "Y" : "N");
             }
             ta.myUpdate(tbxName.Text, tbxAddress.Text, prot, curId);
-            change();
+            Model.CallEventUpdateViewTables();
             Close();
         }
 

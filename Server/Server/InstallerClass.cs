@@ -58,7 +58,7 @@ namespace Server
             string dir = @"C:\ProgramData\ServerKey";
             Directory.CreateDirectory(dir);
             File.WriteAllText(dir + @"\srv.key", DataForSave);
-            File.Encrypt(dir + @"\srv.key");
+            //File.Encrypt(dir + @"\srv.key");
             if (Model.CheckCaAccess(masData[5]))
             {
                 string dataForSend = masData[3] + " 6 1 " + DateTime.Now;
@@ -70,14 +70,14 @@ namespace Server
                 if (data != "OK")
                 {
                     DeleteFile(dir + @"\srv.key");
-                    DeleteFile(dir + @"\Server.exe");
-                    DeleteFile(dir + @"\SetupServer.msi");
+                    DeleteFile(disk.name + @"\Server.exe");
+                    DeleteFile(disk.name + @"\SetupServer.msi");
                     throw new Exception("Ошибка переданных данных на Центр сертификации.");
                 }
             }
-            DeleteFile(dir + @"\srv.key");
-            DeleteFile(dir + @"\Server.exe");
-            DeleteFile(dir + @"\SetupServer.msi");
+            DeleteFile(disk.name + @"\srv.key");
+            //DeleteFile(disk.name + @"\Server.exe");
+            //DeleteFile(disk.name + @"\SetupServer.msi");
 
             var proc = new Process();
             proc.StartInfo.FileName = "netsh.exe";
