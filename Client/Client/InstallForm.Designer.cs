@@ -37,7 +37,7 @@
             // 
             // tbxPin
             // 
-            this.tbxPin.Location = new System.Drawing.Point(62, 81);
+            this.tbxPin.Location = new System.Drawing.Point(60, 107);
             this.tbxPin.Name = "tbxPin";
             this.tbxPin.Size = new System.Drawing.Size(100, 20);
             this.tbxPin.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             // tbxpin2
             // 
-            this.tbxpin2.Location = new System.Drawing.Point(62, 107);
+            this.tbxpin2.Location = new System.Drawing.Point(60, 81);
             this.tbxpin2.Name = "tbxpin2";
             this.tbxpin2.Size = new System.Drawing.Size(100, 20);
             this.tbxpin2.TabIndex = 0;

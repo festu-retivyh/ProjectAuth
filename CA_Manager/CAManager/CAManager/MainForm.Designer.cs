@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -41,27 +42,26 @@
             this.btnStatistic = new System.Windows.Forms.Button();
             this.mainTabsControl = new System.Windows.Forms.TabControl();
             this.tabStatistic = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabOnlineUsers = new System.Windows.Forms.TabPage();
             this.dgvOnlineUsers = new System.Windows.Forms.DataGridView();
-            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlineUserPanel = new System.Windows.Forms.Panel();
             this.btnSelectUserOnline = new System.Windows.Forms.Button();
             this.btnBlockUserOnline = new System.Windows.Forms.Button();
             this.btnStopSession = new System.Windows.Forms.Button();
             this.tabAllUsers = new System.Windows.Forms.TabPage();
             this.dgvAllUsers = new System.Windows.Forms.DataGridView();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBlockUserAll = new System.Windows.Forms.Button();
             this.btnSelectUser = new System.Windows.Forms.Button();
             this.tabBlockUsers = new System.Windows.Forms.TabPage();
             this.dgvBlockClients = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDeblockUser = new System.Windows.Forms.Button();
             this.btnSelectUserBlocked = new System.Windows.Forms.Button();
@@ -72,6 +72,7 @@
             this.btnBlockServer = new System.Windows.Forms.Button();
             this.btnDeblockServer = new System.Windows.Forms.Button();
             this.tabLogs = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabBlockedCerificates = new System.Windows.Forms.TabPage();
             this.tabGeneralSettings = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -89,13 +90,8 @@
             this.tbxNewPass2 = new System.Windows.Forms.TextBox();
             this.tbxNewPass1 = new System.Windows.Forms.TextBox();
             this.tbxOldPass = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,17 +101,16 @@
             this.dateDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlientClientsStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myFWDataSet = new CAManager.myFWDataSet();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateStopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeEndCertsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myHardLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lastClientsStatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,6 +119,12 @@
             this.guidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.certificateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serverBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myLogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.certificateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new CAManager.myFWDataSetTableAdapters.ClientTableAdapter();
@@ -132,15 +133,46 @@
             this.lastClientsStatesTableAdapter = new CAManager.myFWDataSetTableAdapters.LastClientsStatesTableAdapter();
             this.onlineClientStateTableAdapter = new CAManager.myFWDataSetTableAdapters.OnlineClientStateTableAdapter();
             this.serverTableAdapter = new CAManager.myFWDataSetTableAdapters.ServerTableAdapter();
-            this.timeEndCertsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timeEndCertsTableAdapter = new CAManager.myFWDataSetTableAdapters.TimeEndCertsTableAdapter();
-            this.dateStopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logTableAdapter = new CAManager.myFWDataSetTableAdapters.LogTableAdapter();
+            this.myLogsTableAdapter = new CAManager.myFWDataSetTableAdapters.myLogsTableAdapter();
+            this.myHardLogTableAdapter = new CAManager.myFWDataSetTableAdapters.myHardLogTableAdapter();
+            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenuPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.mainTabsControl.SuspendLayout();
             this.tabStatistic.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabOnlineUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).BeginInit();
             this.onlineUserPanel.SuspendLayout();
@@ -153,24 +185,24 @@
             this.tabServers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServers)).BeginInit();
             this.panel3.SuspendLayout();
+            this.tabLogs.SuspendLayout();
             this.tabGeneralSettings.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.tabSecuritySettings.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlientClientsStateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEndCertsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHardLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastClientsStatesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myLogsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEndCertsBindingSource)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuPanel
@@ -223,7 +255,7 @@
             this.btnCertificateMasterOpen.Name = "btnCertificateMasterOpen";
             this.btnCertificateMasterOpen.Size = new System.Drawing.Size(194, 32);
             this.btnCertificateMasterOpen.TabIndex = 4;
-            this.btnCertificateMasterOpen.Text = "Мастер создания сертификата";
+            this.btnCertificateMasterOpen.Text = "Мастер добавления клиента";
             this.btnCertificateMasterOpen.UseVisualStyleBackColor = false;
             this.btnCertificateMasterOpen.Click += new System.EventHandler(this.btnCertificateMasterOpen_Click);
             // 
@@ -312,6 +344,111 @@
             this.tabStatistic.Text = "Статистика";
             this.tabStatistic.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel3.Controls.Add(this.groupBox3);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(762, 534);
+            this.flowLayoutPanel3.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(287, 316);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Подключенные пользователи";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.clientIdDataGridViewTextBoxColumn2,
+            this.stateIdDataGridViewTextBoxColumn2,
+            this.loginDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn2,
+            this.nameUserDataGridViewTextBoxColumn1,
+            this.dateDataGridViewTextBoxColumn3});
+            this.dataGridView1.DataSource = this.onlientClientsStateBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(281, 297);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Location = new System.Drawing.Point(296, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(295, 316);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Окнчание дейсвия сертификатов";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateStopDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn4,
+            this.typeDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.timeEndCertsBindingSource;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(289, 297);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dataGridView3);
+            this.groupBox3.Location = new System.Drawing.Point(3, 325);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(287, 321);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "События нарушения безопасности";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn6,
+            this.dateDataGridViewTextBoxColumn5,
+            this.nameDataGridViewTextBoxColumn2,
+            this.textDataGridViewTextBoxColumn1,
+            this.typeDataGridViewTextBoxColumn1});
+            this.dataGridView3.DataSource = this.myHardLogBindingSource;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.Size = new System.Drawing.Size(281, 302);
+            this.dataGridView3.TabIndex = 0;
+            // 
             // tabOnlineUsers
             // 
             this.tabOnlineUsers.Controls.Add(this.dgvOnlineUsers);
@@ -344,30 +481,10 @@
             this.dgvOnlineUsers.Location = new System.Drawing.Point(3, 33);
             this.dgvOnlineUsers.Name = "dgvOnlineUsers";
             this.dgvOnlineUsers.ReadOnly = true;
+            this.dgvOnlineUsers.RowHeadersVisible = false;
             this.dgvOnlineUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOnlineUsers.Size = new System.Drawing.Size(762, 504);
             this.dgvOnlineUsers.TabIndex = 1;
-            // 
-            // login
-            // 
-            this.login.DataPropertyName = "login";
-            this.login.HeaderText = "Логин";
-            this.login.Name = "login";
-            this.login.ReadOnly = true;
-            // 
-            // ip
-            // 
-            this.ip.DataPropertyName = "address";
-            this.ip.HeaderText = "ip";
-            this.ip.Name = "ip";
-            this.ip.ReadOnly = true;
-            // 
-            // NameUser
-            // 
-            this.NameUser.DataPropertyName = "NameUser";
-            this.NameUser.HeaderText = "Пользователь";
-            this.NameUser.Name = "NameUser";
-            this.NameUser.ReadOnly = true;
             // 
             // onlineUserPanel
             // 
@@ -451,13 +568,6 @@
             this.dgvAllUsers.TabIndex = 1;
             this.dgvAllUsers.DoubleClick += new System.EventHandler(this.dgvAllUsers_DoubleClick);
             // 
-            // State
-            // 
-            this.State.DataPropertyName = "stateId";
-            this.State.HeaderText = "Статус";
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnBlockUserAll);
@@ -502,6 +612,8 @@
             // 
             // dgvBlockClients
             // 
+            this.dgvBlockClients.AllowUserToAddRows = false;
+            this.dgvBlockClients.AllowUserToDeleteRows = false;
             this.dgvBlockClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBlockClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -511,28 +623,10 @@
             this.dgvBlockClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBlockClients.Location = new System.Drawing.Point(3, 33);
             this.dgvBlockClients.Name = "dgvBlockClients";
+            this.dgvBlockClients.ReadOnly = true;
+            this.dgvBlockClients.RowHeadersVisible = false;
             this.dgvBlockClients.Size = new System.Drawing.Size(762, 504);
             this.dgvBlockClients.TabIndex = 1;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Логин";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ФИО";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Состояние";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ip";
-            this.Column8.Name = "Column8";
             // 
             // panel2
             // 
@@ -640,13 +734,23 @@
             // 
             // tabLogs
             // 
+            this.tabLogs.Controls.Add(this.panel4);
             this.tabLogs.Location = new System.Drawing.Point(4, 22);
             this.tabLogs.Name = "tabLogs";
             this.tabLogs.Padding = new System.Windows.Forms.Padding(3);
             this.tabLogs.Size = new System.Drawing.Size(768, 540);
             this.tabLogs.TabIndex = 5;
-            this.tabLogs.Text = "Активные";
+            this.tabLogs.Text = "События";
             this.tabLogs.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 24);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Установить фильтр";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tabBlockedCerificates
             // 
@@ -697,21 +801,22 @@
             this.flowLayoutPanel2.Controls.Add(this.btnSrv);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(107, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(142, 248);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(142, 240);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // lblSpr
             // 
             this.lblSpr.AutoSize = true;
+            this.lblSpr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblSpr.Location = new System.Drawing.Point(3, 0);
             this.lblSpr.Name = "lblSpr";
-            this.lblSpr.Size = new System.Drawing.Size(73, 13);
+            this.lblSpr.Size = new System.Drawing.Size(94, 15);
             this.lblSpr.TabIndex = 0;
             this.lblSpr.Text = "Справочники";
             // 
             // btnProgram
             // 
-            this.btnProgram.Location = new System.Drawing.Point(3, 16);
+            this.btnProgram.Location = new System.Drawing.Point(3, 18);
             this.btnProgram.Name = "btnProgram";
             this.btnProgram.Size = new System.Drawing.Size(139, 31);
             this.btnProgram.TabIndex = 1;
@@ -721,7 +826,7 @@
             // 
             // btnProfile
             // 
-            this.btnProfile.Location = new System.Drawing.Point(3, 53);
+            this.btnProfile.Location = new System.Drawing.Point(3, 55);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(139, 31);
             this.btnProfile.TabIndex = 1;
@@ -731,7 +836,7 @@
             // 
             // btnGroup
             // 
-            this.btnGroup.Location = new System.Drawing.Point(3, 90);
+            this.btnGroup.Location = new System.Drawing.Point(3, 92);
             this.btnGroup.Name = "btnGroup";
             this.btnGroup.Size = new System.Drawing.Size(139, 31);
             this.btnGroup.TabIndex = 1;
@@ -741,7 +846,7 @@
             // 
             // btnCert
             // 
-            this.btnCert.Location = new System.Drawing.Point(3, 127);
+            this.btnCert.Location = new System.Drawing.Point(3, 129);
             this.btnCert.Name = "btnCert";
             this.btnCert.Size = new System.Drawing.Size(139, 31);
             this.btnCert.TabIndex = 1;
@@ -751,7 +856,7 @@
             // 
             // btnClient
             // 
-            this.btnClient.Location = new System.Drawing.Point(3, 164);
+            this.btnClient.Location = new System.Drawing.Point(3, 166);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(139, 31);
             this.btnClient.TabIndex = 1;
@@ -760,7 +865,7 @@
             // 
             // btnSrv
             // 
-            this.btnSrv.Location = new System.Drawing.Point(3, 201);
+            this.btnSrv.Location = new System.Drawing.Point(3, 203);
             this.btnSrv.Name = "btnSrv";
             this.btnSrv.Size = new System.Drawing.Size(139, 31);
             this.btnSrv.TabIndex = 1;
@@ -769,6 +874,10 @@
             // 
             // tabSecuritySettings
             // 
+            this.tabSecuritySettings.Controls.Add(this.label5);
+            this.tabSecuritySettings.Controls.Add(this.label4);
+            this.tabSecuritySettings.Controls.Add(this.label2);
+            this.tabSecuritySettings.Controls.Add(this.label1);
             this.tabSecuritySettings.Controls.Add(this.btnChangePassword);
             this.tabSecuritySettings.Controls.Add(this.tbxNewPass2);
             this.tabSecuritySettings.Controls.Add(this.tbxNewPass1);
@@ -782,7 +891,7 @@
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(298, 96);
+            this.btnChangePassword.Location = new System.Drawing.Point(145, 133);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(155, 31);
             this.btnChangePassword.TabIndex = 3;
@@ -792,120 +901,55 @@
             // 
             // tbxNewPass2
             // 
-            this.tbxNewPass2.Location = new System.Drawing.Point(298, 70);
+            this.tbxNewPass2.Location = new System.Drawing.Point(145, 107);
             this.tbxNewPass2.Name = "tbxNewPass2";
             this.tbxNewPass2.Size = new System.Drawing.Size(155, 20);
             this.tbxNewPass2.TabIndex = 2;
+            this.tbxNewPass2.UseSystemPasswordChar = true;
             // 
             // tbxNewPass1
             // 
-            this.tbxNewPass1.Location = new System.Drawing.Point(298, 44);
+            this.tbxNewPass1.Location = new System.Drawing.Point(145, 81);
             this.tbxNewPass1.Name = "tbxNewPass1";
             this.tbxNewPass1.Size = new System.Drawing.Size(155, 20);
             this.tbxNewPass1.TabIndex = 1;
+            this.tbxNewPass1.UseSystemPasswordChar = true;
             // 
             // tbxOldPass
             // 
-            this.tbxOldPass.Location = new System.Drawing.Point(298, 18);
+            this.tbxOldPass.Location = new System.Drawing.Point(145, 55);
             this.tbxOldPass.Name = "tbxOldPass";
             this.tbxOldPass.Size = new System.Drawing.Size(155, 20);
             this.tbxOldPass.TabIndex = 0;
+            this.tbxOldPass.UseSystemPasswordChar = true;
             // 
-            // flowLayoutPanel3
+            // dataGridView4
             // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel3.Controls.Add(this.groupBox3);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(762, 534);
-            this.flowLayoutPanel3.TabIndex = 0;
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn5,
+            this.dateDataGridViewTextBoxColumn4,
+            this.nameDataGridViewTextBoxColumn1,
+            this.textDataGridViewTextBoxColumn,
+            this.type});
+            this.dataGridView4.DataSource = this.myLogsBindingSource;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 33);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.Size = new System.Drawing.Size(756, 498);
+            this.dataGridView4.TabIndex = 1;
             // 
-            // groupBox1
+            // type
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 316);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Подключенные пользователи";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.clientIdDataGridViewTextBoxColumn2,
-            this.stateIdDataGridViewTextBoxColumn2,
-            this.loginDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn2,
-            this.nameUserDataGridViewTextBoxColumn1,
-            this.dateDataGridViewTextBoxColumn3});
-            this.dataGridView1.DataSource = this.onlientClientsStateBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(281, 297);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(296, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(295, 316);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Окнчание дейсвия сертификатов";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dateStopDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn4,
-            this.typeDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.timeEndCertsBindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(289, 297);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dataGridView3);
-            this.groupBox3.Location = new System.Drawing.Point(3, 325);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(284, 311);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "События нарушения безопасности";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(278, 292);
-            this.dataGridView3.TabIndex = 0;
+            this.type.DataPropertyName = "type";
+            this.type.HeaderText = "Тип события";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -971,87 +1015,75 @@
             this.myFWDataSet.DataSetName = "myFWDataSet";
             this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // idDataGridViewTextBoxColumn
+            // dateStopDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateStopDataGridViewTextBoxColumn.DataPropertyName = "dateStop";
+            this.dateStopDataGridViewTextBoxColumn.HeaderText = "Окончание действия";
+            this.dateStopDataGridViewTextBoxColumn.Name = "dateStopDataGridViewTextBoxColumn";
+            this.dateStopDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dateDataGridViewTextBoxColumn1
+            // idDataGridViewTextBoxColumn4
             // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn4.HeaderText = "Наименование";
+            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // clientIdDataGridViewTextBoxColumn1
+            // typeDataGridViewTextBoxColumn
             // 
-            this.clientIdDataGridViewTextBoxColumn1.DataPropertyName = "clientId";
-            this.clientIdDataGridViewTextBoxColumn1.HeaderText = "clientId";
-            this.clientIdDataGridViewTextBoxColumn1.Name = "clientIdDataGridViewTextBoxColumn1";
-            this.clientIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Тип объекта";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // stateIdDataGridViewTextBoxColumn
+            // timeEndCertsBindingSource
             // 
-            this.stateIdDataGridViewTextBoxColumn.DataPropertyName = "stateId";
-            this.stateIdDataGridViewTextBoxColumn.HeaderText = "stateId";
-            this.stateIdDataGridViewTextBoxColumn.Name = "stateIdDataGridViewTextBoxColumn";
-            this.stateIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeEndCertsBindingSource.DataMember = "TimeEndCerts";
+            this.timeEndCertsBindingSource.DataSource = this.myFWDataSet;
             // 
-            // clientIdDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn6
             // 
-            this.clientIdDataGridViewTextBoxColumn.DataPropertyName = "clientId";
-            this.clientIdDataGridViewTextBoxColumn.HeaderText = "clientId";
-            this.clientIdDataGridViewTextBoxColumn.Name = "clientIdDataGridViewTextBoxColumn";
-            this.clientIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clientIdDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn6.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn6.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn6.Name = "idDataGridViewTextBoxColumn6";
+            this.idDataGridViewTextBoxColumn6.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn6.Visible = false;
             // 
-            // nameUserDataGridViewTextBoxColumn
+            // dateDataGridViewTextBoxColumn5
             // 
-            this.nameUserDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameUserDataGridViewTextBoxColumn.DataPropertyName = "NameUser";
-            this.nameUserDataGridViewTextBoxColumn.HeaderText = "NameUser";
-            this.nameUserDataGridViewTextBoxColumn.Name = "nameUserDataGridViewTextBoxColumn";
-            this.nameUserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn5.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn5.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn5.Name = "dateDataGridViewTextBoxColumn5";
+            this.dateDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // nameDataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "login";
-            this.dataGridViewTextBoxColumn1.HeaderText = "login";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.nameDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Наименование";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // addressDataGridViewTextBoxColumn
+            // textDataGridViewTextBoxColumn1
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.textDataGridViewTextBoxColumn1.DataPropertyName = "text";
+            this.textDataGridViewTextBoxColumn1.HeaderText = "text";
+            this.textDataGridViewTextBoxColumn1.Name = "textDataGridViewTextBoxColumn1";
+            this.textDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.textDataGridViewTextBoxColumn1.Visible = false;
             // 
-            // idDataGridViewTextBoxColumn2
+            // typeDataGridViewTextBoxColumn1
             // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn2.Visible = false;
+            this.typeDataGridViewTextBoxColumn1.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn1.HeaderText = "Тип события";
+            this.typeDataGridViewTextBoxColumn1.Name = "typeDataGridViewTextBoxColumn1";
+            this.typeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dateDataGridViewTextBoxColumn
+            // myHardLogBindingSource
             // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateIdDataGridViewTextBoxColumn1
-            // 
-            this.stateIdDataGridViewTextBoxColumn1.DataPropertyName = "stateId";
-            this.stateIdDataGridViewTextBoxColumn1.HeaderText = "stateId";
-            this.stateIdDataGridViewTextBoxColumn1.Name = "stateIdDataGridViewTextBoxColumn1";
-            this.stateIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.stateIdDataGridViewTextBoxColumn1.Visible = false;
+            this.myHardLogBindingSource.DataMember = "myHardLog";
+            this.myHardLogBindingSource.DataSource = this.myFWDataSet;
             // 
             // lastClientsStatesBindingSource
             // 
@@ -1111,6 +1143,45 @@
             this.serverBindingSource.DataMember = "Server";
             this.serverBindingSource.DataSource = this.myFWDataSet;
             // 
+            // idDataGridViewTextBoxColumn5
+            // 
+            this.idDataGridViewTextBoxColumn5.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn5.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn5.Name = "idDataGridViewTextBoxColumn5";
+            this.idDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn4
+            // 
+            this.dateDataGridViewTextBoxColumn4.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn4.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn4.Name = "dateDataGridViewTextBoxColumn4";
+            this.dateDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Наименование";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // textDataGridViewTextBoxColumn
+            // 
+            this.textDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.textDataGridViewTextBoxColumn.DataPropertyName = "text";
+            this.textDataGridViewTextBoxColumn.HeaderText = "Содержание";
+            this.textDataGridViewTextBoxColumn.Name = "textDataGridViewTextBoxColumn";
+            this.textDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // myLogsBindingSource
+            // 
+            this.myLogsBindingSource.DataMember = "myLogs";
+            this.myLogsBindingSource.DataSource = this.myFWDataSet;
+            // 
+            // logBindingSource
+            // 
+            this.logBindingSource.DataMember = "Log";
+            this.logBindingSource.DataSource = this.myFWDataSet;
+            // 
             // certificateBindingSource
             // 
             this.certificateBindingSource.DataMember = "Certificate";
@@ -1165,36 +1236,223 @@
             // 
             this.serverTableAdapter.ClearBeforeFill = true;
             // 
-            // timeEndCertsBindingSource
-            // 
-            this.timeEndCertsBindingSource.DataMember = "TimeEndCerts";
-            this.timeEndCertsBindingSource.DataSource = this.myFWDataSet;
-            // 
             // timeEndCertsTableAdapter
             // 
             this.timeEndCertsTableAdapter.ClearBeforeFill = true;
             // 
-            // dateStopDataGridViewTextBoxColumn
+            // logTableAdapter
             // 
-            this.dateStopDataGridViewTextBoxColumn.DataPropertyName = "dateStop";
-            this.dateStopDataGridViewTextBoxColumn.HeaderText = "Окончание действия";
-            this.dateStopDataGridViewTextBoxColumn.Name = "dateStopDataGridViewTextBoxColumn";
-            this.dateStopDataGridViewTextBoxColumn.ReadOnly = true;
+            this.logTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn4
+            // myLogsTableAdapter
             // 
-            this.idDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn4.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn4.HeaderText = "Наименование";
-            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
-            this.idDataGridViewTextBoxColumn4.ReadOnly = true;
+            this.myLogsTableAdapter.ClearBeforeFill = true;
             // 
-            // typeDataGridViewTextBoxColumn
+            // myHardLogTableAdapter
             // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Тип объекта";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.myHardLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // login
+            // 
+            this.login.DataPropertyName = "login";
+            this.login.HeaderText = "Логин";
+            this.login.Name = "login";
+            this.login.ReadOnly = true;
+            // 
+            // ip
+            // 
+            this.ip.DataPropertyName = "address";
+            this.ip.HeaderText = "ip";
+            this.ip.Name = "ip";
+            this.ip.ReadOnly = true;
+            // 
+            // NameUser
+            // 
+            this.NameUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameUser.DataPropertyName = "NameUser";
+            this.NameUser.HeaderText = "Пользователь";
+            this.NameUser.Name = "NameUser";
+            this.NameUser.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clientIdDataGridViewTextBoxColumn1
+            // 
+            this.clientIdDataGridViewTextBoxColumn1.DataPropertyName = "clientId";
+            this.clientIdDataGridViewTextBoxColumn1.HeaderText = "clientId";
+            this.clientIdDataGridViewTextBoxColumn1.Name = "clientIdDataGridViewTextBoxColumn1";
+            this.clientIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.clientIdDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // stateIdDataGridViewTextBoxColumn
+            // 
+            this.stateIdDataGridViewTextBoxColumn.DataPropertyName = "stateId";
+            this.stateIdDataGridViewTextBoxColumn.HeaderText = "stateId";
+            this.stateIdDataGridViewTextBoxColumn.Name = "stateIdDataGridViewTextBoxColumn";
+            this.stateIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stateIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Логин";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "ФИО";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Состояние";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "ip";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(23, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Смена пароля администратор";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Действующий пароль:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Новый пароль:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Новый еще раз:";
+            // 
+            // clientIdDataGridViewTextBoxColumn
+            // 
+            this.clientIdDataGridViewTextBoxColumn.DataPropertyName = "clientId";
+            this.clientIdDataGridViewTextBoxColumn.HeaderText = "clientId";
+            this.clientIdDataGridViewTextBoxColumn.Name = "clientIdDataGridViewTextBoxColumn";
+            this.clientIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameUserDataGridViewTextBoxColumn
+            // 
+            this.nameUserDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameUserDataGridViewTextBoxColumn.DataPropertyName = "NameUser";
+            this.nameUserDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.nameUserDataGridViewTextBoxColumn.Name = "nameUserDataGridViewTextBoxColumn";
+            this.nameUserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "login";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "ip-адрес";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.DataPropertyName = "stateId";
+            this.State.HeaderText = "Статус";
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата регистрации";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stateIdDataGridViewTextBoxColumn1
+            // 
+            this.stateIdDataGridViewTextBoxColumn1.DataPropertyName = "stateId";
+            this.stateIdDataGridViewTextBoxColumn1.HeaderText = "stateId";
+            this.stateIdDataGridViewTextBoxColumn1.Name = "stateIdDataGridViewTextBoxColumn1";
+            this.stateIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.stateIdDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tableLayoutPanel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(762, 534);
+            this.panel4.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView4, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(762, 534);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -1203,6 +1461,7 @@
             this.ClientSize = new System.Drawing.Size(975, 566);
             this.Controls.Add(this.mainTabsControl);
             this.Controls.Add(this.mainMenuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = " Менеджер Центра сертификации";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -1212,6 +1471,13 @@
             this.statusStrip1.PerformLayout();
             this.mainTabsControl.ResumeLayout(false);
             this.tabStatistic.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabOnlineUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOnlineUsers)).EndInit();
             this.onlineUserPanel.ResumeLayout(false);
@@ -1224,6 +1490,7 @@
             this.tabServers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServers)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.tabLogs.ResumeLayout(false);
             this.tabGeneralSettings.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -1231,20 +1498,19 @@
             this.flowLayoutPanel2.PerformLayout();
             this.tabSecuritySettings.ResumeLayout(false);
             this.tabSecuritySettings.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlientClientsStateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEndCertsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHardLogBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastClientsStatesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serverBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myLogsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.certificateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEndCertsBindingSource)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1294,10 +1560,6 @@
         private System.Windows.Forms.TextBox tbxOldPass;
         private System.Windows.Forms.Button btnAddServerMasterOpen;
         private System.Windows.Forms.Button btnCertificateMasterOpen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private myFWDataSet myFWDataSet;
         private System.Windows.Forms.BindingSource clientBindingSource;
         private myFWDataSetTableAdapters.ClientTableAdapter clientTableAdapter;
@@ -1308,13 +1570,6 @@
         private myFWDataSetTableAdapters.LastClientsStatesTableAdapter lastClientsStatesTableAdapter;
         private System.Windows.Forms.BindingSource onlientClientsStateBindingSource;
         private myFWDataSetTableAdapters.OnlineClientStateTableAdapter onlineClientStateTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serverBindingSource;
         private myFWDataSetTableAdapters.ServerTableAdapter serverTableAdapter;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -1326,14 +1581,6 @@
         private System.Windows.Forms.Button btnCert;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnSrv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameUserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateIdDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
@@ -1359,6 +1606,49 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateStopDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.BindingSource logBindingSource;
+        private myFWDataSetTableAdapters.LogTableAdapter logTableAdapter;
+        private System.Windows.Forms.BindingSource myLogsBindingSource;
+        private myFWDataSetTableAdapters.myLogsTableAdapter myLogsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.BindingSource myHardLogBindingSource;
+        private myFWDataSetTableAdapters.myHardLogTableAdapter myHardLogTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameUserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

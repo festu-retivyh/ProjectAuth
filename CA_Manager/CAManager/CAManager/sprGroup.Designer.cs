@@ -74,9 +74,9 @@
             this.LayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.LayoutPanel.Name = "LayoutPanel";
             this.LayoutPanel.RowCount = 3;
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.00926F));
             this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.99074F));
+            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0F));
+            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.LayoutPanel.Size = new System.Drawing.Size(254, 304);
             this.LayoutPanel.TabIndex = 0;
             // 
@@ -117,7 +117,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 24);
+            this.panel2.Size = new System.Drawing.Size(248, 1);
             this.panel2.TabIndex = 2;
             this.panel2.Visible = false;
             // 
@@ -162,10 +162,10 @@
             this.nameDataGridViewTextBoxColumn});
             this.dgvProfile.DataSource = this.profileBindingSource;
             this.dgvProfile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProfile.Location = new System.Drawing.Point(3, 63);
+            this.dgvProfile.Location = new System.Drawing.Point(3, 33);
             this.dgvProfile.Name = "dgvProfile";
             this.dgvProfile.RowHeadersVisible = false;
-            this.dgvProfile.Size = new System.Drawing.Size(248, 238);
+            this.dgvProfile.Size = new System.Drawing.Size(248, 268);
             this.dgvProfile.TabIndex = 3;
             // 
             // idDataGridViewTextBoxColumn

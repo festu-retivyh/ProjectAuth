@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvProfile = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Наименование = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Программа = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сервер = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myProfileTABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myFWDataSet = new CAManager.myFWDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.mSel = new System.Windows.Forms.ToolStripMenuItem();
             this.mDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myProfileTABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myFWDataSet = new CAManager.myFWDataSet();
             this.profileBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profileTableAdapter = new CAManager.myFWDataSetTableAdapters.ProfileTableAdapter();
             this.myProfileTATableAdapter = new CAManager.myFWDataSetTableAdapters.myProfileTATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfile)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myProfileTABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,8 +68,16 @@
             this.dgvProfile.ReadOnly = true;
             this.dgvProfile.RowHeadersVisible = false;
             this.dgvProfile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProfile.Size = new System.Drawing.Size(301, 253);
+            this.dgvProfile.Size = new System.Drawing.Size(406, 305);
             this.dgvProfile.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // Наименование
             // 
@@ -93,6 +101,16 @@
             this.Сервер.Name = "Сервер";
             this.Сервер.ReadOnly = true;
             // 
+            // myProfileTABindingSource
+            // 
+            this.myProfileTABindingSource.DataMember = "myProfileTA";
+            this.myProfileTABindingSource.DataSource = this.myFWDataSet;
+            // 
+            // myFWDataSet
+            // 
+            this.myFWDataSet.DataSetName = "myFWDataSet";
+            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,7 +119,7 @@
             this.mDel});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(301, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(406, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,24 +144,6 @@
             this.mDel.Text = "Удалить";
             this.mDel.Click += new System.EventHandler(this.mDel_Click);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // myProfileTABindingSource
-            // 
-            this.myProfileTABindingSource.DataMember = "myProfileTA";
-            this.myProfileTABindingSource.DataSource = this.myFWDataSet;
-            // 
-            // myFWDataSet
-            // 
-            this.myFWDataSet.DataSetName = "myFWDataSet";
-            this.myFWDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // profileBindingSource
             // 
             this.profileBindingSource.DataMember = "Profile";
@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 277);
+            this.ClientSize = new System.Drawing.Size(406, 329);
             this.Controls.Add(this.dgvProfile);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -169,10 +169,10 @@
             this.Text = "Список профилей";
             this.Load += new System.EventHandler(this.sprListProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfile)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myProfileTABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myFWDataSet)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

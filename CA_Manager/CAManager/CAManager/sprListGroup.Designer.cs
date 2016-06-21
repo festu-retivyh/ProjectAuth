@@ -49,8 +49,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mAdd,
-            this.mDel,
-            this.mSel});
+            this.mSel,
+            this.mDel});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(284, 24);
@@ -136,7 +136,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "sprListGroup";
-            this.Text = "sprListGroup";
+            this.Text = "Группы";
             this.Load += new System.EventHandler(this.sprListGroup_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

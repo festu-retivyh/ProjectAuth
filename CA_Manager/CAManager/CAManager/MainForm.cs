@@ -64,6 +64,11 @@ namespace CAManager
                 mainTabsControl.TabPages.Add(allTabs["tabSecuritySettings"]);
                 mainTabsControl.TabPages[0].Show();
             }
+            else if (currentMenu.Name == "btnLogs")
+            {
+                mainTabsControl.TabPages.Add(allTabs["tabLogs"]);
+                mainTabsControl.TabPages[0].Show();
+            }
             else mainTabsControl.TabPages.Add(allTabs[0]);
         }
         private void UpdateDataForm()
@@ -94,8 +99,6 @@ namespace CAManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.TimeEndCerts". При необходимости она может быть перемещена или удалена.
-            this.timeEndCertsTableAdapter.Fill(this.myFWDataSet.TimeEndCerts);
             UpdateTables();
                         
             currentMenu = btnStatistic;
@@ -106,6 +109,9 @@ namespace CAManager
             serverTableAdapter.Fill(myFWDataSet.Server);
             onlineClientStateTableAdapter.Fill(myFWDataSet.OnlientClientsState);
             lastClientsStatesTableAdapter.Fill(myFWDataSet.LastClientsStates);
+            timeEndCertsTableAdapter.Fill(myFWDataSet.TimeEndCerts);
+            myHardLogTableAdapter.Fill(this.myFWDataSet.myHardLog);
+            myLogsTableAdapter.Fill(this.myFWDataSet.myLogs);
         }
 
         private void btnSelectUserOnline_Click(object sender, EventArgs e)
