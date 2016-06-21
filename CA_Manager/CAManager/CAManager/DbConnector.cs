@@ -18,6 +18,12 @@ namespace CAManager
             return ta.GetName(id);
         }
 
+        internal static string GetNameUserForIdClient(int id)
+        {
+            myFWDataSetTableAdapters.UserTableAdapter ta = new myFWDataSetTableAdapters.UserTableAdapter();
+            return ta.GetNameByClientId(id);
+        }
+
         internal static string GetParam(string proprty)
         {
             myFWDataSetTableAdapters.ParametrsTableAdapter ta = new myFWDataSetTableAdapters.ParametrsTableAdapter();

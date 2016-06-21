@@ -37,9 +37,9 @@ namespace CAManager
             return Cryptography.Cryptography.DecryptAes(k, pkey, ppin);
         }
 
-        internal static int MasterCreateCertificate(sCertData data, string domainName, UsbDisk disk)
+        internal static int MasterCreateCertificate(sCertData data, string domainName, UsbDisk disk, bool first=true)
         {
-            int idUsb = CreatePesonCerificate(data, disk); //Создание сертификата добавление его в БД и сохранение его на юсб носитель
+            int idUsb = CreatePesonCerificate(data, disk, first); //Создание сертификата добавление его в БД и сохранение его на юсб носитель
             sUSER user= new sUSER();
             user.login = data.login;
             user.domain = domainName;
@@ -47,10 +47,14 @@ namespace CAManager
             user.surname = fio[0];
             user.name = fio.Length > 1 ? fio[1] : "";
             user.patronymic = fio.Length==3?fio[2]:"";
-            int idUser = DbConnector.addUser(user); //Добавляем в БД Юзера
-            int idClient = DbConnector.AddClient(idUsb,idUser); //Добавляем в БД Клиента
-            UpdateViewTables(true, new EventArgs());
-            return idClient;
+            if (first)
+            {
+                int idUser = DbConnector.addUser(user); //Добавляем в БД Юзера
+                int idClient = DbConnector.AddClient(idUsb, idUser); //Добавляем в БД Клиента
+                CallEventUpdateViewTables();
+                return idClient;
+            }
+            return 0;
         }
 
         internal static void CallEventUpdateViewTables()
@@ -64,7 +68,7 @@ namespace CAManager
             DbConnector.SetProfilesForClient(clientId, profiles);
         }
 
-        internal static int CreatePesonCerificate(sCertData data, UsbDisk USB)
+        internal static int CreatePesonCerificate(sCertData data, UsbDisk USB, bool first)
         {
             string pathToUSB = USB.name + "\\";
             string infoUSB = UsbSearcher.GetInfoUsb(USB);
@@ -85,10 +89,18 @@ namespace CAManager
             //TODO: Create files for INSTALL CLIENT
             //Добавляем setup проект в Client, копируем его как доп.файлы к этому проекту при развертывании
             //При выполнении текущего метода правим данные в нужных местах и копируем экзешник на флешку
-            string pathFrom = Environment.CurrentDirectory + "\\client\\";
-            File.Copy(pathFrom+ "setup.exe", pathToUSB+"Client.exe", true);
-            File.Copy(pathFrom + "setup.msi", pathToUSB+"setup.msi", true);
-            File.SetAttributes(pathToUSB + "setup.msi", FileAttributes.Hidden);
+            if (first)
+            {
+                string pathFrom = Environment.CurrentDirectory + "\\client\\";
+                File.Copy(pathFrom + "setup.exe", pathToUSB + "Client.exe", true);
+                File.Copy(pathFrom + "setup.msi", pathToUSB + "setup.msi", true);
+                File.SetAttributes(pathToUSB + "setup.msi", FileAttributes.Hidden);
+            }
+            else
+            {
+                if (File.Exists(pathToUSB + "clnt.key"))
+                    File.Delete(pathToUSB + "clnt.key");
+            }
             string dataForUsb = "8 " + DateTime.Now + " " + guidUsb + " " + privateKey + " " + pubKeyCA + " " + Cryptography.Cryptography.Sign(guidUsb+ " " + privateKey, PrivateKeyCA);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.GetHash(dataForUsb);
             dataForUsb = dataForUsb + " " + Cryptography.Cryptography.Sign(dataForUsb, PrivateKeyCA);

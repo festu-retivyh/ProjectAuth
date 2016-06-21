@@ -94,6 +94,8 @@ namespace CAManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "myFWDataSet.TimeEndCerts". При необходимости она может быть перемещена или удалена.
+            this.timeEndCertsTableAdapter.Fill(this.myFWDataSet.TimeEndCerts);
             UpdateTables();
                         
             currentMenu = btnStatistic;

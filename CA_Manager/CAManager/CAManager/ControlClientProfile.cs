@@ -16,6 +16,14 @@ namespace CAManager
 
             groupTableAdapter.Fill(myFWDataSet.Group);
             profileTableAdapter1.Fill(myFWDataSet.Profile);
+
+            if (clientId != 0)
+            {
+                tbxUser.Text = DbConnector.GetNameUserForIdClient(clientId);
+            }
+            if (groupId != 0)
+                cbxGroup.SelectedValue = groupId;
+            UpdateChecksProfile();
         }
 
         public void ChangeUser(int clientId, string name, int groupId = 0)
